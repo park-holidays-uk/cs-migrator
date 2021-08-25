@@ -1,0 +1,29 @@
+{
+  "name": "cs-migrator",
+  "version": "1.0.0",
+  "description": "Tool to migrate data into contentstack",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --mode=development",
+    "migrate": "npm run build && node ./dist/index.js migrate",
+    "remove": "npm run build && node ./dist/index.js remove"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-fetch": "^3.1.4",
+    "dotenv": "^10.0.0",
+    "promise-mysql": "^5.0.3",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "happypack": "^5.0.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
