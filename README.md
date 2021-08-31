@@ -18,6 +18,7 @@ You can then populate this database from a dump file by running this command:
 
 ```
 cat ph_db_with_data.sql | docker exec -i parksData /usr/bin/mysql -u root --password=root_password ph_db
+
 ```
 
 Please not this needs to be run from the directory containing your database dump named: `ph_db_with_data.sql`
@@ -27,7 +28,19 @@ Please not this needs to be run from the directory containing your database dump
 
 This migration assumes you have no entries within Contentstack and already have the required structure setup as Content-types.
 
-Use `npm run migrate` to import all the data.
+First create some usable code: `npm install` followed by `npm run build`
 
-Use `npm run remove`  to delete all the entries.
+After which you can run either command:
 
+1) `npm run migrate` to import all the data.
+
+2) `npm run remove`  to delete all the entries.
+
+
+### cache.json
+
+This migration process keeps track of the newly created entries and its associated ContentStack uid in the cache.json file.
+
+The keys to this object are taken from the entries original id within the parkholidays db.
+
+This will allow us to decipher which records in the old db point to which uid within ContentStack.

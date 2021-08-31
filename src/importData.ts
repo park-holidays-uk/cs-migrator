@@ -3,12 +3,23 @@ import { readFileSync, writeFileSync } from 'fs'
 import path from 'path'
 import dotenv from 'dotenv'
 import {
-  createLocationCategories,
-  createLocationAmenities,
-  createLocations,
+  uploadLocationLogos,
+  uploadLocationGalleries,
+  uploadAccommodationGalleries,
+} from './assets'
+import {
   createHolidayProducts,
+  createLocationAmenities,
+  createLocationCategories,
+  createLocations,
   createRegions,
-} from './entries'
+} from './locationEntries'
+import {
+  createAccommodation,
+  createAccommodationAmenities,
+  createAccommodationGrades,
+  createAccommodationTypes,
+} from './accommodationEntries'
 import { snakeCase } from './tools'
 import loginForAuthToken from './login'
 import { getDbConnection } from './db'
@@ -35,9 +46,24 @@ const importData = async () => {
   })
   context.db = await getDbConnection()
   context.cache = {}
-  context.cache = JSON.parse(readFileSync(path.resolve(__dirname, './cache.json'), 'utf-8'))
+  try {
+    context.cache = JSON.parse(readFileSync(path.resolve(__dirname, '../cache.json'), 'utf-8'))
+  } catch (err) {
+    /*
+    No file -> ignore it!!
+    (used for dev purposes: not having to re-create cache from beginning all the time)
+    */
+  }
   /*
-	console.log("TCL: importData -> context.cache", context.cache)
+  context.cache.locationLogos = await uploadLocationLogos(context)
+  reportCreatedEntries('locationLogos', context)
+  context.cache.locationGalleries = await uploadLocationGalleries(context)
+  reportCreatedEntries('locationGalleries', context)
+  // */
+  context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
+  reportCreatedEntries('accommodationGalleries', context)
+
+   /*
   context.cache.holidayProducts = await createHolidayProducts(context)
   reportCreatedEntries('holidayProducts', context)
   context.cache.locationCategories = await createLocationCategories(context)
@@ -46,12 +72,21 @@ const importData = async () => {
   reportCreatedEntries('locationAmenities', context)
   context.cache.regions = await createRegions(context)
   reportCreatedEntries('regions', context)
-  // */
-
   context.cache.locations = await createLocations(context)
   reportCreatedEntries('locations', context)
+  context.cache.accommodationTypes = await createAccommodationTypes(context)
+  reportCreatedEntries('accommodationTypes', context)
+  context.cache.accommodationGrades = await createAccommodationGrades(context)
+  reportCreatedEntries('accommodationGrades', context)
+  context.cache.accommodationAmenities = await createAccommodationAmenities(context)
+  reportCreatedEntries('accommodationAmenities', context)
+  context.cache.accommodation = await createAccommodation(context)
+  reportCreatedEntries('accommodation', context)
+  // */
 
-  // writeFileSync(path.resolve(__dirname, './cache.json'), JSON.stringify(context.cache, null, 2))
+
+
+  writeFileSync(path.resolve(__dirname, '../cache.json'), JSON.stringify(context.cache, null, 2))
 
   process.exit()
 }
