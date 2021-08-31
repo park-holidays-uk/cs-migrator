@@ -29,7 +29,7 @@ dotenv.config()
 const { api_key, base_url, management_token, email } = process.env
 
 const reportCreatedEntries = (key, context) => {
-  console.log(`createdEntries -> [ ${snakeCase(key)} ]`, Object.keys(context.cache[key]).length)
+  console.log(`createdEntries -> [ ${snakeCase(key)} ]`, Object.keys(context.cache[key]).length, ' '.repeat(25))
 }
 
 const importData = async () => {
@@ -54,16 +54,13 @@ const importData = async () => {
     (used for dev purposes: not having to re-create cache from beginning all the time)
     */
   }
-  /*
+
   context.cache.locationLogos = await uploadLocationLogos(context)
   reportCreatedEntries('locationLogos', context)
   context.cache.locationGalleries = await uploadLocationGalleries(context)
   reportCreatedEntries('locationGalleries', context)
-  // */
   context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
   reportCreatedEntries('accommodationGalleries', context)
-
-   /*
   context.cache.holidayProducts = await createHolidayProducts(context)
   reportCreatedEntries('holidayProducts', context)
   context.cache.locationCategories = await createLocationCategories(context)
@@ -82,9 +79,6 @@ const importData = async () => {
   reportCreatedEntries('accommodationAmenities', context)
   context.cache.accommodation = await createAccommodation(context)
   reportCreatedEntries('accommodation', context)
-  // */
-
-
 
   writeFileSync(path.resolve(__dirname, '../cache.json'), JSON.stringify(context.cache, null, 2))
 

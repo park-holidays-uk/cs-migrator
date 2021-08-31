@@ -34,8 +34,8 @@ const removeContent = async (context) => {
 
 const removeAssetsByFolder = async (context) => {
   const folders = [
-    // 'Park_Logo',
-    // 'Location_Media',
+    'Park_Logo',
+    'Location_Media',
     'Accommodation_Media'
   ]
   for (const folder of folders) {
@@ -64,7 +64,7 @@ const removeData = async () => {
     }
   })
   await removeAssetsByFolder(context)
-  // removeContent(context)
+  await removeContent(context)
   process.exit()
 }
 
@@ -85,4 +85,31 @@ export default removeData
       "order": 3
   }
 ]
+
+
+"product_content": [{
+  "holiday_product": {
+    "holiday_product_reference": [{
+      "uid": "blt41b92151ac79946e",
+      "_content_type_uid": "holiday_products"
+    }],
+    "holiday_product_details": [{
+      "holiday_product_overviews": {
+        "holiday_product_short_overview": "This is a short overview",
+        "holiday_product_long_overview": "This is an even longer overview"
+      }
+    }, {
+      "holiday_product_media":  {
+        "media": [{
+          "file": {
+              "file": "blt6eb2954f9a55d7f8"
+          }
+        }],
+        "type": null,
+        "order": 1
+      }
+    }]
+  }
+}]
+
 */

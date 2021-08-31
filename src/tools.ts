@@ -45,7 +45,6 @@ export const createImageFolders = async (context, folder, subFolderName) => {
     })
   })
   const subFolderResponse = await subRes.json()
-	console.log("TCL: subFolderResponse", subFolderResponse)
   const imgRes = await fetch(`${context.base_url}/assets/folders`, {
     method: 'POST',
     headers,
@@ -67,9 +66,7 @@ export const createImageFolders = async (context, folder, subFolderName) => {
     })
   })
   const imageResponse = await imgRes.json()
-	console.log("TCL: imageResponse", imageResponse)
   const videoResponse = await vidRes.json()
-	console.log("TCL: videoResponse", videoResponse)
   return {
     imageFolderUid: imageResponse.asset.uid,
     videoFolderUid: videoResponse.asset.uid
@@ -96,6 +93,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
       const formData = new FormData();
       formData.append('asset[upload]', fs.createReadStream(`${TMP_DIR}/${asset.path}`))
       formData.append('asset[parent_uid]', folderUid)
+      formData.append('asset[description]', asset.description)
       const res = await fetch(`${context.base_url}/assets`, {
         method: 'POST',
         headers,

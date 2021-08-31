@@ -30,7 +30,33 @@ export const accommodationGradeQuery = () => `
   WHERE g.id = ht.grading_id;
 `
 
+const createAccommodationGradeImages = (context, images) => {
+  const allMediaBlocks = []
+  if (images?.length) {
+    const blockSize = 25
+    for (let mediaBlock = 0, imageCursor = 0; imageCursor < images.length; imageCursor += blockSize, mediaBlock += 1) {
+      const thisMediaBlocksImages = images.slice(imageCursor, (mediaBlock + 1) * blockSize)
+      allMediaBlocks.push({
+        media: thisMediaBlocksImages.map((img, index) => ({
+          file: {
+            file: img.uid,
+            order: (mediaBlock * 100) + index
+          }
+        })),
+        type: null,
+        order: mediaBlock
+      })
+    }
+  }
+  return allMediaBlocks
+}
+
 export const createAccommodationGrades = async (context) => {
+  const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGalleries).reduce((acc, value: any) => {
+    if (!acc[value.grade]) acc[value.grade] = []
+    acc[value.grade].push(value)
+    return acc
+  }, {})
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
   const accommodationGradeEntries = await createEntries(
     context,
@@ -39,7 +65,8 @@ export const createAccommodationGrades = async (context) => {
     (grade) => ({
       entry: {
         title: grade.name,
-        description: grade.overview
+        description: grade.overview,
+        media: createAccommodationGradeImages(context, accommodationGalleriesByGrade[grade.id])
       }
     }),
     ({ entry }) => ({
@@ -53,13 +80,20 @@ export const createAccommodationGrades = async (context) => {
 
 export const createAccommodationAmenities = async (context) => {
   const hireTypeFeatures = await context.db.query(`
-    SELECT * FROM ph_db.hire_type_features
-    WHERE deleted_at IS NULL
+    SELECT DISTINCT htf.description, htf.sector_id, htf.sort_order FROM ph_db.hire_type_features as htf
+    INNER JOIN ph_db.hire_type_description_hire_type_feature as htdhtf
+    INNER JOIN ph_db.hire_type_descriptions as htd
+    INNER JOIN ph_db.hire_types as ht
+    WHERE htf.id = htdhtf.hire_type_feature_id
+    AND htdhtf.hire_type_description_id = htd.id
+    AND ht.hire_type_description_id = htd.id
+    AND ht.deleted_at IS NULL
+    AND htf.deleted_at IS NULL
     AND (
-      sector_id=1
-      OR sector_id=2
+      htf.sector_id = 1
+      OR htf.sector_id = 2
     )
-    ORDER BY sort_order ASC;
+    ORDER BY htf.sort_order ASC;
   `)
   const accommodationAmenityEntries = await createEntries(
     context,
@@ -159,8 +193,5 @@ export const createAccommodation = async (context) => {
     const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.locations[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
     console.log(totalStr.padEnd(50, ' '))
   }
-
-
-
   return accommodationEntries
 }
