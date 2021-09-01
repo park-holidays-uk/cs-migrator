@@ -1,16 +1,22 @@
 import fetch from 'node-fetch'
 import FormData from 'form-data'
 import fs from 'fs'
+import path from 'path'
 import request from 'request'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export const apiDelay = (delay = 50) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
 
+console.log("TCL: process.env['Park_Logo']", process.env['Park_Logo'], process.env)
+
 export const folderLookup = {
-  'Park_Logo': 'bltee6ed710d6be4f60',
-  'Location_Media': 'bltf2b21a385ea6c1cc',
-  'Accommodation_Media': 'bltc9f8b05dab8bae86',
+  'Park_Logo': process.env['Park_Logo'],
+  'Location_Media': process.env['Location_Media'],
+  'Accommodation_Media': process.env['Accommodation_Media'],
 }
-const TMP_DIR = `${__dirname}/tmp`
+const TMP_DIR = path.resolve(__dirname, '../tmp')
 
 const createAssetLocally = (assetName) => new Promise(async (resolve) => {
   const writeStream = fs.createWriteStream(`${TMP_DIR}/${assetName}`)
