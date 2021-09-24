@@ -9,8 +9,6 @@ dotenv.config()
 
 export const apiDelay = (delay = 50) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
 
-console.log("TCL: process.env['Park_Logo']", process.env['Park_Logo'], process.env)
-
 export const folderLookup = {
   'Park_Logo': process.env['Park_Logo'],
   'Location_Media': process.env['Location_Media'],
@@ -79,6 +77,29 @@ export const createImageFolders = async (context, folder, subFolderName) => {
   }
 }
 
+const publishAsset = async (context, assetUid) => {
+  try {
+    const res = await fetch(`${context.base_url}/assets/${assetUid}/publish`, {
+      method: 'POST',
+      headers: {
+        ...context.headers,
+        'authorization': context.management_token,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "asset": {
+          "locales": ["en-gb"],
+          "environments": JSON.parse(process.env.environments) // i.e. production / qa / preview
+        },
+        "version": 1,
+        "scheduled_at": "2019-02-08T18:30:00.000Z"
+      })
+    })
+  } catch (err) {
+	  console.error("publishAsset -> err", err)
+  }
+}
+
 export const uploadAssets = async (context, assets, folderName, folderUid, createCacheEntry) => {
   if (!folderUid) {
     console.error('Could not find a folder uid. Aborting asset upload!')
@@ -109,6 +130,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
       if (response['error_code']) {
         console.error(`\r[ ${asset.path} ]: `, response.errors)
       } else {
+        await publishAsset(context, response.asset.uid)
         responses[asset.id] = createCacheEntry(asset, response)
       }
     } catch (error) {
@@ -116,6 +138,34 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
     }
   }
   return responses
+}
+
+const publishEntry = async (context, contentUid, entryUid) => {
+  try {
+    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entryUid}/publish`, {
+      method: 'POST',
+      headers: {
+        ...context.headers,
+        'authorization': context.management_token,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "entry": {
+          "locales": ["en-gb"],
+          "environments": [
+            "blt768ff34d9f82b006", //production
+            "blt242187e2891f7339", //qa
+            "blt3d97399c6e83ae0b" //preview
+          ]
+        },
+        "version": 1,
+        "scheduled_at": "2019-02-08T18:30:00.000Z"
+      })
+    })
+  } catch(err) {
+	  console.error("publishEntry -> err", err)
+
+  }
 }
 
 export const createEntries = async (context, contentUid, entries, createBody, createCacheEntry) => {
@@ -135,7 +185,7 @@ export const createEntries = async (context, contentUid, entries, createBody, cr
     })
     const response = await res.json()
     if (response['error_code']) {
-      if (response['error_code'] === 119 && response.errors.title && response.errors.title[0] === 'is not unique.') {
+      if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
         const dupedId = findDuplicateInResponses(responses, body.entry.title)
         console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors, 'mapped to original: ', dupedId)
 				responses[entry.id] = responses[dupedId]
@@ -143,6 +193,7 @@ export const createEntries = async (context, contentUid, entries, createBody, cr
         console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
       }
     } else {
+      await publishEntry(context, contentUid, response.entry.uid)
       responses[entry.id] = createCacheEntry(response, entry)
     }
   }
@@ -224,7 +275,7 @@ export const snakeCase = (str) => {
 const findDuplicateInResponses = (responses, title) => {
   return Object.keys(responses).reduce((foundId, key) => {
     if (foundId) return foundId
-    if (responses[key].title === title) {
+    if (responses[key]?.title === title) {
       return key
     }
     return null

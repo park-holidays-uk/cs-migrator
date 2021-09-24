@@ -208,7 +208,6 @@ export const createLocations = async (context) => {
         AND park_facility_category_id=1
         ORDER BY sort_order ASC;
       `)
-
       const locationProductContent = []
       if (park['is_holidays_park']) {
         locationProductContent.push(await createHolidayProductDetails('1', park, context))
@@ -242,7 +241,8 @@ export const createLocations = async (context) => {
             'uid': context.cache.locationAmenities[facility.id].uid,
             '_content_type_uid': 'location_amenities'
           })),
-          "product_content": locationProductContent
+          'product_content': locationProductContent,
+          'park_code': park['code']
         }
       })
       return entryBody
