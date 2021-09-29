@@ -32,11 +32,7 @@ First create some usable code: `npm install` followed by `npm run build`
 
 Create a valid `.env` file. The structure and contents can be taken from env.sample ( secrets are in LastPass )
 
-After which you can run either command:
-
-1) `npm run migrate` to import all the data.
-
-2) `npm run remove`  to delete all the entries.
+Followed by using `npm start`.
 
 
 ### cache.json

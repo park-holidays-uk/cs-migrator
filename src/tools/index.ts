@@ -4,15 +4,14 @@ import fs from 'fs'
 import path from 'path'
 import request from 'request'
 import dotenv from 'dotenv'
+import { EnvironmentType, FolderNameType } from '../types'
 
 dotenv.config()
 
 export const apiDelay = (delay = 50) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
 
-export const folderLookup = {
-  'Park_Logo': process.env['Park_Logo'],
-  'Location_Media': process.env['Location_Media'],
-  'Accommodation_Media': process.env['Accommodation_Media'],
+export const getFolderUid = (env: EnvironmentType, folder: FolderNameType) => {
+  return process.env[`${env}_${folder}`]
 }
 const TMP_DIR = path.resolve(__dirname, '../tmp')
 
@@ -29,7 +28,8 @@ const emptyAssetTmpDir = () => {
 }
 
 export const createImageFolders = async (context, folder, subFolderName) => {
-  if (!folderLookup[folder]) {
+  const folderUid = getFolderUid(context.env, folder)
+  if (!folderUid) {
     console.error('Could not find a folder lookup. Aborting folder creation!')
     return
   }
@@ -44,7 +44,7 @@ export const createImageFolders = async (context, folder, subFolderName) => {
     body: JSON.stringify({
       asset: {
         name: subFolderName.replace('&', 'and'),
-        'parent_uid': folderLookup[folder]
+        'parent_uid': folderUid
       }
     })
   })
@@ -89,7 +89,7 @@ const publishAsset = async (context, assetUid) => {
       body: JSON.stringify({
         "asset": {
           "locales": ["en-gb"],
-          "environments": JSON.parse(process.env.environments) // i.e. production / qa / preview
+          "environments": JSON.parse(process.env[`${context.env}_environments`]) // i.e. production / qa / preview
         },
         "version": 1,
         "scheduled_at": "2019-02-08T18:30:00.000Z"
@@ -140,9 +140,9 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
   return responses
 }
 
-const publishEntry = async (context, contentUid, entryUid) => {
+const publishEntry = async (context, contentUid, responseEntry, entry) => {
   try {
-    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entryUid}/publish`, {
+    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${responseEntry.uid}/publish`, {
       method: 'POST',
       headers: {
         ...context.headers,
@@ -152,14 +152,17 @@ const publishEntry = async (context, contentUid, entryUid) => {
       body: JSON.stringify({
         "entry": {
           "locales": ["en-gb"],
-          "environments": JSON.parse(process.env.environments) // i.e. production / qa / preview
+          "environments": JSON.parse(process.env[`${context.env}_environments`]) // i.e. production / qa / preview
         },
         "version": 1,
         "scheduled_at": "2019-02-08T18:30:00.000Z"
       })
     })
     const publishEntryResponse = await res.json()
-		console.log("TCL: publishEntry -> publishEntryResponse", publishEntryResponse)
+    if (publishEntryResponse.errors) {
+      console.error('\npublishEntry -> error: ', publishEntryResponse, 'contentUid', contentUid)
+      console.error('responseEntry -> ', responseEntry, 'entry', entry)
+    }
   } catch(err) {
 	  console.error("publishEntry -> err", err)
 
@@ -191,7 +194,7 @@ export const createEntries = async (context, contentUid, entries, createBody, cr
         console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
       }
     } else {
-      await publishEntry(context, contentUid, response.entry.uid)
+      await publishEntry(context, contentUid, response.entry, entry)
       responses[entry.id] = createCacheEntry(response, entry)
     }
   }
@@ -199,12 +202,13 @@ export const createEntries = async (context, contentUid, entries, createBody, cr
 }
 
 export const getAssets = async (context, folder) => {
-  if (!folderLookup[folder]) {
-    console.error('Could not find a folder lookup. Aborting asset fetch!!')
+  const folderUid = getFolderUid(context.env, folder)
+  if (!folderUid) {
+    console.error(`Could not find a folder uid for ${folder}. Aborting asset fetch!!`)
     return []
   }
   await apiDelay()
-  const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderLookup[folder]}&include_count=true`, {
+  const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderUid}&include_count=true`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -270,6 +274,10 @@ export const snakeCase = (str) => {
     .join('_');
 }
 
+export const camelCase = (str) => {
+  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+}
+
 const findDuplicateInResponses = (responses, title) => {
   return Object.keys(responses).reduce((foundId, key) => {
     if (foundId) return foundId
@@ -281,6 +289,7 @@ const findDuplicateInResponses = (responses, title) => {
 }
 
 export default {
+  camelCase,
   createEntries,
   getEntries,
   removeEntries,

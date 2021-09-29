@@ -1,12 +1,12 @@
 import {
   accommodationGradeQuery
-} from './accommodationEntries'
+} from '../entries/accommodationEntries'
 import {
   apiDelay,
   createImageFolders,
-  folderLookup,
+  getFolderUid,
   uploadAssets
-} from './tools'
+} from '../tools'
 
 
 export const parkLogoQuery = (parkId) => `
@@ -28,7 +28,8 @@ export const uploadLocationLogos = async (context) => {
   for (const park of parks) {
     const parkId = park.id
     const parkLogos = await context.db.query(parkLogoQuery(parkId))
-    const thisResponse = await uploadAssets(context, parkLogos, `${folderName} ${parkId}`, folderLookup[folderName], (asset, response) => ({
+    const folderUid = getFolderUid(context.env, folderName)
+    const thisResponse = await uploadAssets(context, parkLogos, `${folderName} ${parkId}`, folderUid, (asset, response) => ({
       uid: response.asset.uid,
       filename: asset.path,
       parkId,

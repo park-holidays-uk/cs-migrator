@@ -1,5 +1,4 @@
-import { createEntries, snakeCase } from './tools'
-
+import { createEntries, snakeCase } from '../tools'
 
 export const createAccommodationTypes = async (context) => {
   const accommodationTypes = await context.db.query(`

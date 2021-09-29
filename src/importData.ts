@@ -1,33 +1,17 @@
 import 'cross-fetch/polyfill'
-import { readFileSync, writeFileSync } from 'fs'
-import path from 'path'
-import dotenv from 'dotenv'
-import {
-  uploadLocationLogos,
-  uploadLocationGalleries,
-  uploadAccommodationGalleries,
-} from './assets'
-import {
-  createCounties,
-  createHolidayProducts,
-  createLocationAmenities,
-  createLocationCategories,
-  createLocations,
-  createRegions,
-} from './locationEntries'
-import {
-  createAccommodation,
-  createAccommodationAmenities,
-  createAccommodationGrades,
-  createAccommodationTypes,
-} from './accommodationEntries'
 import { snakeCase } from './tools'
-import loginForAuthToken from './login'
+import loginForAuthToken from './tools/login'
 import { getDbConnection } from './db'
+import {
+  getEnvironmentVariables,
+  migrationConfiguration
+} from './config/envConfig'
+import { getCache, writeSync } from './dataHandler/fileCache'
+import { EnvironmentType } from './types'
 
-dotenv.config()
+const env = process.argv[2] as EnvironmentType
 
-const { api_key, base_url, management_token, email } = process.env
+const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
 
 const reportCreatedEntries = (key, context) => {
   console.log(`createdEntries -> [ ${snakeCase(key)} ]`, Object.keys(context.cache[key]).length, ' '.repeat(25))
@@ -46,14 +30,25 @@ const importData = async () => {
     }
   })
   context.db = await getDbConnection()
-  context.cache = {}
-  try {
-    context.cache = JSON.parse(readFileSync(path.resolve(__dirname, '../cache.json'), 'utf-8'))
-  } catch (err) {
-    /*
-    No file -> ignore it!!
-    (used for dev purposes: not having to re-create cache from beginning all the time)
-    */
+  context.env = env
+  context.cache = getCache(env, migrationConfiguration.map((m) => m.name))
+
+  const migrations = migrationConfiguration.filter((migration) => {
+    return migration.includeInMigration
+  })
+
+  for (const migration of migrations) {
+    try {
+      context.cache[migration.name] = await migration.handler(context)
+      reportCreatedEntries(migration.name, context)
+      writeSync(env, migration.name, context.cache[migration.name])
+    } catch (error) {
+      console.error('Error during migrations ',  error)
+      console.error('Cache saved at this point: ', migration)
+      console.error('Cache: ', context.cache[migration.name])
+    } finally {
+
+    }
   }
 
   // context.cache.locationLogos = await uploadLocationLogos(context)
@@ -62,28 +57,28 @@ const importData = async () => {
   // reportCreatedEntries('locationGalleries', context)
   // context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
   // reportCreatedEntries('accommodationGalleries', context)
-  context.cache.holidayProducts = await createHolidayProducts(context)
-  reportCreatedEntries('holidayProducts', context)
-  context.cache.locationCategories = await createLocationCategories(context)
-  reportCreatedEntries('locationCategories', context)
-  context.cache.locationAmenities = await createLocationAmenities(context)
-  reportCreatedEntries('locationAmenities', context)
-  context.cache.regions = await createRegions(context)
-  reportCreatedEntries('regions', context)
-  context.cache.counties = await createCounties(context)
-  reportCreatedEntries('counties', context)
-  context.cache.locations = await createLocations(context)
-  reportCreatedEntries('locations', context)
-  context.cache.accommodationTypes = await createAccommodationTypes(context)
-  reportCreatedEntries('accommodationTypes', context)
-  context.cache.accommodationGrades = await createAccommodationGrades(context)
-  reportCreatedEntries('accommodationGrades', context)
-  context.cache.accommodationAmenities = await createAccommodationAmenities(context)
-  reportCreatedEntries('accommodationAmenities', context)
-  context.cache.accommodation = await createAccommodation(context)
-  reportCreatedEntries('accommodation', context)
+  // context.cache.holidayProducts = await createHolidayProducts(context)
+  // reportCreatedEntries('holidayProducts', context)
+  // context.cache.locationCategories = await createLocationCategories(context)
+  // reportCreatedEntries('locationCategories', context)
+  // context.cache.locationAmenities = await createLocationAmenities(context)
+  // reportCreatedEntries('locationAmenities', context)
+  // context.cache.regions = await createRegions(context)
+  // reportCreatedEntries('regions', context)
+  // context.cache.counties = await createCounties(context)
+  // reportCreatedEntries('counties', context)
+  // context.cache.locations = await createLocations(context)
+  // reportCreatedEntries('locations', context)
+  // context.cache.accommodationTypes = await createAccommodationTypes(context)
+  // reportCreatedEntries('accommodationTypes', context)
+  // context.cache.accommodationGrades = await createAccommodationGrades(context)
+  // reportCreatedEntries('accommodationGrades', context)
+  // context.cache.accommodationAmenities = await createAccommodationAmenities(context)
+  // reportCreatedEntries('accommodationAmenities', context)
+  // context.cache.accommodation = await createAccommodation(context)
+  // reportCreatedEntries('accommodation', context)
 
-  writeFileSync(path.resolve(__dirname, '../cache.json'), JSON.stringify(context.cache, null, 2))
+  // writeFileSync(path.resolve(__dirname, '../cache.json'), JSON.stringify(context.cache, null, 2))
 
   process.exit()
 }

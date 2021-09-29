@@ -1,25 +1,24 @@
 import 'cross-fetch/polyfill'
-import dotenv from 'dotenv'
+import { camelCase, snakeCase } from './tools'
+import {
+  getEnvironmentVariables,
+  migrationConfiguration
+} from './config/envConfig'
+import { writeSync } from './dataHandler/fileCache'
 import { getAssets, getEntries, removeEntries, removeAssetsWithSubFolders } from './tools'
-import loginForAuthToken from './login'
+import loginForAuthToken from './tools/login'
+import { EnvironmentType } from './types'
 
-dotenv.config()
+const env = process.argv[2] as EnvironmentType
 
-const { api_key, base_url, management_token, email } = process.env
+const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
+
+const contentToRemove = migrationConfiguration.filter((migration) => {
+  return migration.includeInMigration && migration.type === 'entry'
+})
 
 const removeContent = async (context) => {
-  const contentUids = [
-    'holiday_products',
-    'location_categories',
-    'location_amenities',
-    'regions',
-    'counties',
-    'locations',
-    'accommodation_types',
-    'accommodation_grades',
-    'accommodation_amenities',
-    'accommodation',
-  ]
+  const contentUids = contentToRemove.map((item) => snakeCase(item.name))
   for (const contentUid of contentUids) {
     let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
     let recordsRemoved = 0
@@ -30,15 +29,16 @@ const removeContent = async (context) => {
       recordsRemoved += removedEntries.length
     }
     console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
+    writeSync(env, camelCase(contentUid), {})
   }
 }
 
+const assetsToRemove = migrationConfiguration.filter((migration) => {
+  return migration.includeInMigration && migration.type === 'asset'
+})
+
 const removeAssetsByFolder = async (context) => {
-  const folders = [
-    // 'Park_Logo',
-    // 'Location_Media',
-    // 'Accommodation_Media'
-  ]
+  const folders = assetsToRemove.map((item) => item.folderName)
   for (const folder of folders) {
     let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
     let recordsRemoved = 0
@@ -64,6 +64,7 @@ const removeData = async () => {
       authtoken: null,
     }
   })
+  context.env = env
   await removeAssetsByFolder(context)
   await removeContent(context)
   process.exit()

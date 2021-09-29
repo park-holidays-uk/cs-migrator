@@ -1,6 +1,6 @@
-import { createEntries } from './tools'
-import { parkLogoQuery, locationGalleryQuery } from './assets'
-import { defaultRegions, getRegionIdFromCounty } from './regions'
+import { createEntries } from '../tools'
+import { parkLogoQuery, locationGalleryQuery } from '../assets/galleries'
+import { defaultRegions, getRegionIdFromCounty } from '../entries/regions'
 
 export const createHolidayProducts = async (context) => {
   const sectors = await context.db.query(`
