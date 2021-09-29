@@ -152,16 +152,14 @@ const publishEntry = async (context, contentUid, entryUid) => {
       body: JSON.stringify({
         "entry": {
           "locales": ["en-gb"],
-          "environments": [
-            "blt768ff34d9f82b006", //production
-            "blt242187e2891f7339", //qa
-            "blt3d97399c6e83ae0b" //preview
-          ]
+          "environments": JSON.parse(process.env.environments) // i.e. production / qa / preview
         },
         "version": 1,
         "scheduled_at": "2019-02-08T18:30:00.000Z"
       })
     })
+    const publishEntryResponse = await res.json()
+		console.log("TCL: publishEntry -> publishEntryResponse", publishEntryResponse)
   } catch(err) {
 	  console.error("publishEntry -> err", err)
 

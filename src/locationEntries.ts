@@ -190,6 +190,27 @@ const createParkLogoEntries = async (context, parkId) => {
   }))
 }
 
+export const createCounties = async (context) => {
+  const counties = await context.db.query('SELECT DISTINCT county_name, county_name as id FROM parks')
+  const countyEntries = await createEntries(
+    context,
+    'counties',
+    counties,
+    (county) => ({
+      entry: {
+        title: county['county_name']
+      }
+    }),
+    ({ entry }) => ({
+      uid: entry.uid,
+      title: entry.title,
+      from: 'db.parks',
+    })
+  )
+  return countyEntries
+}
+
+
 export const createLocations = async (context) => {
   const parks = await context.db.query('SELECT * FROM parks')
   const locationEntries = await createEntries(
@@ -219,7 +240,7 @@ export const createLocations = async (context) => {
       const entryBody = ({
         entry: {
           'title': park.name,
-          'long_title': park.name,
+          'long_name': park.name,
           'address': {
             'line_1': park['address_line_1'],
             'line_2': park['address_line_2'],
@@ -227,6 +248,10 @@ export const createLocations = async (context) => {
             'region': [{
               'uid': context.cache.regions[getRegionIdFromCounty(park['county_name'])].uid,
               '_content_type_uid': 'regions'
+            }],
+            'county': [{
+              'uid': context.cache.counties[park['county_name']].uid,
+              '_content_type_uid': 'counties'
             }],
             'postcode': park['postcode'],
             'latitude': park['gps_latitude'].toString().padEnd(8, '0'),

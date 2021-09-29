@@ -13,6 +13,7 @@ const removeContent = async (context) => {
     'location_categories',
     'location_amenities',
     'regions',
+    'counties',
     'locations',
     'accommodation_types',
     'accommodation_grades',
@@ -34,9 +35,9 @@ const removeContent = async (context) => {
 
 const removeAssetsByFolder = async (context) => {
   const folders = [
-    'Park_Logo',
-    'Location_Media',
-    'Accommodation_Media'
+    // 'Park_Logo',
+    // 'Location_Media',
+    // 'Accommodation_Media'
   ]
   for (const folder of folders) {
     let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )

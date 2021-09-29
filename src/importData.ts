@@ -8,6 +8,7 @@ import {
   uploadAccommodationGalleries,
 } from './assets'
 import {
+  createCounties,
   createHolidayProducts,
   createLocationAmenities,
   createLocationCategories,
@@ -55,12 +56,12 @@ const importData = async () => {
     */
   }
 
-  context.cache.locationLogos = await uploadLocationLogos(context)
-  reportCreatedEntries('locationLogos', context)
-  context.cache.locationGalleries = await uploadLocationGalleries(context)
-  reportCreatedEntries('locationGalleries', context)
-  context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
-  reportCreatedEntries('accommodationGalleries', context)
+  // context.cache.locationLogos = await uploadLocationLogos(context)
+  // reportCreatedEntries('locationLogos', context)
+  // context.cache.locationGalleries = await uploadLocationGalleries(context)
+  // reportCreatedEntries('locationGalleries', context)
+  // context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
+  // reportCreatedEntries('accommodationGalleries', context)
   context.cache.holidayProducts = await createHolidayProducts(context)
   reportCreatedEntries('holidayProducts', context)
   context.cache.locationCategories = await createLocationCategories(context)
@@ -69,6 +70,8 @@ const importData = async () => {
   reportCreatedEntries('locationAmenities', context)
   context.cache.regions = await createRegions(context)
   reportCreatedEntries('regions', context)
+  context.cache.counties = await createCounties(context)
+  reportCreatedEntries('counties', context)
   context.cache.locations = await createLocations(context)
   reportCreatedEntries('locations', context)
   context.cache.accommodationTypes = await createAccommodationTypes(context)
