@@ -77,7 +77,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     handler: createCounties
   }, {
     name: 'locations',
-    includeInMigration: true,
+    includeInMigration: false,
     type: 'entry',
     handler: createLocations
   }, {
@@ -97,7 +97,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     handler: createAccommodationAmenities
   }, {
     name: 'accommodation',
-    includeInMigration: false,
+    includeInMigration: true,
     type: 'entry',
     handler: createAccommodation
   },
