@@ -14,7 +14,7 @@ const env = process.argv[2] as EnvironmentType
 const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
 
 const contentToRemove = migrationConfiguration.filter((migration) => {
-  return migration.includeInMigration && migration.type === 'entry'
+  return migration.includeInRemove && migration.type === 'entry'
 })
 
 const removeContent = async (context) => {
@@ -34,12 +34,12 @@ const removeContent = async (context) => {
 }
 
 const assetsToRemove = migrationConfiguration.filter((migration) => {
-  return migration.includeInMigration && migration.type === 'asset'
+  return migration.includeInRemove && migration.type === 'asset'
 })
 
 const removeAssetsByFolder = async (context) => {
-  const folders = assetsToRemove.map((item) => item.folderName)
-  for (const folder of folders) {
+  for (const migrationConfig of assetsToRemove) {
+    const folder = migrationConfig.folderName
     let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
     let recordsRemoved = 0
     while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
@@ -48,6 +48,7 @@ const removeAssetsByFolder = async (context) => {
       const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved)
       recordsRemoved += removedAssets.length
     }
+    writeSync(context.env, migrationConfig.name, {})
     console.log(`removedAssets -> [ ${folder} ]`, recordsRemoved)
   }
 }

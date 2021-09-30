@@ -1,13 +1,14 @@
 import { createEntries } from '../tools'
-import { parkLogoQuery, locationGalleryQuery } from '../assets/galleries'
+import { parkLogoQuery, locationGalleryQuery, UNIQUE_PARK_QUERY } from '../assets/galleries'
 import { defaultRegions, getRegionIdFromCounty } from '../entries/regions'
 
-export const createHolidayProducts = async (context) => {
+export const createHolidayProducts = async (context, migrationConfig) => {
   const sectors = await context.db.query(`
     SELECT * FROM sectors
     WHERE class != "ownership";
   `)
   const holidayProductEntries = await createEntries(
+    migrationConfig,
     context,
     'holiday_products',
     sectors,
@@ -26,11 +27,12 @@ export const createHolidayProducts = async (context) => {
   return holidayProductEntries
 }
 
-export const createLocationCategories = async (context) => {
+export const createLocationCategories = async (context, migrationConfig) => {
   const parkTypes = await context.db.query(`
     SELECT * FROM park_types;
   `)
   const locationCategoryEntries = await createEntries(
+    migrationConfig,
     context,
     'location_categories',
     parkTypes,
@@ -48,7 +50,7 @@ export const createLocationCategories = async (context) => {
   return locationCategoryEntries
 }
 
-export const createLocationAmenities = async (context) => {
+export const createLocationAmenities = async (context, migrationConfig) => {
   // park_facility_category_id
   // 1 = Facilities, 2 = Neighbouring Park Facilities, 3 = What's on, 4 = In the local area
   const parkFacilities = await context.db.query(`
@@ -56,6 +58,7 @@ export const createLocationAmenities = async (context) => {
     WHERE park_facility_category_id=1;
   `)
   const locationAmenityEntries = await createEntries(
+    migrationConfig,
     context,
     'location_amenities',
     parkFacilities,
@@ -74,8 +77,9 @@ export const createLocationAmenities = async (context) => {
 }
 
 
-export const createRegions = async (context) => {
+export const createRegions = async (context, migrationConfig) => {
   const regionEntries = await createEntries(
+    migrationConfig,
     context,
     'regions',
     defaultRegions,
@@ -190,9 +194,10 @@ const createParkLogoEntries = async (context, parkId) => {
   }))
 }
 
-export const createCounties = async (context) => {
-  const counties = await context.db.query('SELECT DISTINCT county_name, county_name as id FROM parks')
+export const createCounties = async (context, migrationConfig) => {
+  const counties = await context.db.query('SELECT DISTINCT county_name, county_name as id FROM parks WHERE deleted_at IS NULL;')
   const countyEntries = await createEntries(
+    migrationConfig,
     context,
     'counties',
     counties,
@@ -211,9 +216,10 @@ export const createCounties = async (context) => {
 }
 
 
-export const createLocations = async (context) => {
-  const parks = await context.db.query('SELECT * FROM parks')
+export const createLocations = async (context, migrationConfig) => {
+  const parks = await context.db.query('SELECT * FROM parks WHERE deleted_at IS NULL;')
   const locationEntries = await createEntries(
+    migrationConfig,
     context,
     'locations',
     parks,

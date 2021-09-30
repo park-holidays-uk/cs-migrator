@@ -37,15 +37,15 @@ const importData = async () => {
     return migration.includeInMigration
   })
 
-  for (const migration of migrations) {
+  for (const migrationConfig of migrations) {
     try {
-      context.cache[migration.name] = await migration.handler(context)
-      reportCreatedEntries(migration.name, context)
-      writeSync(env, migration.name, context.cache[migration.name])
+      context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
+      reportCreatedEntries(migrationConfig.name, context)
+      writeSync(env, migrationConfig.name, context.cache[migrationConfig.name])
     } catch (error) {
       console.error('Error during migrations ',  error)
-      console.error('Cache saved at this point: ', migration)
-      console.error('Cache: ', context.cache[migration.name])
+      console.error('Cache saved at this point: ', migrationConfig)
+      console.error('Cache: ', context.cache[migrationConfig.name])
     } finally {
 
     }

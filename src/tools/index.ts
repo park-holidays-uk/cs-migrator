@@ -27,7 +27,14 @@ const emptyAssetTmpDir = () => {
   })
 }
 
-export const createImageFolders = async (context, folder, subFolderName) => {
+export const createImageFolders = async (context, folder, subFolder, migrationConfig) => {
+  const subFolderName = subFolder.replace('&', 'and')
+  const foldersExist = Object.keys(context.cache[migrationConfig.name]).find((key) => {
+    return context.cache[migrationConfig.name][key].folder === `${folder}/${subFolderName}/images`
+  })
+  if (foldersExist) {
+    return context.cache[migrationConfig.name][foldersExist].folderUids
+  }
   const folderUid = getFolderUid(context.env, folder)
   if (!folderUid) {
     console.error('Could not find a folder lookup. Aborting folder creation!')
@@ -43,7 +50,7 @@ export const createImageFolders = async (context, folder, subFolderName) => {
     headers,
     body: JSON.stringify({
       asset: {
-        name: subFolderName.replace('&', 'and'),
+        name: subFolderName,
         'parent_uid': folderUid
       }
     })
@@ -169,33 +176,56 @@ const publishEntry = async (context, contentUid, responseEntry, entry) => {
   }
 }
 
-export const createEntries = async (context, contentUid, entries, createBody, createCacheEntry) => {
+const findCachedEntry = (migrationConfig, context, entry) => {
+  if (context.cache[migrationConfig.name][entry.id]) {
+    return context.cache[migrationConfig.name][entry.id].uid
+  }
+}
+
+export const createEntries = async (migrationConfig, context, contentUid, entries, createBody, createCacheEntry) => {
   const responses = {}
   for (const entry of entries) {
     const recordCount = Object.keys(responses).length + 1
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
-    await apiDelay()
-    const body = await createBody(entry)
-    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries?locale=en-gb`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...context.headers
-      },
-      body: JSON.stringify(body)
-    })
-    const response = await res.json()
-    if (response['error_code']) {
-      if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
-        const dupedId = findDuplicateInResponses(responses, body.entry.title)
-        console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors, 'mapped to original: ', dupedId)
-				responses[entry.id] = responses[dupedId]
-      } else {
-        console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
-      }
+    const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
+		console.log("TCL: createEntries -> existingEntryUid", existingEntryUid)
+    if (existingEntryUid && !migrationConfig.shouldUpdate) {
+      responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
-      await publishEntry(context, contentUid, response.entry, entry)
-      responses[entry.id] = createCacheEntry(response, entry)
+      await apiDelay()
+      const body = await createBody(entry)
+      let method = 'POST'
+      let url = `${context.base_url}/content_types/${contentUid}/entries`
+      if (existingEntryUid) {
+        url += `/${existingEntryUid}`
+        body.entry.uid = existingEntryUid
+        method = 'PUT'
+      }
+      url += '?locale=en-gb'
+			console.log("TCL: createEntries -> url", url)
+      console.log("TCL: createEntries -> body", JSON.stringify(body, null ,2))
+      const res = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          ...context.headers
+        },
+        body: JSON.stringify(body)
+      })
+      const response = await res.json()
+      if (response['error_code']) {
+        console.log("\nTCL: createEntries -> response", response, body.entry.title, '\n')
+        if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
+          const dupedId = findDuplicateInResponses(responses, body.entry.title)
+          console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors, 'mapped to original: ', dupedId)
+          responses[entry.id] = responses[dupedId]
+        } else {
+          console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
+        }
+      } else {
+        await publishEntry(context, contentUid, response.entry, entry)
+        responses[entry.id] = createCacheEntry(response, entry)
+      }
     }
   }
   return responses

@@ -19,23 +19,41 @@ export const parkLogoQuery = (parkId) => `
   ORDER BY ml.media_lookup_order ASC
 `
 
-export const uploadLocationLogos = async (context) => {
+export const UNIQUE_PARK_QUERY = 'SELECT id, name FROM parks WHERE deleted_at IS NULL;'
+
+export const uploadLocationLogos = async (context, migrationConfig) => {
   const folderName = 'Park_Logo'
-  const parks = await context.db.query(`
-    SELECT id FROM parks;
-  `)
+  const parks = await context.db.query(UNIQUE_PARK_QUERY)
   let responses = {}
   for (const park of parks) {
     const parkId = park.id
     const parkLogos = await context.db.query(parkLogoQuery(parkId))
-    const folderUid = getFolderUid(context.env, folderName)
-    const thisResponse = await uploadAssets(context, parkLogos, `${folderName} ${parkId}`, folderUid, (asset, response) => ({
-      uid: response.asset.uid,
-      filename: asset.path,
-      parkId,
-      folderName
-    }))
-    responses = {...responses, ...thisResponse}
+    const [newParkLogos, existingParkLogos] = parkLogos.reduce((acc, logo) => {
+      acc[context.cache[migrationConfig.name][logo.id] ? 1 : 0].push(logo)
+      return acc
+    }, [[], []])
+
+    if (newParkLogos.length) {
+      const folderUid = getFolderUid(context.env, folderName)
+      const thisResponse = await uploadAssets(context, newParkLogos, `${folderName} ${parkId}`, folderUid, (asset, response) => ({
+        uid: response.asset.uid,
+        filename: asset.path,
+        parkId,
+        folderName
+      }))
+      responses = {...responses, ...thisResponse}
+    }
+    if (existingParkLogos.length) {
+      if (migrationConfig.shouldUpdate) {
+        console.log('\n\nCurrently migration does not handle updating assets. Need to DELETE/CREATE')
+        /*
+        * Legacy images will always be under a new id. So no need for updating content of image.
+        * Also uploading a new asset creates a new contentstack uid - which entries have reference to.
+        * Larger task than warrants the effort. Currently adding new images seems sufficient.
+        */
+      }
+      responses = {...responses, ...context.cache[migrationConfig.name]}
+    }
   }
   return responses
 }
@@ -58,24 +76,45 @@ export const locationGalleryQuery = (parkId, tagType: 'gallery' | 'video', secto
   ORDER BY ml.media_lookup_order ASC;
 `
 
-export const uploadLocationGalleries = async (context) => {
+export const uploadLocationGalleries = async (context, migrationConfig) => {
   const folder = 'Location_Media'
-  const parks = await context.db.query(`
-    SELECT id, name FROM parks;
-  `)
+  const parks = await context.db.query(UNIQUE_PARK_QUERY)
 
   let responses = {}
   for (const park of parks) {
     const parkId = park.id
-    const { imageFolderUid } = await createImageFolders(context, folder, park.name)
+    const { imageFolderUid, videoFolderUid } = await createImageFolders(context, folder, park.name, migrationConfig)
     const locationGalleries = await context.db.query(locationGalleryQuery(parkId, 'gallery', 'all'))
-    const imageUploadResponse = await uploadAssets(context, locationGalleries, `${folder}/images`, imageFolderUid, (asset, response) => ({
-      uid: response.asset.uid,
-      filename: asset.path,
-      parkId,
-      folder: `${folder}/images`
-    }))
-    responses = {...responses, ...imageUploadResponse}
+
+    const [newLocationImages, existingLocationImages] = locationGalleries.reduce((acc, image) => {
+      acc[context.cache[migrationConfig.name][image.id] ? 1 : 0].push(image)
+      return acc
+    }, [[], []])
+
+    if (newLocationImages.length) {
+      const imageUploadResponse = await uploadAssets(context, newLocationImages, `${folder}/images`, imageFolderUid, (asset, response) => ({
+        uid: response.asset.uid,
+        filename: asset.path,
+        parkId,
+        folder: `${folder}/${park.name}/images`,
+        folderUids: {
+          imageFolderUid,
+          videoFolderUid
+        },
+      }))
+      responses = {...responses, ...imageUploadResponse}
+    }
+    if (existingLocationImages.length) {
+      if (migrationConfig.shouldUpdate) {
+        console.log('\n\nCurrently migration does not handle updating assets. Need to DELETE/CREATE')
+        /*
+        * Legacy images will always be under a new id. So no need for updating content of image.
+        * Also uploading a new asset creates a new contentstack uid - which entries have reference to.
+        * Larger task than warrants the effort. Currently adding new images seems sufficient.
+        */
+      }
+      responses = {...responses, ...context.cache[migrationConfig.name]}
+    }
   }
   return responses
 }
@@ -90,17 +129,15 @@ export const accommodationGalleryQuery = (accommodationId) => `
   ORDER BY ml.media_lookup_order ASC
 `
 
-export const uploadAccommodationGalleries = async (context) => {
+export const uploadAccommodationGalleries = async (context, migrationConfig) => {
   const folder = 'Accommodation_Media'
-  const parks = await context.db.query(`
-    SELECT id, name FROM parks;
-  `)
+  const parks = await context.db.query(UNIQUE_PARK_QUERY)
 
   const accommodationGradeUids = {}
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
   for (const grade of accommodationGrades) {
     await apiDelay(150)
-    const folderUids = await createImageFolders(context, folder, grade.name)
+    const folderUids = await createImageFolders(context, folder, grade.name, migrationConfig)
     accommodationGradeUids[grade.id] = {
       ...folderUids,
       parentFolderName: grade.name
@@ -108,7 +145,7 @@ export const uploadAccommodationGalleries = async (context) => {
   }
   await apiDelay(150)
   const pitchImages = 'Touring Pitches'
-  const folderUids = await createImageFolders(context, folder, pitchImages)
+  const folderUids = await createImageFolders(context, folder, pitchImages, migrationConfig)
   accommodationGradeUids[0] = {
     ...folderUids,
     parentFolderName: pitchImages
@@ -137,22 +174,45 @@ export const uploadAccommodationGalleries = async (context) => {
     const gradeKeys = Object.keys(hireTypesByGradeId)
     for (const gradeKey of gradeKeys) {
       if (gradeKey === 'null') continue
-      const { imageFolderUid, parentFolderName } = accommodationGradeUids[gradeKey]
+      const { imageFolderUid, videoFolderUid, parentFolderName } = accommodationGradeUids[gradeKey]
       for (const hireType of hireTypesByGradeId[gradeKey]) {
         let accommodationGalleries = await context.db.query(accommodationGalleryQuery(hireType.id))
         accommodationGalleries = accommodationGalleries.filter((ag) => {
 				  return !responses[ag.id]
         })
         if (accommodationGalleries.length) {
-          const imageUploadResponse = await uploadAssets(context, accommodationGalleries, `${parentFolderName}/images`, imageFolderUid, (asset, response) => ({
-            uid: response.asset.uid,
-            filename: asset.path,
-            grade: gradeKey,
-            accommodationId: hireType.id,
-            parkId,
-            folder: `${parentFolderName}/images`
-          }))
-          responses = {...responses, ...imageUploadResponse}
+
+          const [newAccommodationGalleries, existingAccommodationGalleries] = accommodationGalleries.reduce((acc, image) => {
+            acc[context.cache[migrationConfig.name][image.id] ? 1 : 0].push(image)
+            return acc
+          }, [[], []])
+
+          if (newAccommodationGalleries.length) {
+            const imageUploadResponse = await uploadAssets(context, newAccommodationGalleries, `${parentFolderName}/images`, imageFolderUid, (asset, response) => ({
+              uid: response.asset.uid,
+              filename: asset.path,
+              grade: gradeKey,
+              accommodationId: hireType.id,
+              parkId,
+              folder: `${parentFolderName}/images`,
+              folderUids: {
+                imageFolderUid,
+                videoFolderUid
+              },
+            }))
+            responses = {...responses, ...imageUploadResponse}
+          }
+          if (existingAccommodationGalleries.length) {
+            if (migrationConfig.shouldUpdate) {
+              console.log('\n\nCurrently migration does not handle updating assets. Need to DELETE/CREATE')
+              /*
+              * Legacy images will always be under a new id. So no need for updating content of image.
+              * Also uploading a new asset creates a new contentstack uid - which entries have reference to.
+              * Larger task than warrants the effort. Currently adding new images seems sufficient.
+              */
+            }
+            responses = {...responses, ...context.cache[migrationConfig.name]}
+          }
         }
       }
     }

@@ -1,11 +1,13 @@
+import { UNIQUE_PARK_QUERY } from '../assets/galleries'
 import { createEntries, snakeCase } from '../tools'
 
-export const createAccommodationTypes = async (context) => {
+export const createAccommodationTypes = async (context, migrationConfig) => {
   const accommodationTypes = await context.db.query(`
     SELECT * FROM accommodation_types
     WHERE deleted_at IS NULL;
   `)
   const accommodationTypesEntries = await createEntries(
+    migrationConfig,
     context,
     'accommodation_types',
     accommodationTypes,
@@ -50,7 +52,7 @@ const createAccommodationGradeImages = (context, images) => {
   return allMediaBlocks
 }
 
-export const createAccommodationGrades = async (context) => {
+export const createAccommodationGrades = async (context, migrationConfig) => {
   const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGalleries).reduce((acc, value: any) => {
     if (!acc[value.grade]) acc[value.grade] = []
     acc[value.grade].push(value)
@@ -58,6 +60,7 @@ export const createAccommodationGrades = async (context) => {
   }, {})
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
   const accommodationGradeEntries = await createEntries(
+    migrationConfig,
     context,
     'accommodation_grades',
     accommodationGrades,
@@ -77,9 +80,9 @@ export const createAccommodationGrades = async (context) => {
   return accommodationGradeEntries
 }
 
-export const createAccommodationAmenities = async (context) => {
+export const createAccommodationAmenities = async (context, migrationConfig) => {
   const hireTypeFeatures = await context.db.query(`
-    SELECT DISTINCT htf.description, htf.sector_id, htf.sort_order FROM ph_db.hire_type_features as htf
+    SELECT DISTINCT htf.description, htf.sector_id, htf.id, htf.sort_order FROM ph_db.hire_type_features as htf
     INNER JOIN ph_db.hire_type_description_hire_type_feature as htdhtf
     INNER JOIN ph_db.hire_type_descriptions as htd
     INNER JOIN ph_db.hire_types as ht
@@ -95,6 +98,7 @@ export const createAccommodationAmenities = async (context) => {
     ORDER BY htf.sort_order ASC;
   `)
   const accommodationAmenityEntries = await createEntries(
+    migrationConfig,
     context,
     'accommodation_amenities',
     hireTypeFeatures,
@@ -117,7 +121,7 @@ const findReferenceInCache = (context, cacheRef, id) => {
   if (data) {
     return [{
       'uid': data.uid,
-      '_content_type_uid': snakeCase(cacheRef).replace(/s$/, '')
+      '_content_type_uid': snakeCase(cacheRef)
     }]
   }
 }
@@ -150,11 +154,9 @@ const createAmenitiesOnAccomodation = async (context, hireTypeDescriptionId) => 
   return dbCacheHireTypeDescription[hireTypeDescriptionId]
 }
 
-export const createAccommodation = async (context) => {
+export const createAccommodation = async (context, migrationConfig) => {
   let accommodationEntries = {}
-  const parks = await context.db.query(`
-    SELECT id, name FROM parks;
-  `)
+  const parks = await context.db.query(UNIQUE_PARK_QUERY)
   for (const park of parks) {
     const parkId = park.id
     const hireTypes = await context.db.query(`
@@ -163,6 +165,7 @@ export const createAccommodation = async (context) => {
       AND deleted_at IS NULL;
     `)
     const accommodationEntriesPerPark = await createEntries(
+      migrationConfig,
       context,
       'accommodation',
       hireTypes,
@@ -189,6 +192,7 @@ export const createAccommodation = async (context) => {
       })
     )
     accommodationEntries = {...accommodationEntries, ...accommodationEntriesPerPark}
+		console.log("TCL: createAccommodation -> parkId", parkId)
     const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.locations[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
     console.log(totalStr.padEnd(50, ' '))
   }

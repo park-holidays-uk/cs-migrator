@@ -4,10 +4,12 @@ export type FolderNameType = 'Park_Logo' | 'Location_Media' | 'Accommodation_Med
 
 export type MigrationConfigurationType = {
   name: MigrationType
-  includeInMigration: boolean
   type: 'asset' | 'entry'
-  handler: (context: any) => Promise<{}>
   folderName?: FolderNameType
+  handler: (context: any, migrationConfig: MigrationConfigurationType) => Promise<{}>
+  includeInRemove: boolean
+  includeInMigration: boolean
+  shouldUpdate: boolean
 }
 
 export type MigrationType = 'locationLogos'
