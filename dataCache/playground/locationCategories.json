@@ -1,1 +1,12 @@
-{}
+{
+  "1": {
+    "uid": "bltf4c418c5167bce35",
+    "title": "Relax & Explore",
+    "from": "db.park_types"
+  },
+  "2": {
+    "uid": "blt1ad3644b44d07fec",
+    "title": "Active & Fun",
+    "from": "db.park_types"
+  }
+}

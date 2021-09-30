@@ -1,1 +1,5012 @@
-{}
+{
+  "3": {
+    "uid": "blt0ff70557c1659ae1",
+    "title": "CHPLCV26",
+    "from": "db.hire_types"
+  },
+  "5": {
+    "uid": "blt7523cbadbb918eed",
+    "title": "CHBPCV36",
+    "from": "db.hire_types"
+  },
+  "7": {
+    "uid": "blt6e3799cb20990632",
+    "title": "CHBZCV36",
+    "from": "db.hire_types"
+  },
+  "8": {
+    "uid": "blt5f473a530f8d48a4",
+    "title": "CHGPCV49",
+    "from": "db.hire_types"
+  },
+  "9": {
+    "uid": "blta0500441e372cee6",
+    "title": "CHBPCV38",
+    "from": "db.hire_types"
+  },
+  "11": {
+    "uid": "blt1c199c3b6a3f35e0",
+    "title": "CHBZCV26",
+    "from": "db.hire_types"
+  },
+  "12": {
+    "uid": "blt94c4dcb1716d6df8",
+    "title": "CHBZCV38",
+    "from": "db.hire_types"
+  },
+  "14": {
+    "uid": "bltda300a4c8fa553a2",
+    "title": "CHGPCV26",
+    "from": "db.hire_types"
+  },
+  "15": {
+    "uid": "blt3a7ab0d6b56f0521",
+    "title": "CHGPCV38",
+    "from": "db.hire_types"
+  },
+  "19": {
+    "uid": "blt6d043168eff7321a",
+    "title": "CHSPCV26",
+    "from": "db.hire_types"
+  },
+  "20": {
+    "uid": "blta3bf44457a3eee0e",
+    "title": "CHSPCV38",
+    "from": "db.hire_types"
+  },
+  "21": {
+    "uid": "blte222bfb69475987e",
+    "title": "CHSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "22": {
+    "uid": "blt59116a2d9076fe04",
+    "title": "CHGPCV36",
+    "from": "db.hire_types"
+  },
+  "23": {
+    "uid": "bltde550b832c7ad478",
+    "title": "CHBPCV26",
+    "from": "db.hire_types"
+  },
+  "24": {
+    "uid": "blt1bbbd2ac217166ff",
+    "title": "CHGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "27": {
+    "uid": "blt2d4a2a343586f7d6",
+    "title": "CHSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "28": {
+    "uid": "blt1a9515983a4bf977",
+    "title": "CHPLCV38",
+    "from": "db.hire_types"
+  },
+  "31": {
+    "uid": "bltbc52f37b50ef358c",
+    "title": "CHGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "34": {
+    "uid": "bltf21f1cc51028f530",
+    "title": "LSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "35": {
+    "uid": "bltca137ab9fe01396d",
+    "title": "LSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "42": {
+    "uid": "bltab77f592dca98dd2",
+    "title": "LSPLLO26",
+    "from": "db.hire_types"
+  },
+  "43": {
+    "uid": "bltcdcb3d0892e4daef",
+    "title": "LSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "44": {
+    "uid": "blt35006793f38d2c88",
+    "title": "LSELTC22",
+    "from": "db.hire_types"
+  },
+  "45": {
+    "uid": "blte0ea6ba3b6f19fbe",
+    "title": "LSNETC22",
+    "from": "db.hire_types"
+  },
+  "46": {
+    "uid": "bltbfbad642f84666f7",
+    "title": "LSBPCV26",
+    "from": "db.hire_types"
+  },
+  "48": {
+    "uid": "blt8cbc4cbae449f7c2",
+    "title": "LSSPCV36",
+    "from": "db.hire_types"
+  },
+  "49": {
+    "uid": "blt674eea1c20af3b4e",
+    "title": "LSSPCV49",
+    "from": "db.hire_types"
+  },
+  "50": {
+    "uid": "blta4805be9fd12e8a9",
+    "title": "LSGPCV24",
+    "from": "db.hire_types"
+  },
+  "53": {
+    "uid": "blt137bf617dad80764",
+    "title": "LSBPCV38",
+    "from": "db.hire_types"
+  },
+  "55": {
+    "uid": "blt83cf9c7f4e13d0cf",
+    "title": "LSBZCV26",
+    "from": "db.hire_types"
+  },
+  "58": {
+    "uid": "bltf2825f4ace84adc0",
+    "title": "LSPLLO36",
+    "from": "db.hire_types"
+  },
+  "59": {
+    "uid": "blt0cd6f1743da16c9e",
+    "title": "LSGPCV26",
+    "from": "db.hire_types"
+  },
+  "60": {
+    "uid": "bltebf75b7f621b47c0",
+    "title": "LSPLLO24",
+    "from": "db.hire_types"
+  },
+  "61": {
+    "uid": "blt87310db5f5888ddd",
+    "title": "CMPLCV24",
+    "from": "db.hire_types"
+  },
+  "62": {
+    "uid": "blt88657625ab614b02",
+    "title": "LSGPCV38",
+    "from": "db.hire_types"
+  },
+  "64": {
+    "uid": "blt01883508b0fd8572",
+    "title": "LSPLCV26",
+    "from": "db.hire_types"
+  },
+  "69": {
+    "uid": "bltfb262ec11ebb3d45",
+    "title": "LSSPCV26",
+    "from": "db.hire_types"
+  },
+  "71": {
+    "uid": "bltd735d4338a15f8bf",
+    "title": "LSGPCV36",
+    "from": "db.hire_types"
+  },
+  "73": {
+    "uid": "blt82b9efe515a4515b",
+    "title": "LSSPCV38",
+    "from": "db.hire_types"
+  },
+  "76": {
+    "uid": "blt71647269f5a3c296",
+    "title": "LSBZCV24",
+    "from": "db.hire_types"
+  },
+  "79": {
+    "uid": "bltcb5dc24140b8ed22",
+    "title": "LSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "81": {
+    "uid": "blt225057d3881dfb67",
+    "title": "LSGPCV49",
+    "from": "db.hire_types"
+  },
+  "82": {
+    "uid": "blt168e0bb33c41489b",
+    "title": "LSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "84": {
+    "uid": "bltecccdfdfbc3fc9e3",
+    "title": "GSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "85": {
+    "uid": "blt49043aa1272891ac",
+    "title": "GSBZCV24",
+    "from": "db.hire_types"
+  },
+  "86": {
+    "uid": "blt05fea3dfc4a0dd99",
+    "title": "GSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "87": {
+    "uid": "blt296c8716843f163e",
+    "title": "GSPLCV38",
+    "from": "db.hire_types"
+  },
+  "98": {
+    "uid": "bltf4e0cc864fa893f3",
+    "title": "GSCCTC22",
+    "from": "db.hire_types"
+  },
+  "102": {
+    "uid": "blte9b5c0f31a3d9afe",
+    "title": "GSBZAP24",
+    "from": "db.hire_types"
+  },
+  "104": {
+    "uid": "blt28c787cad8be022e",
+    "title": "GSBZAP26",
+    "from": "db.hire_types"
+  },
+  "105": {
+    "uid": "blt1f75260e3bf324a6",
+    "title": "GSBPCV26",
+    "from": "db.hire_types"
+  },
+  "106": {
+    "uid": "blt38242ba410e35185",
+    "title": "GSBPCV38",
+    "from": "db.hire_types"
+  },
+  "108": {
+    "uid": "blt854af6ca60dedee2",
+    "title": "GSBZCV26",
+    "from": "db.hire_types"
+  },
+  "109": {
+    "uid": "blt4a35ab20acab10e8",
+    "title": "GSGPCV26",
+    "from": "db.hire_types"
+  },
+  "110": {
+    "uid": "blt740aad56404d0a03",
+    "title": "GSGPCV38",
+    "from": "db.hire_types"
+  },
+  "111": {
+    "uid": "blt1d76ac6f60427829",
+    "title": "GSPLCV26",
+    "from": "db.hire_types"
+  },
+  "113": {
+    "uid": "bltba3da5c453926a01",
+    "title": "GSSPCV26",
+    "from": "db.hire_types"
+  },
+  "114": {
+    "uid": "blt2d94fd30d5793159",
+    "title": "GSSPCV38",
+    "from": "db.hire_types"
+  },
+  "115": {
+    "uid": "blt44774313d1fe9725",
+    "title": "GSSPCV49",
+    "from": "db.hire_types"
+  },
+  "118": {
+    "uid": "blt73e7af67d7ab506a",
+    "title": "GSPLCV24",
+    "from": "db.hire_types"
+  },
+  "121": {
+    "uid": "blt468e78da782e31c7",
+    "title": "GSBZCV38",
+    "from": "db.hire_types"
+  },
+  "122": {
+    "uid": "blt9df135ce3b6882b6",
+    "title": "HTPLLO24",
+    "from": "db.hire_types"
+  },
+  "124": {
+    "uid": "blt0703990d3fab7b0a",
+    "title": "GSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "125": {
+    "uid": "blt197a3af7cbc58489",
+    "title": "GSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "126": {
+    "uid": "blt6d58a699fb06a390",
+    "title": "GSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "127": {
+    "uid": "blt2482a21f06dc666a",
+    "title": "GSPLLO26",
+    "from": "db.hire_types"
+  },
+  "133": {
+    "uid": "blt1bb008978404f6a5",
+    "title": "GSGPLO24",
+    "from": "db.hire_types"
+  },
+  "139": {
+    "uid": "blta65ba13f7ae30e8e",
+    "title": "GSGPCV49",
+    "from": "db.hire_types"
+  },
+  "145": {
+    "uid": "blt6a4839c54089a319",
+    "title": "ABBPCV26",
+    "from": "db.hire_types"
+  },
+  "146": {
+    "uid": "blt544555eb1769e74c",
+    "title": "ABBPCV38",
+    "from": "db.hire_types"
+  },
+  "150": {
+    "uid": "blt70a7eff10c29cc16",
+    "title": "ABGPCV26",
+    "from": "db.hire_types"
+  },
+  "151": {
+    "uid": "bltca6d3fafb4ba1a06",
+    "title": "ABGPCV38",
+    "from": "db.hire_types"
+  },
+  "154": {
+    "uid": "blt4549509bcb37a67b",
+    "title": "ABSPCV38",
+    "from": "db.hire_types"
+  },
+  "156": {
+    "uid": "blt6113ccd4b1f5c1f1",
+    "title": "ABSPCV26",
+    "from": "db.hire_types"
+  },
+  "157": {
+    "uid": "blt2e93dc75bc7cca95",
+    "title": "ABPLLO26",
+    "from": "db.hire_types"
+  },
+  "159": {
+    "uid": "bltd866ebb53a7694a6",
+    "title": "ABGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "162": {
+    "uid": "blt90111589dedcc7f1",
+    "title": "ABPLCV26",
+    "from": "db.hire_types"
+  },
+  "195": {
+    "uid": "blt1f3eabd38ef79b2a",
+    "title": "DLSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "198": {
+    "uid": "blt9ac8c909908e3383",
+    "title": "DLBPCV38",
+    "from": "db.hire_types"
+  },
+  "199": {
+    "uid": "blt24aeeb21a76f56ca",
+    "title": "DLBZCV26",
+    "from": "db.hire_types"
+  },
+  "200": {
+    "uid": "blt25a4d914e7ffa61f",
+    "title": "DLGPCV38",
+    "from": "db.hire_types"
+  },
+  "202": {
+    "uid": "bltc497de95f404e12d",
+    "title": "DLGPCV49",
+    "from": "db.hire_types"
+  },
+  "203": {
+    "uid": "bltd226cafed6ebadc9",
+    "title": "DLPLCV26",
+    "from": "db.hire_types"
+  },
+  "205": {
+    "uid": "blta3c2a791b3e8fed9",
+    "title": "DLSPCV26",
+    "from": "db.hire_types"
+  },
+  "207": {
+    "uid": "blt90bbc8521604db2d",
+    "title": "DLSPCV38",
+    "from": "db.hire_types"
+  },
+  "208": {
+    "uid": "blt975f02ae76af55cd",
+    "title": "DLSPCV49",
+    "from": "db.hire_types"
+  },
+  "209": {
+    "uid": "bltc9198e2d4537a512",
+    "title": "DLGPCV26",
+    "from": "db.hire_types"
+  },
+  "216": {
+    "uid": "bltc3bfe57a071d8d03",
+    "title": "DLGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "217": {
+    "uid": "blt0f264014e0282af6",
+    "title": "DLBZCV38",
+    "from": "db.hire_types"
+  },
+  "218": {
+    "uid": "blt92549650a1fb2a77",
+    "title": "DLBPCV26",
+    "from": "db.hire_types"
+  },
+  "219": {
+    "uid": "blt133b31974af4c460",
+    "title": "DLBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "220": {
+    "uid": "blt0c0ca29b5b9862b4",
+    "title": "DLSPCV37",
+    "from": "db.hire_types"
+  },
+  "225": {
+    "uid": "bltd130befba07f9283",
+    "title": "SSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "230": {
+    "uid": "blt3f1452006468732e",
+    "title": "RHPLCV26",
+    "from": "db.hire_types"
+  },
+  "232": {
+    "uid": "bltbf27136b1fb38acf",
+    "title": "RHSPCV24",
+    "from": "db.hire_types"
+  },
+  "235": {
+    "uid": "bltc5d22862e7f02f7f",
+    "title": "RHBPCV26",
+    "from": "db.hire_types"
+  },
+  "236": {
+    "uid": "blt7c5c1ea1963b5393",
+    "title": "RHSPCV38",
+    "from": "db.hire_types"
+  },
+  "237": {
+    "uid": "blt341b9baf465422fc",
+    "title": "RHSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "243": {
+    "uid": "blt72c71f3e9112403f",
+    "title": "RHGPCV26",
+    "from": "db.hire_types"
+  },
+  "245": {
+    "uid": "bltbda602ffd25ea966",
+    "title": "RHBZCV26",
+    "from": "db.hire_types"
+  },
+  "246": {
+    "uid": "blt3b65a5537669586e",
+    "title": "RHPLLO26",
+    "from": "db.hire_types"
+  },
+  "249": {
+    "uid": "blt84d4afd8d85a02c3",
+    "title": "RHGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "251": {
+    "uid": "bltbcb3dc94ca4f5f81",
+    "title": "RHSPCV26",
+    "from": "db.hire_types"
+  },
+  "252": {
+    "uid": "blt650fdc8697c0d306",
+    "title": "RHGPCV38",
+    "from": "db.hire_types"
+  },
+  "253": {
+    "uid": "blta141dd361f11da93",
+    "title": "RHSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "258": {
+    "uid": "bltde5cf2222d9021c6",
+    "title": "RHGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "265": {
+    "uid": "blt7252e5e3ee28e21d",
+    "title": "FSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "266": {
+    "uid": "blt3809b7a625b9c2ae",
+    "title": "FSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "267": {
+    "uid": "blt61e75ecf9b0628ad",
+    "title": "FSGPCV49",
+    "from": "db.hire_types"
+  },
+  "270": {
+    "uid": "blt66eea9c26e0d2f70",
+    "title": "FSBPCV26",
+    "from": "db.hire_types"
+  },
+  "271": {
+    "uid": "blt74359edd6c561dc7",
+    "title": "FSBPCV38",
+    "from": "db.hire_types"
+  },
+  "272": {
+    "uid": "blt6725933edca7f5dd",
+    "title": "FSBZCV26",
+    "from": "db.hire_types"
+  },
+  "273": {
+    "uid": "bltddd571240ad13f00",
+    "title": "FSBZCV38",
+    "from": "db.hire_types"
+  },
+  "274": {
+    "uid": "blt1169ed48593d1b00",
+    "title": "FSGPCV26",
+    "from": "db.hire_types"
+  },
+  "275": {
+    "uid": "blt53e1b05c6ea554b6",
+    "title": "FSGPCV38",
+    "from": "db.hire_types"
+  },
+  "278": {
+    "uid": "blt0f19bd31a65aaad1",
+    "title": "FSSPCV26",
+    "from": "db.hire_types"
+  },
+  "279": {
+    "uid": "blt5f463bb747884205",
+    "title": "FSSPCV38",
+    "from": "db.hire_types"
+  },
+  "283": {
+    "uid": "blt18d890ee1826305c",
+    "title": "FSBZCV36",
+    "from": "db.hire_types"
+  },
+  "284": {
+    "uid": "blt2e5ee7a2ccbe7ca4",
+    "title": "FSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "285": {
+    "uid": "bltddb5f911e8de2686",
+    "title": "FSPLCV26",
+    "from": "db.hire_types"
+  },
+  "286": {
+    "uid": "blt60a176abaa929c9d",
+    "title": "FSBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "287": {
+    "uid": "blt29b9157a849e7fb4",
+    "title": "HTSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "289": {
+    "uid": "blta8209c783dd16063",
+    "title": "HTBZCV36",
+    "from": "db.hire_types"
+  },
+  "291": {
+    "uid": "blt1069f7ff8922de62",
+    "title": "HTBPCV49",
+    "from": "db.hire_types"
+  },
+  "294": {
+    "uid": "bltd511bd12f39c030e",
+    "title": "HTGPCV26",
+    "from": "db.hire_types"
+  },
+  "295": {
+    "uid": "bltbb64fbdb1e11fabb",
+    "title": "HTBPCV26",
+    "from": "db.hire_types"
+  },
+  "296": {
+    "uid": "blt72037ce82a355c13",
+    "title": "HTBPCV38",
+    "from": "db.hire_types"
+  },
+  "297": {
+    "uid": "blt265b61ee08e7c618",
+    "title": "HTBZCV26",
+    "from": "db.hire_types"
+  },
+  "298": {
+    "uid": "blta1f85c0fcee1e098",
+    "title": "HTSPCV49",
+    "from": "db.hire_types"
+  },
+  "299": {
+    "uid": "blt64c80ed0ef1efefe",
+    "title": "HTBZCV38",
+    "from": "db.hire_types"
+  },
+  "300": {
+    "uid": "blt0cb68dfe728b5eae",
+    "title": "HTGPCV38",
+    "from": "db.hire_types"
+  },
+  "303": {
+    "uid": "bltf636afdda9baa5d7",
+    "title": "HTSPCV26",
+    "from": "db.hire_types"
+  },
+  "304": {
+    "uid": "blt15e282b2f92aac4a",
+    "title": "HTSPCV38",
+    "from": "db.hire_types"
+  },
+  "307": {
+    "uid": "blt770eefd01af04f7d",
+    "title": "HTGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "311": {
+    "uid": "bltb12019e8b2b2b222",
+    "title": "HTSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "313": {
+    "uid": "bltfe090950d5235c40",
+    "title": "HTGPCV49",
+    "from": "db.hire_types"
+  },
+  "315": {
+    "uid": "blt68d6a2d82a7ee7e8",
+    "title": "HTGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "316": {
+    "uid": "blt083bcc201b8ce2be",
+    "title": "HTPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "317": {
+    "uid": "blta0cab5ea6ab4f767",
+    "title": "HTBZCV24",
+    "from": "db.hire_types"
+  },
+  "318": {
+    "uid": "bltdf9f25209ea18eb0",
+    "title": "LCGPCV36",
+    "from": "db.hire_types"
+  },
+  "319": {
+    "uid": "blt1c1b1d68b5b0f5e2",
+    "title": "LCSPCV26",
+    "from": "db.hire_types"
+  },
+  "322": {
+    "uid": "blt979ee04497393b52",
+    "title": "LCPLCV24",
+    "from": "db.hire_types"
+  },
+  "325": {
+    "uid": "blt4a91254478d76fc6",
+    "title": "BSPLCV26",
+    "from": "db.hire_types"
+  },
+  "327": {
+    "uid": "blt2b0aff40634e21fe",
+    "title": "LCBZCO24NP",
+    "from": "db.hire_types"
+  },
+  "328": {
+    "uid": "blt2685dfa6029a8c53",
+    "title": "LCGPCV24",
+    "from": "db.hire_types"
+  },
+  "329": {
+    "uid": "blt101d7e36bdcd946c",
+    "title": "LCPLLO24",
+    "from": "db.hire_types"
+  },
+  "331": {
+    "uid": "blt68c496c551015ff8",
+    "title": "LCBZCO26",
+    "from": "db.hire_types"
+  },
+  "332": {
+    "uid": "blt49485cdfca235143",
+    "title": "LCBZCV38",
+    "from": "db.hire_types"
+  },
+  "334": {
+    "uid": "blt398faa1628fcbea0",
+    "title": "LCBZCV26",
+    "from": "db.hire_types"
+  },
+  "338": {
+    "uid": "bltd3504630ea5ff561",
+    "title": "LCGPCV26",
+    "from": "db.hire_types"
+  },
+  "339": {
+    "uid": "bltccfd95c6f78de568",
+    "title": "LCGPCV38",
+    "from": "db.hire_types"
+  },
+  "341": {
+    "uid": "blt91d37dce8afa4d81",
+    "title": "LCSICO24",
+    "from": "db.hire_types"
+  },
+  "342": {
+    "uid": "blt954bc4218397347a",
+    "title": "LCSICO26",
+    "from": "db.hire_types"
+  },
+  "345": {
+    "uid": "bltc26a86a6f31c14c9",
+    "title": "LCPLLO26",
+    "from": "db.hire_types"
+  },
+  "346": {
+    "uid": "blta9ac0f6a182d6d38",
+    "title": "LCSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "347": {
+    "uid": "blt89b52e811446db60",
+    "title": "LCBZCO26NP",
+    "from": "db.hire_types"
+  },
+  "348": {
+    "uid": "bltda02ca3ef941ef5d",
+    "title": "LCPLLO38",
+    "from": "db.hire_types"
+  },
+  "354": {
+    "uid": "bltd3eb9e5f4bbd1aaa",
+    "title": "LCSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "357": {
+    "uid": "blt1a535bca26bd3e2b",
+    "title": "LCBPCV38",
+    "from": "db.hire_types"
+  },
+  "360": {
+    "uid": "bltcc14a8e6e490729b",
+    "title": "LCSPCV38",
+    "from": "db.hire_types"
+  },
+  "362": {
+    "uid": "bltf2385d49d36eba4f",
+    "title": "LCSPCV49",
+    "from": "db.hire_types"
+  },
+  "364": {
+    "uid": "blt91dcecc764008df3",
+    "title": "MFSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "369": {
+    "uid": "bltccd2a957c09e0959",
+    "title": "MFGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "373": {
+    "uid": "bltd12e273992ad63a8",
+    "title": "MFGPCV49",
+    "from": "db.hire_types"
+  },
+  "374": {
+    "uid": "blt9fa8f7d55bcd2109",
+    "title": "MFPLCV24",
+    "from": "db.hire_types"
+  },
+  "375": {
+    "uid": "blt64c87ce83e971801",
+    "title": "MFELTC22",
+    "from": "db.hire_types"
+  },
+  "377": {
+    "uid": "blte03db03f5c6f1b23",
+    "title": "MFNETC22",
+    "from": "db.hire_types"
+  },
+  "378": {
+    "uid": "blta5427c4d12fc4ddb",
+    "title": "MFCCTC22",
+    "from": "db.hire_types"
+  },
+  "384": {
+    "uid": "bltd161a671f3788ab0",
+    "title": "MFGPCV24",
+    "from": "db.hire_types"
+  },
+  "385": {
+    "uid": "bltbf8c46333b17e475",
+    "title": "MFBPCV26",
+    "from": "db.hire_types"
+  },
+  "386": {
+    "uid": "blt11c7eeaab9dffa88",
+    "title": "MFBPCV38",
+    "from": "db.hire_types"
+  },
+  "388": {
+    "uid": "bltdd0942bcc8ac7c20",
+    "title": "MFSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "389": {
+    "uid": "blt74341e98e9d31f04",
+    "title": "MFBZCV26",
+    "from": "db.hire_types"
+  },
+  "392": {
+    "uid": "bltee1e195ff38b676c",
+    "title": "MFPLCV26",
+    "from": "db.hire_types"
+  },
+  "393": {
+    "uid": "blt5051d721faded6e8",
+    "title": "MFGPCV26",
+    "from": "db.hire_types"
+  },
+  "394": {
+    "uid": "blt94e02afaa6027b47",
+    "title": "MFGPCV38",
+    "from": "db.hire_types"
+  },
+  "395": {
+    "uid": "blt1476ba637d111bca",
+    "title": "MFBPCV36",
+    "from": "db.hire_types"
+  },
+  "398": {
+    "uid": "bltf90cee81bf4986ad",
+    "title": "MFBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "400": {
+    "uid": "bltcf841db491ad487c",
+    "title": "MFSPCV26",
+    "from": "db.hire_types"
+  },
+  "401": {
+    "uid": "bltdabccc338d72b66a",
+    "title": "MFSPCV38",
+    "from": "db.hire_types"
+  },
+  "409": {
+    "uid": "blt6fdcd5aad4f07d6c",
+    "title": "MFSPCV49",
+    "from": "db.hire_types"
+  },
+  "412": {
+    "uid": "bltbf7262d409b8f09b",
+    "title": "NBPLCV24",
+    "from": "db.hire_types"
+  },
+  "414": {
+    "uid": "blte3d2e4e5017b0a3c",
+    "title": "NBBPCV24DS",
+    "from": "db.hire_types"
+  },
+  "419": {
+    "uid": "blta46e40d5667de2dc",
+    "title": "NBSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "425": {
+    "uid": "blte4651bf6484ba4d6",
+    "title": "NBGPCV49",
+    "from": "db.hire_types"
+  },
+  "426": {
+    "uid": "blte22a3a6c1c986e79",
+    "title": "NBSPCV36",
+    "from": "db.hire_types"
+  },
+  "427": {
+    "uid": "blt2d3acba5bcd0810d",
+    "title": "NBELTC22",
+    "from": "db.hire_types"
+  },
+  "428": {
+    "uid": "blt337caa179f919d98",
+    "title": "NBNETC22",
+    "from": "db.hire_types"
+  },
+  "430": {
+    "uid": "blta779a7c2462416e9",
+    "title": "NBSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "433": {
+    "uid": "blt17590c2796c7e3ea",
+    "title": "NBSPCV37",
+    "from": "db.hire_types"
+  },
+  "434": {
+    "uid": "blt2b8684a2cb7ebb4b",
+    "title": "NBGPCV26",
+    "from": "db.hire_types"
+  },
+  "436": {
+    "uid": "bltedba14597f17e952",
+    "title": "NBBZCV36",
+    "from": "db.hire_types"
+  },
+  "439": {
+    "uid": "blt02c0633dc2cf287a",
+    "title": "NBBPCV36",
+    "from": "db.hire_types"
+  },
+  "441": {
+    "uid": "blt62b731ccad4c7d81",
+    "title": "NBGPCV36",
+    "from": "db.hire_types"
+  },
+  "442": {
+    "uid": "bltc84b2375c0853c7e",
+    "title": "NBSPCV24",
+    "from": "db.hire_types"
+  },
+  "443": {
+    "uid": "bltfa65dec60dd0b7a8",
+    "title": "NBBPCV26",
+    "from": "db.hire_types"
+  },
+  "444": {
+    "uid": "bltf7cc02d6dbf66cda",
+    "title": "NBBPCV38",
+    "from": "db.hire_types"
+  },
+  "446": {
+    "uid": "blt3733735cdf5da122",
+    "title": "NBBZCV24",
+    "from": "db.hire_types"
+  },
+  "447": {
+    "uid": "blt1ce7ebd805eed3dd",
+    "title": "NBBZCV26",
+    "from": "db.hire_types"
+  },
+  "448": {
+    "uid": "blt9de790fa5154b812",
+    "title": "NBBZCV38",
+    "from": "db.hire_types"
+  },
+  "449": {
+    "uid": "blt1b84ee4d019dc8d8",
+    "title": "NBGPCV38",
+    "from": "db.hire_types"
+  },
+  "450": {
+    "uid": "blt81ccf4ffa01dc3ed",
+    "title": "NBSPCV49",
+    "from": "db.hire_types"
+  },
+  "453": {
+    "uid": "blt86ac5d8efd6f3f2a",
+    "title": "NBSPCV26",
+    "from": "db.hire_types"
+  },
+  "454": {
+    "uid": "blt19e63e9c66e57485",
+    "title": "NBSPCV38",
+    "from": "db.hire_types"
+  },
+  "475": {
+    "uid": "blt84c4515d8309b363",
+    "title": "OKBPCV38",
+    "from": "db.hire_types"
+  },
+  "476": {
+    "uid": "blt4ef1c6f3091b203b",
+    "title": "OKBZCV26",
+    "from": "db.hire_types"
+  },
+  "482": {
+    "uid": "bltce3d61d89664e43b",
+    "title": "RBSICH14SV",
+    "from": "db.hire_types"
+  },
+  "483": {
+    "uid": "bltae0013070dc83540",
+    "title": "RBSICH26SV",
+    "from": "db.hire_types"
+  },
+  "484": {
+    "uid": "blt9d3ebc0c1de863d7",
+    "title": "RBBZCH14",
+    "from": "db.hire_types"
+  },
+  "485": {
+    "uid": "blt6ef54bfb1d90b385",
+    "title": "RBBZCH26",
+    "from": "db.hire_types"
+  },
+  "486": {
+    "uid": "bltff65bd87ee64189a",
+    "title": "RBSICH38",
+    "from": "db.hire_types"
+  },
+  "487": {
+    "uid": "blt3c6dae52d9eedef0",
+    "title": "RBGPCO49",
+    "from": "db.hire_types"
+  },
+  "488": {
+    "uid": "blt131bfa4bb20ad173",
+    "title": "RBPLLO26",
+    "from": "db.hire_types"
+  },
+  "489": {
+    "uid": "bltbf5e91de33d8ef17",
+    "title": "RBSICH14",
+    "from": "db.hire_types"
+  },
+  "490": {
+    "uid": "blta1edc6a21f2af3da",
+    "title": "RBSICH26",
+    "from": "db.hire_types"
+  },
+  "495": {
+    "uid": "blte027566ca5d7038b",
+    "title": "RBSICH14PF",
+    "from": "db.hire_types"
+  },
+  "497": {
+    "uid": "blt96428c7c6a8dfd25",
+    "title": "RBSICH26PF",
+    "from": "db.hire_types"
+  },
+  "499": {
+    "uid": "bltef6884f085664446",
+    "title": "RBPLLO24",
+    "from": "db.hire_types"
+  },
+  "500": {
+    "uid": "blt04a4e12b5f7c80a3",
+    "title": "RBBZCH14NP",
+    "from": "db.hire_types"
+  },
+  "501": {
+    "uid": "blt3d925f7bf01c0053",
+    "title": "RBBZCH26NP",
+    "from": "db.hire_types"
+  },
+  "503": {
+    "uid": "bltc63a4c5dc01d1d13",
+    "title": "SFBPCV26",
+    "from": "db.hire_types"
+  },
+  "504": {
+    "uid": "blt672b5c6042767266",
+    "title": "SFBPCV38",
+    "from": "db.hire_types"
+  },
+  "505": {
+    "uid": "bltbfa1e2c4c5258806",
+    "title": "SFBZCV38",
+    "from": "db.hire_types"
+  },
+  "506": {
+    "uid": "blt26d5fcfd4c83943c",
+    "title": "SFGPCV26",
+    "from": "db.hire_types"
+  },
+  "507": {
+    "uid": "blt8062e0bd11fa7baa",
+    "title": "SFGPCV38",
+    "from": "db.hire_types"
+  },
+  "509": {
+    "uid": "blt70bfe5517397c538",
+    "title": "SFSPCV26",
+    "from": "db.hire_types"
+  },
+  "516": {
+    "uid": "blt9f242da2c2c2727a",
+    "title": "SFGPCV24",
+    "from": "db.hire_types"
+  },
+  "517": {
+    "uid": "blt0b5638a067885385",
+    "title": "SFBZCV26",
+    "from": "db.hire_types"
+  },
+  "519": {
+    "uid": "blt5b600528e6839893",
+    "title": "SFSPCV38",
+    "from": "db.hire_types"
+  },
+  "520": {
+    "uid": "blt6258615240a15bc7",
+    "title": "SFGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "523": {
+    "uid": "bltf7b2b9225f26e88d",
+    "title": "SHGPLO26",
+    "from": "db.hire_types"
+  },
+  "524": {
+    "uid": "bltf6f4edfcdf81aeee",
+    "title": "SHGPCV24",
+    "from": "db.hire_types"
+  },
+  "525": {
+    "uid": "blt088397b10055c1ab",
+    "title": "SHGPCV26",
+    "from": "db.hire_types"
+  },
+  "526": {
+    "uid": "blt796d128a1e4808c3",
+    "title": "SHPLLO24",
+    "from": "db.hire_types"
+  },
+  "527": {
+    "uid": "blt2b3396addb11da8f",
+    "title": "SHPLLO26",
+    "from": "db.hire_types"
+  },
+  "528": {
+    "uid": "bltf4a7d9465f527e87",
+    "title": "SHSPCV26",
+    "from": "db.hire_types"
+  },
+  "532": {
+    "uid": "bltf8bfb060bad50127",
+    "title": "SHSPCV24",
+    "from": "db.hire_types"
+  },
+  "553": {
+    "uid": "blt9006bc1af0ffb819",
+    "title": "SHGPCV38",
+    "from": "db.hire_types"
+  },
+  "557": {
+    "uid": "blt88acb5187e5c611e",
+    "title": "SHPLAP14F3",
+    "from": "db.hire_types"
+  },
+  "558": {
+    "uid": "blt200590d55bc5c7c3",
+    "title": "SHSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "560": {
+    "uid": "blt54c5f86e75a494e0",
+    "title": "SHGPLO24",
+    "from": "db.hire_types"
+  },
+  "561": {
+    "uid": "bltfbc4e03114451ab1",
+    "title": "SHPLCV24",
+    "from": "db.hire_types"
+  },
+  "563": {
+    "uid": "blt56246aac57e6b515",
+    "title": "PFPLCV26",
+    "from": "db.hire_types"
+  },
+  "566": {
+    "uid": "blt741252dd6e5d52a7",
+    "title": "SLGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "568": {
+    "uid": "bltcb6643519bef91f3",
+    "title": "SLBPCV26",
+    "from": "db.hire_types"
+  },
+  "569": {
+    "uid": "blt25bc7c5505a3cec3",
+    "title": "SLBPCV38",
+    "from": "db.hire_types"
+  },
+  "572": {
+    "uid": "blt0adacc3eedc8e05d",
+    "title": "SLGPCV24",
+    "from": "db.hire_types"
+  },
+  "573": {
+    "uid": "blt3210f6a290147777",
+    "title": "SLGPCV26",
+    "from": "db.hire_types"
+  },
+  "574": {
+    "uid": "blt2abd43b6e2d0c5a2",
+    "title": "SLGPCV38",
+    "from": "db.hire_types"
+  },
+  "576": {
+    "uid": "blt432c33934e8487df",
+    "title": "SLSPCV26",
+    "from": "db.hire_types"
+  },
+  "577": {
+    "uid": "bltc3ad3dafbaf14d1a",
+    "title": "SLSPCV38",
+    "from": "db.hire_types"
+  },
+  "579": {
+    "uid": "blt8233d2b886ff05a4",
+    "title": "SLBPCV24DS",
+    "from": "db.hire_types"
+  },
+  "580": {
+    "uid": "blt90a400a31bcad4d9",
+    "title": "SLPLCV24",
+    "from": "db.hire_types"
+  },
+  "581": {
+    "uid": "blt864481ced4f1205a",
+    "title": "SLBPCV36",
+    "from": "db.hire_types"
+  },
+  "582": {
+    "uid": "blta4d92f7caf770b71",
+    "title": "SLGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "587": {
+    "uid": "blt214cee9a3e71de6c",
+    "title": "SLBPCV24",
+    "from": "db.hire_types"
+  },
+  "590": {
+    "uid": "blt11f80e79eab17108",
+    "title": "SLBZCV24",
+    "from": "db.hire_types"
+  },
+  "591": {
+    "uid": "blte509ea430659e53d",
+    "title": "SLPLCV38",
+    "from": "db.hire_types"
+  },
+  "592": {
+    "uid": "blt5742d1774918c5de",
+    "title": "SLSPCV24",
+    "from": "db.hire_types"
+  },
+  "593": {
+    "uid": "blt837fadf6ec93c058",
+    "title": "SLSPCV36PF",
+    "from": "db.hire_types"
+  },
+  "595": {
+    "uid": "blt767e399658460d8e",
+    "title": "SLGPCV36",
+    "from": "db.hire_types"
+  },
+  "596": {
+    "uid": "blt7c8e39097540676c",
+    "title": "SLSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "597": {
+    "uid": "blt7c1f53d7dd1b4e72",
+    "title": "SLSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "600": {
+    "uid": "blt3fd7bb4d6a3dd51e",
+    "title": "SOGPCV49",
+    "from": "db.hire_types"
+  },
+  "601": {
+    "uid": "blt8f760ad9f2d24811",
+    "title": "SOBPCV26",
+    "from": "db.hire_types"
+  },
+  "602": {
+    "uid": "blt76a1544d8816f5ff",
+    "title": "SOBPCV38",
+    "from": "db.hire_types"
+  },
+  "603": {
+    "uid": "blt1f76ecdebc54a906",
+    "title": "SOBZCV24",
+    "from": "db.hire_types"
+  },
+  "604": {
+    "uid": "blt7116ac546a5234b9",
+    "title": "SOBZCV26",
+    "from": "db.hire_types"
+  },
+  "605": {
+    "uid": "blt7d8d8d4d936081a1",
+    "title": "SOBZCV38",
+    "from": "db.hire_types"
+  },
+  "606": {
+    "uid": "bltb0d6933ae11b99cc",
+    "title": "SOGPCV26",
+    "from": "db.hire_types"
+  },
+  "607": {
+    "uid": "blt11295c2d7e960792",
+    "title": "SOGPCV36",
+    "from": "db.hire_types"
+  },
+  "608": {
+    "uid": "blt0114336f9decb425",
+    "title": "SOGPCV38",
+    "from": "db.hire_types"
+  },
+  "612": {
+    "uid": "blted7f66e2a284ebe3",
+    "title": "SOSPCV26",
+    "from": "db.hire_types"
+  },
+  "614": {
+    "uid": "blt0aa157d9a673a5e5",
+    "title": "SOSPCV38",
+    "from": "db.hire_types"
+  },
+  "615": {
+    "uid": "bltc6152a79a89bf262",
+    "title": "SOPLCV26",
+    "from": "db.hire_types"
+  },
+  "616": {
+    "uid": "blt4cd58f43397277a7",
+    "title": "SOSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "620": {
+    "uid": "blte5b1c78cbdd09ad5",
+    "title": "SOBZCV36",
+    "from": "db.hire_types"
+  },
+  "621": {
+    "uid": "blt764ff26eb77e1f57",
+    "title": "SOBPCV36",
+    "from": "db.hire_types"
+  },
+  "625": {
+    "uid": "blt7c6c8285cc2567dc",
+    "title": "SOSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "627": {
+    "uid": "blt17859ac4010ab9f4",
+    "title": "SOGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "629": {
+    "uid": "blt31ad280118c29314",
+    "title": "SOSPCV49",
+    "from": "db.hire_types"
+  },
+  "633": {
+    "uid": "blt8bee48f8db51bc30",
+    "title": "SPGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "637": {
+    "uid": "bltfe8452860a2311bf",
+    "title": "SPGPCV49",
+    "from": "db.hire_types"
+  },
+  "639": {
+    "uid": "blt3a43d28c16b2532f",
+    "title": "SPSPCV26",
+    "from": "db.hire_types"
+  },
+  "642": {
+    "uid": "blt4037279c86b8eca9",
+    "title": "SPELTC22",
+    "from": "db.hire_types"
+  },
+  "643": {
+    "uid": "blt22fd70a339c5e58a",
+    "title": "SPNETC22",
+    "from": "db.hire_types"
+  },
+  "645": {
+    "uid": "blt13438c8703db09f0",
+    "title": "SPBPCV26",
+    "from": "db.hire_types"
+  },
+  "646": {
+    "uid": "blt53986d55890d1c1e",
+    "title": "SPBPCV38",
+    "from": "db.hire_types"
+  },
+  "647": {
+    "uid": "blt4cba0e7f880ea060",
+    "title": "SPBZCV26",
+    "from": "db.hire_types"
+  },
+  "649": {
+    "uid": "blted6a0395baadbe43",
+    "title": "SPSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "650": {
+    "uid": "blt9bd480062369a852",
+    "title": "SPBZCV38",
+    "from": "db.hire_types"
+  },
+  "651": {
+    "uid": "blt8707c45a634de87a",
+    "title": "SPGPCV38",
+    "from": "db.hire_types"
+  },
+  "656": {
+    "uid": "bltbffd6d7d4001b523",
+    "title": "SPSPCV38",
+    "from": "db.hire_types"
+  },
+  "660": {
+    "uid": "blt04186b8f3a3fbc27",
+    "title": "SPGPCV26",
+    "from": "db.hire_types"
+  },
+  "661": {
+    "uid": "blt3b61153900566079",
+    "title": "SPSPCV49",
+    "from": "db.hire_types"
+  },
+  "662": {
+    "uid": "blt8405aace2b441477",
+    "title": "SVGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "663": {
+    "uid": "blt0006e0c942c04793",
+    "title": "SVSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "664": {
+    "uid": "blt4855a35a7cabdf3a",
+    "title": "SVSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "667": {
+    "uid": "bltd117ac21efedb4a7",
+    "title": "SVBZCV24",
+    "from": "db.hire_types"
+  },
+  "668": {
+    "uid": "blt7db38babace7937e",
+    "title": "SVELTC22",
+    "from": "db.hire_types"
+  },
+  "669": {
+    "uid": "bltfe2e9d4ebc9ab99d",
+    "title": "SVEHTC22",
+    "from": "db.hire_types"
+  },
+  "670": {
+    "uid": "bltfc8b7b69163183ad",
+    "title": "SVBPCV26",
+    "from": "db.hire_types"
+  },
+  "672": {
+    "uid": "blt2c2ffa622b310a42",
+    "title": "SVCCTC22",
+    "from": "db.hire_types"
+  },
+  "673": {
+    "uid": "blt78e93dc78ce3fb34",
+    "title": "SVBPCV38",
+    "from": "db.hire_types"
+  },
+  "674": {
+    "uid": "blt36516f74e6848b65",
+    "title": "SVBZCV26",
+    "from": "db.hire_types"
+  },
+  "676": {
+    "uid": "blt1ac3a43ae3badff1",
+    "title": "SVGPCV26",
+    "from": "db.hire_types"
+  },
+  "677": {
+    "uid": "bltfc7517a9aa9be1ed",
+    "title": "SVGPCV38",
+    "from": "db.hire_types"
+  },
+  "678": {
+    "uid": "blt3224b0817455e3f3",
+    "title": "SVNETC22",
+    "from": "db.hire_types"
+  },
+  "680": {
+    "uid": "blt6742b1affddbe5b2",
+    "title": "SVSPCV26",
+    "from": "db.hire_types"
+  },
+  "681": {
+    "uid": "blt3ca8420fee46bf1c",
+    "title": "SVSPCV38",
+    "from": "db.hire_types"
+  },
+  "689": {
+    "uid": "bltfd969888977aa6b3",
+    "title": "SVPLCV26",
+    "from": "db.hire_types"
+  },
+  "692": {
+    "uid": "blt072096dd28c12b79",
+    "title": "SWSPCV49",
+    "from": "db.hire_types"
+  },
+  "693": {
+    "uid": "blt7c1ea939fd63f7fa",
+    "title": "SWSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "700": {
+    "uid": "blt506c2e1623a41b45",
+    "title": "SWBPCV26",
+    "from": "db.hire_types"
+  },
+  "701": {
+    "uid": "blt61802b3653ccca7c",
+    "title": "SWBPCV38",
+    "from": "db.hire_types"
+  },
+  "702": {
+    "uid": "blt88f2b8cf8b5b2aea",
+    "title": "SWBZCH24",
+    "from": "db.hire_types"
+  },
+  "704": {
+    "uid": "bltb337a78eb8126012",
+    "title": "SWBPCV36",
+    "from": "db.hire_types"
+  },
+  "705": {
+    "uid": "blt99d2d4cfda768bc4",
+    "title": "SWBZCV26",
+    "from": "db.hire_types"
+  },
+  "706": {
+    "uid": "blt9fbbdfe22514d0fd",
+    "title": "SWBZCV38",
+    "from": "db.hire_types"
+  },
+  "707": {
+    "uid": "bltf1680fea3bbdc34f",
+    "title": "SWGPCV26",
+    "from": "db.hire_types"
+  },
+  "708": {
+    "uid": "bltde3014649befa630",
+    "title": "SWGPCV38",
+    "from": "db.hire_types"
+  },
+  "709": {
+    "uid": "blt42aea879eeea72a9",
+    "title": "SWSPCV36",
+    "from": "db.hire_types"
+  },
+  "712": {
+    "uid": "bltfc289e505b7b447f",
+    "title": "SWSPCV26",
+    "from": "db.hire_types"
+  },
+  "713": {
+    "uid": "blt988f270bd59c9de4",
+    "title": "SWSPCV38",
+    "from": "db.hire_types"
+  },
+  "715": {
+    "uid": "blta87ea30594545b69",
+    "title": "SWPLCV38",
+    "from": "db.hire_types"
+  },
+  "717": {
+    "uid": "bltecf1acdcbf60320b",
+    "title": "SWGPCV49",
+    "from": "db.hire_types"
+  },
+  "722": {
+    "uid": "blte7d409e2c9efc8c6",
+    "title": "SWGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "724": {
+    "uid": "bltfc3368d603ae938f",
+    "title": "SWGPCV36",
+    "from": "db.hire_types"
+  },
+  "725": {
+    "uid": "blt482ec92898d34959",
+    "title": "SWPLCV26",
+    "from": "db.hire_types"
+  },
+  "727": {
+    "uid": "blt953bb48614cd136a",
+    "title": "SWBZCV24",
+    "from": "db.hire_types"
+  },
+  "728": {
+    "uid": "blt23a3e18b1c479a2f",
+    "title": "SWPLCV26DS",
+    "from": "db.hire_types"
+  },
+  "729": {
+    "uid": "blt6a3e7fbc5e6b1092",
+    "title": "SWBPCV49",
+    "from": "db.hire_types"
+  },
+  "733": {
+    "uid": "blte9b8198185f2933d",
+    "title": "SWSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "736": {
+    "uid": "blte4956ff03db52908",
+    "title": "SWGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "738": {
+    "uid": "bltb5216d62c09f7ac8",
+    "title": "WCSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "739": {
+    "uid": "blt7009127c34a7d99e",
+    "title": "WCBZCV24",
+    "from": "db.hire_types"
+  },
+  "740": {
+    "uid": "bltc04dfd1835e2aef3",
+    "title": "WCGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "743": {
+    "uid": "blt6871ac8dc67452bd",
+    "title": "WCGPCV49",
+    "from": "db.hire_types"
+  },
+  "748": {
+    "uid": "bltbd48f0a295dbb868",
+    "title": "WCBPCV26",
+    "from": "db.hire_types"
+  },
+  "749": {
+    "uid": "bltc1ecad8519d06979",
+    "title": "WCBPCV38",
+    "from": "db.hire_types"
+  },
+  "750": {
+    "uid": "blt32bdbd2d13147557",
+    "title": "WCBZCV26",
+    "from": "db.hire_types"
+  },
+  "752": {
+    "uid": "blt785e1ad0a5c61110",
+    "title": "WCGPCV26",
+    "from": "db.hire_types"
+  },
+  "754": {
+    "uid": "blt5004a1c8c64600d8",
+    "title": "WCGPCV38",
+    "from": "db.hire_types"
+  },
+  "757": {
+    "uid": "blt6501f44c9d1ec91d",
+    "title": "WCSPCV26",
+    "from": "db.hire_types"
+  },
+  "758": {
+    "uid": "blt9d255b2b674beed2",
+    "title": "WCSPCV38",
+    "from": "db.hire_types"
+  },
+  "761": {
+    "uid": "blt98ec67ae192d499a",
+    "title": "WCBPCV24",
+    "from": "db.hire_types"
+  },
+  "762": {
+    "uid": "blt5950831bdc6d4bf2",
+    "title": "WCSPCV49",
+    "from": "db.hire_types"
+  },
+  "764": {
+    "uid": "blt9abfd4f52a527407",
+    "title": "WCBPCV49",
+    "from": "db.hire_types"
+  },
+  "765": {
+    "uid": "blt0e1c883fd516e1c4",
+    "title": "WCBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "768": {
+    "uid": "bltd0316882cd1fa1f3",
+    "title": "WCBPCV37",
+    "from": "db.hire_types"
+  },
+  "770": {
+    "uid": "blte1e5b855909a4ef0",
+    "title": "WSGPCV24",
+    "from": "db.hire_types"
+  },
+  "771": {
+    "uid": "blt06a9dca717765674",
+    "title": "WSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "772": {
+    "uid": "blt8c2fa996875a407b",
+    "title": "WSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "775": {
+    "uid": "blt9ab634f74f4ca839",
+    "title": "WSGPCV49",
+    "from": "db.hire_types"
+  },
+  "777": {
+    "uid": "blt1ca4957745ae4ea0",
+    "title": "WSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "778": {
+    "uid": "bltd118a886d52a45ff",
+    "title": "WSSPCV24",
+    "from": "db.hire_types"
+  },
+  "779": {
+    "uid": "bltf45d9278cd8b4bfb",
+    "title": "WSSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "780": {
+    "uid": "blta499e2fbb6859cb3",
+    "title": "WSBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "781": {
+    "uid": "blt1be560c0aef1db6a",
+    "title": "WSBZCV38",
+    "from": "db.hire_types"
+  },
+  "784": {
+    "uid": "bltca4bb3eb6c92e2a3",
+    "title": "WSBPCV26",
+    "from": "db.hire_types"
+  },
+  "785": {
+    "uid": "blt887048e3c1571884",
+    "title": "WSBPCV38",
+    "from": "db.hire_types"
+  },
+  "787": {
+    "uid": "bltf81ad928c668e741",
+    "title": "WSBZCV26",
+    "from": "db.hire_types"
+  },
+  "789": {
+    "uid": "blt6c705a5dc6aa5b47",
+    "title": "WSGPCV26",
+    "from": "db.hire_types"
+  },
+  "790": {
+    "uid": "blt7768e81412cdee38",
+    "title": "WSGPCV38",
+    "from": "db.hire_types"
+  },
+  "798": {
+    "uid": "blt94932c2d5c48cde1",
+    "title": "WSSPCV26",
+    "from": "db.hire_types"
+  },
+  "799": {
+    "uid": "bltca713710e0e89f12",
+    "title": "WSSPCV38",
+    "from": "db.hire_types"
+  },
+  "804": {
+    "uid": "blt551a99330b0564bb",
+    "title": "WSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "807": {
+    "uid": "blt2fd501f382089591",
+    "title": "WSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "808": {
+    "uid": "bltf115827f44fc5759",
+    "title": "BSBPCV26",
+    "from": "db.hire_types"
+  },
+  "809": {
+    "uid": "blt0e1145861d9288cf",
+    "title": "BSBPCV38",
+    "from": "db.hire_types"
+  },
+  "810": {
+    "uid": "blt1ffb1524edd8dfd9",
+    "title": "BSBZCV38",
+    "from": "db.hire_types"
+  },
+  "811": {
+    "uid": "bltc487add963d0b389",
+    "title": "BSGPCV26",
+    "from": "db.hire_types"
+  },
+  "812": {
+    "uid": "bltd46855e3d9c39006",
+    "title": "BSGPCV38",
+    "from": "db.hire_types"
+  },
+  "814": {
+    "uid": "bltd9203cc091560e01",
+    "title": "BSSPCV26",
+    "from": "db.hire_types"
+  },
+  "815": {
+    "uid": "blt1d65674245a419fb",
+    "title": "BSSPCV38",
+    "from": "db.hire_types"
+  },
+  "819": {
+    "uid": "blt1eab344d111c4223",
+    "title": "BSBZCV26",
+    "from": "db.hire_types"
+  },
+  "820": {
+    "uid": "bltd8417f59640c243c",
+    "title": "BSBPCV24",
+    "from": "db.hire_types"
+  },
+  "821": {
+    "uid": "blt61ab42294ce93c53",
+    "title": "BSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "823": {
+    "uid": "blte9427c36ce9fa1fd",
+    "title": "BSBZCV24",
+    "from": "db.hire_types"
+  },
+  "824": {
+    "uid": "bltee1600ee0792bc27",
+    "title": "BSBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "825": {
+    "uid": "blt97f110242a1fb9ca",
+    "title": "BSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "827": {
+    "uid": "blt8298ee16fa2b0f0d",
+    "title": "BSGPCV49",
+    "from": "db.hire_types"
+  },
+  "828": {
+    "uid": "blt1c0796e63feedaea",
+    "title": "BSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "829": {
+    "uid": "blta2b0e6f310603ada",
+    "title": "BSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "833": {
+    "uid": "blt3abb733ff39f9801",
+    "title": "BVBZCV26",
+    "from": "db.hire_types"
+  },
+  "834": {
+    "uid": "blt2fcaf2e5f356a282",
+    "title": "BVSPCV26",
+    "from": "db.hire_types"
+  },
+  "835": {
+    "uid": "blt2ecc360863e8e129",
+    "title": "BVBPCV38",
+    "from": "db.hire_types"
+  },
+  "836": {
+    "uid": "blt8b6da84f9ffe30f7",
+    "title": "BVSPCV38",
+    "from": "db.hire_types"
+  },
+  "837": {
+    "uid": "blt3ac92cf0074825d7",
+    "title": "BVNETC22",
+    "from": "db.hire_types"
+  },
+  "838": {
+    "uid": "blt968d6f221e61df70",
+    "title": "BVELTC22",
+    "from": "db.hire_types"
+  },
+  "840": {
+    "uid": "blt590cefc432d10361",
+    "title": "BVSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "841": {
+    "uid": "bltaab82959ebc5d6aa",
+    "title": "BVBPCV26",
+    "from": "db.hire_types"
+  },
+  "842": {
+    "uid": "blte2c32ce1b2cc84ba",
+    "title": "BVGPCV26",
+    "from": "db.hire_types"
+  },
+  "844": {
+    "uid": "blte8311607141b55e5",
+    "title": "BVPLCV26",
+    "from": "db.hire_types"
+  },
+  "845": {
+    "uid": "blt36357eff2c4e11ea",
+    "title": "BVGPCV38",
+    "from": "db.hire_types"
+  },
+  "846": {
+    "uid": "blt000b8a18d740ab5c",
+    "title": "BVEHTC22",
+    "from": "db.hire_types"
+  },
+  "847": {
+    "uid": "blt638abdc2b01ed856",
+    "title": "PBBPCV38",
+    "from": "db.hire_types"
+  },
+  "848": {
+    "uid": "bltbcccce80b3201f16",
+    "title": "PBGPCV38",
+    "from": "db.hire_types"
+  },
+  "849": {
+    "uid": "bltd2e4f5539b175a65",
+    "title": "PBSPCV26",
+    "from": "db.hire_types"
+  },
+  "850": {
+    "uid": "bltad9cd67c5ea5468d",
+    "title": "SHPLAP24PF",
+    "from": "db.hire_types"
+  },
+  "851": {
+    "uid": "blt1caa8942f60a8b83",
+    "title": "SHGOAP24F1",
+    "from": "db.hire_types"
+  },
+  "852": {
+    "uid": "bltbc0df5bef08d6645",
+    "title": "SHPLAP24F0",
+    "from": "db.hire_types"
+  },
+  "853": {
+    "uid": "blt2909faa827d4c9ff",
+    "title": "SHPLAP14F7",
+    "from": "db.hire_types"
+  },
+  "854": {
+    "uid": "blt82a37209e7276078",
+    "title": "SHPLAP14F4",
+    "from": "db.hire_types"
+  },
+  "855": {
+    "uid": "bltd6e36fb297a9b267",
+    "title": "SHPLAP26F5",
+    "from": "db.hire_types"
+  },
+  "856": {
+    "uid": "blt6dd572fab24e6501",
+    "title": "SHPLAP14F6",
+    "from": "db.hire_types"
+  },
+  "857": {
+    "uid": "bltd605c96defe52db0",
+    "title": "BVBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "858": {
+    "uid": "bltfc41e361481ddfb2",
+    "title": "PBSPCV38",
+    "from": "db.hire_types"
+  },
+  "859": {
+    "uid": "blt18ba7f2447791ffd",
+    "title": "PBGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "860": {
+    "uid": "blt57b1ae5b7beff2f9",
+    "title": "MFGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "861": {
+    "uid": "blt9eb0e448c98deb59",
+    "title": "PBGPCV26",
+    "from": "db.hire_types"
+  },
+  "862": {
+    "uid": "blt4dfb300e295032d6",
+    "title": "PBPLCV26",
+    "from": "db.hire_types"
+  },
+  "863": {
+    "uid": "blt7458302fb6fe0cfa",
+    "title": "PBGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "864": {
+    "uid": "blt508ba7a0efebe4a7",
+    "title": "CMBPCV38",
+    "from": "db.hire_types"
+  },
+  "865": {
+    "uid": "bltd96dd25b74718347",
+    "title": "LCGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "866": {
+    "uid": "blt3616f6edc29328f0",
+    "title": "SOPLLO36",
+    "from": "db.hire_types"
+  },
+  "867": {
+    "uid": "blt270a0c956c5a2f4f",
+    "title": "LCSIBS14",
+    "from": "db.hire_types"
+  },
+  "868": {
+    "uid": "blt254a2988993c1b3f",
+    "title": "DLGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "869": {
+    "uid": "blt7d601447d1c70ee9",
+    "title": "SWGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "870": {
+    "uid": "blt4569dbd5f16064ac",
+    "title": "BSSPCV49",
+    "from": "db.hire_types"
+  },
+  "871": {
+    "uid": "blt6c0fbeb1bcdde7ed",
+    "title": "SFGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "872": {
+    "uid": "blt86345a550e77457b",
+    "title": "BVSPCV49",
+    "from": "db.hire_types"
+  },
+  "873": {
+    "uid": "blt72f4ae4d7f9d0950",
+    "title": "BVGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "874": {
+    "uid": "blt2e1d7c9854c1f818",
+    "title": "DLGPCV49PF",
+    "from": "db.hire_types"
+  },
+  "875": {
+    "uid": "blt9f95ea9c07956e5d",
+    "title": "NBGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "876": {
+    "uid": "bltba260d283dfcc15c",
+    "title": "BVGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "877": {
+    "uid": "bltcb31b9f6d9529920",
+    "title": "SLSPCV36",
+    "from": "db.hire_types"
+  },
+  "878": {
+    "uid": "bltcf16a4b142c1b3f2",
+    "title": "SPBPCV24",
+    "from": "db.hire_types"
+  },
+  "879": {
+    "uid": "blt2fc4399a00032516",
+    "title": "SPSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "880": {
+    "uid": "blt0c994d87be12fee3",
+    "title": "GSBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "881": {
+    "uid": "blt8bc15c151e5a8814",
+    "title": "WSGPCV24DS",
+    "from": "db.hire_types"
+  },
+  "882": {
+    "uid": "bltef423b8620e1e6e1",
+    "title": "NBPLLO36",
+    "from": "db.hire_types"
+  },
+  "883": {
+    "uid": "blt0d80cc90ae8f2344",
+    "title": "CHPLCV24",
+    "from": "db.hire_types"
+  },
+  "884": {
+    "uid": "blt449bf3f954aba858",
+    "title": "SHGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "885": {
+    "uid": "bltf82a53d2b90207d9",
+    "title": "RHPLLO24",
+    "from": "db.hire_types"
+  },
+  "886": {
+    "uid": "blt2be077ceee163997",
+    "title": "LCBPCV26",
+    "from": "db.hire_types"
+  },
+  "887": {
+    "uid": "blt5f49b7662666b761",
+    "title": "LCGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "888": {
+    "uid": "blt6d8a13c50bb65896",
+    "title": "LCGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "889": {
+    "uid": "blt302d32d34d8bce1b",
+    "title": "LCBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "890": {
+    "uid": "bltaca88651d58fe44a",
+    "title": "SOGPLO26",
+    "from": "db.hire_types"
+  },
+  "891": {
+    "uid": "blt13791eca3f8796f2",
+    "title": "NBBPCV24",
+    "from": "db.hire_types"
+  },
+  "892": {
+    "uid": "blt5fc8cd897d45fb2a",
+    "title": "LCSPCV36",
+    "from": "db.hire_types"
+  },
+  "893": {
+    "uid": "bltd4c84b2d55544acb",
+    "title": "BSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "894": {
+    "uid": "blt5290e826705bea6b",
+    "title": "ABSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "895": {
+    "uid": "blt2c7167188ad24ae9",
+    "title": "DLSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "896": {
+    "uid": "blt54767fdb08484476",
+    "title": "NBGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "897": {
+    "uid": "blt72344ae269b177f4",
+    "title": "SHSPLO26",
+    "from": "db.hire_types"
+  },
+  "898": {
+    "uid": "bltc08b2718f6ddcb28",
+    "title": "FSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "899": {
+    "uid": "blte6e76dd0f36e48d4",
+    "title": "LSBPLO38",
+    "from": "db.hire_types"
+  },
+  "900": {
+    "uid": "blte8bbabcaa79d3ce4",
+    "title": "LSPLLO38",
+    "from": "db.hire_types"
+  },
+  "901": {
+    "uid": "bltf247e2c44527acf3",
+    "title": "LCBZCO24",
+    "from": "db.hire_types"
+  },
+  "902": {
+    "uid": "blte854b288ec493137",
+    "title": "NBNTTC22",
+    "from": "db.hire_types"
+  },
+  "903": {
+    "uid": "blt291590ca6a431aed",
+    "title": "ABSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "904": {
+    "uid": "blt2515dfd1d19a2b28",
+    "title": "NBBPCV37",
+    "from": "db.hire_types"
+  },
+  "905": {
+    "uid": "bltd7cd57be711b3a9d",
+    "title": "SOSPCV36PF",
+    "from": "db.hire_types"
+  },
+  "906": {
+    "uid": "bltaa14e6839fb3a9ad",
+    "title": "SLGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "907": {
+    "uid": "blt67dc9b050d6ebaf9",
+    "title": "SLPLLO36",
+    "from": "db.hire_types"
+  },
+  "908": {
+    "uid": "blt9d5872b303975ce0",
+    "title": "CMELTC22",
+    "from": "db.hire_types"
+  },
+  "909": {
+    "uid": "blte9b5b43d2e70c7eb",
+    "title": "CMEHTC22",
+    "from": "db.hire_types"
+  },
+  "910": {
+    "uid": "bltb881df41b4696ffa",
+    "title": "CMNETC22",
+    "from": "db.hire_types"
+  },
+  "911": {
+    "uid": "blt532e03b6a98c730e",
+    "title": "CMGPCV26",
+    "from": "db.hire_types"
+  },
+  "912": {
+    "uid": "bltd3468f3b08140da4",
+    "title": "CMPLLO26",
+    "from": "db.hire_types"
+  },
+  "913": {
+    "uid": "blt801d16b8493658e2",
+    "title": "SLSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "914": {
+    "uid": "blt8832ad994beac128",
+    "title": "FSSPCV36",
+    "from": "db.hire_types"
+  },
+  "915": {
+    "uid": "blt9b1e346e0ecf04e7",
+    "title": "CMGPCV38",
+    "from": "db.hire_types"
+  },
+  "916": {
+    "uid": "blt46d447cd464a43d9",
+    "title": "CMPLLO36",
+    "from": "db.hire_types"
+  },
+  "917": {
+    "uid": "blt41030f59c4e81475",
+    "title": "CMGPCV36",
+    "from": "db.hire_types"
+  },
+  "918": {
+    "uid": "blteca4a603487f4104",
+    "title": "CMGPCV24",
+    "from": "db.hire_types"
+  },
+  "919": {
+    "uid": "bltd6c25f70dff79302",
+    "title": "RHGPCV24",
+    "from": "db.hire_types"
+  },
+  "920": {
+    "uid": "bltc0c5a4b27cc3354d",
+    "title": "WCSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "922": {
+    "uid": "blted27efa0fd5cc6c3",
+    "title": "WCGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "923": {
+    "uid": "blt29e80261d3231677",
+    "title": "FSGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "924": {
+    "uid": "bltbea836ec81c3ebde",
+    "title": "PBPLLO38",
+    "from": "db.hire_types"
+  },
+  "925": {
+    "uid": "blte5e1f10325ba05a4",
+    "title": "PBPLCV38",
+    "from": "db.hire_types"
+  },
+  "926": {
+    "uid": "blt948e8eb3015c59c3",
+    "title": "PBPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "927": {
+    "uid": "bltf60cd11638bdc086",
+    "title": "PBPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "928": {
+    "uid": "blt7c190cb870507be5",
+    "title": "PBPLLO36",
+    "from": "db.hire_types"
+  },
+  "930": {
+    "uid": "blt6d6e6ba4b2245941",
+    "title": "PBBPCV26",
+    "from": "db.hire_types"
+  },
+  "931": {
+    "uid": "blt4c74c6c6e598aad1",
+    "title": "CMSPCV38",
+    "from": "db.hire_types"
+  },
+  "932": {
+    "uid": "blt1557d75bc32d1941",
+    "title": "CMNTTC22",
+    "from": "db.hire_types"
+  },
+  "933": {
+    "uid": "blt4a20c1a4492fa0fd",
+    "title": "BSPLLO24",
+    "from": "db.hire_types"
+  },
+  "934": {
+    "uid": "blt8a7b66ad38c458df",
+    "title": "TKPLLO24",
+    "from": "db.hire_types"
+  },
+  "935": {
+    "uid": "blt418c26f1828038ca",
+    "title": "CMPLLO24",
+    "from": "db.hire_types"
+  },
+  "936": {
+    "uid": "bltc72d850d65da3959",
+    "title": "BVPLLO24",
+    "from": "db.hire_types"
+  },
+  "937": {
+    "uid": "blt669c542bafa3de3f",
+    "title": "PBPLLO24",
+    "from": "db.hire_types"
+  },
+  "938": {
+    "uid": "blt496b9cd40a7c2361",
+    "title": "BSPLLO36",
+    "from": "db.hire_types"
+  },
+  "939": {
+    "uid": "blt681a01b5285e4403",
+    "title": "TKPLLO36",
+    "from": "db.hire_types"
+  },
+  "940": {
+    "uid": "blta2ad6c3b72238ac0",
+    "title": "RBPLLO36",
+    "from": "db.hire_types"
+  },
+  "941": {
+    "uid": "blt215f4c8e857f5347",
+    "title": "BVPLLO36",
+    "from": "db.hire_types"
+  },
+  "942": {
+    "uid": "bltacc385a2b56b2f6d",
+    "title": "MBSPCV49PF",
+    "from": "db.hire_types"
+  },
+  "943": {
+    "uid": "blta30f808e9ec17b6b",
+    "title": "DLBPCV37",
+    "from": "db.hire_types"
+  },
+  "944": {
+    "uid": "blt831501cefe8c4b0d",
+    "title": "DLBPCV49",
+    "from": "db.hire_types"
+  },
+  "945": {
+    "uid": "bltbf9eb03868f9de8a",
+    "title": "SWSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "946": {
+    "uid": "blt350e1838c0c47b1b",
+    "title": "SFSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "947": {
+    "uid": "bltafb47f57a0c88c91",
+    "title": "BVGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "948": {
+    "uid": "blt758aa8507905d35d",
+    "title": "CMGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "949": {
+    "uid": "bltdc39c29c2622c349",
+    "title": "HTGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "950": {
+    "uid": "blt857ddd0a7204f377",
+    "title": "NBGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "951": {
+    "uid": "blt72c085fa5bc93dae",
+    "title": "SLGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "952": {
+    "uid": "blt73d922dfe420702e",
+    "title": "SFGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "953": {
+    "uid": "blta60744d02e0aeaee",
+    "title": "WCGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "954": {
+    "uid": "blt48cf003d84725d2d",
+    "title": "PBGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "955": {
+    "uid": "blt36646584077ecc98",
+    "title": "BVGPCV49",
+    "from": "db.hire_types"
+  },
+  "956": {
+    "uid": "blt4789f03ba66834a2",
+    "title": "CMGPCV49",
+    "from": "db.hire_types"
+  },
+  "957": {
+    "uid": "bltf1c031d00095ca92",
+    "title": "FSSPCV49",
+    "from": "db.hire_types"
+  },
+  "958": {
+    "uid": "blt583cbf01cc249dd1",
+    "title": "BSPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "959": {
+    "uid": "bltc0acfea2ac2af960",
+    "title": "CMPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "960": {
+    "uid": "blt1296b67205f91368",
+    "title": "BVPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "961": {
+    "uid": "blt36ff264cb30e67d6",
+    "title": "LSPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "962": {
+    "uid": "blt6380822a98a932ab",
+    "title": "PBPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "963": {
+    "uid": "blt62f6abd8b08a13b1",
+    "title": "PBPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "964": {
+    "uid": "blt12a3d939c717d0df",
+    "title": "RBPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "965": {
+    "uid": "blt6a77c7328590d2b2",
+    "title": "RBPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "966": {
+    "uid": "blt42ce3caea6bca1df",
+    "title": "BVBZCV38",
+    "from": "db.hire_types"
+  },
+  "967": {
+    "uid": "bltba6f71579d951bef",
+    "title": "TKGPCV26",
+    "from": "db.hire_types"
+  },
+  "968": {
+    "uid": "blt5768406d49737591",
+    "title": "TKGPCV38",
+    "from": "db.hire_types"
+  },
+  "969": {
+    "uid": "blt08c1c93bad687f41",
+    "title": "TKGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "970": {
+    "uid": "bltcbc2ae1c9343ca6d",
+    "title": "TKGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "971": {
+    "uid": "blt2b34a4f16b672b23",
+    "title": "CMPLCV26",
+    "from": "db.hire_types"
+  },
+  "972": {
+    "uid": "blt2bfcecdd24ec0e8f",
+    "title": "LCBPCV36",
+    "from": "db.hire_types"
+  },
+  "973": {
+    "uid": "blt5ea06ddec19a63e3",
+    "title": "RHGPLO26",
+    "from": "db.hire_types"
+  },
+  "974": {
+    "uid": "blt37edd6ba87140f0c",
+    "title": "CMSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "975": {
+    "uid": "blt88906715a1988e77",
+    "title": "SWSPCV37",
+    "from": "db.hire_types"
+  },
+  "976": {
+    "uid": "blt5946c4054485e2c8",
+    "title": "SOGPLO36",
+    "from": "db.hire_types"
+  },
+  "977": {
+    "uid": "blt9a3f3e0a23e5e6ee",
+    "title": "PBSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "978": {
+    "uid": "blte583e73f072d2693",
+    "title": "SOGPCV24",
+    "from": "db.hire_types"
+  },
+  "979": {
+    "uid": "blt1b804bbf733f5ba2",
+    "title": "RHGPLO24",
+    "from": "db.hire_types"
+  },
+  "980": {
+    "uid": "blt17e39023f229d1e3",
+    "title": "LCGPLO24",
+    "from": "db.hire_types"
+  },
+  "981": {
+    "uid": "bltea71344d1b9f09cc",
+    "title": "LCGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "982": {
+    "uid": "bltfff315002d97dc29",
+    "title": "PBGPLO38PF",
+    "from": "db.hire_types"
+  },
+  "983": {
+    "uid": "bltb6867b77a8945213",
+    "title": "LSGPLO26PF",
+    "from": "db.hire_types"
+  },
+  "984": {
+    "uid": "blt04b4eabe0921ee80",
+    "title": "RHPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "985": {
+    "uid": "blt8677b89fde8b3252",
+    "title": "ABSPCV24",
+    "from": "db.hire_types"
+  },
+  "986": {
+    "uid": "blta91e1af53b43916b",
+    "title": "LCGPLO38",
+    "from": "db.hire_types"
+  },
+  "987": {
+    "uid": "blt3f02a52236a32d42",
+    "title": "WCPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "988": {
+    "uid": "bltdcf10b1b1d1afbd4",
+    "title": "CHSPCV36",
+    "from": "db.hire_types"
+  },
+  "989": {
+    "uid": "blt64a60845c003b3f7",
+    "title": "SVGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "991": {
+    "uid": "bltcead76850369b2ee",
+    "title": "MBBPCV26",
+    "from": "db.hire_types"
+  },
+  "992": {
+    "uid": "blt5f08658a62cf1db7",
+    "title": "MBBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "993": {
+    "uid": "blt2b3f1eaa78ef05b7",
+    "title": "MBBPCV38",
+    "from": "db.hire_types"
+  },
+  "994": {
+    "uid": "blt62f5b27404070e07",
+    "title": "MBBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "995": {
+    "uid": "bltf6e41cf17cd2fe56",
+    "title": "MBBZCV24",
+    "from": "db.hire_types"
+  },
+  "996": {
+    "uid": "blt8f0e9963c7d72164",
+    "title": "MBBZCV24NP",
+    "from": "db.hire_types"
+  },
+  "997": {
+    "uid": "blt89a690bd7ad6d4ac",
+    "title": "MBBZCV26",
+    "from": "db.hire_types"
+  },
+  "998": {
+    "uid": "blte6263745158e773c",
+    "title": "MBBZCV26NP",
+    "from": "db.hire_types"
+  },
+  "999": {
+    "uid": "blt8771ff7c1338ffdc",
+    "title": "MBBZCV36",
+    "from": "db.hire_types"
+  },
+  "1000": {
+    "uid": "blt6450f815439b1da7",
+    "title": "MBBZCV36NP",
+    "from": "db.hire_types"
+  },
+  "1001": {
+    "uid": "blt4dc90b332d7c9723",
+    "title": "MBBZCV38",
+    "from": "db.hire_types"
+  },
+  "1002": {
+    "uid": "bltbd7f5ecda9264ce0",
+    "title": "MBBZCV38NP",
+    "from": "db.hire_types"
+  },
+  "1003": {
+    "uid": "blt052114a256839d2a",
+    "title": "MBGPCV26",
+    "from": "db.hire_types"
+  },
+  "1004": {
+    "uid": "blt2d01bdf781a63f5f",
+    "title": "MBGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1005": {
+    "uid": "blt70b9b2deee1d2f90",
+    "title": "MBGPCV38",
+    "from": "db.hire_types"
+  },
+  "1006": {
+    "uid": "bltda8b961ef001ba1d",
+    "title": "MBSICV24",
+    "from": "db.hire_types"
+  },
+  "1007": {
+    "uid": "bltfda49f59973150d2",
+    "title": "MBSICV26",
+    "from": "db.hire_types"
+  },
+  "1008": {
+    "uid": "blt93999f9990505070",
+    "title": "MBSICV38",
+    "from": "db.hire_types"
+  },
+  "1009": {
+    "uid": "bltd4f608083ecd825a",
+    "title": "MBSPCV26",
+    "from": "db.hire_types"
+  },
+  "1010": {
+    "uid": "bltbccbf5cc687c5df0",
+    "title": "MBSPCV38",
+    "from": "db.hire_types"
+  },
+  "1011": {
+    "uid": "bltec311568b267cdcb",
+    "title": "MBSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1014": {
+    "uid": "blt263dd880c670dc00",
+    "title": "MBEHTC22",
+    "from": "db.hire_types"
+  },
+  "1015": {
+    "uid": "bltbd3ae1db66642131",
+    "title": "SOBPCV24",
+    "from": "db.hire_types"
+  },
+  "1016": {
+    "uid": "bltdaa8fc9d59da6f7f",
+    "title": "SOSPCV36",
+    "from": "db.hire_types"
+  },
+  "1017": {
+    "uid": "blt2231987c96625b9a",
+    "title": "SOGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1018": {
+    "uid": "blt3a128faf3069c3e3",
+    "title": "DLGPCV37",
+    "from": "db.hire_types"
+  },
+  "1019": {
+    "uid": "blt214cee9a3e71de6c",
+    "title": "SLBPCV24",
+    "from": "db.hire_types"
+  },
+  "1020": {
+    "uid": "bltdf9f25209ea18eb0",
+    "title": "LCGPCV36",
+    "from": "db.hire_types"
+  },
+  "1021": {
+    "uid": "bltaaa4e17cbec2ec70",
+    "title": "RHPLCV24",
+    "from": "db.hire_types"
+  },
+  "1022": {
+    "uid": "bltb23fe7cbe5f59374",
+    "title": "SOGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1023": {
+    "uid": "blt2f2e725191852d6c",
+    "title": "CMSPLO36PF",
+    "from": "db.hire_types"
+  },
+  "1024": {
+    "uid": "blt69af1441395abe4c",
+    "title": "CMGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1025": {
+    "uid": "blt467424f1c4387984",
+    "title": "SLGPLO36",
+    "from": "db.hire_types"
+  },
+  "1026": {
+    "uid": "blt9256a038f79d54fc",
+    "title": "CMSPCV26",
+    "from": "db.hire_types"
+  },
+  "1027": {
+    "uid": "blta0fef7c56a5ad8e8",
+    "title": "SPGPLO26",
+    "from": "db.hire_types"
+  },
+  "1028": {
+    "uid": "blt2f338ae7b9c523b2",
+    "title": "CMGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1029": {
+    "uid": "blt167db24ee5aa714c",
+    "title": "CMSPLO26PF",
+    "from": "db.hire_types"
+  },
+  "1030": {
+    "uid": "bltb10264a2af501050",
+    "title": "CMGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1031": {
+    "uid": "blt3007ecf945f15b78",
+    "title": "LSPLLO26PF",
+    "from": "db.hire_types"
+  },
+  "1032": {
+    "uid": "blt14f3e8e439e9f5db",
+    "title": "RHGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1033": {
+    "uid": "bltd6dd0b8c60563a8d",
+    "title": "RHPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "1034": {
+    "uid": "bltfe1178310cb0e403",
+    "title": "SVSPCV36",
+    "from": "db.hire_types"
+  },
+  "1035": {
+    "uid": "bltde3348c7588746e9",
+    "title": "MBGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1036": {
+    "uid": "blt2926ddbb7a7f9f64",
+    "title": "MBSPCV49",
+    "from": "db.hire_types"
+  },
+  "1037": {
+    "uid": "blt2daad5f4e421efa3",
+    "title": "SPGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1038": {
+    "uid": "blt04c265013aa7ab40",
+    "title": "CMPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1039": {
+    "uid": "bltd5f18c2a2b4479b1",
+    "title": "GSGPCV24",
+    "from": "db.hire_types"
+  },
+  "1040": {
+    "uid": "bltd0c83e4669944287",
+    "title": "WSSPCV49",
+    "from": "db.hire_types"
+  },
+  "1041": {
+    "uid": "blt80c83c648979512c",
+    "title": "MFSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1043": {
+    "uid": "bltff85037cf1479bf9",
+    "title": "CMSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1044": {
+    "uid": "blt1a074812836e1809",
+    "title": "MBGPCV49",
+    "from": "db.hire_types"
+  },
+  "1045": {
+    "uid": "bltce65524580cc766e",
+    "title": "LCGPLO26",
+    "from": "db.hire_types"
+  },
+  "1046": {
+    "uid": "blt93adc65237332113",
+    "title": "SVPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1047": {
+    "uid": "bltccde173dbcf4aa86",
+    "title": "MBSPCV36",
+    "from": "db.hire_types"
+  },
+  "1048": {
+    "uid": "blt39216062ed2bfc73",
+    "title": "MBBPCV36",
+    "from": "db.hire_types"
+  },
+  "1049": {
+    "uid": "blt7f4ddcfe15cf6175",
+    "title": "GSPLLO36",
+    "from": "db.hire_types"
+  },
+  "1050": {
+    "uid": "blt52d0d71505178698",
+    "title": "BSPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1051": {
+    "uid": "blte8eaaf5c04e52f6d",
+    "title": "GSGPCV49PF",
+    "from": "db.hire_types"
+  },
+  "1052": {
+    "uid": "bltaf96fea844bee84c",
+    "title": "BSPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "1053": {
+    "uid": "blt4a2866e4855d01fd",
+    "title": "MBSICV38PF",
+    "from": "db.hire_types"
+  },
+  "1054": {
+    "uid": "blt49f53b9b48672dea",
+    "title": "FSPLCV36",
+    "from": "db.hire_types"
+  },
+  "1055": {
+    "uid": "blt0de74f25b57c5a35",
+    "title": "RHPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1056": {
+    "uid": "bltd5ab2dc726d96e93",
+    "title": "PBSPCV24",
+    "from": "db.hire_types"
+  },
+  "1057": {
+    "uid": "blt75e89140264ccddf",
+    "title": "SWBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1058": {
+    "uid": "blt98f7e4b78aec9c6b",
+    "title": "BVSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1059": {
+    "uid": "blt1c8cb42cbe385f0a",
+    "title": "WCSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1060": {
+    "uid": "blt02f4b221a5ab43d1",
+    "title": "WCSPCV49PF",
+    "from": "db.hire_types"
+  },
+  "1061": {
+    "uid": "bltf094de0298b15917",
+    "title": "NBBPCV49",
+    "from": "db.hire_types"
+  },
+  "1062": {
+    "uid": "blt3ae023f161f948df",
+    "title": "LSBPCV49",
+    "from": "db.hire_types"
+  },
+  "1063": {
+    "uid": "bltcaa22bcc20b0d2d8",
+    "title": "MBBPCV49",
+    "from": "db.hire_types"
+  },
+  "1064": {
+    "uid": "blt7b8e193ac7f6677c",
+    "title": "BSBPCV49",
+    "from": "db.hire_types"
+  },
+  "1065": {
+    "uid": "blt30d5646b72815ba5",
+    "title": "SOGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1066": {
+    "uid": "blta041c01868d44068",
+    "title": "SPGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1067": {
+    "uid": "bltb299bba4da634108",
+    "title": "MFGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1068": {
+    "uid": "blt2c9b979e2cc3cd2d",
+    "title": "TKGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1069": {
+    "uid": "blt095c0aa12abc3ed6",
+    "title": "CHGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1070": {
+    "uid": "blt332224788f40c70d",
+    "title": "MFPLLO36",
+    "from": "db.hire_types"
+  },
+  "1071": {
+    "uid": "blt631fff54d474a28b",
+    "title": "MFPLLO24",
+    "from": "db.hire_types"
+  },
+  "1072": {
+    "uid": "blt43242e8515c45dd6",
+    "title": "BVPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1073": {
+    "uid": "bltb2ec39893d0a26ae",
+    "title": "BSPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1074": {
+    "uid": "bltaf029c42a7da94bf",
+    "title": "TKPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1075": {
+    "uid": "blt9da74c48a2a573b2",
+    "title": "LSPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "1076": {
+    "uid": "bltd06306742e9e0c74",
+    "title": "FSBPCV49",
+    "from": "db.hire_types"
+  },
+  "1077": {
+    "uid": "blt3aabe3dfb423d7bf",
+    "title": "SPBPCV49",
+    "from": "db.hire_types"
+  },
+  "1078": {
+    "uid": "blt20c3b1ac432b0d25",
+    "title": "BVBPCV49",
+    "from": "db.hire_types"
+  },
+  "1079": {
+    "uid": "blta2618131a2fdc803",
+    "title": "MFNGPD14",
+    "from": "db.hire_types"
+  },
+  "1080": {
+    "uid": "blt8dbd346f4db3d718",
+    "title": "BVNGPD14",
+    "from": "db.hire_types"
+  },
+  "1081": {
+    "uid": "blt76c5036fdc075080",
+    "title": "CMNGPD14",
+    "from": "db.hire_types"
+  },
+  "1082": {
+    "uid": "bltf6c6cd28a4b2a96a",
+    "title": "SVNGPD14",
+    "from": "db.hire_types"
+  },
+  "1083": {
+    "uid": "bltfc56e2852df77442",
+    "title": "DCGPCV26",
+    "from": "db.hire_types"
+  },
+  "1084": {
+    "uid": "blt9c933bdbaf1025b3",
+    "title": "DCGPCV38",
+    "from": "db.hire_types"
+  },
+  "1085": {
+    "uid": "blt2aabc9b92cac46a9",
+    "title": "DCGPCV49",
+    "from": "db.hire_types"
+  },
+  "1086": {
+    "uid": "bltb81b8aaf256fb0bb",
+    "title": "DCSPCV26",
+    "from": "db.hire_types"
+  },
+  "1087": {
+    "uid": "bltd584dd490c26c03e",
+    "title": "DCSPCV38",
+    "from": "db.hire_types"
+  },
+  "1088": {
+    "uid": "blt16c38d5141b99917",
+    "title": "DCBPCV26",
+    "from": "db.hire_types"
+  },
+  "1089": {
+    "uid": "bltd5f1a97d0ba1d385",
+    "title": "DCBPCV38",
+    "from": "db.hire_types"
+  },
+  "1090": {
+    "uid": "blt590d0a985abc12fb",
+    "title": "GSBPCV49",
+    "from": "db.hire_types"
+  },
+  "1091": {
+    "uid": "blta3b6152db6ea6e14",
+    "title": "MBSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1092": {
+    "uid": "blt6eab1f43a5f90ba7",
+    "title": "FSBZCV24",
+    "from": "db.hire_types"
+  },
+  "1093": {
+    "uid": "blt84cfaa992acf7a1d",
+    "title": "CMSPCV36",
+    "from": "db.hire_types"
+  },
+  "1094": {
+    "uid": "blt0ec13539d20edab1",
+    "title": "PBGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1095": {
+    "uid": "blt1c01f0ec10726b5d",
+    "title": "CHPLLO36",
+    "from": "db.hire_types"
+  },
+  "1096": {
+    "uid": "blt885105539131dee5",
+    "title": "CMSPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1097": {
+    "uid": "blt85d07333fc4eb87e",
+    "title": "DCEHTC22",
+    "from": "db.hire_types"
+  },
+  "1098": {
+    "uid": "blt92b9746dc482736e",
+    "title": "LCSPCV24",
+    "from": "db.hire_types"
+  },
+  "1099": {
+    "uid": "bltc17cce8e6740f03c",
+    "title": "DCGPCV36",
+    "from": "db.hire_types"
+  },
+  "1100": {
+    "uid": "bltf6ab909b5e79c136",
+    "title": "DCGPCV24",
+    "from": "db.hire_types"
+  },
+  "1101": {
+    "uid": "bltecd96ffd15dcee0c",
+    "title": "DCSPCV24",
+    "from": "db.hire_types"
+  },
+  "1102": {
+    "uid": "bltf763457803764057",
+    "title": "DCSPCV36",
+    "from": "db.hire_types"
+  },
+  "1103": {
+    "uid": "bltf2e720240a59c58c",
+    "title": "DCBPCV24",
+    "from": "db.hire_types"
+  },
+  "1104": {
+    "uid": "blt348c26775431ce8d",
+    "title": "NBGPCV24",
+    "from": "db.hire_types"
+  },
+  "1105": {
+    "uid": "blt9a062495231809fe",
+    "title": "SVGPCV24",
+    "from": "db.hire_types"
+  },
+  "1106": {
+    "uid": "blt7625c24b66d53aed",
+    "title": "LCPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1107": {
+    "uid": "blta703aac80b349da0",
+    "title": "CMGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1108": {
+    "uid": "blt16ea59e419a17d40",
+    "title": "CMPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1109": {
+    "uid": "blt07941c5ee670733d",
+    "title": "GSGPLO26PF",
+    "from": "db.hire_types"
+  },
+  "1110": {
+    "uid": "blt653f604a29892dbd",
+    "title": "NBPLCV36",
+    "from": "db.hire_types"
+  },
+  "1111": {
+    "uid": "bltab3a8295a780ab0a",
+    "title": "NBGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1112": {
+    "uid": "blta1176b4b97d566d5",
+    "title": "BSSPCV24",
+    "from": "db.hire_types"
+  },
+  "1113": {
+    "uid": "blt8da1e05ee8721e55",
+    "title": "CMGPCV49PF",
+    "from": "db.hire_types"
+  },
+  "1114": {
+    "uid": "bltddff6bcfd796fe77",
+    "title": "DCGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1115": {
+    "uid": "blt3869cd8a9396dc57",
+    "title": "DCGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1116": {
+    "uid": "blt79942f19812e5d9f",
+    "title": "GSGPLO26",
+    "from": "db.hire_types"
+  },
+  "1117": {
+    "uid": "blt72847fb3224f7319",
+    "title": "SVGPCV36",
+    "from": "db.hire_types"
+  },
+  "1118": {
+    "uid": "blt261102d0892be65c",
+    "title": "NBPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1119": {
+    "uid": "bltab161a86c17064f9",
+    "title": "LCBZCV36",
+    "from": "db.hire_types"
+  },
+  "1120": {
+    "uid": "blt64da6d77b98b3d15",
+    "title": "CMPLLO36DB",
+    "from": "db.hire_types"
+  },
+  "1121": {
+    "uid": "blt86e988e47ea65295",
+    "title": "TKPLLO36PF",
+    "from": "db.hire_types"
+  },
+  "1122": {
+    "uid": "blt061641a63e8fc9c9",
+    "title": "TKPLLO24DB",
+    "from": "db.hire_types"
+  },
+  "1123": {
+    "uid": "bltad2c1e9659346a48",
+    "title": "DCGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1124": {
+    "uid": "blt8a244b6ee52406ba",
+    "title": "DCSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1125": {
+    "uid": "blt3731909c86c2ae2c",
+    "title": "SFPLCV26",
+    "from": "db.hire_types"
+  },
+  "1126": {
+    "uid": "blt703078f397d13535",
+    "title": "SVPLCV24",
+    "from": "db.hire_types"
+  },
+  "1127": {
+    "uid": "blt9989b0a75bcd5896",
+    "title": "DLSPCV24",
+    "from": "db.hire_types"
+  },
+  "1128": {
+    "uid": "blt35af8d07ea385c9a",
+    "title": "RHPSCV26PF",
+    "from": "db.hire_types"
+  },
+  "1129": {
+    "uid": "blt7f056d8918cb4b49",
+    "title": "WSBPCV24",
+    "from": "db.hire_types"
+  },
+  "1130": {
+    "uid": "blt61f5e0b7696d0400",
+    "title": "SVBPCV24",
+    "from": "db.hire_types"
+  },
+  "1131": {
+    "uid": "bltf9466e830acc26f2",
+    "title": "MBGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1132": {
+    "uid": "blt978025a564cd0285",
+    "title": "RHGPLO26PF",
+    "from": "db.hire_types"
+  },
+  "1133": {
+    "uid": "blt4f145d49666456e1",
+    "title": "SVPLLO24",
+    "from": "db.hire_types"
+  },
+  "1134": {
+    "uid": "blt1bc78aaf2811fd07",
+    "title": "SVPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1135": {
+    "uid": "blt5b2599ea5f89e95b",
+    "title": "SVPLLO36",
+    "from": "db.hire_types"
+  },
+  "1136": {
+    "uid": "blt9051af17871d7ea9",
+    "title": "BSGPCV36",
+    "from": "db.hire_types"
+  },
+  "1137": {
+    "uid": "blt58cec43521ff7571",
+    "title": "DCBPCV36",
+    "from": "db.hire_types"
+  },
+  "1138": {
+    "uid": "blt3a6ff439421f71ce",
+    "title": "DLGPCV24",
+    "from": "db.hire_types"
+  },
+  "1139": {
+    "uid": "blt6bf0d94079ac1186",
+    "title": "LCBPCV49",
+    "from": "db.hire_types"
+  },
+  "1140": {
+    "uid": "bltaee186aa625b8a27",
+    "title": "DLPLLO38",
+    "from": "db.hire_types"
+  },
+  "1141": {
+    "uid": "bltb92e1e0b4664c9ca",
+    "title": "GSNGPD14",
+    "from": "db.hire_types"
+  },
+  "1142": {
+    "uid": "blt93bb6249a61406cc",
+    "title": "WSSPCV49PF",
+    "from": "db.hire_types"
+  },
+  "1143": {
+    "uid": "bltf978428fd7132174",
+    "title": "SWSPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1144": {
+    "uid": "blt29fab3740bf2cef3",
+    "title": "PBGPCV36",
+    "from": "db.hire_types"
+  },
+  "1145": {
+    "uid": "blt5b301efd34e95f36",
+    "title": "NBGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1146": {
+    "uid": "bltfec2eb2195cad131",
+    "title": "DLPLLO36",
+    "from": "db.hire_types"
+  },
+  "1147": {
+    "uid": "blt092c165a61d4f241",
+    "title": "LSPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1148": {
+    "uid": "blt4d6b6133e4824d9d",
+    "title": "PBPLCV24",
+    "from": "db.hire_types"
+  },
+  "1149": {
+    "uid": "bltc4c14e7863750528",
+    "title": "SVPLLO26",
+    "from": "db.hire_types"
+  },
+  "1150": {
+    "uid": "blt7295a6f17a59b5e3",
+    "title": "LCPLLO36DB",
+    "from": "db.hire_types"
+  },
+  "1151": {
+    "uid": "blt72fae041e2c1d42f",
+    "title": "PBPLCV36",
+    "from": "db.hire_types"
+  },
+  "1152": {
+    "uid": "blt18f60875525b8939",
+    "title": "SOPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1153": {
+    "uid": "bltf5a1b96b40a493ba",
+    "title": "DLGPLO24",
+    "from": "db.hire_types"
+  },
+  "1154": {
+    "uid": "blt7cd08802be23fe4b",
+    "title": "PBGPCV24",
+    "from": "db.hire_types"
+  },
+  "1155": {
+    "uid": "blt6250979f9a8096c1",
+    "title": "BVPLCV38",
+    "from": "db.hire_types"
+  },
+  "1156": {
+    "uid": "bltad9f97086a1db1b0",
+    "title": "RBGPLO26",
+    "from": "db.hire_types"
+  },
+  "1157": {
+    "uid": "blte67b993dbd463942",
+    "title": "WSBPCV49",
+    "from": "db.hire_types"
+  },
+  "1158": {
+    "uid": "blt1891d7b77d92e73f",
+    "title": "CHPLLO24",
+    "from": "db.hire_types"
+  },
+  "1159": {
+    "uid": "bltab71874d68f94934",
+    "title": "DCPLLO24",
+    "from": "db.hire_types"
+  },
+  "1160": {
+    "uid": "blt8dd656008b63b1e0",
+    "title": "DCPLLO36",
+    "from": "db.hire_types"
+  },
+  "1161": {
+    "uid": "blt147b7f9632793012",
+    "title": "HTPLLO36",
+    "from": "db.hire_types"
+  },
+  "1162": {
+    "uid": "blt63403c892db1506e",
+    "title": "MFPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1163": {
+    "uid": "bltfbf15d28f105231c",
+    "title": "DCGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1164": {
+    "uid": "bltb3aeae47f4a24aa0",
+    "title": "NBBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1165": {
+    "uid": "bltd591e1886914391d",
+    "title": "DCSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1166": {
+    "uid": "blt2bc96e12ef13a578",
+    "title": "WMNGPD14",
+    "from": "db.hire_types"
+  },
+  "1167": {
+    "uid": "blta18a502eb3d1140f",
+    "title": "DCNGPD14",
+    "from": "db.hire_types"
+  },
+  "1168": {
+    "uid": "blt381de6f48c230f1f",
+    "title": "WMEHTC22",
+    "from": "db.hire_types"
+  },
+  "1169": {
+    "uid": "blt7275f3199c6863d9",
+    "title": "LCPLLO36",
+    "from": "db.hire_types"
+  },
+  "1170": {
+    "uid": "blt84e73724683eded0",
+    "title": "SHPLAP14F2",
+    "from": "db.hire_types"
+  },
+  "1171": {
+    "uid": "blt33fa85153c02fefb",
+    "title": "LCPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1172": {
+    "uid": "blta3ee16a60433617d",
+    "title": "SLPLLO24",
+    "from": "db.hire_types"
+  },
+  "1173": {
+    "uid": "blt8df1fd3744f541f2",
+    "title": "SHGPLO24DB",
+    "from": "db.hire_types"
+  },
+  "1174": {
+    "uid": "bltd4c40219613fafcd",
+    "title": "LCGPLO36",
+    "from": "db.hire_types"
+  },
+  "1175": {
+    "uid": "blt80908787c5b8c589",
+    "title": "LCSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1176": {
+    "uid": "blt1b1b30e69ef294d2",
+    "title": "WCPLLO36",
+    "from": "db.hire_types"
+  },
+  "1177": {
+    "uid": "blte28b7f0dbbd82b87",
+    "title": "NBPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1178": {
+    "uid": "blta8418dab85961bb8",
+    "title": "CMPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1179": {
+    "uid": "bltc601a7b39987984b",
+    "title": "LCBPCV24",
+    "from": "db.hire_types"
+  },
+  "1180": {
+    "uid": "blta62b45625f96beb5",
+    "title": "RHSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1181": {
+    "uid": "blt0fc73e3c916b7c4d",
+    "title": "DLGPCV36",
+    "from": "db.hire_types"
+  },
+  "1182": {
+    "uid": "bltf1ba513f12f65842",
+    "title": "MFGPCV36",
+    "from": "db.hire_types"
+  },
+  "1183": {
+    "uid": "blt068e514df3a2b1e1",
+    "title": "MFSPCV36",
+    "from": "db.hire_types"
+  },
+  "1184": {
+    "uid": "blt573ebb83445a84c9",
+    "title": "MFSPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1185": {
+    "uid": "blt58ea9fa44883b8bd",
+    "title": "DLGOCV12",
+    "from": "db.hire_types"
+  },
+  "1186": {
+    "uid": "blt6fd82a4b781c0326",
+    "title": "GSGOCV12",
+    "from": "db.hire_types"
+  },
+  "1187": {
+    "uid": "bltbb4fa892e8c10bbd",
+    "title": "SFGOCV12",
+    "from": "db.hire_types"
+  },
+  "1188": {
+    "uid": "blt921e1a6a67005d35",
+    "title": "WCGOCV12",
+    "from": "db.hire_types"
+  },
+  "1189": {
+    "uid": "bltb3cfff66032085aa",
+    "title": "SVGOCV12",
+    "from": "db.hire_types"
+  },
+  "1190": {
+    "uid": "blt4bf99414004b1b31",
+    "title": "CHGOCV12",
+    "from": "db.hire_types"
+  },
+  "1191": {
+    "uid": "blt0b540bdb8d7c8f66",
+    "title": "BVPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "1192": {
+    "uid": "blte992f52ae1040041",
+    "title": "SOGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1193": {
+    "uid": "blt95072c0a1dbb3db0",
+    "title": "MFPLCV24PF",
+    "from": "db.hire_types"
+  },
+  "1194": {
+    "uid": "bltc5aba4274df19b40",
+    "title": "BSGPCV24",
+    "from": "db.hire_types"
+  },
+  "1195": {
+    "uid": "blt789fd920128e4a35",
+    "title": "CMSPCV24",
+    "from": "db.hire_types"
+  },
+  "1196": {
+    "uid": "bltf80b0bc9a802907f",
+    "title": "CHSPCV49",
+    "from": "db.hire_types"
+  },
+  "1197": {
+    "uid": "bltf62fbe4523e1eb79",
+    "title": "LSGPLO38",
+    "from": "db.hire_types"
+  },
+  "1198": {
+    "uid": "bltf04f24f148e1b4b9",
+    "title": "ABGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1199": {
+    "uid": "blt5b9325f739286104",
+    "title": "BSSPCV49PF",
+    "from": "db.hire_types"
+  },
+  "1200": {
+    "uid": "blt37a60f2632ce64d8",
+    "title": "DCSPCV49",
+    "from": "db.hire_types"
+  },
+  "1201": {
+    "uid": "bltd7332890b2c6ed6c",
+    "title": "LCSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1202": {
+    "uid": "blt281a07df46dfb1d7",
+    "title": "PBBPCV24",
+    "from": "db.hire_types"
+  },
+  "1203": {
+    "uid": "blt7db6eb44beb8c5a6",
+    "title": "PBSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1204": {
+    "uid": "bltb85893ef6cdb7591",
+    "title": "MFGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1205": {
+    "uid": "blt4e8ea36146951f85",
+    "title": "SVSPCV26DB",
+    "from": "db.hire_types"
+  },
+  "1206": {
+    "uid": "blt2c514f69eff0f7ca",
+    "title": "RBPLLO24DB",
+    "from": "db.hire_types"
+  },
+  "1207": {
+    "uid": "blt9358bffce1f3e6e7",
+    "title": "LSGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1208": {
+    "uid": "blt04c2d7b0cacea213",
+    "title": "MFGPLO24",
+    "from": "db.hire_types"
+  },
+  "1209": {
+    "uid": "blt60fbbbf7253da4dd",
+    "title": "HTGOCV12",
+    "from": "db.hire_types"
+  },
+  "1210": {
+    "uid": "blt1040aa1d5d4548da",
+    "title": "WFGPCV26",
+    "from": "db.hire_types"
+  },
+  "1211": {
+    "uid": "blt452d0bc92871a2ba",
+    "title": "WFNGAP24",
+    "from": "db.hire_types"
+  },
+  "1212": {
+    "uid": "blt8647049ac91432df",
+    "title": "PFGPCV26",
+    "from": "db.hire_types"
+  },
+  "1213": {
+    "uid": "blt10ddb253f7f453e2",
+    "title": "PFGPCV38",
+    "from": "db.hire_types"
+  },
+  "1214": {
+    "uid": "blt26be221d299d6961",
+    "title": "PFGPCV49",
+    "from": "db.hire_types"
+  },
+  "1215": {
+    "uid": "blt8d8953ce19d0f433",
+    "title": "PFGOCV12",
+    "from": "db.hire_types"
+  },
+  "1216": {
+    "uid": "blt2c85e08d91c1a5bb",
+    "title": "WFEHTC22",
+    "from": "db.hire_types"
+  },
+  "1217": {
+    "uid": "blt8cb6fbdf8c228bc8",
+    "title": "WFLGTC22",
+    "from": "db.hire_types"
+  },
+  "1218": {
+    "uid": "blt8a110512f7df1fbc",
+    "title": "WFEHTC22CV",
+    "from": "db.hire_types"
+  },
+  "1219": {
+    "uid": "blt84e0e1bc49164cb4",
+    "title": "WFPRTC22",
+    "from": "db.hire_types"
+  },
+  "1220": {
+    "uid": "bltea72f9566e1ceb7a",
+    "title": "PFEHTC22",
+    "from": "db.hire_types"
+  },
+  "1221": {
+    "uid": "blt625a4878c9f27662",
+    "title": "PFGPCV24",
+    "from": "db.hire_types"
+  },
+  "1222": {
+    "uid": "blt7dd14f503a1d5700",
+    "title": "PFGPCV36",
+    "from": "db.hire_types"
+  },
+  "1223": {
+    "uid": "blt2987771303e792d4",
+    "title": "PFGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1224": {
+    "uid": "bltcd81d1a08c70b2ca",
+    "title": "PFGPCV36PF",
+    "from": "db.hire_types"
+  },
+  "1225": {
+    "uid": "blt3e68e4b4f695d8b4",
+    "title": "PFBPCV24DS",
+    "from": "db.hire_types"
+  },
+  "1226": {
+    "uid": "blt16865d63a68d2970",
+    "title": "WFELTC22",
+    "from": "db.hire_types"
+  },
+  "1227": {
+    "uid": "blt047aa9a23c6ff15d",
+    "title": "WFCCTC22",
+    "from": "db.hire_types"
+  },
+  "1228": {
+    "uid": "blt76991cb7f69ad329",
+    "title": "WFEHTC22MH",
+    "from": "db.hire_types"
+  },
+  "1229": {
+    "uid": "bltd180615ca67eaa39",
+    "title": "RHPLLO24PF",
+    "from": "db.hire_types"
+  },
+  "1230": {
+    "uid": "blt806ab9f02f5d15d7",
+    "title": "MBGOCV12",
+    "from": "db.hire_types"
+  },
+  "1231": {
+    "uid": "bltba70e65fc6c5a632",
+    "title": "MFPLLO24DB",
+    "from": "db.hire_types"
+  },
+  "1232": {
+    "uid": "blt852495e17d51294d",
+    "title": "MFGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1233": {
+    "uid": "blt6d2a8bc4e286f011",
+    "title": "MFSPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1234": {
+    "uid": "blt6ce1645bdd762522",
+    "title": "PFSPCV24",
+    "from": "db.hire_types"
+  },
+  "1235": {
+    "uid": "blt267b26900ef9eda0",
+    "title": "PFSPCV36",
+    "from": "db.hire_types"
+  },
+  "1236": {
+    "uid": "blt25d4e66051a8fa6a",
+    "title": "BSGPLO24PF",
+    "from": "db.hire_types"
+  },
+  "1237": {
+    "uid": "bltb9dcb24529cc12ab",
+    "title": "WFPLAP26",
+    "from": "db.hire_types"
+  },
+  "1239": {
+    "uid": "blt06f3b3e147dede1d",
+    "title": "PFSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1240": {
+    "uid": "blt25cacb5921fd5242",
+    "title": "WSGOCV12",
+    "from": "db.hire_types"
+  },
+  "1241": {
+    "uid": "blt5e11f7d22f565026",
+    "title": "LSSPLO36",
+    "from": "db.hire_types"
+  },
+  "1242": {
+    "uid": "blt1b0db7b07f2cbae2",
+    "title": "MBPLCV26",
+    "from": "db.hire_types"
+  },
+  "1243": {
+    "uid": "blt6bb3ff6c097edb83",
+    "title": "MFBPCV49",
+    "from": "db.hire_types"
+  },
+  "1244": {
+    "uid": "blt9545e54ec2a721a5",
+    "title": "DCBPCV49",
+    "from": "db.hire_types"
+  },
+  "1245": {
+    "uid": "blta53efbb3dd10b067",
+    "title": "PFGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1246": {
+    "uid": "blt653ba749834a7f7d",
+    "title": "PBSPCV36",
+    "from": "db.hire_types"
+  },
+  "1247": {
+    "uid": "blt1630f369c6ddcb85",
+    "title": "WFPLCO38",
+    "from": "db.hire_types"
+  },
+  "1248": {
+    "uid": "bltda196b31fe8c5814",
+    "title": "SFPLCV24",
+    "from": "db.hire_types"
+  },
+  "1249": {
+    "uid": "bltf7fa0447c3f455b1",
+    "title": "SLPLLO36DB",
+    "from": "db.hire_types"
+  },
+  "1250": {
+    "uid": "blt096ceea074f287b3",
+    "title": "SSBPCV24",
+    "from": "db.hire_types"
+  },
+  "1251": {
+    "uid": "blt0aff47e1ae6fe30f",
+    "title": "SSBPCV26",
+    "from": "db.hire_types"
+  },
+  "1252": {
+    "uid": "blt00c889e59d4b7aa9",
+    "title": "SSBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "1253": {
+    "uid": "blt9534e4706bcab543",
+    "title": "SSBPCV38",
+    "from": "db.hire_types"
+  },
+  "1254": {
+    "uid": "blt2246a76da484c39c",
+    "title": "SSBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "1255": {
+    "uid": "blt17a4473f1002bc9d",
+    "title": "SSBZCV24NP",
+    "from": "db.hire_types"
+  },
+  "1256": {
+    "uid": "bltd92cd51876666e21",
+    "title": "SSGPCV26",
+    "from": "db.hire_types"
+  },
+  "1257": {
+    "uid": "bltca1884a48db705d5",
+    "title": "SSGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1258": {
+    "uid": "blt9643bf5392f6b939",
+    "title": "SSGPCV38",
+    "from": "db.hire_types"
+  },
+  "1259": {
+    "uid": "blt3dee1d2e6f241c4f",
+    "title": "SSGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1260": {
+    "uid": "blt5eb43261aaed160c",
+    "title": "SSPLCV26PF",
+    "from": "db.hire_types"
+  },
+  "1261": {
+    "uid": "bltf229b8850281e99a",
+    "title": "SSSPCV24",
+    "from": "db.hire_types"
+  },
+  "1262": {
+    "uid": "blt7de5f951f0a1299e",
+    "title": "SSSPCV26",
+    "from": "db.hire_types"
+  },
+  "1263": {
+    "uid": "blte67d48df383055d8",
+    "title": "SSSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1264": {
+    "uid": "blta4c4c772a816a92b",
+    "title": "SSSPCV38",
+    "from": "db.hire_types"
+  },
+  "1265": {
+    "uid": "blta05340bdb535f315",
+    "title": "SSSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1266": {
+    "uid": "bltafbc177fce4d628f",
+    "title": "TBBPCV26",
+    "from": "db.hire_types"
+  },
+  "1267": {
+    "uid": "blt22820cfcea34b081",
+    "title": "TBBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "1268": {
+    "uid": "blt3073bcb58b7a7b88",
+    "title": "TBBPCV38",
+    "from": "db.hire_types"
+  },
+  "1269": {
+    "uid": "blt0bfca348865da43d",
+    "title": "TBBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "1270": {
+    "uid": "blt0c54072b97d656b3",
+    "title": "TBGPCV26",
+    "from": "db.hire_types"
+  },
+  "1271": {
+    "uid": "blt25152fa39f35b1e9",
+    "title": "TBGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1272": {
+    "uid": "blt271deedcd0d1b714",
+    "title": "TBGPCV38",
+    "from": "db.hire_types"
+  },
+  "1273": {
+    "uid": "bltaf68142b0f0e39ab",
+    "title": "TBSPCV26",
+    "from": "db.hire_types"
+  },
+  "1274": {
+    "uid": "bltd3a7f6c8f0bbad23",
+    "title": "TBSPCV38",
+    "from": "db.hire_types"
+  },
+  "1275": {
+    "uid": "blt80b6c916d23d8681",
+    "title": "SSPRTC22",
+    "from": "db.hire_types"
+  },
+  "1276": {
+    "uid": "blt0dd17e9f32056b89",
+    "title": "SSELTC22",
+    "from": "db.hire_types"
+  },
+  "1277": {
+    "uid": "blt075e9820837b4f3b",
+    "title": "SSNETC22",
+    "from": "db.hire_types"
+  },
+  "1278": {
+    "uid": "blt8a864af619a844f8",
+    "title": "SSEHTC22ES",
+    "from": "db.hire_types"
+  },
+  "1279": {
+    "uid": "blt4e9808642fa7c952",
+    "title": "HWBPCV26",
+    "from": "db.hire_types"
+  },
+  "1280": {
+    "uid": "blt3b35de1a55963943",
+    "title": "HWBPCV38",
+    "from": "db.hire_types"
+  },
+  "1281": {
+    "uid": "blta4afa9232e46cbfc",
+    "title": "HWBZCV38",
+    "from": "db.hire_types"
+  },
+  "1282": {
+    "uid": "blt753d797cfaa1e20b",
+    "title": "HWSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1283": {
+    "uid": "blt6d0ae65802d494b3",
+    "title": "HWSFLO25",
+    "from": "db.hire_types"
+  },
+  "1284": {
+    "uid": "blt92fb98c17966fc1b",
+    "title": "HWSFLO25HT",
+    "from": "db.hire_types"
+  },
+  "1285": {
+    "uid": "blt4df40d7e01e3d904",
+    "title": "HWSFTE24",
+    "from": "db.hire_types"
+  },
+  "1286": {
+    "uid": "blt97ed546a3fd5e3a1",
+    "title": "TVBPCV26",
+    "from": "db.hire_types"
+  },
+  "1287": {
+    "uid": "blt70d9316e8ea766ef",
+    "title": "TVBPCV38",
+    "from": "db.hire_types"
+  },
+  "1288": {
+    "uid": "blt90d412acdd173c8b",
+    "title": "TVGPCV26",
+    "from": "db.hire_types"
+  },
+  "1289": {
+    "uid": "blt0a88ec926f4d36da",
+    "title": "TVGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1290": {
+    "uid": "bltefaacea75a494cc4",
+    "title": "TVGPCV38",
+    "from": "db.hire_types"
+  },
+  "1291": {
+    "uid": "blt046f1a171003aebe",
+    "title": "TVGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1292": {
+    "uid": "blt1fffaddf0e868b69",
+    "title": "TVGPLO26PF",
+    "from": "db.hire_types"
+  },
+  "1293": {
+    "uid": "bltcb672b166ffca115",
+    "title": "TVPLCV26",
+    "from": "db.hire_types"
+  },
+  "1294": {
+    "uid": "blt89e214a9ee56ad55",
+    "title": "TVPLCV38PF",
+    "from": "db.hire_types"
+  },
+  "1295": {
+    "uid": "bltf06c2928395bbb2d",
+    "title": "TVSPCV26",
+    "from": "db.hire_types"
+  },
+  "1296": {
+    "uid": "blt7bebcc7bc8c7217f",
+    "title": "TVSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1297": {
+    "uid": "blt70fcdb0ef91c7fde",
+    "title": "TVSPCV38",
+    "from": "db.hire_types"
+  },
+  "1298": {
+    "uid": "blt7d49dca1cf475982",
+    "title": "SSBPCV24DS",
+    "from": "db.hire_types"
+  },
+  "1299": {
+    "uid": "bltdc2e96602033a50b",
+    "title": "TVBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "1300": {
+    "uid": "bltf11ee3862ed2275e",
+    "title": "TVBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "1301": {
+    "uid": "bltd63997833ec280f1",
+    "title": "TVGPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1302": {
+    "uid": "blt9319830d41b97980",
+    "title": "TVNGGE16HT",
+    "from": "db.hire_types"
+  },
+  "1303": {
+    "uid": "blt4d0a9b775e26b3e4",
+    "title": "TVPLLO24HT",
+    "from": "db.hire_types"
+  },
+  "1304": {
+    "uid": "bltd67f8810f4c6f003",
+    "title": "TVPLLO26HT",
+    "from": "db.hire_types"
+  },
+  "1305": {
+    "uid": "blt185ae100e1bd8638",
+    "title": "TVSFLO25",
+    "from": "db.hire_types"
+  },
+  "1306": {
+    "uid": "blte74be5ab0e63c2e0",
+    "title": "TVSFTE26",
+    "from": "db.hire_types"
+  },
+  "1307": {
+    "uid": "blta3d19f27243b9fd5",
+    "title": "TVSFTE26ES",
+    "from": "db.hire_types"
+  },
+  "1308": {
+    "uid": "blt9fba5c5d752b64f9",
+    "title": "TVSFTE26PF",
+    "from": "db.hire_types"
+  },
+  "1309": {
+    "uid": "blt803c1b0fe996df40",
+    "title": "TVSPCV38DS",
+    "from": "db.hire_types"
+  },
+  "1310": {
+    "uid": "blt3a649c8f1039bc8f",
+    "title": "HWELTC22",
+    "from": "db.hire_types"
+  },
+  "1311": {
+    "uid": "blt1093843f1132dede",
+    "title": "HWNETC22",
+    "from": "db.hire_types"
+  },
+  "1312": {
+    "uid": "blt3225c9dfe908a6f8",
+    "title": "HWSICV38",
+    "from": "db.hire_types"
+  },
+  "1313": {
+    "uid": "blte00f3f5f341c280b",
+    "title": "HWSICV38PF",
+    "from": "db.hire_types"
+  },
+  "1314": {
+    "uid": "blt45bb53ee3484d6a3",
+    "title": "HWBPCV24DS",
+    "from": "db.hire_types"
+  },
+  "1315": {
+    "uid": "blt5fcc15c5b0f4e027",
+    "title": "HWELTC22TE",
+    "from": "db.hire_types"
+  },
+  "1316": {
+    "uid": "blt41ed6ee484f62cfa",
+    "title": "HWNETC22TE",
+    "from": "db.hire_types"
+  },
+  "1317": {
+    "uid": "bltbe33ba780384a005",
+    "title": "HWEHTC22ES",
+    "from": "db.hire_types"
+  },
+  "1318": {
+    "uid": "blt862985608ed12ec9",
+    "title": "TVEHTC22",
+    "from": "db.hire_types"
+  },
+  "1319": {
+    "uid": "blte35723e1a4c828dc",
+    "title": "TVEHTC22ES",
+    "from": "db.hire_types"
+  },
+  "1320": {
+    "uid": "blt84682f5aa0069082",
+    "title": "TVELTC22",
+    "from": "db.hire_types"
+  },
+  "1321": {
+    "uid": "blta11338c687d395d8",
+    "title": "TVNETC22TE",
+    "from": "db.hire_types"
+  },
+  "1322": {
+    "uid": "blt0a5bee28ec71a811",
+    "title": "TVPRTC22",
+    "from": "db.hire_types"
+  },
+  "1323": {
+    "uid": "bltd2f04a40d3dde656",
+    "title": "PLBPCV26",
+    "from": "db.hire_types"
+  },
+  "1324": {
+    "uid": "blt57e2a9bd235b5148",
+    "title": "PLBPCV38",
+    "from": "db.hire_types"
+  },
+  "1325": {
+    "uid": "blt2ad5382568543cd8",
+    "title": "PLBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "1326": {
+    "uid": "bltb9209ef67d913792",
+    "title": "PLBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "1327": {
+    "uid": "bltec6f4b3316b6724d",
+    "title": "PLBZCV26",
+    "from": "db.hire_types"
+  },
+  "1328": {
+    "uid": "blt090ed0a558717d87",
+    "title": "PLBZCV26NP",
+    "from": "db.hire_types"
+  },
+  "1329": {
+    "uid": "bltf42a0b810c90e8c6",
+    "title": "PLGPCV26",
+    "from": "db.hire_types"
+  },
+  "1330": {
+    "uid": "bltc67242dcd8678d24",
+    "title": "PLGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1331": {
+    "uid": "blt644b906706f0255c",
+    "title": "PLGPCV38",
+    "from": "db.hire_types"
+  },
+  "1332": {
+    "uid": "bltece5d427ec55d941",
+    "title": "PLGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1333": {
+    "uid": "blt18be8acae1ac18f0",
+    "title": "PLBZCH12",
+    "from": "db.hire_types"
+  },
+  "1334": {
+    "uid": "blt8ab5c611b599ed5d",
+    "title": "PLBZCH12NP",
+    "from": "db.hire_types"
+  },
+  "1335": {
+    "uid": "bltfd9f08618265114e",
+    "title": "PLBZCH24NP",
+    "from": "db.hire_types"
+  },
+  "1336": {
+    "uid": "blteb1a7ba6762feaff",
+    "title": "PLBZCH26",
+    "from": "db.hire_types"
+  },
+  "1337": {
+    "uid": "blt598afd6e5257373b",
+    "title": "PLBZCH26NP",
+    "from": "db.hire_types"
+  },
+  "1338": {
+    "uid": "blt09e3172827b792bf",
+    "title": "PLSICH26",
+    "from": "db.hire_types"
+  },
+  "1339": {
+    "uid": "bltd2f4b85e85c60d9d",
+    "title": "PLSPCV26",
+    "from": "db.hire_types"
+  },
+  "1340": {
+    "uid": "blt404e7a302eb1e674",
+    "title": "PLSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1341": {
+    "uid": "blt2ca37fa0de200cb9",
+    "title": "PLSPCV38",
+    "from": "db.hire_types"
+  },
+  "1342": {
+    "uid": "blt5e8f77da6eadec7c",
+    "title": "PLSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1343": {
+    "uid": "blt2124c1e2b250a0e8",
+    "title": "PLBZCH23",
+    "from": "db.hire_types"
+  },
+  "1344": {
+    "uid": "blt6c822ae7d927880f",
+    "title": "PLBZCH23NP",
+    "from": "db.hire_types"
+  },
+  "1345": {
+    "uid": "bltae138e74bd13b451",
+    "title": "AHGPCV26",
+    "from": "db.hire_types"
+  },
+  "1346": {
+    "uid": "bltebe803b0730d916c",
+    "title": "AHGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1347": {
+    "uid": "blt8b39a2942261683f",
+    "title": "AHGPCV38",
+    "from": "db.hire_types"
+  },
+  "1348": {
+    "uid": "blt521354d6aba8ef0f",
+    "title": "AHGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1351": {
+    "uid": "bltbe02983b334c02a7",
+    "title": "AHSPCV26",
+    "from": "db.hire_types"
+  },
+  "1352": {
+    "uid": "blt7bf6d92a8e916b51",
+    "title": "AHSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1353": {
+    "uid": "blt7b027c0f25444f1c",
+    "title": "AHSPLO24PF",
+    "from": "db.hire_types"
+  },
+  "1354": {
+    "uid": "blt40ab7b352f2c9497",
+    "title": "BFBPCV24",
+    "from": "db.hire_types"
+  },
+  "1355": {
+    "uid": "bltb52e2c0a4d992be5",
+    "title": "BFBPCV26",
+    "from": "db.hire_types"
+  },
+  "1356": {
+    "uid": "blt55e630039051aeed",
+    "title": "BFGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1357": {
+    "uid": "blt01e57bb38ae19216",
+    "title": "BFGPCV26",
+    "from": "db.hire_types"
+  },
+  "1358": {
+    "uid": "blt884f366252c14a1b",
+    "title": "BFGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1359": {
+    "uid": "blt8ca7aef9ec59e42d",
+    "title": "BFGPCV38",
+    "from": "db.hire_types"
+  },
+  "1360": {
+    "uid": "blt8e89e62c3277dfeb",
+    "title": "BFGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1361": {
+    "uid": "blt4137bbd17234bcf9",
+    "title": "BFSPCV24",
+    "from": "db.hire_types"
+  },
+  "1362": {
+    "uid": "blt3197b2147d34bb7a",
+    "title": "HMGPCV26",
+    "from": "db.hire_types"
+  },
+  "1363": {
+    "uid": "blt94d89e24e5a0dd9d",
+    "title": "HMSPCV26",
+    "from": "db.hire_types"
+  },
+  "1364": {
+    "uid": "blt4fc8a17661ca5365",
+    "title": "HMSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1365": {
+    "uid": "blt7ec83ea46732ffa3",
+    "title": "HMSPCV38",
+    "from": "db.hire_types"
+  },
+  "1366": {
+    "uid": "blt8916e473c4fc9398",
+    "title": "HMSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1367": {
+    "uid": "blt0506f29a08854a71",
+    "title": "SMBPCV26",
+    "from": "db.hire_types"
+  },
+  "1368": {
+    "uid": "blt8539deb020b9d34b",
+    "title": "SMBPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1369": {
+    "uid": "blte52096c763c3bf0a",
+    "title": "SMBPCV26NP",
+    "from": "db.hire_types"
+  },
+  "1370": {
+    "uid": "blt7e0de5d0379f7093",
+    "title": "SMBPCV38",
+    "from": "db.hire_types"
+  },
+  "1371": {
+    "uid": "blt2347042406922710",
+    "title": "SMBPCV38NP",
+    "from": "db.hire_types"
+  },
+  "1372": {
+    "uid": "bltb37e971d51f42dd7",
+    "title": "SMGPCV26",
+    "from": "db.hire_types"
+  },
+  "1373": {
+    "uid": "bltccdbb3818865011a",
+    "title": "SMGPCV38",
+    "from": "db.hire_types"
+  },
+  "1374": {
+    "uid": "blt4aebef40be432611",
+    "title": "SMGPCV49",
+    "from": "db.hire_types"
+  },
+  "1375": {
+    "uid": "blt4438b19257aad55e",
+    "title": "SMSICV38",
+    "from": "db.hire_types"
+  },
+  "1376": {
+    "uid": "blt11222800c45554f8",
+    "title": "SMSPCV26",
+    "from": "db.hire_types"
+  },
+  "1377": {
+    "uid": "bltaf8aa68d6110c9a7",
+    "title": "SMSPCV26DS",
+    "from": "db.hire_types"
+  },
+  "1378": {
+    "uid": "blt0cdd5c411b86325c",
+    "title": "SMSPCV38",
+    "from": "db.hire_types"
+  },
+  "1379": {
+    "uid": "blt724057efed70842d",
+    "title": "SMSPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1380": {
+    "uid": "blt0318afea58af840f",
+    "title": "SMSPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1381": {
+    "uid": "blteeb0dbd01c09ec8b",
+    "title": "AHGMPD14",
+    "from": "db.hire_types"
+  },
+  "1382": {
+    "uid": "blt527e835b7be9cd2b",
+    "title": "AHGMPD14CD",
+    "from": "db.hire_types"
+  },
+  "1383": {
+    "uid": "blt5c2716ba12634904",
+    "title": "AHPLLO26",
+    "from": "db.hire_types"
+  },
+  "1384": {
+    "uid": "bltdf5c3f1bf7ab95a8",
+    "title": "AHGPLO26",
+    "from": "db.hire_types"
+  },
+  "1385": {
+    "uid": "blta2823de7bdbc8305",
+    "title": "AHGPLO24PF",
+    "from": "db.hire_types"
+  },
+  "1386": {
+    "uid": "blt5b881338b44cb421",
+    "title": "AHSPLO24",
+    "from": "db.hire_types"
+  },
+  "1387": {
+    "uid": "bltf8b1e746e5e69c7b",
+    "title": "AHSICB24",
+    "from": "db.hire_types"
+  },
+  "1388": {
+    "uid": "bltc45ae216df37724b",
+    "title": "AHSICB24HT",
+    "from": "db.hire_types"
+  },
+  "1389": {
+    "uid": "blt0e667abb6ef05175",
+    "title": "BFGOAP24A1",
+    "from": "db.hire_types"
+  },
+  "1390": {
+    "uid": "bltb001c0a4734afe55",
+    "title": "BFGOAP24A2",
+    "from": "db.hire_types"
+  },
+  "1391": {
+    "uid": "bltd969e68466bd119c",
+    "title": "BFGOAP36A3",
+    "from": "db.hire_types"
+  },
+  "1392": {
+    "uid": "blt2843928f7bd07a71",
+    "title": "BFGOAP36A4",
+    "from": "db.hire_types"
+  },
+  "1393": {
+    "uid": "bltfb337bf52c8721fd",
+    "title": "BFPLCV26",
+    "from": "db.hire_types"
+  },
+  "1394": {
+    "uid": "blt7d7b9ccf29b72fc5",
+    "title": "BFPLLO26PF",
+    "from": "db.hire_types"
+  },
+  "1395": {
+    "uid": "blte8bcc3b1a217c746",
+    "title": "HMBZVL36HN",
+    "from": "db.hire_types"
+  },
+  "1396": {
+    "uid": "blt5fb329b930bca570",
+    "title": "HMBZVL36HT",
+    "from": "db.hire_types"
+  },
+  "1397": {
+    "uid": "blt8d26665ac4a208b6",
+    "title": "HMGOAP24A1",
+    "from": "db.hire_types"
+  },
+  "1398": {
+    "uid": "blt5994e598fa4eeee2",
+    "title": "HMGOAP24A2",
+    "from": "db.hire_types"
+  },
+  "1399": {
+    "uid": "bltec382a1ea743c695",
+    "title": "HMGOAP36A1",
+    "from": "db.hire_types"
+  },
+  "1400": {
+    "uid": "blt6c45a5d7b895bdf0",
+    "title": "HMGOAP36A2",
+    "from": "db.hire_types"
+  },
+  "1401": {
+    "uid": "blt6dbddf4e2ee75ba2",
+    "title": "HMGOCO24",
+    "from": "db.hire_types"
+  },
+  "1402": {
+    "uid": "blt4b13df1bcea071d0",
+    "title": "HMGOCO24HT",
+    "from": "db.hire_types"
+  },
+  "1403": {
+    "uid": "bltff9252e3e6812838",
+    "title": "HMGOCO12",
+    "from": "db.hire_types"
+  },
+  "1404": {
+    "uid": "bltbb5d43575e90b658",
+    "title": "HMGOCO36",
+    "from": "db.hire_types"
+  },
+  "1405": {
+    "uid": "blt7ddd360dc41fdba0",
+    "title": "HMGOCO36HT",
+    "from": "db.hire_types"
+  },
+  "1406": {
+    "uid": "bltfd3a10da43c80edc",
+    "title": "HMGOVL36",
+    "from": "db.hire_types"
+  },
+  "1407": {
+    "uid": "blt91262cae4f69726c",
+    "title": "HMGOVL36HT",
+    "from": "db.hire_types"
+  },
+  "1408": {
+    "uid": "blt18c8d316cd4df6bf",
+    "title": "HMGOVL36HP",
+    "from": "db.hire_types"
+  },
+  "1409": {
+    "uid": "blt9ec54f3ca68ee2cd",
+    "title": "HMGPCV26HT",
+    "from": "db.hire_types"
+  },
+  "1410": {
+    "uid": "blt9285c9fca9450e6b",
+    "title": "HMNGCH36",
+    "from": "db.hire_types"
+  },
+  "1411": {
+    "uid": "blt34c484496da5f833",
+    "title": "HMSIAP12",
+    "from": "db.hire_types"
+  },
+  "1412": {
+    "uid": "bltdd8f87d914082bbe",
+    "title": "HMSIAP12PF",
+    "from": "db.hire_types"
+  },
+  "1413": {
+    "uid": "blt62aee6362345cff5",
+    "title": "HMSIBG24",
+    "from": "db.hire_types"
+  },
+  "1414": {
+    "uid": "blt2dc7d7f0bacfb113",
+    "title": "HMSIBG24PF",
+    "from": "db.hire_types"
+  },
+  "1415": {
+    "uid": "blt3ba1b09435494d48",
+    "title": "HMSIVL36",
+    "from": "db.hire_types"
+  },
+  "1416": {
+    "uid": "blt6a1d20b2ed299799",
+    "title": "HMSIVL36PF",
+    "from": "db.hire_types"
+  },
+  "1417": {
+    "uid": "bltc203edf5687a9d2f",
+    "title": "HMSIVL38",
+    "from": "db.hire_types"
+  },
+  "1418": {
+    "uid": "blt7ed22d8e15466432",
+    "title": "HMSIVL38PF",
+    "from": "db.hire_types"
+  },
+  "1419": {
+    "uid": "blt07f6bfb1e45ca362",
+    "title": "HMSIVL38HT",
+    "from": "db.hire_types"
+  },
+  "1420": {
+    "uid": "blt8d05fb1b8f026307",
+    "title": "HMSIVL49",
+    "from": "db.hire_types"
+  },
+  "1421": {
+    "uid": "blt2fbdde141c5f09ff",
+    "title": "HMSIVL49HT",
+    "from": "db.hire_types"
+  },
+  "1422": {
+    "uid": "blt497d071991282938",
+    "title": "HMSIVL49HP",
+    "from": "db.hire_types"
+  },
+  "1423": {
+    "uid": "blt72eb075f5cc21aa3",
+    "title": "PLPLBG24",
+    "from": "db.hire_types"
+  },
+  "1424": {
+    "uid": "bltc4b30ad3d04b5c36",
+    "title": "PLSIBG26",
+    "from": "db.hire_types"
+  },
+  "1425": {
+    "uid": "blt84779a0db70ec47e",
+    "title": "SMGPLO26",
+    "from": "db.hire_types"
+  },
+  "1426": {
+    "uid": "bltd58df7f922e38927",
+    "title": "SMGPLO26HT",
+    "from": "db.hire_types"
+  },
+  "1427": {
+    "uid": "bltc6ffde4ad446226e",
+    "title": "SMGPLO38",
+    "from": "db.hire_types"
+  },
+  "1428": {
+    "uid": "blt473ca6ba9a22e0f4",
+    "title": "SMGPLO38HT",
+    "from": "db.hire_types"
+  },
+  "1429": {
+    "uid": "bltd9627b5a4f70930f",
+    "title": "SMGPLO38PF",
+    "from": "db.hire_types"
+  },
+  "1430": {
+    "uid": "bltf7f25703bb9d23b5",
+    "title": "SMSPLO24DB",
+    "from": "db.hire_types"
+  },
+  "1431": {
+    "uid": "bltb155a3d9f0643b94",
+    "title": "SMSPLO36",
+    "from": "db.hire_types"
+  },
+  "1432": {
+    "uid": "blt2dac4dc8adfec46a",
+    "title": "HMGOVL48HT",
+    "from": "db.hire_types"
+  },
+  "1433": {
+    "uid": "blt20fcbe8ed87e166a",
+    "title": "AHPRTC22TE",
+    "from": "db.hire_types"
+  },
+  "1434": {
+    "uid": "blt56668f8ed6f22115",
+    "title": "AHELTC22NT",
+    "from": "db.hire_types"
+  },
+  "1435": {
+    "uid": "blt874626dcf9f3cf80",
+    "title": "AHPRTC22",
+    "from": "db.hire_types"
+  },
+  "1436": {
+    "uid": "blt3af082dff1ca0db2",
+    "title": "AHEHTC22",
+    "from": "db.hire_types"
+  },
+  "1437": {
+    "uid": "blt88257826aab55f60",
+    "title": "AHNETC22TE",
+    "from": "db.hire_types"
+  },
+  "1438": {
+    "uid": "blt47711420f2f1e603",
+    "title": "AHELTC22",
+    "from": "db.hire_types"
+  },
+  "1439": {
+    "uid": "blt054df711a345ddf7",
+    "title": "AHELTC22TE",
+    "from": "db.hire_types"
+  },
+  "1440": {
+    "uid": "blt64a4988824aadfcc",
+    "title": "SMPRTC22",
+    "from": "db.hire_types"
+  },
+  "1441": {
+    "uid": "bltcaec495847d533df",
+    "title": "SMEHTC22",
+    "from": "db.hire_types"
+  },
+  "1442": {
+    "uid": "blt86ccf187a08d23ff",
+    "title": "SMEHTC22ES",
+    "from": "db.hire_types"
+  },
+  "1443": {
+    "uid": "blt26e357e7cc88a3f6",
+    "title": "SMELTC22NT",
+    "from": "db.hire_types"
+  },
+  "1444": {
+    "uid": "blt606186e20d08715e",
+    "title": "PFSPCV26",
+    "from": "db.hire_types"
+  },
+  "1445": {
+    "uid": "blt50e1415b9049bde2",
+    "title": "SSPLCV24",
+    "from": "db.hire_types"
+  },
+  "1446": {
+    "uid": "blt347829f938cd3b74",
+    "title": "HMGOCO36PF",
+    "from": "db.hire_types"
+  },
+  "1447": {
+    "uid": "bltcff7bc1a6086db15",
+    "title": "HMBZBG24",
+    "from": "db.hire_types"
+  },
+  "1448": {
+    "uid": "blt90d49931e548cbf9",
+    "title": "HMBZBG24NP",
+    "from": "db.hire_types"
+  },
+  "1449": {
+    "uid": "blta7c70d0c651c05ec",
+    "title": "HMGPCV26HP",
+    "from": "db.hire_types"
+  },
+  "1450": {
+    "uid": "blta2269f3e9674706d",
+    "title": "HWSICV26",
+    "from": "db.hire_types"
+  },
+  "1451": {
+    "uid": "blta70d6b11ddd47ac5",
+    "title": "PBGPCV24PF",
+    "from": "db.hire_types"
+  },
+  "1452": {
+    "uid": "blt99b8aff10703ac4c",
+    "title": "SSBPCV36NP",
+    "from": "db.hire_types"
+  },
+  "1453": {
+    "uid": "bltb6b7b13b96a75124",
+    "title": "TVSICV26 ",
+    "from": "db.hire_types"
+  },
+  "1454": {
+    "uid": "blt413f908c7ff86c9b",
+    "title": "HMGPCV38",
+    "from": "db.hire_types"
+  },
+  "1455": {
+    "uid": "blt31e22714502acaa5",
+    "title": "TBGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1456": {
+    "uid": "bltb3c2252a6f9c01e3",
+    "title": "HWGPCV26",
+    "from": "db.hire_types"
+  },
+  "1457": {
+    "uid": "bltebe1b4959ec0ff34",
+    "title": "HWGPCV38",
+    "from": "db.hire_types"
+  },
+  "1458": {
+    "uid": "blt2fca4a0e08b29c6b",
+    "title": "SMGPCV26PF",
+    "from": "db.hire_types"
+  },
+  "1459": {
+    "uid": "blt9e97348b7a87cd18",
+    "title": "SMGPCV38PF",
+    "from": "db.hire_types"
+  },
+  "1460": {
+    "uid": "bltcb782a2a02fa7394",
+    "title": "TVSFTE26EP",
+    "from": "db.hire_types"
+  },
+  "1461": {
+    "uid": "blt97fedf7e29edb647",
+    "title": "BSPLCV24",
+    "from": "db.hire_types"
+  }
+}

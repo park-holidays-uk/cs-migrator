@@ -188,7 +188,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     const recordCount = Object.keys(responses).length + 1
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
-		console.log("TCL: createEntries -> existingEntryUid", existingEntryUid)
     if (existingEntryUid && !migrationConfig.shouldUpdate) {
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
@@ -202,8 +201,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         method = 'PUT'
       }
       url += '?locale=en-gb'
-			console.log("TCL: createEntries -> url", url)
-      console.log("TCL: createEntries -> body", JSON.stringify(body, null ,2))
       const res = await fetch(url, {
         method,
         headers: {
@@ -214,7 +211,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
       })
       const response = await res.json()
       if (response['error_code']) {
-        console.log("\nTCL: createEntries -> response", response, body.entry.title, '\n')
         if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
           const dupedId = findDuplicateInResponses(responses, body.entry.title)
           console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors, 'mapped to original: ', dupedId)

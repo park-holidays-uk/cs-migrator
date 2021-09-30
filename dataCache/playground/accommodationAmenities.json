@@ -1,1 +1,267 @@
-{}
+{
+  "1": {
+    "uid": "blt6b7e4a7211af8df9",
+    "title": "10ft wide",
+    "from": "db.hire_type_features"
+  },
+  "2": {
+    "uid": "blt7c7996f7ac6a6a91",
+    "title": "12ft wide",
+    "from": "db.hire_type_features"
+  },
+  "3": {
+    "uid": "blt3dcbc70ea45967ff",
+    "title": "20ft Wide",
+    "from": "db.hire_type_features"
+  },
+  "4": {
+    "uid": "blt26b57bffee25b8ce",
+    "title": "2pm Check-in",
+    "from": "db.hire_type_features"
+  },
+  "6": {
+    "uid": "blt3dfd9c1ebe51e414",
+    "title": "4pm Check-in",
+    "from": "db.hire_type_features"
+  },
+  "7": {
+    "uid": "blt3d9aed45dbc4ab78",
+    "title": "Heating in the living room only ",
+    "from": "db.hire_type_features"
+  },
+  "8": {
+    "uid": "blt6c64921cec617390",
+    "title": "Heating throughout ",
+    "from": "db.hire_type_features"
+  },
+  "9": {
+    "uid": "bltae7544bfce9b5386",
+    "title": "Central heating and double glazing throughout",
+    "from": "db.hire_type_features"
+  },
+  "11": {
+    "uid": "bltf962c662b421602a",
+    "title": "Duvets, pillows and bed linen provided* with beds made for arrival",
+    "from": "db.hire_type_features"
+  },
+  "12": {
+    "uid": "blt44bd6392eb2e7f7c",
+    "title": "En-suite facilities",
+    "from": "db.hire_type_features"
+  },
+  "14": {
+    "uid": "blt20c5c9932e62e1a7",
+    "title": "Bathroom with Rain Shower",
+    "from": "db.hire_type_features"
+  },
+  "15": {
+    "uid": "blt8f3c623864bdaa02",
+    "title": "Walk-in in wet room with rails",
+    "from": "db.hire_type_features"
+  },
+  "16": {
+    "uid": "blt98dd288086aa44d5",
+    "title": "Fully equipped kitchen",
+    "from": "db.hire_type_features"
+  },
+  "17": {
+    "uid": "blt9f794e280641f038",
+    "title": "Fully equipped galley kitchen",
+    "from": "db.hire_type_features"
+  },
+  "18": {
+    "uid": "blt230dccad1eb58313",
+    "title": "Fully equipped  kitchen with lowered worktop, sink and cooker",
+    "from": "db.hire_type_features"
+  },
+  "20": {
+    "uid": "blta8cc44e99b00f7c0",
+    "title": "Integrated fridge freezer ",
+    "from": "db.hire_type_features"
+  },
+  "21": {
+    "uid": "blt61bce25d1660db92",
+    "title": "Gas, water, electricity and entertainment passes included with direct bookings",
+    "from": "db.hire_type_features"
+  },
+  "22": {
+    "uid": "blt6acb95e4b766a7a4",
+    "title": "TV in lounge – minimum 18”",
+    "from": "db.hire_type_features"
+  },
+  "23": {
+    "uid": "blt86a2dce5a98c99f9",
+    "title": "TV in lounge – minimum 32” with DVD player",
+    "from": "db.hire_type_features"
+  },
+  "26": {
+    "uid": "blt6e596ba3674efa70",
+    "title": "Decking",
+    "from": "db.hire_type_features"
+  },
+  "27": {
+    "uid": "blt0953a585b6d62c19",
+    "title": "Decking with outdoor furniture",
+    "from": "db.hire_type_features"
+  },
+  "28": {
+    "uid": "bltbeb7edb6b34754ed",
+    "title": "Ramp access with extra wide 1320mm door",
+    "from": "db.hire_type_features"
+  },
+  "29": {
+    "uid": "blt239982d124e43e52",
+    "title": "Ramp access with extra wide 1200mm door",
+    "from": "db.hire_type_features"
+  },
+  "31": {
+    "uid": "blt0d2b747ab1459208",
+    "title": "Ramp access with extra wide 960mm door",
+    "from": "db.hire_type_features"
+  },
+  "32": {
+    "uid": "blt2be6ceb4c9e91336",
+    "title": "Ramp access with extra wide 900mm door",
+    "from": "db.hire_type_features"
+  },
+  "33": {
+    "uid": "blt24609eb98cbb916e",
+    "title": "Ramp access with extra wide 790mm door",
+    "from": "db.hire_type_features"
+  },
+  "34": {
+    "uid": "bltf112f0b2fd320289",
+    "title": "Portable Trapeze hoist",
+    "from": "db.hire_type_features"
+  },
+  "35": {
+    "uid": "blt16aa4c59881f078e",
+    "title": "Sea views",
+    "from": "db.hire_type_features"
+  },
+  "37": {
+    "uid": "blt796ad6d7d475f229",
+    "title": "Entertainment passes",
+    "from": "db.hire_type_features"
+  },
+  "38": {
+    "uid": "blt29596189ff59737b",
+    "title": "Use of touring and park facilities",
+    "from": "db.hire_type_features"
+  },
+  "44": {
+    "uid": "blte570abeeb91d4214",
+    "title": "King-size bed in master bedroom with en-suite",
+    "from": "db.hire_type_features"
+  },
+  "45": {
+    "uid": "blta6fd018e91b29f07",
+    "title": "Luxury bedding provided",
+    "from": "db.hire_type_features"
+  },
+  "46": {
+    "uid": "blt3910b73c269aa340",
+    "title": "Walk-in wardrobe",
+    "from": "db.hire_type_features"
+  },
+  "47": {
+    "uid": "blt5a85200d0289ecf9",
+    "title": "TV and DVD player in master bedroom",
+    "from": "db.hire_type_features"
+  },
+  "48": {
+    "uid": "blt9c5d3cfcae937499",
+    "title": "Full size bath in family bathroom",
+    "from": "db.hire_type_features"
+  },
+  "49": {
+    "uid": "blt0ccacf37fe5982cb",
+    "title": "Bathrobes, towels, slippers and toiletries",
+    "from": "db.hire_type_features"
+  },
+  "50": {
+    "uid": "bltabf15e4e2638b2d7",
+    "title": "Full size single beds in twin bedrooms",
+    "from": "db.hire_type_features"
+  },
+  "51": {
+    "uid": "blt55c4fbe73e797f5f",
+    "title": "Freestanding furniture",
+    "from": "db.hire_type_features"
+  },
+  "52": {
+    "uid": "blt98dfeb481860d7c6",
+    "title": "Large family dining table",
+    "from": "db.hire_type_features"
+  },
+  "53": {
+    "uid": "bltc2b7c1a21de83b01",
+    "title": "Wall-mounted 49” TV in lounge",
+    "from": "db.hire_type_features"
+  },
+  "54": {
+    "uid": "blt49e02b3ac747d5b9",
+    "title": "Modern contemporary fireplace",
+    "from": "db.hire_type_features"
+  },
+  "55": {
+    "uid": "bltd5a782cb302420e4",
+    "title": "Fully equipped kitchen inc. dishwasher",
+    "from": "db.hire_type_features"
+  },
+  "56": {
+    "uid": "blt854117e34cfbc446",
+    "title": "Open plan kitchen with island",
+    "from": "db.hire_type_features"
+  },
+  "58": {
+    "uid": "bltefc9e3a4c4f020b9",
+    "title": "Coffee machine",
+    "from": "db.hire_type_features"
+  },
+  "59": {
+    "uid": "blt63976d60b909711f",
+    "title": "USB charging points",
+    "from": "db.hire_type_features"
+  },
+  "60": {
+    "uid": "blt109a2f52f04678d2",
+    "title": "Bluetooth speakers",
+    "from": "db.hire_type_features"
+  },
+  "61": {
+    "uid": "blt3f7f2dde6c8aa832",
+    "title": "Double glazing and central heating throughout",
+    "from": "db.hire_type_features"
+  },
+  "62": {
+    "uid": "blt39b1392fd862b813",
+    "title": "Iron and ironing board",
+    "from": "db.hire_type_features"
+  },
+  "67": {
+    "uid": "blt2f00d38d2255d983",
+    "title": "12pm Check-in",
+    "from": "db.hire_type_features"
+  },
+  "68": {
+    "uid": "blt447db69567a5b1e4",
+    "title": "Entertainment Passes (Incl. use of the Swimming Pool)",
+    "from": "db.hire_type_features"
+  },
+  "69": {
+    "uid": "blt554acdd00ba27c09",
+    "title": "Access to Shower and Toilet facilities",
+    "from": "db.hire_type_features"
+  },
+  "70": {
+    "uid": "blt158bdc724265fe5e",
+    "title": "11am Check-out",
+    "from": "db.hire_type_features"
+  },
+  "71": {
+    "uid": "bltbe43a4c3afb7ad70",
+    "title": "Pets Welcome*",
+    "from": "db.hire_type_features"
+  }
+}
