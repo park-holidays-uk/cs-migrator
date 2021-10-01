@@ -59,6 +59,11 @@ export const createAccommodationGrades = async (context, migrationConfig) => {
     return acc
   }, {})
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
+  accommodationGrades.unshift({
+    id: 0,
+    name: 'Other',
+    overview: 'Used for accommodation without a valid accommodation_grade, i.e. Grass Pitch'
+  })
   const accommodationGradeEntries = await createEntries(
     migrationConfig,
     context,
@@ -187,7 +192,7 @@ export const createAccommodation = async (context, migrationConfig) => {
           'holiday_product': findReferenceInCache(context, 'holidayProducts', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
           'location': findReferenceInCache(context, 'locations', parkId),
           'accommodation_type': findReferenceInCache(context, 'accommodationTypes', ht['accommodation_type_id']),
-          'accommodation_grade': findReferenceInCache(context, 'accommodationGrades', ht['grading_id']),
+          'accommodation_grade': findReferenceInCache(context, 'accommodationGrades', ht['grading_id'] || 0),
           'accommodation_amenities': amenitiesForThisAccomodation,
           'bedrooms': ht.bedrooms,
           'sleeps': ht.berths,
