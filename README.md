@@ -30,7 +30,7 @@ This migration assumes you have no entries within Contentstack and already have 
 
 First create some usable code: `npm install` followed by `npm run build`
 
-Create a valid `.env` file. The structure and contents can be taken from env.sample ( secrets are in LastPass )
+Create a valid `.env` file. The structure and contents can be taken from LastPass.
 
 Followed by using `npm start`.
 
