@@ -1,0 +1,32 @@
+{
+  "1": {
+    "uid": "blt2e368c4b5458f713",
+    "title": "East of England",
+    "from": "migration.defaultRegions"
+  },
+  "2": {
+    "uid": "blt211bec412f3856ca",
+    "title": "East Midlands",
+    "from": "migration.defaultRegions"
+  },
+  "3": {
+    "uid": "blt1e19391e570f74cb",
+    "title": "South West",
+    "from": "migration.defaultRegions"
+  },
+  "4": {
+    "uid": "bltcf55016ec381e39e",
+    "title": "South East",
+    "from": "migration.defaultRegions"
+  },
+  "5": {
+    "uid": "blt7ad614717e379160",
+    "title": "Yorkshire & the Humber",
+    "from": "migration.defaultRegions"
+  },
+  "6": {
+    "uid": "blt98e258f826dd9795",
+    "title": "Scotland",
+    "from": "migration.defaultRegions"
+  }
+}

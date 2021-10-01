@@ -116,12 +116,21 @@ export const createAccommodationAmenities = async (context, migrationConfig) => 
   return accommodationAmenityEntries
 }
 
-const findReferenceInCache = (context, cacheRef, id) => {
+const findReferenceInCache = (context, cacheRef, id, contentUid = snakeCase(cacheRef)) => {
+
   const data = context.cache[cacheRef][id]
+  // if (cacheRef === 'locations') {
+  //   console.log("TCL: findReferenceInCache -> cacheRef", cacheRef, contentUid)
+  //   console.log("TCL: findReferenceInCache -> data", {
+  //     'uid': data.uid,
+  //     '_content_type_uid': contentUid
+  //   })
+  // }
+
   if (data) {
     return [{
       'uid': data.uid,
-      '_content_type_uid': snakeCase(cacheRef)
+      '_content_type_uid': contentUid
     }]
   }
 }
@@ -192,7 +201,6 @@ export const createAccommodation = async (context, migrationConfig) => {
       })
     )
     accommodationEntries = {...accommodationEntries, ...accommodationEntriesPerPark}
-		console.log("TCL: createAccommodation -> parkId", parkId)
     const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.locations[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
     console.log(totalStr.padEnd(50, ' '))
   }
