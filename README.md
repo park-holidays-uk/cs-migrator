@@ -35,10 +35,18 @@ Create a valid `.env` file. The structure and contents can be taken from LastPas
 Followed by using `npm start`.
 
 
+
 ### cache.json
 
-This migration process keeps track of the newly created entries and its associated ContentStack uid in the cache.json file.
+This migration process keeps track of the newly created entries and its associated ContentStack uid in the dataCache json files.
 
 The keys to this object are taken from the entries original id within the parkholidays db.
 
 This will allow us to decipher which records in the old db point to which uid within ContentStack.
+
+
+## Content Types
+
+Thers is also a tool available to import/export current Content Type structures.
+
+`npm run types`

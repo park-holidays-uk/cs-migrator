@@ -6,7 +6,7 @@ import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
-import { getCache, writeSync } from './dataHandler/fileCache'
+import { getDataCache, writeDataSync } from './dataHandler/fileCache'
 import { EnvironmentType } from './types'
 
 const env = process.argv[2] as EnvironmentType
@@ -31,7 +31,7 @@ const importData = async () => {
   })
   context.db = await getDbConnection()
   context.env = env
-  context.cache = getCache(env, migrationConfiguration.map((m) => m.name))
+  context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
   const migrations = migrationConfiguration.filter((migration) => {
     return migration.includeInMigration
@@ -41,7 +41,7 @@ const importData = async () => {
     try {
       context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
       reportCreatedEntries(migrationConfig.name, context)
-      writeSync(env, migrationConfig.name, context.cache[migrationConfig.name])
+      writeDataSync(env, migrationConfig.name, context.cache[migrationConfig.name])
     } catch (error) {
       console.error('Error during migrations ',  error)
       console.error('Cache saved at this point: ', migrationConfig)
@@ -50,36 +50,6 @@ const importData = async () => {
 
     }
   }
-
-  // context.cache.locationLogos = await uploadLocationLogos(context)
-  // reportCreatedEntries('locationLogos', context)
-  // context.cache.locationGalleries = await uploadLocationGalleries(context)
-  // reportCreatedEntries('locationGalleries', context)
-  // context.cache.accommodationGalleries = await uploadAccommodationGalleries(context)
-  // reportCreatedEntries('accommodationGalleries', context)
-  // context.cache.holidayProducts = await createHolidayProducts(context)
-  // reportCreatedEntries('holidayProducts', context)
-  // context.cache.locationCategories = await createLocationCategories(context)
-  // reportCreatedEntries('locationCategories', context)
-  // context.cache.locationAmenities = await createLocationAmenities(context)
-  // reportCreatedEntries('locationAmenities', context)
-  // context.cache.regions = await createRegions(context)
-  // reportCreatedEntries('regions', context)
-  // context.cache.counties = await createCounties(context)
-  // reportCreatedEntries('counties', context)
-  // context.cache.locations = await createLocations(context)
-  // reportCreatedEntries('locations', context)
-  // context.cache.accommodationTypes = await createAccommodationTypes(context)
-  // reportCreatedEntries('accommodationTypes', context)
-  // context.cache.accommodationGrades = await createAccommodationGrades(context)
-  // reportCreatedEntries('accommodationGrades', context)
-  // context.cache.accommodationAmenities = await createAccommodationAmenities(context)
-  // reportCreatedEntries('accommodationAmenities', context)
-  // context.cache.accommodation = await createAccommodation(context)
-  // reportCreatedEntries('accommodation', context)
-
-  // writeFileSync(path.resolve(__dirname, '../cache.json'), JSON.stringify(context.cache, null, 2))
-
   process.exit()
 }
 

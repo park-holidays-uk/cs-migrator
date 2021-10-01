@@ -22,6 +22,7 @@ module.exports = (_, argv, configDirs) => {
   return {
     entry: {
       index: path.resolve(__dirname, './src/index.ts'),
+      contentTypes: path.resolve(__dirname, './src/contentTypes/index.ts'),
     },
     mode: argv.mode,
     output: {

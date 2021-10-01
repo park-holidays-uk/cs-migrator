@@ -28,6 +28,7 @@ const run = async (command) => {
       removeData()
       break;
     }
+
     default: {
       reportUsage('No command provided! (requires: migrate / remove)')
     }
@@ -35,7 +36,8 @@ const run = async (command) => {
 }
 
 if (!(process.argv[2] === 'playground' || process.argv[2] === 'parkholidays')) {
-  reportUsage('Invalid environment  provided! (requires: parkholidays / playground)')
+  reportUsage('Invalid environment provided! (requires: parkholidays / playground)')
+  process.exit(1)
 }
 
 run(process.argv[3])

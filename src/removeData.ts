@@ -4,7 +4,7 @@ import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
-import { writeSync } from './dataHandler/fileCache'
+import { writeDataSync } from './dataHandler/fileCache'
 import { getAssets, getEntries, removeEntries, removeAssetsWithSubFolders } from './tools'
 import loginForAuthToken from './tools/login'
 import { EnvironmentType } from './types'
@@ -29,7 +29,7 @@ const removeContent = async (context) => {
       recordsRemoved += removedEntries.length
     }
     console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
-    writeSync(env, camelCase(contentUid), {})
+    writeDataSync(env, camelCase(contentUid), {})
   }
 }
 
@@ -48,7 +48,7 @@ const removeAssetsByFolder = async (context) => {
       const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved)
       recordsRemoved += removedAssets.length
     }
-    writeSync(context.env, migrationConfig.name, {})
+    writeDataSync(context.env, migrationConfig.name, {})
     console.log(`removedAssets -> [ ${folder} ]`, recordsRemoved)
   }
 }
@@ -72,47 +72,3 @@ const removeData = async () => {
 }
 
 export default removeData
-
-
-/*
-"park_logo": [
-  {
-      "media": [
-          {
-              "file": {
-                  "file": "bltcdb01bc9c260f6fc" // OR ["bltcdb01bc9c260f6fc", "bltcdb01bc9c260485d", "bltcdb01bc9cac456"]
-              }
-          }
-      ],
-      "type": null,
-      "order": 3
-  }
-]
-
-
-"product_content": [{
-  "holiday_product": {
-    "holiday_product_reference": [{
-      "uid": "blt41b92151ac79946e",
-      "_content_type_uid": "holiday_products"
-    }],
-    "holiday_product_details": [{
-      "holiday_product_overviews": {
-        "holiday_product_short_overview": "This is a short overview",
-        "holiday_product_long_overview": "This is an even longer overview"
-      }
-    }, {
-      "holiday_product_media":  {
-        "media": [{
-          "file": {
-              "file": "blt6eb2954f9a55d7f8"
-          }
-        }],
-        "type": null,
-        "order": 1
-      }
-    }]
-  }
-}]
-
-*/
