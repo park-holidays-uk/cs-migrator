@@ -182,23 +182,39 @@ const findCachedEntry = (migrationConfig, context, entry) => {
   }
 }
 
+const removeUnwantedDataUsingKeyMap = (keyMap: {}, dataObj) => {
+  return Object.keys(dataObj).reduce((acc, dataKey) => {
+    const data = {...acc}
+    if (!keyMap[dataKey]) return data
+    if (typeof keyMap[dataKey] === 'object') {
+      data[dataKey] = removeUnwantedDataUsingKeyMap(keyMap[dataKey], dataObj[dataKey])
+    } else {
+      data[dataKey] = dataObj[dataKey]
+    }
+    return data
+  }, {})
+}
+
 export const createEntries = async (migrationConfig, context, contentUid, entries, createBody, createCacheEntry) => {
   const responses = {}
   for (const entry of entries) {
     const recordCount = Object.keys(responses).length + 1
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
-    if (existingEntryUid && !migrationConfig.shouldUpdate) {
+    if (existingEntryUid && migrationConfig.updateKeys === 'none') {
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
       await apiDelay()
-      const body = await createBody(entry)
+      let body = await createBody(entry)
       let method = 'POST'
       let url = `${context.base_url}/content_types/${contentUid}/entries`
       if (existingEntryUid) {
         url += `/${existingEntryUid}`
-        body.entry.uid = existingEntryUid
         method = 'PUT'
+        if (migrationConfig.updateKeys !== 'all') {
+          body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body)
+        }
+        body.entry.uid = existingEntryUid
       }
       url += '?locale=en-gb'
       const res = await fetch(url, {
@@ -219,7 +235,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
           console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
         }
       } else {
-        await publishEntry(context, contentUid, response.entry, entry)
+        // await publishEntry(context, contentUid, response.entry, entry)
         responses[entry.id] = createCacheEntry(response, entry)
       }
     }

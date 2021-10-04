@@ -39,7 +39,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     folderName: 'Park_Logo',
     includeInRemove: false,
     includeInMigration: false,
-    shouldUpdate: false, // images cannot update - always migrated with a unique id
+    updateKeys: 'none', // images cannot update - always 'none'
   }, {
     name: 'locationGallery',
     type: 'asset',
@@ -47,7 +47,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     folderName: 'Location_Media',
     includeInRemove: false,
     includeInMigration: false,
-    shouldUpdate: false, // images cannot update - always migrated with a unique id
+    updateKeys: 'none', // images cannot update - always 'none'
   }, {
     name: 'accommodationGallery',
     type: 'asset',
@@ -55,77 +55,82 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     folderName: 'Accommodation_Media',
     includeInRemove: false,
     includeInMigration: false,
-    shouldUpdate: false, // images cannot update - always migrated with a unique id
+    updateKeys: 'none', // images cannot update - always 'none'
   }, {
     name: 'holidayProduct',
     type: 'entry',
     handler: createHolidayProducts,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'locationCategory',
     type: 'entry',
     handler: createLocationCategories,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'locationAmenity',
     type: 'entry',
     handler: createLocationAmenities,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'region',
     type: 'entry',
     handler: createRegions,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'county',
     type: 'entry',
     handler: createCounties,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'location',
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
     includeInMigration: true,
-    shouldUpdate: false,
+    updateKeys: { entry: {
+      long_name: true,
+      address: {
+        'line_1': true
+      }
+    }},
   }, {
     name: 'accommodationType',
     type: 'entry',
     handler: createAccommodationTypes,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'accommodationGrade',
     type: 'entry',
     handler: createAccommodationGrades,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'accommodationAmenity',
     type: 'entry',
     handler: createAccommodationAmenities,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
     includeInRemove: false,
-    includeInMigration: true,
-    shouldUpdate: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   },
 ]
 

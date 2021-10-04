@@ -2,6 +2,10 @@ export type EnvironmentType = 'playground' | 'parkholidays'
 
 export type FolderNameType = 'Park_Logo' | 'Location_Media' | 'Accommodation_Media'
 
+type UpdateKeyMapType = {
+  [key: string]: boolean | UpdateKeyMapType
+}
+
 export type MigrationConfigurationType = {
   name: MigrationType
   type: 'asset' | 'entry'
@@ -9,7 +13,7 @@ export type MigrationConfigurationType = {
   handler: (context: any, migrationConfig: MigrationConfigurationType) => Promise<{}>
   includeInRemove: boolean
   includeInMigration: boolean
-  shouldUpdate: boolean
+  updateKeys: 'none' | 'all' | { entry: UpdateKeyMapType }
 }
 
 export type MigrationType = 'locationLogo'
