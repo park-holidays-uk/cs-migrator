@@ -1,36 +1,36 @@
 {
   "1": {
-    "uid": "blt5b04c7d4fd0a6e42",
+    "uid": "blta96039d563d96eb1",
     "title": "Caravan",
     "from": "db.accommodation_types"
   },
   "2": {
-    "uid": "blt70fba5ae51fa7f25",
+    "uid": "bltb10503f2bd7f7ccd",
     "title": "Lodge",
     "from": "db.accommodation_types"
   },
   "5": {
-    "uid": "blt5251e036a57f2769",
+    "uid": "blte28cc227cbb8314e",
     "title": "Apartment",
     "from": "db.accommodation_types"
   },
   "8": {
-    "uid": "blt4b1fa235b7b51d74",
+    "uid": "blta5f8d2e1633a34bd",
     "title": "Pitch",
     "from": "db.accommodation_types"
   },
   "9": {
-    "uid": "bltfc72425a7abf30e1",
+    "uid": "blt3607bacbfac14dde",
     "title": "Other",
     "from": "db.accommodation_types"
   },
   "10": {
-    "uid": "blt7833e07bfd586d55",
+    "uid": "blt8ebc0607df0e9464",
     "title": "Camping Pod",
     "from": "db.accommodation_types"
   },
   "11": {
-    "uid": "blt14b1c6437b293783",
+    "uid": "bltdd8307c3dbff6249",
     "title": "Luxury Apartments",
     "from": "db.accommodation_types"
   }

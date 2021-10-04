@@ -9,7 +9,7 @@ export const createAccommodationTypes = async (context, migrationConfig) => {
   const accommodationTypesEntries = await createEntries(
     migrationConfig,
     context,
-    'accommodation_types',
+    'accommodation_type',
     accommodationTypes,
     (accomType) => ({
       entry: {
@@ -53,7 +53,7 @@ const createAccommodationGradeImages = (context, images) => {
 }
 
 export const createAccommodationGrades = async (context, migrationConfig) => {
-  const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGalleries).reduce((acc, value: any) => {
+  const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGallery).reduce((acc, value: any) => {
     if (!acc[value.grade]) acc[value.grade] = []
     acc[value.grade].push(value)
     return acc
@@ -67,7 +67,7 @@ export const createAccommodationGrades = async (context, migrationConfig) => {
   const accommodationGradeEntries = await createEntries(
     migrationConfig,
     context,
-    'accommodation_grades',
+    'accommodation_grade',
     accommodationGrades,
     (grade) => ({
       entry: {
@@ -105,7 +105,7 @@ export const createAccommodationAmenities = async (context, migrationConfig) => 
   const accommodationAmenityEntries = await createEntries(
     migrationConfig,
     context,
-    'accommodation_amenities',
+    'accommodation_amenity',
     hireTypeFeatures,
     (htFeature) => ({
       entry: {
@@ -155,11 +155,11 @@ const createAmenitiesOnAccomodation = async (context, hireTypeDescriptionId) => 
       ORDER BY sort_order;
     `)
     const accommodationAmenities = hireTypeFeatures.map((feature) => {
-      const cachedAmenity = context.cache.accommodationAmenities[feature.id]
+      const cachedAmenity = context.cache.accommodationAmenity[feature.id]
       if (cachedAmenity) {
         return ({
           'uid': cachedAmenity.uid,
-          '_content_type_uid': 'accommodation_amenities'
+          '_content_type_uid': 'accommodation_amenity'
         })
       }
     })
@@ -189,10 +189,10 @@ export const createAccommodation = async (context, migrationConfig) => {
         entry: {
           'title': ht.code,
           'name': ht.name,
-          'holiday_product': findReferenceInCache(context, 'holidayProducts', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
-          'location': findReferenceInCache(context, 'locations', parkId),
-          'accommodation_type': findReferenceInCache(context, 'accommodationTypes', ht['accommodation_type_id']),
-          'accommodation_grade': findReferenceInCache(context, 'accommodationGrades', ht['grading_id'] || 0),
+          'holiday_product': findReferenceInCache(context, 'holidayProduct', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
+          'location': findReferenceInCache(context, 'location', parkId),
+          'accommodation_type': findReferenceInCache(context, 'accommodationType', ht['accommodation_type_id']),
+          'accommodation_grade': findReferenceInCache(context, 'accommodationGrade', ht['grading_id'] || 0),
           'accommodation_amenities': amenitiesForThisAccomodation,
           'bedrooms': ht.bedrooms,
           'sleeps': ht.berths,
@@ -206,7 +206,7 @@ export const createAccommodation = async (context, migrationConfig) => {
       })
     )
     accommodationEntries = {...accommodationEntries, ...accommodationEntriesPerPark}
-    const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.locations[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
+    const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.location[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
     console.log(totalStr.padEnd(50, ' '))
   }
   return accommodationEntries
