@@ -1,12 +1,17 @@
 import 'cross-fetch/polyfill'
-import { snakeCase, getAllEntries } from '../../tools'
+import { arrayToUidKeyedObject, createEntries, getAllEntries, snakeCase } from '../../tools'
 import loginForAuthToken from '../../tools/login'
 import {
   getEnvironmentVariables,
   migrationConfiguration
 } from '../../config/envConfig'
+
+import { fetchContentType } from '../../contentTypes/export'
+import { updateContentType } from '../../contentTypes/import'
 import { getDataCache, writeSync } from '../../dataHandler/fileCache'
-import { EnvironmentType } from '../../types'
+import { EnvironmentType, MigrationConfigurationType } from '../../types'
+
+import locationSchemaV2 from './locationSchemaV2.json'
 
 const env = process.argv[2] as EnvironmentType
 console.log("TCL: env", env)
@@ -31,8 +36,60 @@ const migrateData = async () => {
   })
   context.env = env
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
-  const locationEntries = await getAllEntries(context, 'location')
+
+  // save a copy of current v1 entries
+  let locationEntries = await getAllEntries(context, 'location')
   writeSync(env, 'migrationCache', 'location_V1', locationEntries)
+
+  locationEntries = locationEntries.slice(0, 2)
+	console.log("TCL: migrateData -> locationEntries", locationEntries.length)
+
+  // export & update content-type structure
+  // const locationContentType = await fetchContentType(context, 'content_types', 'location')
+  // locationContentType.content_type.schema = locationSchemaV2
+  // await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
+
+  const mockMigrationConfig = {
+    name: 'location',
+    updateKeys: 'all'
+  } as MigrationConfigurationType
+
+  // context.cache.location = arrayToUidKeyedObject(locationEntries)
+  // re-populate entries using new structure
+  // const locationEntryResponses = await createEntries(
+  //   mockMigrationConfig,
+  //   context,
+  //   'location',
+  //   locationEntries,
+  //   async (entry) => {
+	// 		console.log("TCL: migrateData -> entry", entry)
+  //     return ({
+  //       entry: {
+  //         ...entry,
+  //         park_logo: {
+  //           image: entry
+  //         }
+  //         // 'park_logo': parkLogos,
+  //         // 'location_category': [{
+  //         //   'uid': context.cache.locationCategory[park['type_id']].uid,
+  //         //   '_content_type_uid': 'location_category'
+  //         // }],
+  //         // 'location_amenities': parkFacilities.map((facility) => ({
+  //         //   'uid': context.cache.locationAmenity[facility.id].uid,
+  //         //   '_content_type_uid': 'location_amenity'
+  //         // })),
+  //         // 'product_content': locationProductContent,
+  //         // 'park_code': park['code']
+  //       }
+  //     })
+  //   },
+  //   () => ({ /* No cache required */ })
+  // )
+
+
+
+
+
   const accommodationEntries = await getAllEntries(context, 'accommodation')
   writeSync(env, 'migrationCache', 'accommodation_V1', accommodationEntries)
   // const migrations = migrationConfiguration.filter((migration) => {

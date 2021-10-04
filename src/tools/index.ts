@@ -176,9 +176,15 @@ const publishEntry = async (context, contentUid, responseEntry, entry) => {
   }
 }
 
+export const arrayToUidKeyedObject = (arr) => arr.reduce((obj, item) => {
+  obj[item.uid] = item
+  return obj
+}, {})
+
 const findCachedEntry = (migrationConfig, context, entry) => {
-  if (context.cache[migrationConfig.name][entry.id]) {
-    return context.cache[migrationConfig.name][entry.id].uid
+  const entryId = entry.id || entry.uid
+  if (context.cache[migrationConfig.name][entryId]) {
+    return context.cache[migrationConfig.name][entryId].uid
   }
 }
 
@@ -202,10 +208,12 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
     if (existingEntryUid && migrationConfig.updateKeys === 'none') {
+      console.log('none')
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
       await apiDelay()
       let body = await createBody(entry)
+			console.log("TCL: createEntries -> body", body)
       let method = 'POST'
       let url = `${context.base_url}/content_types/${contentUid}/entries`
       if (existingEntryUid) {
@@ -226,6 +234,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         body: JSON.stringify(body)
       })
       const response = await res.json()
+			console.log("TCL: createEntries -> response", response)
       if (response['error_code']) {
         if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
           const dupedId = findDuplicateInResponses(responses, body.entry.title)

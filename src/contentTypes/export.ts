@@ -1,16 +1,20 @@
 import 'cross-fetch/polyfill'
 import loginForAuthToken from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
-import { EnvironmentType } from '../types'
+import { EnvironmentType, MigrationType, ContentTypeType } from '../types'
 import { writeSync } from '../dataHandler/fileCache'
+
+
 
 const env = process.argv[2] as EnvironmentType
 const filename = process.argv[4]
 
 const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
 
-export const fetchContentType = async (context, contentType) => {
-  const res = await fetch(`${context.base_url}/${contentType}`, {
+
+export const fetchContentType = async (context, type: ContentTypeType, contentUid?: MigrationType) => {
+  const contentUidUrl = contentUid ? `/${contentUid}` : ''
+  const res = await fetch(`${context.base_url}/${type}${contentUidUrl}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

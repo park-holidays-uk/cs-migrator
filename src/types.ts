@@ -1,5 +1,7 @@
 export type EnvironmentType = 'playground' | 'parkholidays'
 
+export type ContentTypeType = 'global_fields' | 'content_types'
+
 export type FolderNameType = 'Park_Logo' | 'Location_Media' | 'Accommodation_Media'
 
 type UpdateKeyMapType = {

@@ -2,33 +2,32 @@ import 'cross-fetch/polyfill'
 import pluralize from 'pluralize'
 import loginForAuthToken from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
-import { EnvironmentType } from '../types'
+import { EnvironmentType, ContentTypeType, MigrationType } from '../types'
 import { readSync } from '../dataHandler/fileCache'
-import { apiDelay } from '../tools'
+import { apiDelay, arrayToUidKeyedObject } from '../tools'
 
 const env = process.argv[2] as EnvironmentType
 const filename = process.argv[4]
 
 const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
 
-const arrayToUidKeyedObject = (arr) => arr.reduce((obj, item) => {
-  obj[item.uid] = item
-  return obj
-}, {})
 
-export const updateContentType = async (context, data, contentType) => {
+
+export const updateContentType = async (context, data, type: ContentTypeType, contentUid?: MigrationType) => {
+  const contentUidUrl = contentUid ? `/${contentUid}` : ''
   const headers = {
     'Content-Type': 'application/json',
     ...context.headers
   }
-  const res = await fetch(`${context.base_url}/${contentType}`, {
+  const res = await fetch(`${context.base_url}/${type}${contentUidUrl}`, {
     method: 'GET',
     headers
   })
   const response = await res.json()
-  const existingFields = arrayToUidKeyedObject(response[contentType])
-  for (const item of data) {
-    let url = `${context.base_url}/${contentType}`
+  const existingFields = arrayToUidKeyedObject(contentUid ? [ response[pluralize.singular(type)] ] : response[type])
+  const dataToIterate = Array.isArray(data) ? data : [ data ]
+  for (const item of dataToIterate) {
+    let url = `${context.base_url}/${type}`
     let method = 'POST'
     const body = item
     if (existingFields[item.uid]) {
@@ -40,7 +39,7 @@ export const updateContentType = async (context, data, contentType) => {
     const updateRes = await fetch(url, {
       method,
       headers,
-      body: JSON.stringify({ [pluralize.singular(contentType)]: {
+      body: JSON.stringify({ [pluralize.singular(type)]: {
         ...body
       }})
     })
