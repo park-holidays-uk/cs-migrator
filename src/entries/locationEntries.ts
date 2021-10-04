@@ -10,7 +10,7 @@ export const createHolidayProducts = async (context, migrationConfig) => {
   const holidayProductEntries = await createEntries(
     migrationConfig,
     context,
-    'holiday_products',
+    'holiday_product',
     sectors,
     (sector) => ({
       entry: {
@@ -34,7 +34,7 @@ export const createLocationCategories = async (context, migrationConfig) => {
   const locationCategoryEntries = await createEntries(
     migrationConfig,
     context,
-    'location_categories',
+    'location_category',
     parkTypes,
     (parkType) => ({
       entry: {
@@ -60,7 +60,7 @@ export const createLocationAmenities = async (context, migrationConfig) => {
   const locationAmenityEntries = await createEntries(
     migrationConfig,
     context,
-    'location_amenities',
+    'location_amenity',
     parkFacilities,
     (parkFacility) => ({
       entry: {
@@ -81,7 +81,7 @@ export const createRegions = async (context, migrationConfig) => {
   const regionEntries = await createEntries(
     migrationConfig,
     context,
-    'regions',
+    'region',
     defaultRegions,
     (region) => ({
       entry: {
@@ -147,7 +147,7 @@ const createHolidayProductDetailImages = async (sectorId, park, context) => {
       holiday_product_media: {
         media: thisMediaBlocksImages.map((img, index) => ({
           file: {
-            file: context.cache.locationGalleries[img.id].uid,
+            file: context.cache.locationGallery[img.id].uid,
             order: (mediaBlock * 100) + index
           }
         })),
@@ -169,8 +169,8 @@ const createHolidayProductDetails = async (sectorId, park, context) => {
   return {
     'holiday_product': {
       'holiday_product_reference': [{
-          'uid': context.cache.holidayProducts[sectorId].uid,
-          '_content_type_uid': 'holiday_products'
+          'uid': context.cache.holidayProduct[sectorId].uid,
+          '_content_type_uid': 'holiday_product'
       }],
       'holiday_product_details': [
         ...mediaBlocks,
@@ -186,7 +186,7 @@ const createParkLogoEntries = async (context, parkId) => {
   return parkLogos.map((logo) => ({
     media: [{
       file: {
-        file: context.cache.locationLogos[logo.id].uid
+        file: context.cache.locationLogo[logo.id].uid
       }
     }],
     type: null,
@@ -199,7 +199,7 @@ export const createCounties = async (context, migrationConfig) => {
   const countyEntries = await createEntries(
     migrationConfig,
     context,
-    'counties',
+    'county',
     counties,
     (county) => ({
       entry: {
@@ -221,7 +221,7 @@ export const createLocations = async (context, migrationConfig) => {
   const locationEntries = await createEntries(
     migrationConfig,
     context,
-    'locations',
+    'location',
     parks,
     async (park) => {
       const parkFacilities = await context.db.query(`
@@ -252,12 +252,12 @@ export const createLocations = async (context, migrationConfig) => {
             'line_2': park['address_line_2'],
             'town': park['town'],
             'region': [{
-              'uid': context.cache.regions[getRegionIdFromCounty(park['county_name'])].uid,
-              '_content_type_uid': 'regions'
+              'uid': context.cache.region[getRegionIdFromCounty(park['county_name'])].uid,
+              '_content_type_uid': 'region'
             }],
             'county': [{
-              'uid': context.cache.counties[park['county_name']].uid,
-              '_content_type_uid': 'counties'
+              'uid': context.cache.county[park['county_name']].uid,
+              '_content_type_uid': 'county'
             }],
             'postcode': park['postcode'],
             'latitude': park['gps_latitude'].toString().padEnd(8, '0'),
@@ -265,12 +265,12 @@ export const createLocations = async (context, migrationConfig) => {
           },
           'park_logo': parkLogos,
           'location_category': [{
-            'uid': context.cache.locationCategories[park['type_id']].uid,
-            '_content_type_uid': 'location_categories'
+            'uid': context.cache.locationCategory[park['type_id']].uid,
+            '_content_type_uid': 'location_category'
           }],
           'location_amenities': parkFacilities.map((facility) => ({
-            'uid': context.cache.locationAmenities[facility.id].uid,
-            '_content_type_uid': 'location_amenities'
+            'uid': context.cache.locationAmenity[facility.id].uid,
+            '_content_type_uid': 'location_amenity'
           })),
           'product_content': locationProductContent,
           'park_code': park['code']
