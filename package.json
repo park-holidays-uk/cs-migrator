@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --mode=development",
+    "migrateV2": "npm run build && node ./dist/migrateV2.js playground",
     "types": "npm run build && node ./dist/contentTypes.js",
     "start": "npm run build && node ./dist/index.js"
   },

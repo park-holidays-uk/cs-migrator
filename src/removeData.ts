@@ -4,7 +4,7 @@ import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
-import { writeDataSync } from './dataHandler/fileCache'
+import { writeSync } from './dataHandler/fileCache'
 import { getAssets, getEntries, removeEntries, removeAssetsWithSubFolders } from './tools'
 import loginForAuthToken from './tools/login'
 import { EnvironmentType } from './types'
@@ -29,7 +29,7 @@ const removeContent = async (context) => {
       recordsRemoved += removedEntries.length
     }
     console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
-    writeDataSync(env, camelCase(contentUid), {})
+    writeSync(env, 'dataCache', camelCase(contentUid), {})
   }
 }
 
@@ -48,7 +48,7 @@ const removeAssetsByFolder = async (context) => {
       const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved)
       recordsRemoved += removedAssets.length
     }
-    writeDataSync(context.env, migrationConfig.name, {})
+    writeSync(context.env, 'dataCache', migrationConfig.name, {})
     console.log(`removedAssets -> [ ${folder} ]`, recordsRemoved)
   }
 }

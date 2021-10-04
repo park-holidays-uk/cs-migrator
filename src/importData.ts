@@ -6,7 +6,7 @@ import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
-import { getDataCache, writeDataSync } from './dataHandler/fileCache'
+import { getDataCache, writeSync } from './dataHandler/fileCache'
 import { EnvironmentType } from './types'
 
 const env = process.argv[2] as EnvironmentType
@@ -41,7 +41,7 @@ const importData = async () => {
     try {
       context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
       reportCreatedEntries(migrationConfig.name, context)
-      writeDataSync(env, migrationConfig.name, context.cache[migrationConfig.name])
+      writeSync(env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     } catch (error) {
       console.error('Error during migrations ',  error)
       console.error('Cache saved at this point: ', migrationConfig)

@@ -2,9 +2,9 @@ import path from 'path'
 import { EnvironmentType, MigrationType } from '../types'
 import { readFileSync, writeFileSync } from 'fs'
 
-type CacheType = 'dataCache' | 'contentCache'
+type CacheType = 'dataCache' | 'contentCache' | 'migrationCache'
 
-const readSync = (env: EnvironmentType, type: CacheType, filename: string ) => {
+export const readSync = (env: EnvironmentType, type: CacheType, filename: string ) => {
   let result = null
   const filePath = path.resolve(__dirname, `../${type}/${env}/`, `${filename}.json`)
   try {
@@ -28,18 +28,6 @@ export const writeSync = (env: EnvironmentType, type: CacheType, filename: strin
   } catch (error) {
 		console.error("writeSync -> error", error)
   }
-}
-
-export const writeDataSync = (env: EnvironmentType, filename: MigrationType, obj) => {
-  writeSync(env, 'dataCache', filename, obj)
-}
-
-export const writeContentSync = (env: EnvironmentType, filename: string, obj) => {
-  writeSync(env, 'contentCache', filename, obj)
-}
-
-export const getContentCache = (env: EnvironmentType, filename: string) => {
-  return readSync(env, 'contentCache', filename)
 }
 
 export const getDataCache = (env: EnvironmentType, migrationTypes: MigrationType[]) => {

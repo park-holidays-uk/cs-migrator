@@ -3,7 +3,7 @@ import pluralize from 'pluralize'
 import loginForAuthToken from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
 import { EnvironmentType } from '../types'
-import { getContentCache, writeContentSync } from '../dataHandler/fileCache'
+import { readSync } from '../dataHandler/fileCache'
 import { apiDelay } from '../tools'
 
 const env = process.argv[2] as EnvironmentType
@@ -16,7 +16,7 @@ const arrayToUidKeyedObject = (arr) => arr.reduce((obj, item) => {
   return obj
 }, {})
 
-const fetchAndUpdate = async (context, data, contentType) => {
+export const updateContentType = async (context, data, contentType) => {
   const headers = {
     'Content-Type': 'application/json',
     ...context.headers
@@ -46,7 +46,6 @@ const fetchAndUpdate = async (context, data, contentType) => {
     })
     delete existingFields[item.uid]
   }
-	// console.log("TCL: existingFields LEFT OVER", contentType, existingFields)
 }
 
 const importContentTypes = async () => {
@@ -60,9 +59,9 @@ const importContentTypes = async () => {
       authtoken: null,
     }
   })
-  const { contentTypes, globalFields } = getContentCache(env, filename)
-  await fetchAndUpdate(context, globalFields, 'global_fields')
-  await fetchAndUpdate(context, contentTypes, 'content_types')
+  const { contentTypes, globalFields } = readSync(env, 'contentCache', filename)
+  await updateContentType(context, globalFields, 'global_fields')
+  await updateContentType(context, contentTypes, 'content_types')
 }
 
 export default importContentTypes
