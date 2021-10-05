@@ -213,7 +213,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     } else {
       await apiDelay()
       let body = await createBody(entry)
-			console.log("TCL: createEntries -> body", body)
       let method = 'POST'
       let url = `${context.base_url}/content_types/${contentUid}/entries`
       if (existingEntryUid) {
@@ -234,7 +233,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         body: JSON.stringify(body)
       })
       const response = await res.json()
-			console.log("TCL: createEntries -> response", response)
       if (response['error_code']) {
         if (response['error_code'] === 119 && response.errors?.title && response.errors.title[0] === 'is not unique.') {
           const dupedId = findDuplicateInResponses(responses, body.entry.title)

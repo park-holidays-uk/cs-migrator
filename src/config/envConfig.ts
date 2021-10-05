@@ -95,14 +95,9 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'location',
     type: 'entry',
     handler: createLocations,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: true,
-    updateKeys: { entry: {
-      long_name: true,
-      address: {
-        'line_1': true
-      }
-    }},
+    updateKeys: 'all',
   }, {
     name: 'accommodationType',
     type: 'entry',
