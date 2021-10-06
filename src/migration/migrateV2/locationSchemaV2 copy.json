@@ -1,0 +1,152 @@
+[
+  {
+    "data_type": "text",
+    "display_name": "Title",
+    "field_metadata": {
+      "_default": true,
+      "version": 3
+    },
+    "mandatory": true,
+    "uid": "title",
+    "unique": true,
+    "multiple": false,
+    "non_localizable": false
+  },
+  {
+    "data_type": "text",
+    "display_name": "Long name",
+    "uid": "long_name",
+    "field_metadata": {
+      "description": "",
+      "default_value": "",
+      "version": 3
+    },
+    "format": "",
+    "error_messages": {
+      "format": ""
+    },
+    "mandatory": true,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": false
+  },
+  {
+    "data_type": "global_field",
+    "display_name": "Address",
+    "reference_to": "address",
+    "field_metadata": {
+      "description": ""
+    },
+    "uid": "address",
+    "mandatory": false,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": false
+  },
+  {
+    "data_type": "group",
+    "display_name": "Park Logo",
+    "field_metadata": {
+      "description": "",
+      "instruction": ""
+    },
+    "schema": [
+      {
+        "data_type": "file",
+        "display_name": "Image",
+        "uid": "image",
+        "field_metadata": {
+          "description": "",
+          "rich_text_type": "standard",
+          "image": true
+        },
+        "mandatory": true,
+        "multiple": false,
+        "non_localizable": false,
+        "unique": false,
+        "dimension": {
+          "width": {
+            "min": null,
+            "max": null
+          },
+          "height": {
+            "min": null,
+            "max": null
+          }
+        }
+      }
+    ],
+    "uid": "park_logo",
+    "mandatory": false,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": false
+  },
+  {
+    "data_type": "reference",
+    "display_name": "Category",
+    "reference_to": [
+      "location_category"
+    ],
+    "field_metadata": {
+      "ref_multiple": false,
+      "ref_multiple_content_types": true
+    },
+    "uid": "location_category",
+    "mandatory": true,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": false
+  },
+  {
+    "data_type": "reference",
+    "display_name": "Location Amenities",
+    "reference_to": [
+      "location_amenity"
+    ],
+    "field_metadata": {
+      "ref_multiple": true,
+      "ref_multiple_content_types": true
+    },
+    "uid": "location_amenities",
+    "mandatory": false,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": false
+  },
+  {
+    "data_type": "global_field",
+    "display_name": "Holiday Product Contents",
+    "reference_to": "holiday_product_content",
+    "field_metadata": {
+      "description": ""
+    },
+    "uid": "holiday_product_contents",
+    "mandatory": false,
+    "multiple": true,
+    "non_localizable": false,
+    "unique": false,
+    "max_instance": 2
+  },
+  {
+    "data_type": "text",
+    "display_name": "_Park Code",
+    "uid": "park_code",
+    "field_metadata": {
+      "description": "",
+      "default_value": "",
+      "instruction": "Value used to reference park within 'Elite Parks'",
+      "version": 3
+    },
+    "format": "",
+    "error_messages": {
+      "format": ""
+    },
+    "mandatory": false,
+    "multiple": false,
+    "non_localizable": false,
+    "unique": true,
+    "min": 2,
+    "max": 2
+  }
+]

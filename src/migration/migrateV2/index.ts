@@ -16,7 +16,7 @@ import locationSchemaV2 from './locationSchemaV2.json'
 const env = process.argv[2] as EnvironmentType
 console.log("TCL: env", env)
 
-const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
+const { api_key, base_url, management_token, email, Icon_Star } = getEnvironmentVariables(env)
 
 const reportUpdatedEntries = (key, context) => {
   console.log(`updatedEntries -> [ ${snakeCase(key)} ]`, Object.keys(context.cache[key]).length, ' '.repeat(25))
@@ -43,10 +43,7 @@ const migrateData = async () => {
 
   let locationEntries = readSync(env, 'migrationCache', 'location_V1')
 
-  // locationEntries = locationEntries.slice(0, 2)
-	// console.log("TCL: migrateData -> locationEntries", locationEntries.length)
-
-  // // export & update content-type structure
+  // export & update content-type structure
   // const locationContentType = await fetchContentType(context, 'content_types', 'location')
   // locationContentType.content_type.schema = locationSchemaV2
   // await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
@@ -86,7 +83,15 @@ const migrateData = async () => {
     const highlights = holidayProductDetails.filter((pd) => pd.holiday_product_reasons)
     if (highlights.length) {
       return {
-        highlights: highlights[0].holiday_product_reasons.holiday_product_reason
+        highlights:  highlights[0].holiday_product_reasons.holiday_product_reason.map((reason) => {
+          return {
+            icon: [{
+              uid: Icon_Star,
+              _content_type_uid: 'icon'
+            }],
+            title: reason.toString()
+          }
+        })
       }
     }
     return {}

@@ -29,6 +29,7 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   Park_Logo: process.env[`${env}_Park_Logo`],
   Location_Media: process.env[`${env}_Location_Media`],
   Accommodation_Media: process.env[`${env}_Accommodation_Media`],
+  Icon_Star: process.env[`${env}_Icon_Star`],
   environments: process.env[`${env}_environments`]
 })
 
