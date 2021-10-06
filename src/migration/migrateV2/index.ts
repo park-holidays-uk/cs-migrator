@@ -38,15 +38,15 @@ const migrateData = async () => {
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
   // save a copy of current v1 entries
-  // const locationEntries = await getAllEntries(context, 'location')
-  // writeSync(env, 'migrationCache', 'location_V1', locationEntries)
+  const locationEntries = await getAllEntries(context, 'location')
+  writeSync(env, 'migrationCache', 'location_V1', locationEntries)
 
-  let locationEntries = readSync(env, 'migrationCache', 'location_V1')
+  // let locationEntries = readSync(env, 'migrationCache', 'location_V1')
 
   // export & update content-type structure
-  // const locationContentType = await fetchContentType(context, 'content_types', 'location')
-  // locationContentType.content_type.schema = locationSchemaV2
-  // await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
+  const locationContentType = await fetchContentType(context, 'content_types', 'location')
+  locationContentType.content_type.schema = locationSchemaV2
+  await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
 
   const mockMigrationConfig = {
     name: 'location',

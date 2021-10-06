@@ -229,7 +229,7 @@
               "instruction": "Keep below 30 characters (typically 2 - 4 words)",
               "version": 3
             },
-            "format": "30",
+            "format": "",
             "error_messages": {
               "format": ""
             },
@@ -238,7 +238,7 @@
             "non_localizable": false,
             "unique": false,
             "min": 1,
-            "max": 50
+            "max": 140
           },
           {
             "data_type": "text",
