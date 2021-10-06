@@ -149,7 +149,25 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
 
 const publishEntry = async (context, contentUid, responseEntry, entry) => {
   try {
-    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${responseEntry.uid}/publish`, {
+    /* WITHOUT REFERENCES */
+    // const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${responseEntry.uid}/publish`, {
+    //   method: 'POST',
+    //   headers: {
+    //     ...context.headers,
+    //     'authorization': context.management_token,
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     "entry": {
+    //       "locales": ["en-gb"],
+    //       "environments": JSON.parse(process.env[`${context.env}_environments`]) // i.e. production / qa / preview
+    //     },
+    //     "version": 1,
+    //     "scheduled_at": "2019-02-08T18:30:00.000Z"
+    //   })
+    // })
+    /* WITH ALL REFERENCES */
+    const res = await fetch(`${context.base_url}/bulk/publish?x-bulk-action=publish`, {
       method: 'POST',
       headers: {
         ...context.headers,
@@ -157,12 +175,16 @@ const publishEntry = async (context, contentUid, responseEntry, entry) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        "entry": {
-          "locales": ["en-gb"],
-          "environments": JSON.parse(process.env[`${context.env}_environments`]) // i.e. production / qa / preview
-        },
-        "version": 1,
-        "scheduled_at": "2019-02-08T18:30:00.000Z"
+        "entries": [{
+          "uid": responseEntry.uid,
+          "content_type": contentUid,
+          "version": 1,
+          "locale": "en-gb"
+        }],
+        "locales": ["en-gb"],
+        "environments": JSON.parse(process.env[`${context.env}_environments`]), // i.e. production / qa / preview,
+        "publish_with_reference": true,
+        "skip_workflow_stage_check": true
       })
     })
     const publishEntryResponse = await res.json()
@@ -242,7 +264,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
           console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
         }
       } else {
-        // await publishEntry(context, contentUid, response.entry, entry)
+        await publishEntry(context, contentUid, response.entry, entry)
         responses[entry.id] = createCacheEntry(response, entry)
       }
     }
