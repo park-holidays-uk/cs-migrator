@@ -6,7 +6,7 @@ const reportUsage = (reason) => {
   console.log(reason)
   console.log('\n')
   console.log('Usage: ')
-  console.log('       npm run <environment> <command> <foldername> [options]')
+  console.log('       npm run types <environment> <command> <foldername> [options]')
   console.log('\n')
   console.log('  -environment:  playground or parkholidays')
   console.log('\n')
@@ -18,7 +18,7 @@ const reportUsage = (reason) => {
   console.log('\n')
   console.log('  -[options]:    -r   Remove content types not defined in contentCache')
   console.log('\n')
-  console.log('  e.g.    npm run playground import pre-version-2\n')
+  console.log('  e.g.    npm run types playground import pre-version-2\n')
   console.log('       ')
 }
 

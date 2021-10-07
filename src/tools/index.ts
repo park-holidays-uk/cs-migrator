@@ -147,7 +147,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
   return responses
 }
 
-const publishEntry = async (context, contentUid, responseEntry, entry) => {
+export const publishEntry = async (context, contentUid, responseEntry, entry) => {
   try {
     /* WITHOUT REFERENCES */
     // const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${responseEntry.uid}/publish`, {
