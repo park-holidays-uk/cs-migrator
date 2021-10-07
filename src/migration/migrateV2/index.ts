@@ -38,15 +38,15 @@ const migrateData = async () => {
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
   // save a copy of current v1 entries
-  // const locationEntries = await getAllEntries(context, 'location')
-  // writeSync(env, 'migrationCache', 'location_V1', locationEntries)
+  const locationEntries = await getAllEntries(context, 'location')
+  writeSync(env, 'migrationCache', 'location_V1', locationEntries)
 
-  let locationEntries = readSync(env, 'migrationCache', 'location_V1')
+  // let locationEntries = readSync(env, 'migrationCache', 'location_V1') // used for development
 
   // export & update content-type structure
-  // const locationContentType = await fetchContentType(context, 'content_types', 'location')
-  // locationContentType.content_type.schema = locationSchemaV2
-  // await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
+  const locationContentType = await fetchContentType(context, 'content_types', 'location')
+  locationContentType.content_type.schema = locationSchemaV2
+  await updateContentType(context, locationContentType.content_type, 'content_types', 'location')
 
   const mockMigrationConfig = {
     name: 'location',
@@ -143,30 +143,6 @@ const migrateData = async () => {
     })
   )
   reportUpdatedEntries('location', context)
-
-
-
-
-
-  const accommodationEntries = await getAllEntries(context, 'accommodation')
-  writeSync(env, 'migrationCache', 'accommodation_V1', accommodationEntries)
-  // const migrations = migrationConfiguration.filter((migration) => {
-  //   return migration.includeInMigration
-  // })
-
-  // for (const migrationConfig of migrations) {
-  //   try {
-  //     context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
-  //     reportCreatedEntries(migrationConfig.name, context)
-  //     writeDataSync(env, migrationConfig.name, context.cache[migrationConfig.name])
-  //   } catch (error) {
-  //     console.error('Error during migrations ',  error)
-  //     console.error('Cache saved at this point: ', migrationConfig)
-  //     console.error('Cache: ', context.cache[migrationConfig.name])
-  //   } finally {
-
-  //   }
-  // }
   process.exit()
 }
 
