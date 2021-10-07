@@ -304,12 +304,10 @@ export const getEntries = async (context, contentUid) => {
 }
 
 export const getAllEntries = async (context, contentUid) => {
-	console.log("TCL: getAllEntries -> contentUid", contentUid)
   let allEntries = []
   let totalRecordCount = 1 // ensure it attempts it first time ( != 0 )
   while (totalRecordCount > allEntries.length) { // ContentStack is paginated to max 100 records
     const response = await getEntries(context, contentUid)
-		console.log("TCL: getAllEntries -> response", response.entries.length, response.count)
     totalRecordCount = response.count
     allEntries = [...allEntries, ...response.entries]
   }

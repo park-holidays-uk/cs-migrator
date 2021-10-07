@@ -20,7 +20,10 @@ const reportUsage = (reason) => {
   console.log('       ')
 }
 
-const availableContentUids = ['location']
+const availableContentUids = [
+  'accommodation',
+  'location',
+]
 
 const run = async (env, contentUid) => {
   if (!availableContentUids.includes(contentUid)) {
@@ -43,11 +46,14 @@ const run = async (env, contentUid) => {
   context.env = env
 
   const entries = await getAllEntries(context, contentUid)
-
+  let recordCount = 0
   for (const entry of entries) {
     await apiDelay(150)
     await publishEntry(context, contentUid, entry, null)
+    recordCount += 1
+    process.stdout.write(`Publishing entry: [ ${entry.title || entry.uid} ] ${recordCount} ${' '.repeat(25)} \r`)
   }
+  console.log(`\nAdded all ${entries.length} ${contentUid} entries to the publish queue.\n`)
 }
 
 if (!(process.argv[2] === 'playground' || process.argv[2] === 'parkholidays')) {
