@@ -22,6 +22,7 @@ const reportUsage = (reason) => {
 
 const availableContentUids = [
   'accommodation',
+  'accommodation_grade',
   'location',
 ]
 
@@ -48,7 +49,7 @@ const run = async (env, contentUid) => {
   const entries = await getAllEntries(context, contentUid)
   let recordCount = 0
   for (const entry of entries) {
-    await apiDelay(150)
+    await apiDelay(1000)
     await publishEntry(context, contentUid, entry, null)
     recordCount += 1
     process.stdout.write(`Publishing entry: [ ${entry.title || entry.uid} ] ${recordCount} ${' '.repeat(25)} \r`)

@@ -186,18 +186,20 @@ export const createAccommodation = async (context, migrationConfig) => {
       async (ht) => {
         const amenitiesForThisAccomodation = await createAmenitiesOnAccomodation(context, ht['hire_type_description_id'])
         return ({
-        entry: {
-          'title': ht.code,
-          'name': ht.name,
-          'holiday_product': findReferenceInCache(context, 'holidayProduct', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
-          'location': findReferenceInCache(context, 'location', parkId),
-          'accommodation_type': findReferenceInCache(context, 'accommodationType', ht['accommodation_type_id']),
-          'accommodation_grade': findReferenceInCache(context, 'accommodationGrade', ht['grading_id'] || 0),
-          'accommodation_amenities': amenitiesForThisAccomodation,
-          'bedrooms': ht.bedrooms,
-          'sleeps': ht.berths,
-        }
-      })
+          entry: {
+            'title': ht.code,
+            'name': ht.name,
+            'holiday_product': findReferenceInCache(context, 'holidayProduct', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
+            'location': findReferenceInCache(context, 'location', parkId),
+            'accommodation_type': findReferenceInCache(context, 'accommodationType', ht['accommodation_type_id']),
+            'accommodation_grade': findReferenceInCache(context, 'accommodationGrade', ht['grading_id'] || 0),
+            'accommodation_amenities': amenitiesForThisAccomodation,
+            'bedrooms': ht.bedrooms,
+            'sleeps': ht.berths,
+            'pets_allowed': !!ht.pets_allowed,
+            'accessible': !!ht.accessible,
+          }
+        })
       },
       ({ entry }) => ({
         uid: entry.uid,
