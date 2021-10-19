@@ -54,8 +54,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'asset',
     handler: uploadAccommodationGalleries,
     folderName: 'Accommodation_Media',
-    includeInRemove: true,
-    includeInMigration: true,
+    includeInRemove: false,
+    includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
   }, {
     name: 'holidayProduct',
@@ -111,10 +111,10 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createAccommodationGrades,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
-        media: true
+        media: false
       }
     },
   }, {
