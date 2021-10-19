@@ -35,7 +35,7 @@ export const uploadLocationLogos = async (context, migrationConfig) => {
 
     if (newParkLogos.length) {
       const folderUid = getFolderUid(context.env, folderName)
-      const thisResponse = await uploadAssets(context, newParkLogos, `${folderName} ${parkId}`, folderUid, (asset, response) => ({
+      const thisResponse = await uploadAssets(context, newParkLogos, `${folderName} ${parkId}`, folderUid, [], (asset, response) => ({
         uid: response.asset.uid,
         filename: asset.path,
         parkId,
@@ -92,7 +92,7 @@ export const uploadLocationGalleries = async (context, migrationConfig) => {
     }, [[], []])
 
     if (newLocationImages.length) {
-      const imageUploadResponse = await uploadAssets(context, newLocationImages, `${folder}/images`, imageFolderUid, (asset, response) => ({
+      const imageUploadResponse = await uploadAssets(context, newLocationImages, `${folder}/images`, imageFolderUid, [], (asset, response) => ({
         uid: response.asset.uid,
         filename: asset.path,
         parkId,
@@ -124,7 +124,6 @@ export const accommodationGalleryQuery = (accommodationId) => `
   INNER JOIN ph_db.media_lookups as ml
   WHERE m.id = ml.media_id
   AND ml.media_lookup_type LIKE 'App_Models_HireType'
-  AND ml.media_lookup_tag LIKE '%gallery%'
   AND ml.media_lookup_id=${accommodationId}
   ORDER BY ml.media_lookup_order ASC
 `
@@ -155,14 +154,13 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
   for (const park of parks) {
     const parkId = park.id
     const hireTypesWithImages = await context.db.query(`
-      SELECT DISTINCT ht.id, ht.grading_id, ht.code FROM ph_db.hire_types as ht
+      SELECT DISTINCT ht.id, ht.grading_id, ht.code, ht.accommodation_type_id, ht.accommodation_type FROM ph_db.hire_types as ht
       INNER JOIN ph_db.media_lookups as ml
       WHERE ht.park_id=${parkId}
       AND ml.media_lookup_type LIKE 'App_Models_HireType'
-      AND ml.media_lookup_tag LIKE 'Gallery'
       AND ml.media_lookup_id = ht.id
       AND ht.deleted_at IS NULL
-      ORDER BY grading_id;
+      ORDER BY grading_id ASC;
     `)
 
     const hireTypesByGradeId = hireTypesWithImages.reduce((acc, hireType) => {
@@ -188,10 +186,11 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
           }, [[], []])
 
           if (newAccommodationGalleries.length) {
-            const imageUploadResponse = await uploadAssets(context, newAccommodationGalleries, `${parentFolderName}/images`, imageFolderUid, (asset, response) => ({
+            const imageUploadResponse = await uploadAssets(context, newAccommodationGalleries, `${parentFolderName}/images`, imageFolderUid, [hireType.accommodation_type], (asset, response) => ({
               uid: response.asset.uid,
               filename: asset.path,
               grade: gradeKey,
+              accommodationType: hireType.accommodation_type_id,
               accommodationId: hireType.id,
               parkId,
               folder: `${parentFolderName}/images`,

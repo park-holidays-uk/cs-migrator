@@ -182,6 +182,8 @@ const createHolidayProductDetails = async (sectorId, park, context) => {
 }
 
 const createParkLogoEntries = async (context, parkId) => {
+  // this is old migration code.. structure has changed since migrateV2
+  // never updated this code as images have since been manually merged.
   const parkLogos = await context.db.query(parkLogoQuery(parkId))
   return parkLogos.map((logo) => ({
     media: [{
@@ -263,7 +265,7 @@ export const createLocations = async (context, migrationConfig) => {
             'latitude': park['gps_latitude'].toString().padEnd(8, '0'),
             'longitude': park['gps_longitude'].toString().padEnd(8, '0'),
           },
-          'park_logo': parkLogos,
+          // 'park_logo': parkLogos, - OLD migration code.. see migrateV2
           'location_category': [{
             'uid': context.cache.locationCategory[park['type_id']].uid,
             '_content_type_uid': 'location_category'

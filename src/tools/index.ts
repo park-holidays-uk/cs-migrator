@@ -107,7 +107,7 @@ const publishAsset = async (context, assetUid) => {
   }
 }
 
-export const uploadAssets = async (context, assets, folderName, folderUid, createCacheEntry) => {
+export const uploadAssets = async (context, assets, folderName, folderUid, tags, createCacheEntry) => {
   if (!folderUid) {
     console.error('Could not find a folder uid. Aborting asset upload!')
     return
@@ -116,7 +116,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
   const responses = {}
   for (const asset of assets) {
     const recordCount = Object.keys(responses).length + 1
-    process.stdout.write(`Uploading assets: [ ${folderName} ] ${recordCount} \r`)
+    process.stdout.write(`Uploading assets: [ ${folderName} ] ${recordCount} ${' '.repeat(25)}\r`)
     await apiDelay()
     const headers = {
       ...context.headers,
@@ -128,6 +128,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, creat
       formData.append('asset[upload]', fs.createReadStream(`${TMP_DIR}/${asset.path}`))
       formData.append('asset[parent_uid]', folderUid)
       formData.append('asset[description]', asset.description)
+      formData.append('asset[tags]', tags.join(','))
       const res = await fetch(`${context.base_url}/assets`, {
         method: 'POST',
         headers,
@@ -230,7 +231,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
     if (existingEntryUid && migrationConfig.updateKeys === 'none') {
-      console.log('none')
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
       await apiDelay()

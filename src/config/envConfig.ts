@@ -54,7 +54,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'asset',
     handler: uploadAccommodationGalleries,
     folderName: 'Accommodation_Media',
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
   }, {
@@ -111,8 +111,12 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createAccommodationGrades,
     includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
+    includeInMigration: true,
+    updateKeys: {
+      entry: {
+        media: true
+      }
+    },
   }, {
     name: 'accommodationAmenity',
     type: 'entry',
@@ -125,11 +129,12 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createAccommodation,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
-        pets_allowed: true, // This will only update the defined keys. everything else left as is.
-        accessible: true
+        pets_allowed: false, // This will only update the truthy keys. everything else left as is.
+        accessible: false,
+        accommodation_amenities: false,
       }
     },
   },

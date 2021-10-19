@@ -31,33 +31,25 @@ export const accommodationGradeQuery = () => `
   WHERE g.id = ht.grading_id;
 `
 
-const createAccommodationGradeImages = (context, images) => {
-  const allMediaBlocks = []
-  if (images?.length) {
-    const blockSize = 25
-    for (let mediaBlock = 0, imageCursor = 0; imageCursor < images.length; imageCursor += blockSize, mediaBlock += 1) {
-      const thisMediaBlocksImages = images.slice(imageCursor, (mediaBlock + 1) * blockSize)
-      allMediaBlocks.push({
-        media: thisMediaBlocksImages.map((img, index) => ({
-          file: {
-            file: img.uid,
-            order: (mediaBlock * 100) + index
-          }
-        })),
-        type: null,
-        order: mediaBlock
-      })
+const createAccommodationGradeImages = (context, accommodationTypes) => {
+  return Object.keys(accommodationTypes).map((accomTypeId) => {
+    return {
+      accommodation_type: findReferenceInCache(context, 'accommodationType', accomTypeId),
+      contextual_images: accommodationTypes[accomTypeId].map((asset) => ({
+        image: asset.uid
+      }))
     }
-  }
-  return allMediaBlocks
+  })
 }
 
 export const createAccommodationGrades = async (context, migrationConfig) => {
   const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGallery).reduce((acc, value: any) => {
-    if (!acc[value.grade]) acc[value.grade] = []
-    acc[value.grade].push(value)
+    if (!acc[value.grade]) acc[value.grade] = {}
+    if (!acc[value.grade][value.accommodationType]) acc[value.grade][value.accommodationType] = []
+    acc[value.grade][value.accommodationType].push(value)
     return acc
   }, {})
+
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
   accommodationGrades.unshift({
     id: 0,
@@ -97,11 +89,13 @@ export const createAccommodationAmenities = async (context, migrationConfig) => 
     AND ht.deleted_at IS NULL
     AND htf.deleted_at IS NULL
     AND (
-      htf.sector_id = 1
+      htf.sector_id = 0
+      OR htf.sector_id = 1
       OR htf.sector_id = 2
     )
     ORDER BY htf.sort_order ASC;
   `)
+
   const accommodationAmenityEntries = await createEntries(
     migrationConfig,
     context,
@@ -122,16 +116,7 @@ export const createAccommodationAmenities = async (context, migrationConfig) => 
 }
 
 const findReferenceInCache = (context, cacheRef, id, contentUid = snakeCase(cacheRef)) => {
-
   const data = context.cache[cacheRef][id]
-  // if (cacheRef === 'locations') {
-  //   console.log("TCL: findReferenceInCache -> cacheRef", cacheRef, contentUid)
-  //   console.log("TCL: findReferenceInCache -> data", {
-  //     'uid': data.uid,
-  //     '_content_type_uid': contentUid
-  //   })
-  // }
-
   if (data) {
     return [{
       'uid': data.uid,
