@@ -55,7 +55,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     handler: uploadAccommodationGalleries,
     folderName: 'Accommodation_Media',
     includeInRemove: true,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'none', // images cannot update - always 'none'
   }, {
     name: 'holidayProduct',
