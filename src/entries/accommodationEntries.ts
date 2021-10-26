@@ -1,5 +1,5 @@
 import { UNIQUE_PARK_QUERY } from '../assets/galleries'
-import { createEntries, snakeCase } from '../tools'
+import { arrayToUidKeyedObject, createEntries, snakeCase } from '../tools'
 
 export const createAccommodationTypes = async (context, migrationConfig) => {
   const accommodationTypes = await context.db.query(`
@@ -153,6 +153,27 @@ const createAmenitiesOnAccomodation = async (context, hireTypeDescriptionId) => 
   return dbCacheHireTypeDescription[hireTypeDescriptionId]
 }
 
+const createImagesOnAccomodation = async (context, hireTypeCode) => {
+  const mediaLookups = await context.db.query(`
+    SELECT ht.code, ml.media_id FROM ph_db.hire_types as ht
+    INNER JOIN ph_db.media_lookups as ml
+    WHERE ht.code="${hireTypeCode}"
+    AND ml.media_lookup_type LIKE 'App_Models_HireType'
+    AND ml.media_lookup_id = ht.id
+    ORDER BY ml.media_lookup_order ASC;
+  `)
+  return mediaLookups.reduce((acc, lookup) => {
+    const imageRef = findReferenceInCache(context, 'accommodationGallery', lookup.media_id)
+    if (imageRef?.[0].uid) {
+      return [
+        ...acc,
+        { image: findReferenceInCache(context, 'accommodationGallery', lookup.media_id)[0].uid}
+      ]
+    }
+    return acc
+  }, []);
+}
+
 export const createAccommodation = async (context, migrationConfig) => {
   let accommodationEntries = {}
   const parks = await context.db.query(UNIQUE_PARK_QUERY)
@@ -170,6 +191,7 @@ export const createAccommodation = async (context, migrationConfig) => {
       hireTypes,
       async (ht) => {
         const amenitiesForThisAccomodation = await createAmenitiesOnAccomodation(context, ht['hire_type_description_id'])
+        const imagesForThisAccomodation = await createImagesOnAccomodation(context, ht.code)
         return ({
           entry: {
             'title': ht.code,
@@ -183,6 +205,7 @@ export const createAccommodation = async (context, migrationConfig) => {
             'sleeps': ht.berths,
             'pets_allowed': !!ht.pets_allowed,
             'accessible': !!ht.accessible,
+            'contextual_images': imagesForThisAccomodation
           }
         })
       },

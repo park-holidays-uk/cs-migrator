@@ -129,12 +129,13 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createAccommodation,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: {
       entry: {
         pets_allowed: false, // This will only update the truthy keys. everything else left as is.
         accessible: false,
         accommodation_amenities: false,
+        contextual_images: false,
       }
     },
   },
