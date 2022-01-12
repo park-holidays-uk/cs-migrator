@@ -56,8 +56,8 @@ const runImport = async () => {
   const env = await getUserInput('Provide the environment: (default: parkholidays)? ', 'parkholidays')
   const type = await getUserInput('Provide the cacheFolder: (default: dataCache)? ', 'dataCache')
 	if (!fileName || !tableName) {
-    colorLog(RED, 'Please provide a valid table name & file name you wish to import from.');
-    return
+    colorLog(RED, 'Please provide a valid table name & file name you wish to import!');
+    return process.exit(1)
   }
   await writeToDynamoDb(tableName, env, type, fileName)
   process.exit()
