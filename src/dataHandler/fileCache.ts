@@ -1,8 +1,8 @@
+import { readFileSync, writeFileSync } from 'fs'
 import path from 'path'
 import { EnvironmentType, MigrationType } from '../types'
-import { readFileSync, writeFileSync } from 'fs'
 
-type CacheType = 'dataCache' | 'contentCache' | 'migrationCache'
+export type CacheType = 'dataCache' | 'contentCache' | 'migrationCache'
 
 export const readSync = (env: EnvironmentType, type: CacheType, filename: string ) => {
   let result = null

@@ -23,6 +23,7 @@ module.exports = (_, argv, configDirs) => {
     entry: {
       index: path.resolve(__dirname, './src/index.ts'),
       contentTypes: path.resolve(__dirname, './src/contentTypes/index.ts'),
+      dynamo: path.resolve(__dirname, './src/dynamoDb/index.ts'),
       migrateSlugs: path.resolve(__dirname, './src/migration/migrateSlug'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
