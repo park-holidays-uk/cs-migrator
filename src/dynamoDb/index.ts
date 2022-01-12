@@ -25,7 +25,6 @@ const getUserInput = (text, defaultInput = '') => new Promise((resolve, reject) 
 const putItem = (params) => new Promise<number>((resolve) => {
   docClient.put(params, (err, data) => {
     if (err) {
-			console.log("TCL: putItem -> err", err)
       colorLog(RED, 'Can`t add item!', params);
       resolve(0);
     } else {
