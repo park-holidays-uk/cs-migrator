@@ -1,0 +1,17 @@
+{
+  "1": {
+    "uid": "bltd518ebdfaf42971d",
+    "title": "New",
+    "from": "db.holiday_home_qualities"
+  },
+  "2": {
+    "uid": "blt726665e8856e557c",
+    "title": "Pre-Owned",
+    "from": "db.holiday_home_qualities"
+  },
+  "3": {
+    "uid": "blt0382f022bb4d78d5",
+    "title": "Ex-Demo",
+    "from": "db.holiday_home_qualities"
+  }
+}

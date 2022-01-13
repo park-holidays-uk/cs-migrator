@@ -1,0 +1,23 @@
+{
+  "1": {
+    "updated_at": "1960-01-01T00:00:00.000Z",
+    "id": "1",
+    "uid": "blt8a48ff41889b9eba",
+    "from": "db.holiday_home_types",
+    "title": "Static Caravan"
+  },
+  "2": {
+    "updated_at": "1960-01-01T00:00:00.000Z",
+    "id": "2",
+    "uid": "bltd751fa80ee8d453b",
+    "from": "db.holiday_home_types",
+    "title": "Luxury Lodge"
+  },
+  "3": {
+    "updated_at": "1960-01-01T00:00:00.000Z",
+    "id": "3",
+    "uid": "blt1ed95f41065a28d0",
+    "from": "db.holiday_home_types",
+    "title": "Villa"
+  }
+}
