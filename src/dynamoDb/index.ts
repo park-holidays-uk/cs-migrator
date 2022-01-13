@@ -86,19 +86,19 @@ const runImport = async () => {
   const fileName = await getUserInput('Provide the file name: (e.g. location)? ');
   const env = await getUserInput('Provide the environment: (default: parkholidays)? ', 'parkholidays');
   const type = await getUserInput('Provide the cacheFolder: (default: stockCache)? ', 'stockCache');
-  const isRead = await getUserInput('Read or write (r/W)? ', 'w');
+  const readWrite = await getUserInput('Read or write (r/W)? ', 'w');
   let forceUpdate = false;
-  if (isRead) {
+  if (readWrite === 'r') {
     forceUpdate = await getUserInput('Force updated_at = 1960/01/01? (y/N) ', 'n') === 'y';
   }
 	if (!fileName || !tableName) {
     colorLog(RED, 'Please provide a valid table name & file name you wish to import!');
     return process.exit(1)
   }
-  if (isRead === 'r') {
+  if (readWrite === 'r') {
     const file = fileName.endsWith('_read') ? fileName : `${fileName}_read`
     await readFromDynamoDb(tableName, env, type, file, forceUpdate);
-  } else if (isRead === 'w') {
+  } else if (readWrite === 'w') {
     await writeToDynamoDb(tableName, env, type, fileName);
   }
   process.exit()

@@ -1,23 +1,23 @@
 {
   "1": {
-    "updated_at": "2017-11-01T11:52:35.000Z",
+    "updated_at": "1960-01-01T00:00:00.000Z",
     "id": "1",
     "uid": "bltcf08d84eab5fb333",
     "from": "db.holiday_home_qualities",
-    "title": "New_11:13"
+    "title": "New"
   },
   "2": {
-    "updated_at": "2017-11-01T11:52:35.000Z",
+    "updated_at": "1960-01-01T00:00:00.000Z",
     "id": "2",
     "uid": "bltae5304d6eeaa650e",
     "from": "db.holiday_home_qualities",
-    "title": "Pre-Owned_11:13"
+    "title": "Pre-Owned"
   },
   "3": {
-    "updated_at": "2017-11-01T11:52:35.000Z",
+    "updated_at": "1960-01-01T00:00:00.000Z",
     "id": "3",
     "uid": "blt202ba7a3475ab6b1",
     "from": "db.holiday_home_qualities",
-    "title": "Ex-Demo_11:13"
+    "title": "Ex-Demo"
   }
 }
