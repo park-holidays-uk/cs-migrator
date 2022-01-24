@@ -164,7 +164,7 @@ const createImagesOnAccomodation = async (context, hireTypeCode) => {
   `)
   return mediaLookups.reduce((acc, lookup) => {
     const imageRef = findReferenceInCache(context, 'accommodationGallery', lookup.media_id)
-    if (imageRef?.[0].uid) {
+    if (imageRef?.[0]?.uid) {
       return [
         ...acc,
         { image: findReferenceInCache(context, 'accommodationGallery', lookup.media_id)[0].uid}
@@ -207,7 +207,7 @@ export const createAccommodation = async (context, migrationConfig) => {
             'accessible': !!ht.accessible,
             'contextual_images': imagesForThisAccomodation
           }
-        })
+        });
       },
       ({ entry }) => ({
         uid: entry.uid,

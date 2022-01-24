@@ -31,3 +31,14 @@ export type MigrationType = 'locationLogo'
   | 'accommodationGrade'
   | 'accommodationAmenity'
   | 'accommodation'
+
+  | 'stockAddon'
+  | 'stockAmenity'
+  | 'stockCondition'
+  | 'stockManufacturer'
+  | 'stockModel'
+  | 'stockStatus'
+  | 'stockType'
+  | 'stockUnit'
+
+

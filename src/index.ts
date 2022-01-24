@@ -6,7 +6,7 @@ const reportUsage = (reason) => {
   console.log(reason)
   console.log('\n')
   console.log('Usage: ')
-  console.log('       npm run <environment> <command>')
+  console.log('       npm start <environment> <command>')
   console.log('\n')
   console.log('  -environment:  playground or parkholidays')
   console.log('\n')
@@ -14,7 +14,7 @@ const reportUsage = (reason) => {
   // console.log('               migrate - creates new assets/entries')
   console.log('                 remove - deletes all assets/entries')
   console.log('\n')
-  console.log('  e.g.    npm run playground migrate\n')
+  console.log('  e.g.    npm start playground migrate\n')
   console.log('       ')
 }
 

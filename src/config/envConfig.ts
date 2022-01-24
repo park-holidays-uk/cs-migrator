@@ -129,7 +129,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createAccommodation,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
         pets_allowed: false, // This will only update the truthy keys. everything else left as is.
@@ -138,7 +138,71 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         contextual_images: false,
       }
     },
-  },
+  }, {
+    name: 'stockAddon',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockAmenity',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockCondition',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockManufacturer',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockModel',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockStatus',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockType',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'stockUnit',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }
 ]
 
 export default {

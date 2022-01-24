@@ -1,5 +1,5 @@
 # cs-migrator
-Tool to migrate data into contentstack
+Tool to migrate data into contentstack ( PLUS extra utilities around data within contentstack)
 
 This tool assumes you have a database available containing all the latest data.
 
@@ -45,8 +45,27 @@ The keys to this object are taken from the entries original id within the parkho
 This will allow us to decipher which records in the old db point to which uid within ContentStack.
 
 
+## Publishing
+
+Scripts available for bulk publishing.
+
+`npm run publish`
+
 ## Content Types
 
 Thers is also a tool available to import/export current Content Type structures.
 
 `npm run types`
+
+
+## Dynamo scripts
+
+There is also a tool to read in json structures from file and upload into DynamoDB.
+
+`npm run dynamo`
+
+## Migrations
+
+Also added code to create migrations for contentstack -> contentstack migrations. i.e. When contentypes change.
+
+e.g. `npm run migrateSlugs`
