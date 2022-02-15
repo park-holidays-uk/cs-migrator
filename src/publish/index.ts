@@ -1,7 +1,7 @@
 import 'cross-fetch/polyfill'
-import { apiDelay, publishEntry,  getAllEntries } from '../tools'
-import loginForAuthToken from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
+import { apiDelay, getAllEntries, publishEntry } from '../tools'
+import loginForAuthToken from '../tools/login'
 
 const reportUsage = (reason) => {
   console.log('\n\n')
@@ -49,7 +49,7 @@ const run = async (env, contentUid) => {
   const entries = await getAllEntries(context, contentUid)
   let recordCount = 0
   for (const entry of entries) {
-    await apiDelay(1000)
+    await apiDelay(1500)
     await publishEntry(context, contentUid, entry, null)
     recordCount += 1
     process.stdout.write(`Publishing entry: [ ${entry.title || entry.uid} ] ${recordCount} ${' '.repeat(25)} \r`)

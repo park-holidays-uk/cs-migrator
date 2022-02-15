@@ -1,6 +1,6 @@
-import { createEntries } from '../tools'
-import { parkLogoQuery, locationGalleryQuery, UNIQUE_PARK_QUERY } from '../assets/galleries'
+import { locationGalleryQuery, parkLogoQuery } from '../assets/galleries'
 import { defaultRegions, getRegionIdFromCounty } from '../entries/regions'
+import { createEntries } from '../tools'
 
 export const createHolidayProducts = async (context, migrationConfig) => {
   const sectors = await context.db.query(`
@@ -181,6 +181,32 @@ const createHolidayProductDetails = async (sectorId, park, context) => {
   }
 }
 
+const createSalesJourneyOverviews = async (context, parkId) => {
+  const parkSectorInfo = await context.db.query(`
+    SELECT psi.medium_overview, psi.full_overview
+    FROM park_sector_info as psi
+    INNER JOIN park_sector_info_lookups as lu
+    WHERE psi.id = lu.park_sector_info_id
+    AND lu.park_id = ${parkId}
+    AND lu.sector_id = 3
+  `)
+  if (parkSectorInfo[0]) {
+    return {
+      "short_overview": parkSectorInfo[0]['medium_overview'],
+      "long_overview": parkSectorInfo[0]['full_overview'],
+    }
+  } else {
+		console.error('createSalesJourneyOverviews -> ERROR-> missing information => park.id', parkId, 'parkSectorInfo', parkSectorInfo)
+  }
+};
+
+const createSalesProductContent = async (context, parkId) => {
+  const overview = await createSalesJourneyOverviews(context, parkId);
+  return {
+    overview,
+  }
+};
+
 const createParkLogoEntries = async (context, parkId) => {
   // this is old migration code.. structure has changed since migrateV2
   // never updated this code as images have since been manually merged.
@@ -244,6 +270,7 @@ export const createLocations = async (context, migrationConfig) => {
       if (park['is_touring_park']) {
         locationProductContent.push(await createHolidayProductDetails('2', park, context))
       }
+      const salesProductContent = await createSalesProductContent(context, park.id);
       const parkLogos = await createParkLogoEntries(context, park.id)
       const entryBody = ({
         entry: {
@@ -274,7 +301,8 @@ export const createLocations = async (context, migrationConfig) => {
             'uid': context.cache.locationAmenity[facility.id].uid,
             '_content_type_uid': 'location_amenity'
           })),
-          'product_content': locationProductContent,
+          'holiday_product_contents': locationProductContent,
+          'sales_product_content': salesProductContent,
           'park_code': park['code']
         }
       })

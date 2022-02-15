@@ -1,9 +1,9 @@
-import fetch from 'node-fetch'
+import dotenv from 'dotenv'
 import FormData from 'form-data'
 import fs from 'fs'
+import fetch from 'node-fetch'
 import path from 'path'
 import request from 'request'
-import dotenv from 'dotenv'
 import { EnvironmentType, FolderNameType } from '../types'
 
 dotenv.config()
@@ -242,6 +242,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         method = 'PUT'
         if (migrationConfig.updateKeys !== 'all') {
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body)
+					console.log('TCL: createEntries -> body', body)
         }
         body.entry.uid = existingEntryUid
       }

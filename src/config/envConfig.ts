@@ -1,24 +1,22 @@
-import { EnvironmentType, MigrationConfigurationType } from '../types'
+import dotenv from 'dotenv'
 import {
-  uploadLocationLogos,
-  uploadLocationGalleries,
-  uploadAccommodationGalleries,
+  uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
 } from '../assets/galleries'
+import {
+  createAccommodation,
+  createAccommodationAmenities,
+  createAccommodationGrades,
+  createAccommodationTypes
+} from '../entries/accommodationEntries'
 import {
   createCounties,
   createHolidayProducts,
   createLocationAmenities,
   createLocationCategories,
   createLocations,
-  createRegions,
+  createRegions
 } from '../entries/locationEntries'
-import {
-  createAccommodation,
-  createAccommodationAmenities,
-  createAccommodationGrades,
-  createAccommodationTypes,
-} from '../entries/accommodationEntries'
-import dotenv from 'dotenv'
+import { EnvironmentType, MigrationConfigurationType } from '../types'
 dotenv.config()
 
 export const getEnvironmentVariables = (env: EnvironmentType) => ({
@@ -97,8 +95,12 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'all',
+    includeInMigration: true,
+    updateKeys: {
+      entry: {
+        sales_product_content: true
+      }
+    },
   }, {
     name: 'accommodationType',
     type: 'entry',
@@ -143,7 +145,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -151,7 +153,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -159,7 +161,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -167,7 +169,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -175,7 +177,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -183,7 +185,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -191,7 +193,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -199,7 +201,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }
