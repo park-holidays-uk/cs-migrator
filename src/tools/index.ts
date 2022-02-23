@@ -27,11 +27,22 @@ const emptyAssetTmpDir = () => {
   })
 }
 
+export const findReferenceInCache = (context, cacheRef, id, contentUid = snakeCase(cacheRef)) => {
+  const data = context.cache[cacheRef][id]
+  if (data) {
+    return [{
+      'uid': data.uid,
+      '_content_type_uid': contentUid
+    }]
+  }
+}
+
 export const createImageFolders = async (context, folder, subFolder, migrationConfig) => {
   const subFolderName = subFolder.replace('&', 'and')
   const foldersExist = Object.keys(context.cache[migrationConfig.name]).find((key) => {
     return context.cache[migrationConfig.name][key].folder === `${folder}/${subFolderName}/images`
   })
+	console.log('TCL: createImageFolders -> foldersExist', foldersExist)
   if (foldersExist) {
     return context.cache[migrationConfig.name][foldersExist].folderUids
   }
@@ -211,12 +222,59 @@ const findCachedEntry = (migrationConfig, context, entry) => {
   }
 }
 
-const removeUnwantedDataUsingKeyMap = (keyMap: {}, dataObj) => {
+
+const blacklistKeys = {
+  created_at: true,
+  updated_at: true,
+  created_by: true,
+  updated_by: true,
+  is_dir: true,
+  _version: true,
+  _metadata: true,
+  content_type: true,
+  ACL: true,
+  _in_progress: true,
+  locale: true,
+};
+const scrubExistingData = (existingData) => {
+  const data = { ...existingData };
+  return Object.keys(data).reduce((acc, key) => {
+    const formatted = { ...acc };
+    if (key === 'image' && data.image.uid) {
+      formatted['image'] = data[key].uid;
+    } else if (!blacklistKeys[key]) {
+      if (typeof data[key] === 'object') {
+        if (Array.isArray(data[key])) {
+          formatted[key] = data[key].map((item) => scrubExistingData(item));
+        } else {
+          formatted[key] = scrubExistingData(data[key]);
+        }
+      } else {
+        formatted[key] = data[key]
+      }
+    }
+    return formatted;
+  }, {});
+}
+
+const removeUnwantedDataUsingKeyMap = (keyMap: {}, dataObj, existingData) => {
   return Object.keys(dataObj).reduce((acc, dataKey) => {
     const data = {...acc}
-    if (!keyMap[dataKey]) return data
+    if (!keyMap[dataKey]) {
+      return {
+        ...data,
+        [dataKey]: existingData[dataKey]
+      };
+    }
     if (typeof keyMap[dataKey] === 'object') {
-      data[dataKey] = removeUnwantedDataUsingKeyMap(keyMap[dataKey], dataObj[dataKey])
+      if (Array.isArray(keyMap[dataKey])) {
+        data[dataKey] = dataObj[dataKey].reduce((acc, curr, index) => [
+          ...acc,
+          removeUnwantedDataUsingKeyMap(keyMap[dataKey][0], curr, existingData[dataKey][index])
+        ], [])
+      } else {
+        data[dataKey] = removeUnwantedDataUsingKeyMap(keyMap[dataKey], dataObj[dataKey], existingData[dataKey])
+      }
     } else {
       data[dataKey] = dataObj[dataKey]
     }
@@ -230,6 +288,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     const recordCount = Object.keys(responses).length + 1
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
+		console.log('TCL: createEntries -> existingEntryUid', existingEntryUid)
     if (existingEntryUid && migrationConfig.updateKeys === 'none') {
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
@@ -241,8 +300,12 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         url += `/${existingEntryUid}`
         method = 'PUT'
         if (migrationConfig.updateKeys !== 'all') {
-          body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body)
-					console.log('TCL: createEntries -> body', body)
+          let existingData = await getEntry(context, contentUid, existingEntryUid);
+          console.log('TCL: createEntries -> existingData', JSON.stringify(existingData, null, 2))
+          existingData = scrubExistingData(existingData);
+					console.log('TCL: createEntries -> existingData', JSON.stringify(existingData, null, 2))
+          body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, existingData);
+					console.log('TCL: createEntries -> body', JSON.stringify(body, null, 2))
         }
         body.entry.uid = existingEntryUid
       }
@@ -273,12 +336,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
   return responses
 }
 
-export const getAssets = async (context, folder) => {
-  const folderUid = getFolderUid(context.env, folder)
-  if (!folderUid) {
-    console.error(`Could not find a folder uid for ${folder}. Aborting asset fetch!!`)
-    return []
-  }
+export const getAssets = async (context, folderUid) => {
   await apiDelay()
   const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderUid}&include_count=true`, {
     method: 'GET',
@@ -294,6 +352,19 @@ export const getAssets = async (context, folder) => {
 export const getEntries = async (context, contentUid) => {
   await apiDelay()
   const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries?include_count=true`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      ...context.headers
+    }
+  })
+  const response = await res.json()
+  return response
+}
+
+export const getEntry = async (context, contentUid, uid) => {
+  await apiDelay()
+  const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${uid}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

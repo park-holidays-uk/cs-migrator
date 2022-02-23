@@ -1,10 +1,18 @@
-import prompt from 'prompt-sync'
+import dotenv from 'dotenv';
+import prompt from 'prompt-sync';
+
+dotenv.config()
 
 const ask = prompt({sigint: true})
 
 const loginForAuthToken = async (context) => {
   try {
-    const password = ask(`(${context.email}) Contentstack login, please enter your password:  `, { echo: '*' })
+    let password = '';
+    if (process.env.password) {
+      password = process.env.password;
+    } else {
+      password = ask(`(${context.email}) Contentstack login, please enter your password:  `, { echo: '*' })
+    }
     context.password = password
 
     const res = await fetch(`${context.base_url}/user-session`, {

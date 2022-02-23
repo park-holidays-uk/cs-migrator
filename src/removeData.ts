@@ -1,11 +1,10 @@
 import 'cross-fetch/polyfill'
-import { camelCase, snakeCase } from './tools'
 import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
-import { writeSync } from './dataHandler/fileCache'
-import { getAssets, getEntries, removeEntries, removeAssetsWithSubFolders } from './tools'
+import { getDataCache, writeSync } from './dataHandler/fileCache'
+import { camelCase, getAssets, getEntries, getFolderUid, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools'
 import loginForAuthToken from './tools/login'
 import { EnvironmentType } from './types'
 
@@ -37,21 +36,65 @@ const assetsToRemove = migrationConfiguration.filter((migration) => {
   return migration.includeInRemove && migration.type === 'asset'
 })
 
-const removeAssetsByFolder = async (context) => {
+const removeAssets = async (context) => {
   for (const migrationConfig of assetsToRemove) {
     const folder = migrationConfig.folderName
-    let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
-    let recordsRemoved = 0
-    while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
-      const response = await getAssets(context, folder)
-      remainingRecordCount = response.count
-      const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved)
-      recordsRemoved += removedAssets.length
+    const folderUid = getFolderUid(context.env, folder);
+    if (!folderUid) {
+      console.error(`Could not find a folder uid for ${folder}. Aborting asset fetch!!`)
+      continue;
     }
-    writeSync(context.env, 'dataCache', migrationConfig.name, {})
+    let recordsRemoved = await removeAssetsByFolder(context, migrationConfig, folder, folderUid, migrationConfig.removalTags);
+    writeSync(context.env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     console.log(`removedAssets -> [ ${folder} ]`, recordsRemoved)
   }
 }
+
+const removeItemFromCache = (context, migrationConfig, item) => {
+  const cacheKeys = Object.keys(context.cache[migrationConfig.name]);
+  for (const id of cacheKeys) {
+    if (context.cache[migrationConfig.name][id].uid === item.uid) {
+      delete context.cache[migrationConfig.name][id];
+      break;
+    }
+  }
+};
+
+const itemHasAllTags = (itemTags, tags = []) => {
+  const hasAllTags =  tags.reduce((hasAllTags, currTag) => {
+    if (!hasAllTags) return hasAllTags;
+    return itemTags.includes(currTag);
+  }, true);
+  return hasAllTags
+};
+
+const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid, removalTags) => {
+  let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
+  let recordsRemoved = 0
+  while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
+    const response = await getAssets(context, folderUid)
+    remainingRecordCount = response.count
+    if (!removalTags?.length) {
+      const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved);
+      context.cache[migrationConfig.name] = {};
+      recordsRemoved += removedAssets.length;
+    } else {
+      for (const asset of response.assets) {
+        if (itemHasAllTags(asset.tags, removalTags)) {
+          const removeAssetResponse = await removeAssetsWithSubFolders(context, folder, [asset], recordsRemoved);
+          if (removeAssetResponse?.[0].notice === 'Asset deleted successfully.') {
+            recordsRemoved += 1;
+            removeItemFromCache(context, migrationConfig, asset)
+          }
+        } else {
+          recordsRemoved += await removeAssetsByFolder(context, migrationConfig, asset.name, asset.uid, removalTags);
+        }
+        remainingRecordCount -= 1;
+      }
+    }
+  }
+  return recordsRemoved;
+};
 
 const removeData = async () => {
   console.log('\n\n Build Complete!! Starting removal... \n\n\n')
@@ -66,7 +109,8 @@ const removeData = async () => {
     }
   })
   context.env = env
-  await removeAssetsByFolder(context)
+  context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name));
+  await removeAssets(context)
   await removeContent(context)
   process.exit()
 }

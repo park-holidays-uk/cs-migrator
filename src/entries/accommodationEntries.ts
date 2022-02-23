@@ -1,5 +1,5 @@
 import { UNIQUE_PARK_QUERY } from '../assets/galleries'
-import { arrayToUidKeyedObject, createEntries, snakeCase } from '../tools'
+import { createEntries, findReferenceInCache } from '../tools'
 
 export const createAccommodationTypes = async (context, migrationConfig) => {
   const accommodationTypes = await context.db.query(`
@@ -115,15 +115,6 @@ export const createAccommodationAmenities = async (context, migrationConfig) => 
   return accommodationAmenityEntries
 }
 
-const findReferenceInCache = (context, cacheRef, id, contentUid = snakeCase(cacheRef)) => {
-  const data = context.cache[cacheRef][id]
-  if (data) {
-    return [{
-      'uid': data.uid,
-      '_content_type_uid': contentUid
-    }]
-  }
-}
 
 const dbCacheHireTypeDescription = {}
 

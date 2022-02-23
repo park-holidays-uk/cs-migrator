@@ -1,6 +1,7 @@
-import { locationGalleryQuery, parkLogoQuery } from '../assets/galleries'
+import { locationGalleryQuery, LocationGallerySectorType, parkLogoQuery } from '../assets/galleries'
+import { getEnvironmentVariables } from '../config/envConfig'
 import { defaultRegions, getRegionIdFromCounty } from '../entries/regions'
-import { createEntries } from '../tools'
+import { createEntries, findReferenceInCache } from '../tools'
 
 export const createHolidayProducts = async (context, migrationConfig) => {
   const sectors = await context.db.query(`
@@ -107,20 +108,22 @@ const createHolidayProductDetailOverviews = async (sectorId, park, context) => {
         WHERE park_id=${park.id}
         AND sector_id=${sectorId}
     );
-  `)
+  `);
   if (parkSectorInfo[0]) {
     return {
-      "holiday_product_overviews": {
-        "holiday_product_short_overview": parkSectorInfo[0]['short_overview'],
-        "holiday_product_long_overview": parkSectorInfo[0]['full_overview'],
+      overview: {
+        short_overview: parkSectorInfo[0]['short_overview'],
+        long_overview: parkSectorInfo[0]['full_overview'],
       }
-    }
+    };
   } else {
-		console.error('createHolidayProductDetailOverviews -> ERROR-> missing information => park.id', park.id, 'sector', sectorId, 'parkSectorInfo', parkSectorInfo)
+		console.error('createHolidayProductDetailOverviews -> ERROR-> missing information => park.id', park.id, 'sector', sectorId, 'parkSectorInfo', parkSectorInfo);
+    return {};
   }
 }
 
 const createHolidayProductDetailReasons = async (sectorId, park, context) => {
+  const { Icon_Star } = getEnvironmentVariables(context.env);
   const parkReasonsToLove = await context.db.query(`
     SELECT * from ph_db.park_reasons_to_love
     WHERE sector_id=${sectorId}
@@ -128,56 +131,44 @@ const createHolidayProductDetailReasons = async (sectorId, park, context) => {
   `)
   if (parkReasonsToLove.length >= 3) {
     return {
-      "holiday_product_reasons": {
-        "holiday_product_reason": parkReasonsToLove.map((r) => r.text)
-      }
+      highlights: parkReasonsToLove.map((r) => ({
+        icon: [{
+          uid: Icon_Star,
+          _content_type_uid: 'icon'
+        }],
+        title: r.text
+      }))
     }
   } else {
 		console.error('createHolidayProductDetailReasons -> ERROR-> missing information => park.id', park.id, 'sector', sectorId, 'parkReasonsToLove', parkReasonsToLove)
+    return {};
   }
 }
 
-const createHolidayProductDetailImages = async (sectorId, park, context) => {
-  const parkImages = await context.db.query(locationGalleryQuery(park.id, 'gallery', sectorId === '1' ? 'holidays' : 'touring'))
-  const allMediaBlocks = []
-  const blockSize = 25
-  for (let mediaBlock = 0, imageCursor = 0; imageCursor < parkImages.length; imageCursor += blockSize, mediaBlock += 1) {
-    const thisMediaBlocksImages = parkImages.slice(imageCursor, (mediaBlock + 1) * blockSize)
-    allMediaBlocks.push({
-      holiday_product_media: {
-        media: thisMediaBlocksImages.map((img, index) => ({
-          file: {
-            file: context.cache.locationGallery[img.id].uid,
-            order: (mediaBlock * 100) + index
-          }
-        })),
-        type: null,
-        order: mediaBlock
-      }
-    })
-  }
+const createProductImages = async (context, cacheRef, productType: LocationGallerySectorType, parkId) => {
+  const parkImages = await context.db.query(locationGalleryQuery(parkId, 'gallery', productType))
   if (!parkImages.length) {
-		console.error('createHolidayProductDetailImages -> ERROR-> missing information => park.id', park.id, 'sector', sectorId, 'parkImages', parkImages)
+		console.error('createProductImages -> ERROR-> missing information => park.id', parkId, 'sector', productType, 'parkImages', parkImages)
+    return {}
   }
-  return allMediaBlocks
+  return {
+    contextual_images: parkImages.map((img) => {
+      const image = context.cache[cacheRef]?.[img.id]?.uid
+      return image ? { image } : null;
+    }).filter(Boolean)
+  }
 }
 
-const createHolidayProductDetails = async (sectorId, park, context) => {
-  const mediaBlocks = await createHolidayProductDetailImages(sectorId, park, context)
+const createHolidayProductDetails = async (sectorId, park, context, migrationConfig) => {
+  // TCL: 'ownershipLocationGallery' -> 'locationGallery'
+  const contextualImages = await createProductImages(context, 'ownershipLocationGallery', sectorId === '1' ? 'holidays' : 'touring', park.id);
   const overviews = await createHolidayProductDetailOverviews(sectorId, park, context)
   const reasons = await createHolidayProductDetailReasons(sectorId, park, context)
   return {
-    'holiday_product': {
-      'holiday_product_reference': [{
-          'uid': context.cache.holidayProduct[sectorId].uid,
-          '_content_type_uid': 'holiday_product'
-      }],
-      'holiday_product_details': [
-        ...mediaBlocks,
-        overviews,
-        reasons
-      ].filter(Boolean)
-    }
+    'holiday_product': findReferenceInCache(context, 'holidayProduct', sectorId, 'holiday_product') ,
+    ...overviews,
+    ...reasons,
+    ...contextualImages,
   }
 }
 
@@ -200,27 +191,51 @@ const createSalesJourneyOverviews = async (context, parkId) => {
   }
 };
 
-const createSalesProductContent = async (context, parkId) => {
-  const overview = await createSalesJourneyOverviews(context, parkId);
+const createSalesHighlights = async (context, parkId) => {
+  const { Icon_Star } = getEnvironmentVariables(context.env);
+  const parkReasonsToLove = await context.db.query(`
+    SELECT * from ph_db.park_reasons_to_love
+    WHERE sector_id=3
+    AND park_id=${parkId};
+  `)
+  if (parkReasonsToLove.length >= 2) {
+    return parkReasonsToLove.map((r) => ({
+      icon: [{
+        "uid": Icon_Star,
+        "_content_type_uid": "icon"
+      }],
+      title: r.text,
+      subtitle: ''
+    }))
+  } else {
+		console.error('createSalesHighlights -> ERROR-> missing information => park.id', parkId, 'parkReasonsToLove', parkReasonsToLove)
+  }
+}
+
+const createSalesProductContent = async (context, migrationConfig, park) => {
+  // TCL: 'ownershipLocationGallery' -> 'locationGallery'
+  const contextualImages = await createProductImages(context, 'ownershipLocationGallery', 'ownership', park.id);
+  const overview = await createSalesJourneyOverviews(context, park.id);
+  const highlights = await createSalesHighlights(context, park.id);
   return {
     overview,
+    highlights,
+    ...contextualImages,
   }
 };
 
-const createParkLogoEntries = async (context, parkId) => {
-  // this is old migration code.. structure has changed since migrateV2
-  // never updated this code as images have since been manually merged.
+const createParkLogoEntry = async (context, parkId) => {
   const parkLogos = await context.db.query(parkLogoQuery(parkId))
-  return parkLogos.map((logo) => ({
-    media: [{
-      file: {
-        file: context.cache.locationLogo[logo.id].uid
+  if (parkLogos.length) {
+    return {
+      park_logo: {
+        image: context.cache.locationLogo[parkLogos[0].id]?.uid
       }
-    }],
-    type: null,
-    order: logo.media_lookup_order
-  }))
+    }
+  }
+  return {};
 }
+
 
 export const createCounties = async (context, migrationConfig) => {
   const counties = await context.db.query('SELECT DISTINCT county_name, county_name as id FROM parks WHERE deleted_at IS NULL;')
@@ -245,7 +260,7 @@ export const createCounties = async (context, migrationConfig) => {
 
 
 export const createLocations = async (context, migrationConfig) => {
-  const parks = await context.db.query('SELECT * FROM parks WHERE deleted_at IS NULL;')
+  const parks = await context.db.query('SELECT * FROM parks WHERE deleted_at IS NULL LIMIT 1;')
   const locationEntries = await createEntries(
     migrationConfig,
     context,
@@ -265,13 +280,13 @@ export const createLocations = async (context, migrationConfig) => {
       `)
       const locationProductContent = []
       if (park['is_holidays_park']) {
-        locationProductContent.push(await createHolidayProductDetails('1', park, context))
+        locationProductContent.push(await createHolidayProductDetails('1', park, context, migrationConfig))
       }
       if (park['is_touring_park']) {
-        locationProductContent.push(await createHolidayProductDetails('2', park, context))
+        locationProductContent.push(await createHolidayProductDetails('2', park, context, migrationConfig))
       }
-      const salesProductContent = await createSalesProductContent(context, park.id);
-      const parkLogos = await createParkLogoEntries(context, park.id)
+      const salesProductContent = await createSalesProductContent(context, migrationConfig, park);
+      const parkLogo = await createParkLogoEntry(context, park.id)
       const entryBody = ({
         entry: {
           'title': park.name,
@@ -292,7 +307,7 @@ export const createLocations = async (context, migrationConfig) => {
             'latitude': park['gps_latitude'].toString().padEnd(8, '0'),
             'longitude': park['gps_longitude'].toString().padEnd(8, '0'),
           },
-          // 'park_logo': parkLogos, - OLD migration code.. see migrateV2
+          ...parkLogo,
           'location_category': [{
             'uid': context.cache.locationCategory[park['type_id']].uid,
             '_content_type_uid': 'location_category'

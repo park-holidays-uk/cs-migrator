@@ -2,8 +2,6 @@ import {
   accommodationGradeQuery
 } from '../entries/accommodationEntries'
 import {
-  apiDelay,
-  createImageFolders,
   getFolderUid,
   uploadAssets
 } from '../tools'
@@ -58,33 +56,32 @@ export const uploadLocationLogos = async (context, migrationConfig) => {
   return responses
 }
 
-export const locationGalleryQuery = (parkId, tagType: 'gallery' | 'video', sector: 'holidays' | 'touring' | 'all') => `
+// 'all' existed before ownership - so only combines holidays & touring.
+// Never updated during sales journey as updating images is not possible, allocates new uid.
+export type LocationGallerySectorType = 'holidays' | 'touring' | 'ownership'
+
+export const locationGalleryQuery = (parkId, tagType: 'gallery' | 'video', sector: LocationGallerySectorType) => `
   SELECT m.id, m.path, m.description, ml.media_lookup_order FROM ph_db.media as m
   INNER JOIN ph_db.media_lookups as ml
   WHERE m.id = ml.media_id
   AND ml.media_lookup_type LIKE 'App_Models_Parks_Park'
   AND ml.media_lookup_id=${parkId}
-  ${sector === 'all'
-    ? `
-        AND (
-          ml.media_lookup_tag LIKE '%holidays_${tagType}%'
-          OR ml.media_lookup_tag LIKE '%touring_${tagType}%'
-        )
-      `
-    : `AND ml.media_lookup_tag LIKE '%${sector}_${tagType}%'`
-  }
+  AND ml.media_lookup_tag LIKE '%${sector}_${tagType}%'
   ORDER BY ml.media_lookup_order ASC;
 `
 
-export const uploadLocationGalleries = async (context, migrationConfig) => {
-  const folder = 'Location_Media'
+export const uploadLocationGalleries = async (context, migrationConfig, galleryType: LocationGallerySectorType, tags = []) => {
+  const folder = 'Location_Media_2'
   const parks = await context.db.query(UNIQUE_PARK_QUERY)
 
   let responses = {}
   for (const park of parks) {
     const parkId = park.id
-    const { imageFolderUid, videoFolderUid } = await createImageFolders(context, folder, park.name, migrationConfig)
-    const locationGalleries = await context.db.query(locationGalleryQuery(parkId, 'gallery', 'all'))
+    if (parkId == 2) {
+      break; // TCL:
+    }
+    const folderUid = getFolderUid(context.env, folder)
+    const locationGalleries = await context.db.query(locationGalleryQuery(parkId, 'gallery', galleryType))
 
     const [newLocationImages, existingLocationImages] = locationGalleries.reduce((acc, image) => {
       acc[context.cache[migrationConfig.name][image.id] ? 1 : 0].push(image)
@@ -92,15 +89,11 @@ export const uploadLocationGalleries = async (context, migrationConfig) => {
     }, [[], []])
 
     if (newLocationImages.length) {
-      const imageUploadResponse = await uploadAssets(context, newLocationImages, `${folder}/images`, imageFolderUid, [], (asset, response) => ({
+      const imageUploadResponse = await uploadAssets(context, newLocationImages, `${folder}/images`, folderUid, [...tags, park.name.replace('&', 'and')], (asset, response) => ({
         uid: response.asset.uid,
         filename: asset.path,
         parkId,
-        folder: `${folder}/${park.name}/images`,
-        folderUids: {
-          imageFolderUid,
-          videoFolderUid
-        },
+        type: galleryType,
       }))
       responses = {...responses, ...imageUploadResponse}
     }
@@ -129,32 +122,41 @@ export const accommodationGalleryQuery = (accommodationId) => `
 `
 
 export const uploadAccommodationGalleries = async (context, migrationConfig) => {
-  const folder = 'Accommodation_Media'
-  const parks = await context.db.query(UNIQUE_PARK_QUERY)
+  const folder = 'Accommodation_Media_2';
+  const parks = await context.db.query(UNIQUE_PARK_QUERY);
 
-  const accommodationGradeUids = {}
+  const folderUid = getFolderUid(context.env, folder);
+
+  // const accommodationGradeUids = {}
+  // const accommodationGrades = await context.db.query(accommodationGradeQuery())
+  // for (const grade of accommodationGrades) {
+  //   await apiDelay(150)
+  //   const folderUids = await createImageFolders(context, folder, grade.name, migrationConfig)
+  //   accommodationGradeUids[grade.id] = {
+  //     ...folderUids,
+  //     parentFolderName: grade.name
+  //   }
+  // }
+  // await apiDelay(150)
+  // const pitchImages = 'Touring Pitches'
+  // const folderUids = await createImageFolders(context, folder, pitchImages, migrationConfig)
+  // accommodationGradeUids[0] = {
+  //   ...folderUids,
+  //   parentFolderName: pitchImages
+  // }
+
+  const accommodationGradeNames = { '0': 'Touring Pitches' }
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
   for (const grade of accommodationGrades) {
-    await apiDelay(150)
-    const folderUids = await createImageFolders(context, folder, grade.name, migrationConfig)
-    accommodationGradeUids[grade.id] = {
-      ...folderUids,
-      parentFolderName: grade.name
-    }
-  }
-  await apiDelay(150)
-  const pitchImages = 'Touring Pitches'
-  const folderUids = await createImageFolders(context, folder, pitchImages, migrationConfig)
-  accommodationGradeUids[0] = {
-    ...folderUids,
-    parentFolderName: pitchImages
+    accommodationGradeNames[grade.id] = grade.name
   }
 
   let responses = {}
   for (const park of parks) {
     const parkId = park.id
     const hireTypesWithImages = await context.db.query(`
-      SELECT DISTINCT ht.id, ht.grading_id, ht.code, ht.accommodation_type_id, ht.accommodation_type FROM ph_db.hire_types as ht
+      SELECT DISTINCT ht.id, ht.grading_id, ht.code, ht.accommodation_type_id, ht.accommodation_type
+      FROM ph_db.hire_types as ht
       INNER JOIN ph_db.media_lookups as ml
       WHERE ht.park_id=${parkId}
       AND ml.media_lookup_type LIKE 'App_Models_HireType'
@@ -171,8 +173,9 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
 
     const gradeKeys = Object.keys(hireTypesByGradeId)
     for (const gradeKey of gradeKeys) {
-      if (gradeKey === 'null') continue
-      const { imageFolderUid, videoFolderUid, parentFolderName } = accommodationGradeUids[gradeKey]
+      if (gradeKey === 'null') continue;
+      const gradeName = accommodationGradeNames[gradeKey]
+      // const { imageFolderUid, videoFolderUid, parentFolderName } = accommodationGradeNames[gradeKey]
       for (const hireType of hireTypesByGradeId[gradeKey]) {
         let accommodationGalleries = await context.db.query(accommodationGalleryQuery(hireType.id))
         accommodationGalleries = accommodationGalleries.filter((ag) => {
@@ -186,18 +189,19 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
           }, [[], []])
 
           if (newAccommodationGalleries.length) {
-            const imageUploadResponse = await uploadAssets(context, newAccommodationGalleries, `${parentFolderName}/images`, imageFolderUid, [hireType.accommodation_type], (asset, response) => ({
+            const tags = [
+              gradeName,
+              hireType.accommodation_type,
+              hireType.code,
+              park.name.replace('&', 'and'),
+            ]
+            const imageUploadResponse = await uploadAssets(context, newAccommodationGalleries, `${folder}/${gradeName}/images`, folderUid, tags, (asset, response) => ({
               uid: response.asset.uid,
               filename: asset.path,
               grade: gradeKey,
               accommodationType: hireType.accommodation_type_id,
               accommodationId: hireType.id,
               parkId,
-              folder: `${parentFolderName}/images`,
-              folderUids: {
-                imageFolderUid,
-                videoFolderUid
-              },
             }))
             responses = {...responses, ...imageUploadResponse}
           }
