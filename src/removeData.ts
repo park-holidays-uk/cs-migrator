@@ -69,17 +69,24 @@ const itemHasAllTags = (itemTags, tags = []) => {
 };
 
 const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid, removalTags) => {
-  let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
+  let remainingRecords = 1 // ensure it attempts it first time ( != 0 )
   let recordsRemoved = 0
-  while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
-    const response = await getAssets(context, folderUid)
-    remainingRecordCount = response.count
+  let scannedAssets = 0
+  let skip = 0, limit = 100;
+  while (remainingRecords > 0) { // ContentStack is paginated to max 100 records
+    const response = await getAssets(context, folderUid, skip, limit)
+    const assets = response.assets || [];
+    remainingRecords = assets.length;
+    skip += limit;
     if (!removalTags?.length) {
-      const removedAssets = await removeAssetsWithSubFolders(context, folder, response.assets, recordsRemoved);
+      const removedAssets = await removeAssetsWithSubFolders(context, folder, assets, recordsRemoved);
+      recordsRemoved = removedAssets.length;
       context.cache[migrationConfig.name] = {};
-      recordsRemoved += removedAssets.length;
+      remainingRecords = 0;
     } else {
-      for (const asset of response.assets) {
+      for (const asset of assets) {
+        scannedAssets += 1;
+        process.stdout.write(`Scanning asset tags: [ ${folder} ] : ${asset.id || asset.uid} (${scannedAssets})  ${' '.repeat(35)} \r`)
         if (itemHasAllTags(asset.tags, removalTags)) {
           const removeAssetResponse = await removeAssetsWithSubFolders(context, folder, [asset], recordsRemoved);
           if (removeAssetResponse?.[0].notice === 'Asset deleted successfully.') {
@@ -89,7 +96,6 @@ const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid,
         } else {
           recordsRemoved += await removeAssetsByFolder(context, migrationConfig, asset.name, asset.uid, removalTags);
         }
-        remainingRecordCount -= 1;
       }
     }
   }

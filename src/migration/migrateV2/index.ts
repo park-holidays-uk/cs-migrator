@@ -1,20 +1,19 @@
 import 'cross-fetch/polyfill'
-import { arrayToUidKeyedObject, createEntries, getAllEntries, snakeCase } from '../../tools'
-import loginForAuthToken from '../../tools/login'
 import {
   getEnvironmentVariables,
   migrationConfiguration
 } from '../../config/envConfig'
-
 import { fetchContentType } from '../../contentTypes/export'
 import { updateContentType } from '../../contentTypes/import'
-import { getDataCache, readSync, writeSync } from '../../dataHandler/fileCache'
+import { getDataCache, writeSync } from '../../dataHandler/fileCache'
+import { arrayToUidKeyedObject, createEntries, getAllEntries, snakeCase } from '../../tools'
+import loginForAuthToken from '../../tools/login'
 import { EnvironmentType, MigrationConfigurationType } from '../../types'
-
 import locationSchemaV2 from './locationSchemaV2.json'
 
+
+
 const env = process.argv[2] as EnvironmentType
-console.log("TCL: env", env)
 
 const { api_key, base_url, management_token, email, Icon_Star } = getEnvironmentVariables(env)
 

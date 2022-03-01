@@ -71,15 +71,12 @@ export const locationGalleryQuery = (parkId, tagType: 'gallery' | 'video', secto
 `
 
 export const uploadLocationGalleries = async (context, migrationConfig, galleryType: LocationGallerySectorType, tags = []) => {
-  const folder = 'Location_Media_2'
+  const folder = 'Location_Media'
   const parks = await context.db.query(UNIQUE_PARK_QUERY)
 
   let responses = {}
   for (const park of parks) {
     const parkId = park.id
-    if (parkId == 2) {
-      break; // TCL:
-    }
     const folderUid = getFolderUid(context.env, folder)
     const locationGalleries = await context.db.query(locationGalleryQuery(parkId, 'gallery', galleryType))
 
@@ -108,6 +105,8 @@ export const uploadLocationGalleries = async (context, migrationConfig, galleryT
       }
       responses = {...responses, ...context.cache[migrationConfig.name]}
     }
+    // keep cache up to date.. It will write current cache to file in event of failure
+    context.cache[migrationConfig.name] = responses
   }
   return responses
 }
@@ -122,28 +121,10 @@ export const accommodationGalleryQuery = (accommodationId) => `
 `
 
 export const uploadAccommodationGalleries = async (context, migrationConfig) => {
-  const folder = 'Accommodation_Media_2';
+  const folder = 'Accommodation_Media';
   const parks = await context.db.query(UNIQUE_PARK_QUERY);
 
   const folderUid = getFolderUid(context.env, folder);
-
-  // const accommodationGradeUids = {}
-  // const accommodationGrades = await context.db.query(accommodationGradeQuery())
-  // for (const grade of accommodationGrades) {
-  //   await apiDelay(150)
-  //   const folderUids = await createImageFolders(context, folder, grade.name, migrationConfig)
-  //   accommodationGradeUids[grade.id] = {
-  //     ...folderUids,
-  //     parentFolderName: grade.name
-  //   }
-  // }
-  // await apiDelay(150)
-  // const pitchImages = 'Touring Pitches'
-  // const folderUids = await createImageFolders(context, folder, pitchImages, migrationConfig)
-  // accommodationGradeUids[0] = {
-  //   ...folderUids,
-  //   parentFolderName: pitchImages
-  // }
 
   const accommodationGradeNames = { '0': 'Touring Pitches' }
   const accommodationGrades = await context.db.query(accommodationGradeQuery())
@@ -217,6 +198,8 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
             responses = {...responses, ...context.cache[migrationConfig.name]}
           }
         }
+        // keep cache up to date.. It will write current cache to file in event of failure
+        context.cache[migrationConfig.name] = responses
       }
     }
   }

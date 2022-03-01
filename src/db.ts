@@ -10,6 +10,6 @@ export const getDbConnection = async () => {
     })
     return db
   } catch (error) {
-    console.error("TCL: getDbConnection ~ error", error)
+    console.error("getDbConnection ~ error", error)
   }
 }

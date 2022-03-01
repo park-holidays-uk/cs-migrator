@@ -20,8 +20,9 @@ export type MigrationConfigurationType = {
 }
 
 export type MigrationType = 'locationLogo'
-  | 'locationGallery'
-  | 'ownershipLocationGallery'
+  | 'locationGalleryHolidays'
+  | 'locationGalleryTouring'
+  | 'locationGalleryOwnership'
   | 'accommodationGallery'
   | 'holidayProduct'
   | 'locationCategory'

@@ -149,26 +149,34 @@ const createProductImages = async (context, cacheRef, productType: LocationGalle
   const parkImages = await context.db.query(locationGalleryQuery(parkId, 'gallery', productType))
   if (!parkImages.length) {
 		console.error('createProductImages -> ERROR-> missing information => park.id', parkId, 'sector', productType, 'parkImages', parkImages)
-    return {}
   }
-  return {
-    contextual_images: parkImages.map((img) => {
-      const image = context.cache[cacheRef]?.[img.id]?.uid
-      return image ? { image } : null;
-    }).filter(Boolean)
-  }
+
+  return parkImages.reduce((acc, img) => {
+    const imageRef = findReferenceInCache(context, cacheRef, img.id)
+    if (imageRef?.[0]?.uid) {
+      return [
+        ...acc,
+        { image: imageRef[0].uid}
+      ]
+    }
+    return acc
+  }, []);
 }
 
 const createHolidayProductDetails = async (sectorId, park, context, migrationConfig) => {
-  // TCL: 'ownershipLocationGallery' -> 'locationGallery'
-  const contextualImages = await createProductImages(context, 'ownershipLocationGallery', sectorId === '1' ? 'holidays' : 'touring', park.id);
+  const images = await createProductImages(
+    context,
+    sectorId === '1' ? 'locationGalleryHolidays' : 'locationGalleryTouring',
+    sectorId === '1' ? 'holidays' : 'touring',
+    park.id
+  );
   const overviews = await createHolidayProductDetailOverviews(sectorId, park, context)
   const reasons = await createHolidayProductDetailReasons(sectorId, park, context)
   return {
     'holiday_product': findReferenceInCache(context, 'holidayProduct', sectorId, 'holiday_product') ,
     ...overviews,
     ...reasons,
-    ...contextualImages,
+    contextual_images: images,
   }
 }
 
@@ -181,8 +189,18 @@ const createSalesJourneyOverviews = async (context, parkId) => {
     AND lu.park_id = ${parkId}
     AND lu.sector_id = 3
   `)
+  const parkDates = await context.db.query(`
+    SELECT start_date, finish_date
+    FROM park_opening_dates
+    WHERE sector_id=3
+    AND park_id=${parkId}
+    ORDER BY park_id asc, finish_date desc
+    ;
+  `)
   if (parkSectorInfo[0]) {
     return {
+      "season_start_date": parkDates[0]['start_date'],
+      "season_end_date": parkDates[0]['finish_date'],
       "short_overview": parkSectorInfo[0]['medium_overview'],
       "long_overview": parkSectorInfo[0]['full_overview'],
     }
@@ -212,15 +230,85 @@ const createSalesHighlights = async (context, parkId) => {
   }
 }
 
+const createDummyMediaTextContent = () => ({
+  pages: [{
+    title: 'Title 1',
+    image: 'bltc7f6560369b360c4',
+    text: `
+      <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum, eget finibus felis varius.
+        Duis sollicitudin rutrum aliquam. Curabitur mollis pulvinar nulla et faucibus. Phasellus nec purus fringilla, mollis est
+        sit amet, egestas lectus.
+      </p>
+      <p>
+        Curabitur dignissim ante sapien, eget tincidunt leo blandit luctus. In gravida nunc in risus hendrerit,
+        vel viverra purus mattis. Donec et lectus nisl. Donec lectus metus, aliquet a placerat ut, interdum eu dui. Aenean a pulvinar magna.
+        Nunc laoreet orci in semper condimentum. Vivamus.
+      </p>
+    `
+  }, {
+    title: 'Title 2',
+    image: 'blt3de10ec9047a3f05',
+    text: `
+      <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum, eget finibus felis varius.
+        Duis sollicitudin rutrum aliquam. Curabitur mollis pulvinar nulla et faucibus. Phasellus nec purus fringilla, mollis est
+        sit amet, egestas lectus. Curabitur dignissim ante sapien, eget tincidunt leo blandit luctus. In gravida nunc in risus hendrerit,
+        vel viverra purus mattis. Donec et lectus nisl.
+      </p>
+      <p>
+        Curabitur dignissim ante sapien, eget tincidunt leo blandit luctus. In gravida nunc in risus hendrerit,
+        vel viverra purus mattis. Donec et lectus nisl.
+        Curabitur dignissim ante sapien, eget tincidunt leo blandit luctus. In gravida nunc in risus hendrerit,
+        vel viverra purus mattis. Donec et lectus nisl. Donec lectus metus, aliquet a placerat ut, interdum eu dui. Aenean a pulvinar magna.
+        Nunc laoreet orci in semper condimentum. Vivamus.
+      </p>
+    `
+  }, {
+    title: 'Title 3',
+    image: 'bltff3086543cb10a49',
+    text: `
+      <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
+      <h3>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum, eget finibus felis varius.
+      </h3>
+      <p>
+        Curabitur dignissim ante sapien, eget tincidunt leo blandit luctus. In gravida nunc in risus hendrerit,
+        vel viverra purus mattis. Donec et lectus nisl. Donec lectus metus, aliquet a placerat ut, interdum eu dui. Aenean a pulvinar magna.
+        Nunc laoreet orci in semper condimentum. Vivamus.
+      </p>
+    `
+  }, {
+    title: 'Title 4',
+    image: 'blt37a260db1f5dd57f',
+    text: `
+      <h3>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h3>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum.
+      <ul>
+        <li>Donec et lectus nisl. Donec lectus metus</li>
+        <li>In gravida nunc in risus hendrerit.</li>
+        <li>Donec et lectus nisl. Donec lectus metus, aliquet a placerat ut.</li>
+        <li>Nunc laoreet orci in semper condimentum. Vivamus.</li>
+      </ul>
+    `
+  }]
+})
+
 const createSalesProductContent = async (context, migrationConfig, park) => {
-  // TCL: 'ownershipLocationGallery' -> 'locationGallery'
-  const contextualImages = await createProductImages(context, 'ownershipLocationGallery', 'ownership', park.id);
+  const images = await createProductImages(context, 'locationGalleryOwnership', 'ownership', park.id);
   const overview = await createSalesJourneyOverviews(context, park.id);
   const highlights = await createSalesHighlights(context, park.id);
+  const media_text_content = createDummyMediaTextContent();
   return {
     overview,
     highlights,
-    ...contextualImages,
+    contextual_images: images,
+    media_text_content,
+    arrange_visit: {
+      text_content: ''
+    }
   }
 };
 
@@ -260,7 +348,7 @@ export const createCounties = async (context, migrationConfig) => {
 
 
 export const createLocations = async (context, migrationConfig) => {
-  const parks = await context.db.query('SELECT * FROM parks WHERE deleted_at IS NULL LIMIT 1;')
+  const parks = await context.db.query('SELECT * FROM parks WHERE deleted_at IS NULL;')
   const locationEntries = await createEntries(
     migrationConfig,
     context,
@@ -317,7 +405,7 @@ export const createLocations = async (context, migrationConfig) => {
             '_content_type_uid': 'location_amenity'
           })),
           'holiday_product_contents': locationProductContent,
-          'sales_product_content': salesProductContent,
+          'sales_product_contents': [salesProductContent],
           'park_code': park['code']
         }
       })

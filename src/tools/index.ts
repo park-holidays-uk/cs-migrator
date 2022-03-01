@@ -42,7 +42,6 @@ export const createImageFolders = async (context, folder, subFolder, migrationCo
   const foldersExist = Object.keys(context.cache[migrationConfig.name]).find((key) => {
     return context.cache[migrationConfig.name][key].folder === `${folder}/${subFolderName}/images`
   })
-	console.log('TCL: createImageFolders -> foldersExist', foldersExist)
   if (foldersExist) {
     return context.cache[migrationConfig.name][foldersExist].folderUids
   }
@@ -115,6 +114,7 @@ const publishAsset = async (context, assetUid) => {
     })
   } catch (err) {
 	  console.error("publishAsset -> err", err)
+    throw new Error(err);
   }
 }
 
@@ -154,6 +154,7 @@ export const uploadAssets = async (context, assets, folderName, folderUid, tags,
       }
     } catch (error) {
       console.error("uploadAssets -> error", error)
+      throw new Error(error);
     }
   }
   return responses
@@ -227,6 +228,8 @@ const blacklistKeys = {
   created_at: true,
   updated_at: true,
   created_by: true,
+  season_start_date: true,
+  season_end_date: true,
   updated_by: true,
   is_dir: true,
   _version: true,
@@ -236,11 +239,16 @@ const blacklistKeys = {
   _in_progress: true,
   locale: true,
 };
+
 const scrubExistingData = (existingData) => {
+  // This existing data is needed for arrays in particular.
+  // Whilst updating things like contextual_images an empty array
+  // removes all the data, whereas we should just be leaving it alone.
+  // This comes from having a nested keyMap obj for updates.
   const data = { ...existingData };
   return Object.keys(data).reduce((acc, key) => {
     const formatted = { ...acc };
-    if (key === 'image' && data.image.uid) {
+    if (key === 'image' && data['image']?.uid) {
       formatted['image'] = data[key].uid;
     } else if (!blacklistKeys[key]) {
       if (typeof data[key] === 'object') {
@@ -301,11 +309,8 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         method = 'PUT'
         if (migrationConfig.updateKeys !== 'all') {
           let existingData = await getEntry(context, contentUid, existingEntryUid);
-          console.log('TCL: createEntries -> existingData', JSON.stringify(existingData, null, 2))
           existingData = scrubExistingData(existingData);
-					console.log('TCL: createEntries -> existingData', JSON.stringify(existingData, null, 2))
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, existingData);
-					console.log('TCL: createEntries -> body', JSON.stringify(body, null, 2))
         }
         body.entry.uid = existingEntryUid
       }
@@ -336,9 +341,9 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
   return responses
 }
 
-export const getAssets = async (context, folderUid) => {
+export const getAssets = async (context, folderUid, skip = 0, limit = 100) => {
   await apiDelay()
-  const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderUid}&include_count=true`, {
+  const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderUid}&include_count=true&skip=${skip}&limit=${limit}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -349,9 +354,24 @@ export const getAssets = async (context, folderUid) => {
   return response
 }
 
-export const getEntries = async (context, contentUid) => {
+export const getAllAssets = async (context, contentUid) => {
+  let allAssets = []
+  let remainingRecords = 1 // ensure it attempts it first time ( != 0 )
+  let skip = 0;
+  let limit = 100;
+  while (remainingRecords > 0) { // ContentStack is paginated to max 100 records
+    const response = await getAssets(context, contentUid, skip, limit)
+    remainingRecords = response.assets.length
+    skip += limit;
+    allAssets = [...allAssets, ...response.assets]
+  }
+  return allAssets;
+}
+
+
+export const getEntries = async (context, contentUid, skip = 0, limit = 100) => {
   await apiDelay()
-  const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries?include_count=true`, {
+  const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries?include_count=true&skip=${skip}&limit=${limit}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -377,10 +397,13 @@ export const getEntry = async (context, contentUid, uid) => {
 
 export const getAllEntries = async (context, contentUid) => {
   let allEntries = []
-  let totalRecordCount = 1 // ensure it attempts it first time ( != 0 )
-  while (totalRecordCount > allEntries.length) { // ContentStack is paginated to max 100 records
-    const response = await getEntries(context, contentUid)
-    totalRecordCount = response.count
+  let remainingRecords = 1 // ensure it attempts it first time ( != 0 )
+  let skip = 0;
+  let limit = 100;
+  while (remainingRecords > 0) { // ContentStack is paginated to max 100 records
+    const response = await getEntries(context, contentUid, skip, limit)
+    remainingRecords = response.entries.length;
+    skip += limit;
     allEntries = [...allEntries, ...response.entries]
   }
   return allEntries
@@ -390,7 +413,7 @@ export const getAllEntries = async (context, contentUid) => {
 export const removeAssetsWithSubFolders = async (context, folder, assets, recordsRemoved = 0) => {
   const responses = []
   for (const asset of assets) {
-    process.stdout.write(`Removing assets: [ ${folder} ] ${recordsRemoved + responses.length} \r`)
+    process.stdout.write(`Removing assets: [ ${folder} ] ${recordsRemoved + responses.length} ${' '.repeat(35)}\r`)
     await apiDelay()
     const res = await fetch(`${context.base_url}/assets${asset.is_dir ? '/folders' : ''}/${asset.uid}`, {
       method: 'DELETE',
@@ -408,7 +431,7 @@ export const removeAssetsWithSubFolders = async (context, folder, assets, record
 export const removeEntries = async (context, contentUid, entries, recordsRemoved = 0) => {
   const responses = []
   for (const entry of entries) {
-    process.stdout.write(`Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} \r`)
+    process.stdout.write(`Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} ${' '.repeat(35)} \r`)
     await apiDelay()
     const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entry.uid}`, {
       method: 'DELETE',

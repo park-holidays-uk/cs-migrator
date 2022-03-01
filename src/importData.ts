@@ -1,12 +1,12 @@
 import 'cross-fetch/polyfill'
-import { snakeCase } from './tools'
-import loginForAuthToken from './tools/login'
-import { getDbConnection } from './db'
 import {
   getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
 import { getDataCache, writeSync } from './dataHandler/fileCache'
+import { getDbConnection } from './db'
+import { snakeCase } from './tools'
+import loginForAuthToken from './tools/login'
 import { EnvironmentType } from './types'
 
 const env = process.argv[2] as EnvironmentType
@@ -46,6 +46,7 @@ const importData = async () => {
       console.error('Error during migrations ',  error)
       console.error('Cache saved at this point: ', migrationConfig)
       console.error('Cache: ', context.cache[migrationConfig.name])
+      writeSync(env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     } finally {
 
     }

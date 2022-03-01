@@ -1,8 +1,6 @@
 import dotenv from 'dotenv'
 import {
-  uploadAccommodationGalleries,
-  uploadLocationGalleries,
-  uploadLocationLogos
+  uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
 } from '../assets/galleries'
 import {
   createAccommodation,
@@ -28,7 +26,6 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   email: process.env[`${env}_email`],
   Park_Logo: process.env[`${env}_Park_Logo`],
   Location_Media: process.env[`${env}_Location_Media`],
-  Location_Media_2: process.env[`${env}_Location_Media_2`],
   Accommodation_Media: process.env[`${env}_Accommodation_Media`],
   Icon_Star: process.env[`${env}_Icon_Star`],
   environments: process.env[`${env}_environments`]
@@ -42,58 +39,41 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
-  // }, {
-  //   name: 'locationGallery',
-  //   type: 'asset',
-  //   handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'all'),
-  //   folderName: 'Location_Media',
-  //   includeInRemove: false,
-  //   includeInMigration: false,
-  //   updateKeys: 'none', // images cannot update - always 'none'
   }, {
-    name: 'ownershipLocationGallery',
+    name: 'locationGalleryTouring',
     type: 'asset',
     handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'touring', ['touring']),
-    folderName: 'Location_Media_2',
+    folderName: 'Location_Media',
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['touring'],
   }, {
-    name: 'ownershipLocationGallery',
+    name: 'locationGalleryHolidays',
     type: 'asset',
     handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'holidays', ['holidays']),
-    folderName: 'Location_Media_2',
+    folderName: 'Location_Media',
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['holidays'],
   }, {
-    name: 'ownershipLocationGallery',
+    name: 'locationGalleryOwnership',
     type: 'asset',
     handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'ownership', ['sales']),
-    folderName: 'Location_Media_2',
+    folderName: 'Location_Media',
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['sales'],
-  // }, {
-  //   name: 'accommodationGallery',
-  //   type: 'asset',
-  //   handler: uploadAccommodationGalleries,
-  //   folderName: 'Accommodation_Media',
-  //   includeInRemove: false,
-  //   includeInMigration: false,
-  //   updateKeys: 'none', // images cannot update - always 'none'
   }, {
-    name: 'ownershipAccommodationGallery',
+    name: 'accommodationGallery',
     type: 'asset',
     handler: uploadAccommodationGalleries,
-    folderName: 'Accommodation_Media_2',
-    includeInRemove: true,
-    includeInMigration: true,
+    folderName: 'Accommodation_Media',
+    includeInRemove: false,
+    includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
-    // removalTags: ['sales'],
   }, {
     name: 'holidayProduct',
     type: 'entry',
@@ -137,10 +117,10 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInMigration: true,
     updateKeys: {
       entry: {
-        holiday_product_contents: [{
-          contextual_images: true,
-        }],
-        sales_product_content: true,
+        // holiday_product_contents: [{
+        //   contextual_images: false,
+        // }],
+        sales_product_contents: true,
       }
     },
   }, {
@@ -175,8 +155,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: {
-      entry: {
-        pets_allowed: false, // This will only update the truthy keys. everything else left as is.
+      entry: { // This will only update the truthy keys. everything else left as is.
+        pets_allowed: false,
         accessible: false,
         accommodation_amenities: false,
         contextual_images: false,

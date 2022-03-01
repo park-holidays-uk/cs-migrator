@@ -207,7 +207,7 @@ export const createAccommodation = async (context, migrationConfig) => {
       })
     )
     accommodationEntries = {...accommodationEntries, ...accommodationEntriesPerPark}
-    const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.location[parkId].title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
+    const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.location[parkId]?.title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
     console.log(totalStr.padEnd(50, ' '))
   }
   return accommodationEntries
