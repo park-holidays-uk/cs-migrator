@@ -114,13 +114,13 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
         // holiday_product_contents: [{
         //   contextual_images: false,
         // }],
-        sales_product_contents: true,
+        sales_product_contents: false,
       }
     },
   }, {
@@ -223,7 +223,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }

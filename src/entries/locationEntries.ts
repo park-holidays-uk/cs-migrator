@@ -182,7 +182,7 @@ const createHolidayProductDetails = async (sectorId, park, context, migrationCon
 
 const createSalesJourneyOverviews = async (context, parkId) => {
   const parkSectorInfo = await context.db.query(`
-    SELECT psi.medium_overview, psi.full_overview
+    SELECT psi.medium_overview, psi.full_overview, psi.phone
     FROM park_sector_info as psi
     INNER JOIN park_sector_info_lookups as lu
     WHERE psi.id = lu.park_sector_info_id
@@ -203,6 +203,7 @@ const createSalesJourneyOverviews = async (context, parkId) => {
       "season_end_date": parkDates[0]['finish_date'],
       "short_overview": parkSectorInfo[0]['medium_overview'],
       "long_overview": parkSectorInfo[0]['full_overview'],
+      "telephone": parkSectorInfo[0]['phone'],
     }
   } else {
 		console.error('createSalesJourneyOverviews -> ERROR-> missing information => park.id', parkId, 'parkSectorInfo', parkSectorInfo)
@@ -230,10 +231,10 @@ const createSalesHighlights = async (context, parkId) => {
   }
 }
 
-const createDummyMediaTextContent = () => ({
+const createDummyMediaTextContent = (environment) => ({
   pages: [{
     title: 'Title 1',
-    image: 'bltc7f6560369b360c4',
+    image: environment === 'playground' ? 'blt3ff0473f5b589f87' : 'bltc7f6560369b360c4',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <p>
@@ -249,7 +250,7 @@ const createDummyMediaTextContent = () => ({
     `
   }, {
     title: 'Title 2',
-    image: 'blt3de10ec9047a3f05',
+    image: environment === 'playground' ? 'blt989d2aa3a9bf31c7' : 'blt3de10ec9047a3f05',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <p>
@@ -268,7 +269,7 @@ const createDummyMediaTextContent = () => ({
     `
   }, {
     title: 'Title 3',
-    image: 'bltff3086543cb10a49',
+    image: environment === 'playground' ? 'bltfdd7a16b54736526' : 'bltff3086543cb10a49',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <h3>
@@ -282,7 +283,7 @@ const createDummyMediaTextContent = () => ({
     `
   }, {
     title: 'Title 4',
-    image: 'blt37a260db1f5dd57f',
+    image: environment === 'playground' ? 'bltfe2324bdc20dae00' : 'blt37a260db1f5dd57f',
     text: `
       <h3>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h3>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum.
@@ -300,7 +301,7 @@ const createSalesProductContent = async (context, migrationConfig, park) => {
   const images = await createProductImages(context, 'locationGalleryOwnership', 'ownership', park.id);
   const overview = await createSalesJourneyOverviews(context, park.id);
   const highlights = await createSalesHighlights(context, park.id);
-  const media_text_content = createDummyMediaTextContent();
+  const media_text_content = createDummyMediaTextContent(context.env);
   return {
     overview,
     highlights,
