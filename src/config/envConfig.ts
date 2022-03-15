@@ -27,6 +27,7 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   Park_Logo: process.env[`${env}_Park_Logo`],
   Location_Media: process.env[`${env}_Location_Media`],
   Accommodation_Media: process.env[`${env}_Accommodation_Media`],
+  Stock_Media: process.env[`${env}_Stock_Media`],
   Icon_Star: process.env[`${env}_Icon_Star`],
   environments: process.env[`${env}_environments`]
 })
@@ -66,6 +67,16 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['sales'],
+  }, {
+    name: 'stockGallery',
+    type: 'asset',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    folderName: 'Stock_Media',
+    includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',  // images cannot update - always 'none'
+    removalTags: ['cms_scraped'],
   }, {
     name: 'accommodationGallery',
     type: 'asset',
@@ -224,6 +235,14 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
     includeInRemove: true,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'locationStockPrice',
+    type: 'entry',
+    //@ts-ignore
+    handler: () => {/* not used to migrate only delete... */},
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }

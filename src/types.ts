@@ -2,7 +2,7 @@ export type EnvironmentType = 'playground' | 'parkholidays'
 
 export type ContentTypeType = 'global_fields' | 'content_types'
 
-export type FolderNameType = 'Park_Logo' | 'Location_Media' | 'Accommodation_Media'
+export type FolderNameType = 'Park_Logo' | 'Location_Media' | 'Accommodation_Media' | 'Stock_Media'
 
 type UpdateKeyMapType = {
   [key: string]: boolean | UpdateKeyMapType | UpdateKeyMapType[]
@@ -23,6 +23,7 @@ export type MigrationType = 'locationLogo'
   | 'locationGalleryHolidays'
   | 'locationGalleryTouring'
   | 'locationGalleryOwnership'
+  | 'stockGallery'
   | 'accommodationGallery'
   | 'holidayProduct'
   | 'locationCategory'
@@ -43,5 +44,6 @@ export type MigrationType = 'locationLogo'
   | 'stockStatus'
   | 'stockType'
   | 'stockUnit'
+  | 'locationStockPrice'
 
 
