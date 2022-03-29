@@ -125,19 +125,19 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
         // slug: true,
         // holiday_product_contents: [{
         //   contextual_images: false,
         // }],
-        sales_product_contents: [{
-          overview: {
-            season_start_date: true,
-            season_end_date: true,
-          },
-        }],
+        // sales_product_contents: [{
+        //   overview: {
+        //     season_start_date: true,
+        //     season_end_date: true,
+        //   },
+        // }],
       }
     },
   }, {

@@ -228,8 +228,8 @@ const blacklistKeys = {
   created_at: true,
   updated_at: true,
   created_by: true,
-  season_start_date: true,
-  season_end_date: true,
+  // season_start_date: true,
+  // season_end_date: true,
   updated_by: true,
   is_dir: true,
   _version: true,
@@ -248,8 +248,10 @@ const scrubExistingData = (existingData) => {
   const data = { ...existingData };
   return Object.keys(data).reduce((acc, key) => {
     const formatted = { ...acc };
-    if (key === 'image' && data['image']?.uid) {
+    /* if (key === 'image' && data['image']?.uid) {
       formatted['image'] = data[key].uid;
+    } else */ if (data[key]?.filename && data[key]?.uid) { // This is an asset - just return uid
+      formatted[key] = data[key].uid;
     } else if (!blacklistKeys[key]) {
       if (typeof data[key] === 'object') {
         if (Array.isArray(data[key])) {
@@ -309,8 +311,10 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         method = 'PUT'
         if (migrationConfig.updateKeys !== 'all') {
           let existingData = await getEntry(context, contentUid, existingEntryUid);
+					console.log('TCL: createEntries -> existingData', JSON.stringify({...existingData}, null, 2))
           existingData = scrubExistingData(existingData);
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, existingData);
+					console.log('TCL: createEntries -> body', JSON.stringify(body, null, 2))
         }
         body.entry.uid = existingEntryUid
       }
@@ -337,6 +341,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         responses[entry.id] = createCacheEntry(response, entry)
       }
     }
+    break; // TCL:
   }
   return responses
 }
