@@ -380,6 +380,7 @@ export const createLocations = async (context, migrationConfig) => {
         entry: {
           'title': park.name,
           'long_name': park.name,
+          'slug': park.slug,
           'address': {
             'line_1': park['address_line_1'],
             'line_2': park['address_line_2'],
