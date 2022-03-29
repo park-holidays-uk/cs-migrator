@@ -234,7 +234,7 @@ const createSalesHighlights = async (context, parkId) => {
 const createDummyMediaTextContent = (environment) => ({
   pages: [{
     title: 'Title 1',
-    image: environment === 'playground' ? 'blt3ff0473f5b589f87' : 'bltc7f6560369b360c4',
+    image: environment === 'playground' ? 'blt3ff0473f5b589f87' : 'bltff78114c89dc0259',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <p>
@@ -250,7 +250,7 @@ const createDummyMediaTextContent = (environment) => ({
     `
   }, {
     title: 'Title 2',
-    image: environment === 'playground' ? 'blt989d2aa3a9bf31c7' : 'blt3de10ec9047a3f05',
+    image: environment === 'playground' ? 'blt989d2aa3a9bf31c7' : 'bltff78114c89dc0259',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <p>
@@ -269,7 +269,7 @@ const createDummyMediaTextContent = (environment) => ({
     `
   }, {
     title: 'Title 3',
-    image: environment === 'playground' ? 'bltfdd7a16b54736526' : 'bltff3086543cb10a49',
+    image: environment === 'playground' ? 'bltfdd7a16b54736526' : 'bltff78114c89dc0259',
     text: `
       <h2>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h2>
       <h3>
@@ -283,7 +283,7 @@ const createDummyMediaTextContent = (environment) => ({
     `
   }, {
     title: 'Title 4',
-    image: environment === 'playground' ? 'bltfe2324bdc20dae00' : 'blt37a260db1f5dd57f',
+    image: environment === 'playground' ? 'bltfe2324bdc20dae00' : 'bltff78114c89dc0259',
     text: `
       <h3>Lorem ipsum dolor sit amet est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit </h3>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor erat vel massa bibendum.

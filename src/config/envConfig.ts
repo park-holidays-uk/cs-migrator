@@ -73,7 +73,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
     folderName: 'Stock_Media',
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',  // images cannot update - always 'none'
     removalTags: ['cms_scraped'],
@@ -125,13 +125,16 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: {
       entry: {
         // holiday_product_contents: [{
         //   contextual_images: false,
         // }],
-        sales_product_contents: false,
+        sales_product_contents: [{
+          overview: true,
+          media_text_content: true
+        }],
       }
     },
   }, {
@@ -234,7 +237,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
