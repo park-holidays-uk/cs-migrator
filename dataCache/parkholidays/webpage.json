@@ -1,0 +1,227 @@
+{
+  "59": {
+    "uid": "bltf96712c62ec8c309",
+    "title": "Dawlish Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "60": {
+    "uid": "blt8f321663b52a191b",
+    "title": "Golden Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "61": {
+    "uid": "bltdfce340361a0010b",
+    "title": "Landscove (Ownership)",
+    "from": "db.pages"
+  },
+  "62": {
+    "uid": "blt8b16399aa71bb9e8",
+    "title": "Waterside (Ownership)",
+    "from": "db.pages"
+  },
+  "63": {
+    "uid": "bltbe6aae9e578cd7bd",
+    "title": "Riviera Bay (Ownership)",
+    "from": "db.pages"
+  },
+  "64": {
+    "uid": "bltc5d753d2a14a1e03",
+    "title": "Sandhills (Ownership)",
+    "from": "db.pages"
+  },
+  "65": {
+    "uid": "blt55e0d677acb3c053",
+    "title": "Alberta (Ownership)",
+    "from": "db.pages"
+  },
+  "66": {
+    "uid": "blte8b7178509834337",
+    "title": "Marlie (Ownership)",
+    "from": "db.pages"
+  },
+  "67": {
+    "uid": "bltcfaf396c1bd2a1cf",
+    "title": "New Beach (Ownership)",
+    "from": "db.pages"
+  },
+  "68": {
+    "uid": "blt46ca24682e847b27",
+    "title": "Seaview (Ownership)",
+    "from": "db.pages"
+  },
+  "69": {
+    "uid": "bltb4adeedfc0aa40d1",
+    "title": "Harts (Ownership)",
+    "from": "db.pages"
+  },
+  "70": {
+    "uid": "blt7166e2e74597493f",
+    "title": "Oaklands",
+    "from": "db.pages"
+  },
+  "71": {
+    "uid": "blt6604d9ce678ee69b",
+    "title": "St Osyth (Ownership)",
+    "from": "db.pages"
+  },
+  "72": {
+    "uid": "blt4953ec3c1b92b737",
+    "title": "Steeple Bay (Ownership)",
+    "from": "db.pages"
+  },
+  "73": {
+    "uid": "blte16cbe21d87a167a",
+    "title": "Seawick (Ownership)",
+    "from": "db.pages"
+  },
+  "74": {
+    "uid": "blt6616f78ca94c75be",
+    "title": "Solent Breezes (Ownership)",
+    "from": "db.pages"
+  },
+  "75": {
+    "uid": "blt04624dc48c82a337",
+    "title": "Felixstowe Beach (Ownership)",
+    "from": "db.pages"
+  },
+  "76": {
+    "uid": "blt9f3d6579bdd8b53c",
+    "title": "Suffolk Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "77": {
+    "uid": "blta674c89709a688a6",
+    "title": "Chichester Lakeside (Ownership",
+    "from": "db.pages"
+  },
+  "78": {
+    "uid": "blt4f19583b5d7de857",
+    "title": "Coghurst Hall (Ownership)",
+    "from": "db.pages"
+  },
+  "79": {
+    "uid": "blt1f3dbf1d24e2414e",
+    "title": "Beauport (Ownership)",
+    "from": "db.pages"
+  },
+  "80": {
+    "uid": "blta366b13d582c6478",
+    "title": "Rye Harbour (Ownership)",
+    "from": "db.pages"
+  },
+  "81": {
+    "uid": "bltca955d0de7e859ec",
+    "title": "Winchelsea Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "84": {
+    "uid": "bltd33e691a0ba85117",
+    "title": "Broadland Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "87": {
+    "uid": "bltee8895ab8c2c56f5",
+    "title": "Birchington Vale (Ownership)",
+    "from": "db.pages"
+  },
+  "89": {
+    "uid": "bltfdaa953c6447debf",
+    "title": "Tarka (Ownership)",
+    "from": "db.pages"
+  },
+  "92": {
+    "uid": "blt5d70d3ff20378716",
+    "title": "Carlton Meres (Ownership)",
+    "from": "db.pages"
+  },
+  "94": {
+    "uid": "blt37c7002c192ec7c7",
+    "title": "Pevensey Bay (Ownership)",
+    "from": "db.pages"
+  },
+  "262": {
+    "uid": "bltf93ffe18015342cd",
+    "title": "Martello Beach (Ownership)",
+    "from": "db.pages"
+  },
+  "285": {
+    "uid": "blt038d0fb1ab6a9014",
+    "title": "Dovercourt (Ownership)",
+    "from": "db.pages"
+  },
+  "522": {
+    "uid": "blt09252db03fc70f99",
+    "title": "West Mersea (Ownership)",
+    "from": "db.pages"
+  },
+  "633": {
+    "uid": "blt4fb0bc79b3bf39cb",
+    "title": "Pakefield (Ownership)",
+    "from": "db.pages"
+  },
+  "642": {
+    "uid": "bltf17bd63b9b2e97cc",
+    "title": "Wood Farm (Ownership)",
+    "from": "db.pages"
+  },
+  "730": {
+    "uid": "blt4ea066eef1e09243",
+    "title": "Silver Sands (Ownership)",
+    "from": "db.pages"
+  },
+  "731": {
+    "uid": "blt53a959919a4245f6",
+    "title": "Turnberry (Ownership)",
+    "from": "db.pages"
+  },
+  "732": {
+    "uid": "blt830cc604e751a4ce",
+    "title": "Sand le Mere (Ownership)",
+    "from": "db.pages"
+  },
+  "733": {
+    "uid": "blta6848a820df1d9be",
+    "title": "Ashbourne Heights (Ownership)",
+    "from": "db.pages"
+  },
+  "734": {
+    "uid": "blt4e2b95768dd638c7",
+    "title": "Bowland Fell (Ownership)",
+    "from": "db.pages"
+  },
+  "735": {
+    "uid": "bltb0e83ec32a759c9a",
+    "title": "Hengar Manor (Ownership)",
+    "from": "db.pages"
+  },
+  "736": {
+    "uid": "blt8c9d58ba22a82069",
+    "title": "Hedley Wood  (Ownership)",
+    "from": "db.pages"
+  },
+  "737": {
+    "uid": "bltd9888c5f1e11756a",
+    "title": "Trevella (Ownership)",
+    "from": "db.pages"
+  },
+  "738": {
+    "uid": "blt469ff1aef40e8a87",
+    "title": "Seaview Village - Polperro (Ow",
+    "from": "db.pages"
+  },
+  "851": {
+    "uid": "blt2aa0a32bad3b2a3f",
+    "title": "Bodmin (Ownership)",
+    "from": "db.pages"
+  },
+  "854": {
+    "uid": "bltd32fe0ba306efd95",
+    "title": "Lossiemouth (Ownership)",
+    "from": "db.pages"
+  },
+  "857": {
+    "uid": "blteffd411e8bf1c6ae",
+    "title": "Burghead (Ownership)",
+    "from": "db.pages"
+  }
+}

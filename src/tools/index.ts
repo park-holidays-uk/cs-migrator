@@ -8,7 +8,8 @@ import { EnvironmentType, FolderNameType } from '../types'
 
 dotenv.config()
 
-export const apiDelay = (delay = 50) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
+// TCL: delay needs to be above 1500 to publish reliably - reduce for testing
+export const apiDelay = (delay = 1500) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
 
 export const getFolderUid = (env: EnvironmentType, folder: FolderNameType) => {
   return process.env[`${env}_${folder}`]
@@ -298,7 +299,6 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     const recordCount = Object.keys(responses).length + 1
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`)
     const existingEntryUid = findCachedEntry(migrationConfig, context, entry)
-		console.log('TCL: createEntries -> existingEntryUid', existingEntryUid)
     if (existingEntryUid && migrationConfig.updateKeys === 'none') {
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
@@ -311,10 +311,8 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         method = 'PUT'
         if (migrationConfig.updateKeys !== 'all') {
           let existingData = await getEntry(context, contentUid, existingEntryUid);
-					console.log('TCL: createEntries -> existingData', JSON.stringify({...existingData}, null, 2))
           existingData = scrubExistingData(existingData);
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, existingData);
-					console.log('TCL: createEntries -> body', JSON.stringify(body, null, 2))
         }
         body.entry.uid = existingEntryUid
       }
@@ -341,7 +339,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         responses[entry.id] = createCacheEntry(response, entry)
       }
     }
-    break; // TCL:
+    // break; // TCL:
   }
   return responses
 }
@@ -437,7 +435,7 @@ export const removeEntries = async (context, contentUid, entries, recordsRemoved
   const responses = []
   for (const entry of entries) {
     process.stdout.write(`Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} ${' '.repeat(35)} \r`)
-    await apiDelay()
+    await apiDelay(50)
     const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entry.uid}`, {
       method: 'DELETE',
       headers: {

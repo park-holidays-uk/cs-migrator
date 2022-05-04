@@ -1,13 +1,13 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import {
   uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
-} from '../assets/galleries'
+} from '../assets/galleries';
 import {
   createAccommodation,
   createAccommodationAmenities,
   createAccommodationGrades,
   createAccommodationTypes
-} from '../entries/accommodationEntries'
+} from '../entries/accommodationEntries';
 import {
   createCounties,
   createHolidayProducts,
@@ -15,8 +15,11 @@ import {
   createLocationCategories,
   createLocations,
   createRegions
-} from '../entries/locationEntries'
-import { EnvironmentType, MigrationConfigurationType } from '../types'
+} from '../entries/locationEntries';
+import {
+  createOwnershipParkWebpages
+} from '../entries/pages';
+import { EnvironmentType, MigrationConfigurationType } from '../types';
 dotenv.config();
 
 export const getEnvironmentVariables = (env: EnvironmentType) => ({
@@ -121,6 +124,13 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInMigration: false,
     updateKeys: 'none',
   }, {
+    name: 'webpage',
+    type: 'entry',
+    handler: createOwnershipParkWebpages,
+    includeInRemove: true,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
     name: 'location',
     type: 'entry',
     handler: createLocations,
@@ -128,14 +138,14 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInMigration: false,
     updateKeys: {
       entry: {
-        // slug: true,
+        // slug: false,
         // holiday_product_contents: [{
         //   contextual_images: false,
         // }],
         // sales_product_contents: [{
         //   overview: {
-        //     season_start_date: true,
-        //     season_end_date: true,
+        //     season_start_date: false,
+        //     season_end_date: false,
         //   },
         // }],
       }
