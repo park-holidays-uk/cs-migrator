@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npx webpack --mode=development",
     "migrateSlugs": "npm run build && node ./dist/migrateSlugs.js parkholidays",
+    "migrateAdditionalStockImages": "npm run build && node ./dist/migrateAdditionalStockImages.js playground",
     "publish": "npm run build && node ./dist/publish.js",
     "dynamo": "npm run build && node ./dist/dynamo.js",
     "types": "npm run build && node ./dist/contentTypes.js",

@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import {
+  additionalStockGalleries,
   uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
 } from '../assets/galleries';
 import {
@@ -89,6 +90,15 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
   }, {
+    name: 'additionalStockGallery',
+    type: 'asset',
+    handler: additionalStockGalleries,
+    folderName: 'Location_Media',
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'none', // images cannot update - always 'none'
+    removalTags: ['additional_stock'],
+  }, {
     name: 'holidayProduct',
     type: 'entry',
     handler: createHolidayProducts,
@@ -127,15 +137,15 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'webpage',
     type: 'entry',
     handler: createOwnershipParkWebpages,
-    includeInRemove: true,
-    includeInMigration: true,
+    includeInRemove: false,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'location',
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: {
       entry: {
         // slug: false,
@@ -143,10 +153,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         //   contextual_images: false,
         // }],
         // sales_product_contents: [{
-        //   overview: {
-        //     season_start_date: false,
-        //     season_end_date: false,
-        //   },
+        //   additional_stock_image: false
         // }],
       }
     },

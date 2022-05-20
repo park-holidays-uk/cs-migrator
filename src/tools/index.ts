@@ -225,6 +225,21 @@ const findCachedEntry = (migrationConfig, context, entry) => {
 }
 
 
+export const findCachedEntryFromUid = (context, cacheRef, entry) => {
+  const cache = context.cache[cacheRef];
+  const response = Object.keys(cache).reduce<{ uid: string, id: string } | null>((foundItem, id) => {
+    if (!foundItem && cache[id].uid === entry.uid) {
+      foundItem = {
+        ...cache[id],
+        id
+      }
+    }
+    return foundItem;
+  }, null)
+	console.log('TCL: findCachedEntryFromUid -> response', response)
+  return response;
+}
+
 const blacklistKeys = {
   created_at: true,
   updated_at: true,

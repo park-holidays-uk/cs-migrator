@@ -1,4 +1,4 @@
-import { locationGalleryQuery, LocationGallerySectorType, parkLogoQuery } from '../assets/galleries'
+import { additionalStockGalleryQuery, locationGalleryQuery, LocationGallerySectorType, parkLogoQuery } from '../assets/galleries'
 import { getEnvironmentVariables } from '../config/envConfig'
 import { defaultRegions, getRegionIdFromCounty } from '../entries/regions'
 import { createEntries, findReferenceInCache } from '../tools'
@@ -163,6 +163,23 @@ const createProductImages = async (context, cacheRef, productType: LocationGalle
   }, []);
 }
 
+export const createAdditionalStockImages = async (context, cacheRef, parkId) => {
+  const additionalImages = await context.db.query(additionalStockGalleryQuery(parkId))
+  if (!additionalImages.length) {
+		console.error('createProductImages -> ERROR-> missing information => park.id', parkId)
+  }
+  return additionalImages.reduce((acc, img) => {
+    const imageRef = findReferenceInCache(context, cacheRef, img.id)
+    if (imageRef?.[0]?.uid) {
+      return [
+        ...acc,
+        { image: imageRef[0].uid }
+      ]
+    }
+    return acc
+  }, []);
+}
+
 const createHolidayProductDetails = async (sectorId, park, context, migrationConfig) => {
   const images = await createProductImages(
     context,
@@ -302,6 +319,8 @@ const createSalesProductContent = async (context, migrationConfig, park) => {
   const overview = await createSalesJourneyOverviews(context, park.id);
   const highlights = await createSalesHighlights(context, park.id);
   const media_text_content = createDummyMediaTextContent(context.env);
+  const additional_images = await createAdditionalStockImages(context, 'additionalStockGallery', park.id)
+
   return {
     overview,
     highlights,
@@ -309,6 +328,9 @@ const createSalesProductContent = async (context, migrationConfig, park) => {
     media_text_content,
     arrange_visit: {
       text_content: ''
+    },
+    additional_stock_image: {
+      contextual_images: additional_images,
     }
   }
 };

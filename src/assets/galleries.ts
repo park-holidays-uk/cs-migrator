@@ -206,3 +206,57 @@ export const uploadAccommodationGalleries = async (context, migrationConfig) => 
   return responses
 }
 
+export const additionalStockGalleryQuery = (parkId) => `
+  SELECT m.id, m.path, m.description, ml.media_lookup_order FROM ph_db.media as m
+  INNER JOIN ph_db.media_lookups as ml
+  WHERE m.id = ml.media_id
+  AND ml.media_lookup_tag LIKE 'Additional Holiday Home Image'
+  AND ml.media_lookup_id=${parkId}
+  ORDER BY ml.media_lookup_order ASC;
+`
+
+export const additionalStockGalleries = async (context, migrationConfig, tags = ['additional_stock']) => {
+  const folder = 'Location_Media';
+  const galleryType = 'ownership';
+  const parks = await context.db.query(UNIQUE_PARK_QUERY);
+
+  const folderUid = getFolderUid(context.env, folder);
+
+  let responses = {}
+  for (const park of parks) {
+    const parkId = park.id
+
+    const additionalStockGalleries = await context.db.query(additionalStockGalleryQuery(parkId))
+
+    const [newAdditionalStockImages, existingAdditionalStockImages] = additionalStockGalleries.reduce((acc, image) => {
+      acc[context.cache[migrationConfig.name][image.id] ? 1 : 0].push(image)
+      return acc
+    }, [[], []])
+
+    if (newAdditionalStockImages.length) {
+      const imageUploadResponse = await uploadAssets(context, newAdditionalStockImages, `${folder}`, folderUid, [...tags, park.name.replace('&', 'and')], (asset, response) => ({
+        uid: response.asset.uid,
+        filename: asset.path,
+        parkId,
+        type: galleryType,
+      }))
+      responses = {...responses, ...imageUploadResponse}
+    }
+    if (existingAdditionalStockImages.length) {
+      if (migrationConfig.shouldUpdate) {
+        console.log('\n\nCurrently migration does not handle updating assets. Need to DELETE/CREATE')
+        /*
+        * Legacy images will always be under a new id. So no need for updating content of image.
+        * Also uploading a new asset creates a new contentstack uid - which entries have reference to.
+        * Larger task than warrants the effort. Currently adding new images seems sufficient.
+        */
+      }
+      responses = {...responses, ...context.cache[migrationConfig.name]}
+    }
+    // keep cache up to date.. It will write current cache to file in event of failure
+    context.cache[migrationConfig.name] = responses
+
+  }
+  return responses
+}
+

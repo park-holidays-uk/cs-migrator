@@ -25,6 +25,7 @@ module.exports = (_, argv, configDirs) => {
       contentTypes: path.resolve(__dirname, './src/contentTypes/index.ts'),
       dynamo: path.resolve(__dirname, './src/dynamoDb/index.ts'),
       migrateSlugs: path.resolve(__dirname, './src/migration/migrateSlug'),
+      migrateAdditionalStockImages: path.resolve(__dirname, './src/migration/migrateAdditionalStockImages'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
     mode: argv.mode,
