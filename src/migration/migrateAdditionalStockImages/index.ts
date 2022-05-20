@@ -39,24 +39,32 @@ const migrateData = async () => {
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
   // save a copy of current v1 entries
-  const locationEntries = await getAllEntries(context, 'location')
+  let locationEntries = await getAllEntries(context, 'location')
+  locationEntries = locationEntries.map((entry) => {
+    const park = findCachedEntryFromUid(context, 'location', entry)
+		console.log('TCL: migrateData -> park', park)
+    if (park) {
+      return {
+        ...entry,
+        id: park.id,
+      }
+    }
+    return null;
+  }).filter(Boolean);
   writeSync(env, 'migrationCache', 'location_preAdditionalStockImages', locationEntries)
-
-  // let locationEntries = readSync(env, 'migrationCache', 'location_preAdditionalStockImages') // used for development
 
   const mockMigrationConfig = {
     name: 'location',
     updateKeys: {
       entry: {
         sales_product_contents: [{
-          additional_stock_image: true
+          arrange_visit: {
+            display_offers: true
+          }
         }],
       }
     }
   } as any
-
-  // context.cache.location = arrayToUidKeyedObject(locationEntries)
-	console.log('TCL: migrateData -> context.cache.location', context.cache.location)
 
   // re-populate entries using new structure
   context.cache['location'] = await createEntries(
@@ -65,16 +73,11 @@ const migrateData = async () => {
     'location',
     locationEntries,
     async (entry) => {
-      const park = findCachedEntryFromUid(context, 'location', entry)
-			console.log('TCL: migrateData -> park', park)
-      const additional_images = await createAdditionalStockImages(context, 'additionalStockGallery', park.id)
-			console.log('TCL: migrateData -> additional_images', additional_images)
-      const update = {
-        ...entry
-      }
-      delete update.id
-			console.log('TCL: migrateData -> update', update)
-      update.sales_product_contents[0].additional_images = additional_images;
+      const additional_images = await createAdditionalStockImages(context, 'additionalStockGallery', entry.id)
+      const update = {...entry};
+      update.sales_product_contents[0].arrange_visit = {
+        display_offers: true
+      };
       return ({
         entry: update
       })
