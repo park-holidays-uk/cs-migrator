@@ -95,7 +95,7 @@ export const createImageFolders = async (context, folder, subFolder, migrationCo
   }
 }
 
-const publishAsset = async (context, assetUid) => {
+export const publishAsset = async (context, assetUid) => {
   try {
     const res = await fetch(`${context.base_url}/assets/${assetUid}/publish`, {
       method: 'POST',

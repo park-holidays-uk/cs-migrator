@@ -89,6 +89,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
+    removalTags: ['cms-scraped'],
   }, {
     name: 'additionalStockGallery',
     type: 'asset',
@@ -145,7 +146,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     handler: createLocations,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: {
       entry: {
         // slug: false,
@@ -186,7 +187,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: {
       entry: { // This will only update the truthy keys. everything else left as is.

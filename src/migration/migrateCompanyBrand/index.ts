@@ -4,13 +4,9 @@ import {
   migrationConfiguration
 } from '../../config/envConfig'
 import { getDataCache, writeSync } from '../../dataHandler/fileCache'
-import { arrayToUidKeyedObject, createEntries, getAllEntries, snakeCase } from '../../tools'
+import { arrayToUidKeyedObject, createEntries, findCachedEntryFromUid, getAllEntries, snakeCase } from '../../tools'
 import loginForAuthToken from '../../tools/login'
 import { EnvironmentType } from '../../types'
-
-
-
-
 
 const env = process.argv[2] as EnvironmentType
 
@@ -32,45 +28,61 @@ const migrateData = async () => {
       authtoken: null,
     }
   })
+  // context.db = await getDbConnection()
   context.env = env
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
   // save a copy of current v1 entries
-  const locationEntries = await getAllEntries(context, 'location')
-  writeSync(env, 'migrationCache', 'location_preSlug', locationEntries)
+  let locationEntries = await getAllEntries(context, 'location')
+  locationEntries = locationEntries.map((entry) => {
+    const park = findCachedEntryFromUid(context, 'location', entry)
+		console.log('TCL: migrateData -> park', park)
+    if (park) {
+      return {
+        ...entry,
+        // brand: [
+        //   {
+        //     "uid": "blt512eebdbfb8c0494",
+        //     "_content_type_uid": "company_brand"
+        //   },
+        // ],
+      }
+    }
+    return null;
+  }).filter(Boolean);
 
-  // let locationEntries = readSync(env, 'migrationCache', 'location_V1') // used for development
+  context.cache.location = arrayToUidKeyedObject(locationEntries)
+  writeSync(env, 'migrationCache', 'location_preCompanyBrand', locationEntries);
+
+   // let accommodationImages = readSync(env, 'migrationCache', 'accommodationImages_preTags') // used for development
 
   const mockMigrationConfig = {
     name: 'location',
     updateKeys: {
       entry: {
-        slug: true
+        brand: true,
       }
     }
   } as any
 
-  context.cache.location = arrayToUidKeyedObject(locationEntries)
-
-  const createSlugFromTitle = (title: string) => title
-  .trim()
-  .toLowerCase()
-  .split(' ')
-  .join('-') + '-holiday-park'
-
-  // re-populate entries using new structure
+  // // re-populate entries using new structure
   context.cache['location'] = await createEntries(
     mockMigrationConfig,
     context,
     'location',
     locationEntries,
     async (entry) => {
-      return ({
+      return {
         entry: {
           ...entry,
-          slug: createSlugFromTitle(entry.title)
+          brand: [
+            {
+              "uid": "blt512eebdbfb8c0494",
+              "_content_type_uid": "company_brand"
+            },
+          ]
         }
-      })
+      }
     },
     ({ entry }) => ({
       uid: entry.uid,
