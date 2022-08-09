@@ -1,214 +1,125 @@
-import { UNIQUE_PARK_QUERY } from '../assets/galleries'
-import { createEntries, findReferenceInCache } from '../tools'
+import { createEntries, findReferenceInCache } from "../tools";
 
-export const createAccommodationTypes = async (context, migrationConfig) => {
-  const accommodationTypes = await context.db.query(`
-    SELECT * FROM accommodation_types
-    WHERE deleted_at IS NULL;
-  `)
-  const accommodationTypesEntries = await createEntries(
-    migrationConfig,
-    context,
-    'accommodation_type',
-    accommodationTypes,
-    (accomType) => ({
-      entry: {
-        title: accomType.name
-      }
-    }),
-    ({ entry }) => ({
-      uid: entry.uid,
-      title: entry.title,
-      from: 'db.accommodation_types',
-    })
-  )
-  return accommodationTypesEntries
-}
 
-export const accommodationGradeQuery = () => `
-  SELECT DISTINCT g.id, g.name, g.overview FROM ph_db.grading as g
-  JOIN ph_db.hire_types as ht
-  WHERE g.id = ht.grading_id;
-`
-
-const createAccommodationGradeImages = (context, accommodationTypes) => {
-  return Object.keys(accommodationTypes).map((accomTypeId) => {
-    return {
-      accommodation_type: findReferenceInCache(context, 'accommodationType', accomTypeId),
-      contextual_images: accommodationTypes[accomTypeId].map((asset) => ({
-        image: asset.uid
-      }))
+const getAccommodationEntriesLatestVersion = async (context, entryIds = []) => {
+  const getLatestEntry = async (entryId) => {
+    const entries = await context.db.query(`
+      SELECT * FROM craft_entryversions
+      WHERE entryId=${entryId}
+      ORDER BY dateCreated DESC, dateUpdated DESC;
+    `);
+    return JSON.parse(entries?.[0].data ?? {});
+  };
+  const entries = [];
+  for (const { id: entryId } of entryIds) {
+    const entry = await getLatestEntry(entryId);
+    if (entry.enabled) {
+      entries.push({
+        ...entry,
+        entryId,
+      });
     }
-  })
-}
-
-export const createAccommodationGrades = async (context, migrationConfig) => {
-  const accommodationGalleriesByGrade = Object.values(context.cache.accommodationGallery).reduce((acc, value: any) => {
-    if (!acc[value.grade]) acc[value.grade] = {}
-    if (!acc[value.grade][value.accommodationType]) acc[value.grade][value.accommodationType] = []
-    acc[value.grade][value.accommodationType].push(value)
-    return acc
-  }, {})
-
-  const accommodationGrades = await context.db.query(accommodationGradeQuery())
-  accommodationGrades.unshift({
-    id: 0,
-    name: 'Other',
-    overview: 'Used for accommodation without a valid accommodation_grade, i.e. Grass Pitch'
-  })
-  const accommodationGradeEntries = await createEntries(
-    migrationConfig,
-    context,
-    'accommodation_grade',
-    accommodationGrades,
-    (grade) => ({
-      entry: {
-        title: grade.name,
-        description: grade.overview,
-        media: createAccommodationGradeImages(context, accommodationGalleriesByGrade[grade.id])
-      }
-    }),
-    ({ entry }) => ({
-      uid: entry.uid,
-      title: entry.title,
-      from: 'db.grading',
-    })
-  )
-  return accommodationGradeEntries
-}
-
-export const createAccommodationAmenities = async (context, migrationConfig) => {
-  const hireTypeFeatures = await context.db.query(`
-    SELECT DISTINCT htf.description, htf.sector_id, htf.id, htf.sort_order FROM ph_db.hire_type_features as htf
-    INNER JOIN ph_db.hire_type_description_hire_type_feature as htdhtf
-    INNER JOIN ph_db.hire_type_descriptions as htd
-    INNER JOIN ph_db.hire_types as ht
-    WHERE htf.id = htdhtf.hire_type_feature_id
-    AND htdhtf.hire_type_description_id = htd.id
-    AND ht.hire_type_description_id = htd.id
-    AND ht.deleted_at IS NULL
-    AND htf.deleted_at IS NULL
-    AND (
-      htf.sector_id = 0
-      OR htf.sector_id = 1
-      OR htf.sector_id = 2
-    )
-    ORDER BY htf.sort_order ASC;
-  `)
-
-  const accommodationAmenityEntries = await createEntries(
-    migrationConfig,
-    context,
-    'accommodation_amenity',
-    hireTypeFeatures,
-    (htFeature) => ({
-      entry: {
-        title: htFeature.description,
-      }
-    }),
-    ({ entry }) => ({
-      uid: entry.uid,
-      title: entry.title,
-      from: 'db.hire_type_features',
-    })
-  )
-  return accommodationAmenityEntries
-}
-
-
-const dbCacheHireTypeDescription = {}
-
-const createAmenitiesOnAccomodation = async (context, hireTypeDescriptionId) => {
-  if (!dbCacheHireTypeDescription[hireTypeDescriptionId]) {
-    const hireTypeFeatures = await context.db.query(`
-      SELECT * FROM ph_db.hire_type_features
-      WHERE id in
-      (
-        SELECT hire_type_feature_id as id FROM ph_db.hire_type_description_hire_type_feature
-        WHERE hire_type_description_id=${hireTypeDescriptionId}
-      )
-      AND deleted_at IS NULL
-      ORDER BY sort_order;
-    `)
-    const accommodationAmenities = hireTypeFeatures.map((feature) => {
-      const cachedAmenity = context.cache.accommodationAmenity[feature.id]
-      if (cachedAmenity) {
-        return ({
-          'uid': cachedAmenity.uid,
-          '_content_type_uid': 'accommodation_amenity'
-        })
-      }
-    })
-    dbCacheHireTypeDescription[hireTypeDescriptionId] = accommodationAmenities.filter(Boolean)
   }
-  return dbCacheHireTypeDescription[hireTypeDescriptionId]
-}
+  return entries;
+};
 
-const createImagesOnAccomodation = async (context, hireTypeCode) => {
-  const mediaLookups = await context.db.query(`
-    SELECT ht.code, ml.media_id FROM ph_db.hire_types as ht
-    INNER JOIN ph_db.media_lookups as ml
-    WHERE ht.code="${hireTypeCode}"
-    AND ml.media_lookup_type LIKE 'App_Models_HireType'
-    AND ml.media_lookup_id = ht.id
-    ORDER BY ml.media_lookup_order ASC;
-  `)
-  return mediaLookups.reduce((acc, lookup) => {
-    const imageRef = findReferenceInCache(context, 'accommodationGallery', lookup.media_id)
-    if (imageRef?.[0]?.uid) {
-      return [
-        ...acc,
-        { image: findReferenceInCache(context, 'accommodationGallery', lookup.media_id)[0].uid}
-      ]
-    }
-    return acc
+export const getAccommodationEntries = async (context, flattened = true) => {
+  const getEntryIds = (typeId) =>
+    context.db.query(`
+    SELECT id FROM craft_entries
+    WHERE sectionId=3 AND typeId=${typeId};
+  `);
+  const entriesTypeId = {
+    'Holiday Home': 3,
+    Cottage: 26,
+    Glamping: 27,
+    'Holiday Lodge': 28,
+    'Touring Pitch': 29,
+  };
+  const entryIdsByType = await Promise.all(
+    Object.values(entriesTypeId).map((typeId) => getEntryIds(typeId))
+  );
+  const entryDataByType = {};
+  const entryTypeKeys = Object.keys(entriesTypeId);
+  for (let i = 0; i < entryTypeKeys.length; i += 1) {
+    const latestAccommodationEntries =
+      await getAccommodationEntriesLatestVersion(context, entryIdsByType[i]);
+    entryDataByType[entryTypeKeys[i]] = latestAccommodationEntries;
+  }
+
+  return Object.keys(entryDataByType).reduce((acc, entryType) => {
+    const entries = entryDataByType[entryType].map((entry) => ({
+      ...entry,
+      entryType,
+    }));
+    return [...acc, ...entries];
   }, []);
-}
+};
 
 export const createAccommodation = async (context, migrationConfig) => {
-  let accommodationEntries = {}
-  const parks = await context.db.query(UNIQUE_PARK_QUERY)
-  for (const park of parks) {
-    const parkId = park.id
-    const hireTypes = await context.db.query(`
-      SELECT * FROM ph_db.hire_types
-      WHERE park_id=${parkId}
-      AND deleted_at IS NULL;
-    `)
-    const accommodationEntriesPerPark = await createEntries(
-      migrationConfig,
-      context,
-      'accommodation',
-      hireTypes,
-      async (ht) => {
-        const amenitiesForThisAccomodation = await createAmenitiesOnAccomodation(context, ht['hire_type_description_id'])
-        const imagesForThisAccomodation = await createImagesOnAccomodation(context, ht.code)
-        return ({
-          entry: {
-            'title': ht.code,
-            'name': ht.name,
-            'holiday_product': findReferenceInCache(context, 'holidayProduct', ht['rental_type'] == 0 ? 2 : ht['rental_type']),
-            'location': findReferenceInCache(context, 'location', parkId),
-            'accommodation_type': findReferenceInCache(context, 'accommodationType', ht['accommodation_type_id']),
-            'accommodation_grade': findReferenceInCache(context, 'accommodationGrade', ht['grading_id'] || 0),
-            'accommodation_amenities': amenitiesForThisAccomodation,
-            'bedrooms': ht.bedrooms,
-            'sleeps': ht.berths,
-            'pets_allowed': !!ht.pets_allowed,
-            'accessible': !!ht.accessible,
-            'contextual_images': imagesForThisAccomodation
-          }
-        });
-      },
-      ({ entry }) => ({
-        uid: entry.uid,
-        title: entry.title,
-        from: 'db.hire_types',
-      })
-    )
-    accommodationEntries = {...accommodationEntries, ...accommodationEntriesPerPark}
-    const totalStr = `\rTotal: ${Object.keys(accommodationEntries).length}  ->  [ ${context.cache.location[parkId]?.title} ]: ${Object.keys(accommodationEntriesPerPark).length}`
-    console.log(totalStr.padEnd(50, ' '))
-  }
-  return accommodationEntries
-}
+  const accommodationEntries = (await getAccommodationEntries(
+    context
+  )).map((entry) => ({
+    ...entry,
+    id: entry.entryId
+  }));
+
+
+  let uploadedAccommodationEntries = await createEntries(
+    migrationConfig,
+    context,
+    'accommodation',
+    accommodationEntries,
+    async (entry) => {
+      const accomGradeCode = entry.fields['52'];
+      const holidayProductId = ['Touring Pitch', 'Glamping'].includes(entry.entryType) ? 2 : 1;
+      const amenitiesForThisAccomodation = Object.keys(entry.fields["39"] ?? {}).reduce((acc, amenityId) => {
+        const amenityRef = findReferenceInCache(context, 'accommodationAmenity', amenityId);
+        if (amenityRef?.[0].uid) {
+          return [
+            ...acc,
+            amenityRef[0]
+          ];
+        }
+        return acc;
+      }, []);
+      let imageIds = entry.fields['41'] ?? [];
+      const primaryImg = entry.fields['46']?.[0] ?? entry.fields['50']?.[0];
+      if (primaryImg) {
+        imageIds = imageIds.sort((a, b) => a === primaryImg ? -1 : 1);
+      }
+      const imagesForThisAccomodation = imageIds.reduce((acc, imgId) => {
+        const imageRef = findReferenceInCache(context, 'accommodationGallery', imgId);
+        if (imageRef?.[0].uid) {
+          return [
+            ...acc,
+            { image: imageRef[0].uid }
+          ];
+        }
+        return acc;
+      }, []);
+      return ({
+        entry: {
+          'title': accomGradeCode,
+          'name': entry.title.slice(0, entry.title.indexOf(' at ')),
+          'holiday_product': findReferenceInCache(context, 'holidayProduct', holidayProductId),
+          'location': findReferenceInCache(context, 'location', entry.fields['57']?.[0]),
+          'accommodation_type': findReferenceInCache(context, 'accommodationType', entry.entryType),
+          'accommodation_grade': findReferenceInCache(context, 'accommodationGrade', entry.fields['56']?.[0]),
+          'accommodation_amenities': amenitiesForThisAccomodation,
+          'bedrooms': Number(entry.fields['35']),
+          'sleeps': Number(entry.fields['42']),
+          'pets_allowed': Boolean(entry.fields['44']),
+          'accessible': Boolean(entry.fields['43']),
+          'contextual_images': imagesForThisAccomodation
+        }
+      });
+    },
+    ({ entry }) => ({
+      uid: entry.uid,
+      title: entry.title,
+      from: 'pl.craft_entryversions',
+    })
+  )
+  return uploadedAccommodationEntries
+};

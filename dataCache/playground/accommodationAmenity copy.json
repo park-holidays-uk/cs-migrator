@@ -1,0 +1,4741 @@
+{
+  "73": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "74": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "75": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "76": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "77": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "78": {
+    "uid": "not found",
+    "title": "TV Minimum screen size in Lounge area (40\")",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv minimum screen size in lounge area (40\")",
+    "mappedToExistingAmenity": false
+  },
+  "95": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "96": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "97": {
+    "uid": "not found",
+    "title": "Full 'wraparound' decking ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "full 'wraparound' decking",
+    "mappedToExistingAmenity": false
+  },
+  "98": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "117": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "118": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "119": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "120": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "121": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "122": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "132": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "133": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "134": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "135": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "136": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "137": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "171": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "172": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "173": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "174": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "175": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "176": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "179": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "180": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "181": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "182": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "183": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "184": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "187": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "188": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "189": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "190": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "191": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "192": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "195": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "196": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "197": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "198": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "199": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "200": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "203": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "204": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "205": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "206": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "207": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "208": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "211": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "212": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "213": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "214": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "215": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "216": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "232": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "233": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "234": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "235": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "236": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "237": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "245": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "246": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "247": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "248": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "249": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "250": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "253": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "254": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "255": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "256": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "259": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "260": {
+    "uid": "not found",
+    "title": "Fridge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge",
+    "mappedToExistingAmenity": false
+  },
+  "261": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "262": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "263": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "264": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "270": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "271": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "272": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "273": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "274": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "275": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "296": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "297": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "298": {
+    "uid": "not found",
+    "title": "TV (40 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (40 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "299": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "300": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "301": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "327": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "328": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "329": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "330": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "333": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "334": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "335": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "336": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "339": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "340": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "341": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "342": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "349": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "350": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "351": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "352": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "355": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "356": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "357": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "358": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "361": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "362": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "363": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "364": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "365": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "366": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "446": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "447": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "448": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "449": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "450": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "451": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "491": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "492": {
+    "uid": "not found",
+    "title": "TV (40 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (40 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "493": {
+    "uid": "blt906417ce816b2a72",
+    "title": "Bluetooth speakers",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bluetooth speakers",
+    "mappedToExistingAmenity": true
+  },
+  "494": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "495": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "496": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "505": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "506": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "507": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "508": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "509": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "510": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "513": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "514": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "515": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "516": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "534": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "535": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "536": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "537": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "538": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "541": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "542": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "543": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "544": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "547": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "548": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "549": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "550": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "551": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "554": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "555": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "556": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "557": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "558": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "568": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "569": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "570": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "571": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "572": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "573": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "576": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "577": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "578": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "579": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "580": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "581": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "590": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "591": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "592": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "593": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "594": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "595": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2003": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "2004": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "2005": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "2006": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "2007": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "2008": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2180": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2181": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "2182": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "2183": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "2184": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "2185": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2188": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2189": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "2190": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "2191": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "2192": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "2193": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2460": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "2461": {
+    "uid": "not found",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "2462": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "2463": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3454": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "3456": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "3457": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "3458": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3459": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "3460": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "3532": {
+    "uid": "not found",
+    "title": "En-suite toilet",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite toilet",
+    "mappedToExistingAmenity": false
+  },
+  "3533": {
+    "uid": "blt906417ce816b2a72",
+    "title": "Bluetooth speakers",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bluetooth speakers",
+    "mappedToExistingAmenity": true
+  },
+  "3534": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "3535": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "3536": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3537": {
+    "uid": "not found",
+    "title": "SoCozeee mattresses",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "socozeee mattresses",
+    "mappedToExistingAmenity": false
+  },
+  "3554": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "3555": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "3556": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3557": {
+    "uid": "not found",
+    "title": "Large fridge/freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large fridge/freezer",
+    "mappedToExistingAmenity": false
+  },
+  "3558": {
+    "uid": "not found",
+    "title": "Dining table with leather chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining table with leather chairs",
+    "mappedToExistingAmenity": false
+  },
+  "3559": {
+    "uid": "not found",
+    "title": "Large double shower",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large double shower",
+    "mappedToExistingAmenity": false
+  },
+  "3577": {
+    "uid": "not found",
+    "title": "Luxury en-suite bathroom",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "luxury en-suite bathroom",
+    "mappedToExistingAmenity": false
+  },
+  "3578": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "3579": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3580": {
+    "uid": "not found",
+    "title": "Large fridge/freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large fridge/freezer",
+    "mappedToExistingAmenity": false
+  },
+  "3581": {
+    "uid": "not found",
+    "title": "Dining table with leather chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining table with leather chairs",
+    "mappedToExistingAmenity": false
+  },
+  "3582": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "3583": {
+    "uid": "not found",
+    "title": "Corner sofa",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "corner sofa",
+    "mappedToExistingAmenity": false
+  },
+  "3584": {
+    "uid": "not found",
+    "title": "Stylish porch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "stylish porch",
+    "mappedToExistingAmenity": false
+  },
+  "3585": {
+    "uid": "blt8bf6716be5470676",
+    "title": "USB charge points",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "usb charge points",
+    "mappedToExistingAmenity": true
+  },
+  "3586": {
+    "uid": "blt906417ce816b2a72",
+    "title": "Bluetooth speakers",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bluetooth speakers",
+    "mappedToExistingAmenity": true
+  },
+  "3587": {
+    "uid": "not found",
+    "title": "Wine cooler",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wine cooler",
+    "mappedToExistingAmenity": false
+  },
+  "3588": {
+    "uid": "not found",
+    "title": "HYPNOS™ mattresses",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hypnos™ mattresses",
+    "mappedToExistingAmenity": false
+  },
+  "3598": {
+    "uid": "not found",
+    "title": "Corner sofa",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "corner sofa",
+    "mappedToExistingAmenity": false
+  },
+  "3599": {
+    "uid": "not found",
+    "title": "Stylish porch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "stylish porch",
+    "mappedToExistingAmenity": false
+  },
+  "3600": {
+    "uid": "blt8bf6716be5470676",
+    "title": "USB charge points",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "usb charge points",
+    "mappedToExistingAmenity": true
+  },
+  "3601": {
+    "uid": "blt906417ce816b2a72",
+    "title": "Bluetooth speakers",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bluetooth speakers",
+    "mappedToExistingAmenity": true
+  },
+  "3602": {
+    "uid": "not found",
+    "title": "Wine cooler",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wine cooler",
+    "mappedToExistingAmenity": false
+  },
+  "3603": {
+    "uid": "not found",
+    "title": "HYPNOS™ mattresses",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hypnos™ mattresses",
+    "mappedToExistingAmenity": false
+  },
+  "3613": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "3614": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "3615": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "3616": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3618": {
+    "uid": "not found",
+    "title": "Open plan lounge, kitchen and dining area with dividing door to hallway",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open plan lounge, kitchen and dining area with dividing door to hallway",
+    "mappedToExistingAmenity": false
+  },
+  "3619": {
+    "uid": "not found",
+    "title": "Integrated kitchen appliances",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "integrated kitchen appliances",
+    "mappedToExistingAmenity": false
+  },
+  "3620": {
+    "uid": "not found",
+    "title": "Spacious master bedroom with dressing room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious master bedroom with dressing room",
+    "mappedToExistingAmenity": false
+  },
+  "3621": {
+    "uid": "not found",
+    "title": "Bedrooms come complete with Carnaby Comfort mattresses",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bedrooms come complete with carnaby comfort mattresses",
+    "mappedToExistingAmenity": false
+  },
+  "3622": {
+    "uid": "not found",
+    "title": "Family bathroom with shower",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "family bathroom with shower",
+    "mappedToExistingAmenity": false
+  },
+  "3627": {
+    "uid": "blt906417ce816b2a72",
+    "title": "Bluetooth speakers",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "bluetooth speakers",
+    "mappedToExistingAmenity": true
+  },
+  "3628": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "3629": {
+    "uid": "blt106f9afbc2c40807",
+    "title": "Integrated fridge / freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "integrated fridge / freezer",
+    "mappedToExistingAmenity": true
+  },
+  "3630": {
+    "uid": "not found",
+    "title": "LED ceiling spotlights & worktop lights",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "led ceiling spotlights & worktop lights",
+    "mappedToExistingAmenity": false
+  },
+  "3631": {
+    "uid": "blt8bf6716be5470676",
+    "title": "USB charge points",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "usb charge points",
+    "mappedToExistingAmenity": true
+  },
+  "3632": {
+    "uid": "not found",
+    "title": "Stylish interior",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "stylish interior",
+    "mappedToExistingAmenity": false
+  },
+  "4316": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "4317": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4318": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4319": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "4432": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "4433": {
+    "uid": "not found",
+    "title": "Roof top terrace",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "roof top terrace",
+    "mappedToExistingAmenity": false
+  },
+  "4434": {
+    "uid": "not found",
+    "title": "Large living and kitchen area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large living and kitchen area",
+    "mappedToExistingAmenity": false
+  },
+  "4435": {
+    "uid": "not found",
+    "title": "Two bedrooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bedrooms",
+    "mappedToExistingAmenity": false
+  },
+  "4436": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "4585": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4586": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4587": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "4835": {
+    "uid": "not found",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "4836": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4837": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "4838": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4840": {
+    "uid": "not found",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "4841": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4842": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4843": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "5534": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "5535": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "5536": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "5537": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "27234": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "27235": {
+    "uid": "not found",
+    "title": "Roof top terrace",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "roof top terrace",
+    "mappedToExistingAmenity": false
+  },
+  "27236": {
+    "uid": "not found",
+    "title": "Large living and kitchen area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large living and kitchen area",
+    "mappedToExistingAmenity": false
+  },
+  "27237": {
+    "uid": "not found",
+    "title": "Two bedrooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bedrooms",
+    "mappedToExistingAmenity": false
+  },
+  "27238": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "27249": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "27250": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "27251": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "27252": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "31612": {
+    "uid": "not found",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "31613": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "31614": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "31662": {
+    "uid": "not found",
+    "title": "Beautiful hill views",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "beautiful hill views",
+    "mappedToExistingAmenity": false
+  },
+  "31663": {
+    "uid": "not found",
+    "title": "Two bedrooms, master bedroom & twin room with bunkbeds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bedrooms, master bedroom & twin room with bunkbeds",
+    "mappedToExistingAmenity": false
+  },
+  "31664": {
+    "uid": "not found",
+    "title": "Spacious decking area with seating & hot tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious decking area with seating & hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "31665": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "41510": {
+    "uid": "not found",
+    "title": "One double bed and 2 twin rooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "one double bed and 2 twin rooms",
+    "mappedToExistingAmenity": false
+  },
+  "41511": {
+    "uid": "not found",
+    "title": "Large open plan living, dining room and kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large open plan living, dining room and kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "41820": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "41821": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "41822": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "41823": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "41824": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "41825": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "43892": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43893": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43894": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44338": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44339": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44340": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44341": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44378": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "44379": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "44380": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "44381": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44382": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "44383": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "44442": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "44443": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "44444": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "44445": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44446": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "44447": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "44557": {
+    "uid": "not found",
+    "title": "One double bed and 2 twin rooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "one double bed and 2 twin rooms",
+    "mappedToExistingAmenity": false
+  },
+  "44558": {
+    "uid": "not found",
+    "title": "Large open plan living, dining room and kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large open plan living, dining room and kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44561": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44562": {
+    "uid": "not found",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "44563": {
+    "uid": "not found",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44564": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44626": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44627": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44628": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44644": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44645": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44646": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44776": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44777": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "44778": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "44779": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "44780": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "44781": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44784": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44785": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44786": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44790": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44791": {
+    "uid": "blt82c71c73b7cd548b",
+    "title": "Patio",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio",
+    "mappedToExistingAmenity": true
+  },
+  "44792": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "44793": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44794": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "44797": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44798": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "44799": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "44800": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44804": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44805": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44806": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44807": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44808": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "44811": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44812": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44813": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44814": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44815": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "44817": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44818": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44819": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44820": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44823": {
+    "uid": "not found",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44824": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44825": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44826": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "44860": {
+    "uid": "not found",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44861": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44862": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44864": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44865": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44866": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44867": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44870": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44871": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "44872": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44873": {
+    "uid": "not found",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "44876": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "44877": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44878": {
+    "uid": "blt63f903e793408aae",
+    "title": "Free standing furniture",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing furniture",
+    "mappedToExistingAmenity": true
+  },
+  "44879": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "45014": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "45015": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "45016": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45017": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "45282": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "45283": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45284": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "45285": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "45286": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45289": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45290": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45291": {
+    "uid": "blt63f903e793408aae",
+    "title": "Free standing furniture",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing furniture",
+    "mappedToExistingAmenity": true
+  },
+  "45292": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "45295": {
+    "uid": "not found",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45296": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45297": {
+    "uid": "blt63f903e793408aae",
+    "title": "Free standing furniture",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing furniture",
+    "mappedToExistingAmenity": true
+  },
+  "45298": {
+    "uid": "not found",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "46680": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46681": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "46682": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "46684": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46685": {
+    "uid": "not found",
+    "title": "50\" Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "50\" freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "46687": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46688": {
+    "uid": "bltf194d1b64235bb95",
+    "title": "Washing machine",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "washing machine",
+    "mappedToExistingAmenity": true
+  },
+  "46689": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "46691": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46692": {
+    "uid": "not found",
+    "title": "Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "46699": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "46700": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "46943": {
+    "uid": "not found",
+    "title": "Patio, private garden & hot tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio, private garden & hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "46945": {
+    "uid": "not found",
+    "title": "Large living area with open fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large living area with open fire",
+    "mappedToExistingAmenity": false
+  },
+  "46946": {
+    "uid": "not found",
+    "title": "Two bathrooms and Four Bedrooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bathrooms and four bedrooms",
+    "mappedToExistingAmenity": false
+  },
+  "47740": {
+    "uid": "not found",
+    "title": "Available for one Touring caravan or Campervan or Motorhome per pitch (tent and tent trailers are not permitted)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "available for one touring caravan or campervan or motorhome per pitch (tent and tent trailers are not permitted)",
+    "mappedToExistingAmenity": false
+  },
+  "47741": {
+    "uid": "not found",
+    "title": "6 person maximum, 2 dogs maximum",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "6 person maximum, 2 dogs maximum",
+    "mappedToExistingAmenity": false
+  },
+  "47742": {
+    "uid": "not found",
+    "title": "Grass pitch with electric and water included",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "grass pitch with electric and water included",
+    "mappedToExistingAmenity": false
+  },
+  "47743": {
+    "uid": "not found",
+    "title": "Use of toilet, shower block and Elsan Point",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "use of toilet, shower block and elsan point",
+    "mappedToExistingAmenity": false
+  },
+  "47744": {
+    "uid": "not found",
+    "title": "1 awning permitted, car parking space for 1 car",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 awning permitted, car parking space for 1 car",
+    "mappedToExistingAmenity": false
+  },
+  "47803": {
+    "uid": "not found",
+    "title": "Our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "mappedToExistingAmenity": false
+  },
+  "47915": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47916": {
+    "uid": "not found",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47921": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47922": {
+    "uid": "not found",
+    "title": "Spacious living area with smart TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area with smart tv",
+    "mappedToExistingAmenity": false
+  },
+  "47923": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "47926": {
+    "uid": "not found",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47927": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47934": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "47966": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "47967": {
+    "uid": "not found",
+    "title": "Close to toilet & shower facilities",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "close to toilet & shower facilities",
+    "mappedToExistingAmenity": false
+  },
+  "47968": {
+    "uid": "not found",
+    "title": "Double bed & bunk beds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double bed & bunk beds",
+    "mappedToExistingAmenity": false
+  },
+  "47969": {
+    "uid": "not found",
+    "title": "Pull-out sofa",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pull-out sofa",
+    "mappedToExistingAmenity": false
+  },
+  "47970": {
+    "uid": "not found",
+    "title": "Two ring burner, microwave & fridge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two ring burner, microwave & fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47971": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48087": {
+    "uid": "not found",
+    "title": "Situated by the lake",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "situated by the lake",
+    "mappedToExistingAmenity": false
+  },
+  "48088": {
+    "uid": "not found",
+    "title": "Fully equipped kitchen & dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen & dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48668": {
+    "uid": "not found",
+    "title": "Our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "mappedToExistingAmenity": false
+  },
+  "48669": {
+    "uid": "not found",
+    "title": "Available for one Touring caravan or Campervan or Motorhome per pitch (tent and tent trailers are not permitted)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "available for one touring caravan or campervan or motorhome per pitch (tent and tent trailers are not permitted)",
+    "mappedToExistingAmenity": false
+  },
+  "48670": {
+    "uid": "not found",
+    "title": "6 person maximum, 2 dogs maximum",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "6 person maximum, 2 dogs maximum",
+    "mappedToExistingAmenity": false
+  },
+  "48671": {
+    "uid": "not found",
+    "title": "Grass pitch with electric and water included",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "grass pitch with electric and water included",
+    "mappedToExistingAmenity": false
+  },
+  "48672": {
+    "uid": "not found",
+    "title": "Use of toilet, shower block and Elsan Point",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "use of toilet, shower block and elsan point",
+    "mappedToExistingAmenity": false
+  },
+  "48673": {
+    "uid": "not found",
+    "title": "1 awning permitted, car parking space for 1 car",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 awning permitted, car parking space for 1 car",
+    "mappedToExistingAmenity": false
+  },
+  "48725": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48726": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48727": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48736": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48737": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48738": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48740": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48741": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48771": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48772": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "48773": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48774": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "48775": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48780": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48804": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48805": {
+    "uid": "not found",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "48806": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48807": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48808": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48985": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48987": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48991": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48994": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48996": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49006": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49034": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49283": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49284": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49285": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49286": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49287": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49290": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49291": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "49292": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "49293": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49294": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49295": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49313": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49314": {
+    "uid": "not found",
+    "title": "Sleeps 8 when using a sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using a sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "49315": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49316": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49317": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49321": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49322": {
+    "uid": "not found",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "49323": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "49324": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49325": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49326": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49329": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49330": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49331": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49332": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49333": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49727": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49728": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "49729": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49730": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "49731": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49732": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "49976": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49977": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49978": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49979": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49980": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "50269": {
+    "uid": "not found",
+    "title": "Sleeps a family of 4 with double bed and bunk bed (2 adults, 2 children)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps a family of 4 with double bed and bunk bed (2 adults, 2 children)",
+    "mappedToExistingAmenity": false
+  },
+  "50664": {
+    "uid": "not found",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51874": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51875": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51876": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "51877": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "51943": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51944": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "51945": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51946": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "51947": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51950": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "51951": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "51952": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51953": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51954": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "51957": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51958": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "51959": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "51960": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "51961": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51962": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "51965": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51966": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "51967": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51968": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "51969": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51970": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "51973": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51974": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "51975": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "51976": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "51977": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51978": {
+    "uid": "not found",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51981": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51982": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51983": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "51984": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "51985": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51986": {
+    "uid": "not found",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51989": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51990": {
+    "uid": "not found",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51991": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "51992": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "51993": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51996": {
+    "uid": "not found",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "51997": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "51998": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51999": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52000": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52003": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52004": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52005": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52006": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52007": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52014": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52015": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52016": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52017": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52018": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52031": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52032": {
+    "uid": "not found",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "52033": {
+    "uid": "not found",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "52034": {
+    "uid": "not found",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "52035": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52036": {
+    "uid": "not found",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "52086": {
+    "uid": "not found",
+    "title": "Electrical hoist and bed guard can be delivered at an extra charge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electrical hoist and bed guard can be delivered at an extra charge",
+    "mappedToExistingAmenity": false
+  },
+  "52112": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "52113": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "52114": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52115": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52177": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "52178": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52179": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52180": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52517": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52518": {
+    "uid": "not found",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52519": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52520": {
+    "uid": "not found",
+    "title": "Free standing table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52663": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52664": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52665": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "52666": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52667": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "52680": {
+    "uid": "not found",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "52681": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "52682": {
+    "uid": "not found",
+    "title": "Sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "52683": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52759": {
+    "uid": "not found",
+    "title": "Our glamping pods consist of Hares Hideaway, Foxes Den, Hares Hollow and Foxes Bunker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our glamping pods consist of hares hideaway, foxes den, hares hollow and foxes bunker",
+    "mappedToExistingAmenity": false
+  },
+  "52760": {
+    "uid": "not found",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "52778": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52779": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52780": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52781": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "52782": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52783": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "52933": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "52934": {
+    "uid": "not found",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52935": {
+    "uid": "not found",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52936": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52937": {
+    "uid": "not found",
+    "title": "Decking to the front or side of your holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking to the front or side of your holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "52938": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "53125": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53126": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53127": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53128": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53131": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53132": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53133": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53134": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53138": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53139": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53140": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53141": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53142": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53143": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53146": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53147": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53148": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53149": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53150": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53153": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53154": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53155": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53156": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53157": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53161": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53162": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53163": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53164": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53167": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53168": {
+    "uid": "not found",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53169": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53170": {
+    "uid": "not found",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53171": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53172": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53398": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53399": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53400": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53401": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53692": {
+    "uid": "not found",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "53693": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "53694": {
+    "uid": "not found",
+    "title": "Sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "53695": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "53696": {
+    "uid": "not found",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "53699": {
+    "uid": "not found",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "53700": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "53701": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "53702": {
+    "uid": "not found",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "53795": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53796": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53808": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "53809": {
+    "uid": "not found",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "53810": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "53811": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "53812": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53814": {
+    "uid": "not found",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "53815": {
+    "uid": "not found",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "53816": {
+    "uid": "not found",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "53817": {
+    "uid": "not found",
+    "title": "50\" Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "50\" freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "53818": {
+    "uid": "not found",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53835": {
+    "uid": "not found",
+    "title": "1 bedroom",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 bedroom",
+    "mappedToExistingAmenity": false
+  },
+  "53837": {
+    "uid": "not found",
+    "title": "Sleeps 4 with double bed and bunk beds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 4 with double bed and bunk beds",
+    "mappedToExistingAmenity": false
+  },
+  "54130": {
+    "uid": "not found",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "54131": {
+    "uid": "not found",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "54132": {
+    "uid": "not found",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "54133": {
+    "uid": "not found",
+    "title": "1 Double bedroom and 1 single bedroom",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 double bedroom and 1 single bedroom",
+    "mappedToExistingAmenity": false
+  },
+  "54134": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "54601": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "54602": {
+    "uid": "not found",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "54603": {
+    "uid": "not found",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "54604": {
+    "uid": "not found",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "54605": {
+    "uid": "not found",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  }
+}

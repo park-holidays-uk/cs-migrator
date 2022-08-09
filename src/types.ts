@@ -19,33 +19,11 @@ export type MigrationConfigurationType = {
   removalTags?: string[]
 }
 
-export type MigrationType = 'locationLogo'
-  | 'locationGalleryHolidays'
-  | 'locationGalleryTouring'
-  | 'locationGalleryOwnership'
-  | 'stockGallery'
+export type MigrationType = 'location'
+  | 'holidayProduct'
   | 'accommodationGallery'
   | 'additionalStockGallery'
-  | 'holidayProduct'
-  | 'locationCategory'
-  | 'locationAmenity'
-  | 'region'
-  | 'county'
-  | 'webpage'
-  | 'location'
   | 'accommodationType'
   | 'accommodationGrade'
   | 'accommodationAmenity'
   | 'accommodation'
-
-  | 'stockAddon'
-  | 'stockAmenity'
-  | 'stockCondition'
-  | 'stockManufacturer'
-  | 'stockModel'
-  | 'stockStatus'
-  | 'stockType'
-  | 'stockUnit'
-  | 'locationStockPrice'
-
-

@@ -1,1 +1,12 @@
-{}
+{
+  "1": {
+    "uid": "blt128e823207f59808",
+    "title": "Holidays and short breaks",
+    "from": "db.sectors"
+  },
+  "2": {
+    "uid": "bltf7c3da70d95ec980",
+    "title": "Touring and camping",
+    "from": "db.sectors"
+  }
+}

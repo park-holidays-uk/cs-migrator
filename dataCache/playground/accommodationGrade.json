@@ -1,1 +1,117 @@
-{}
+{
+  "10": {
+    "uid": "blt64b940890d11125b",
+    "title": "Elegance with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "11": {
+    "uid": "blt30c839cc3b75287c",
+    "title": "Lifestyle",
+    "from": "pl.craft_content partially manual input"
+  },
+  "48": {
+    "uid": "bltc2764b28e67baed8",
+    "title": "Sanctuary Lodge with Deck and Hot Tub",
+    "from": "pl.craft_content partially manual input"
+  },
+  "50": {
+    "uid": "blt7bc60e4e0c5a5299",
+    "title": "Lifestyle with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "51": {
+    "uid": "blt64b940890d11125b",
+    "title": "Elegance with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "52": {
+    "uid": "blte1de284aa805b338",
+    "title": "Glamping Pod",
+    "from": "pl.craft_content partially manual input"
+  },
+  "53": {
+    "uid": "blt087baa958b7fc8d3",
+    "title": "Safari Tent",
+    "from": "pl.craft_content partially manual input"
+  },
+  "424": {
+    "uid": "blt2f8bff931d46aed1",
+    "title": "Sanctuary Lodge",
+    "from": "pl.craft_content partially manual input"
+  },
+  "2588": {
+    "uid": "bltf05675a3d4b2a76e",
+    "title": "Sanctuary Lodge with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "2665": {
+    "uid": "blt01eefafc51edf03e",
+    "title": "Freedom",
+    "from": "pl.craft_content partially manual input"
+  },
+  "2666": {
+    "uid": "blte0bea4cdb39f3226",
+    "title": "Explorer",
+    "from": "pl.craft_content partially manual input"
+  },
+  "2668": {
+    "uid": "blt6bf3a1fa4abc0c7c",
+    "title": "Explorer+",
+    "from": "pl.craft_content partially manual input"
+  },
+  "2669": {
+    "uid": "blt36acd211c07d2cfd",
+    "title": "Freedom+",
+    "from": "pl.craft_content partially manual input"
+  },
+  "44194": {
+    "uid": "blt8bce4586096a337c",
+    "title": "Sanctuary Lodge with Roof Terrace",
+    "from": "pl.craft_content partially manual input"
+  },
+  "46575": {
+    "uid": "blt16a4f61e4386c717",
+    "title": "Cottage",
+    "from": "pl.craft_content partially manual input"
+  },
+  "47587": {
+    "uid": "blt77ce8521e1be6aef",
+    "title": "Touring Pitch",
+    "from": "pl.craft_content partially manual input"
+  },
+  "48513": {
+    "uid": "blt6384f106bf62f9b6",
+    "title": "Lakeside Cottage with Hot Tub",
+    "from": "pl.craft_content partially manual input"
+  },
+  "51871": {
+    "uid": "blt7ab8610b056fafe6",
+    "title": "Elegance with Deck and Hot Tub",
+    "from": "pl.craft_content partially manual input"
+  },
+  "52108": {
+    "uid": "blt7f23013d68e8aa25",
+    "title": "Elegance+ with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "52109": {
+    "uid": "bltc022cc17430500a1",
+    "title": "Freedom+ with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "52174": {
+    "uid": "blta41ac7717ee3dba1",
+    "title": "Explorer+ with Deck",
+    "from": "pl.craft_content partially manual input"
+  },
+  "53834": {
+    "uid": "blt7d3450d45e54b1d9",
+    "title": "Peartree Cottage with Hot Tub",
+    "from": "pl.craft_content partially manual input"
+  },
+  "53836": {
+    "uid": "bltd785cf7583166446",
+    "title": "Larch Bed Cottage with Hot Tub",
+    "from": "pl.craft_content partially manual input"
+  }
+}

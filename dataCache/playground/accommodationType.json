@@ -1,1 +1,22 @@
-{}
+{
+  "Holiday Home": {
+    "uid": "blt7058da06f67c4a09",
+    "title": "Caravan"
+  },
+  "Cottage": {
+    "uid": "bltb8054a4886aee00b",
+    "title": "Cottage"
+  },
+  "Glamping": {
+    "uid": "bltcca0093afe68bd3e",
+    "title": "Glamping"
+  },
+  "Holiday Lodge": {
+    "uid": "blt7166b673fc7fb918",
+    "title": "Lodge"
+  },
+  "Touring Pitch": {
+    "uid": "bltc5ce22224754c766",
+    "title": "Pitch"
+  }
+}

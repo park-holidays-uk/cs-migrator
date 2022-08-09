@@ -4,7 +4,7 @@ import {
   migrationConfiguration
 } from './config/envConfig'
 import { getDataCache, writeSync } from './dataHandler/fileCache'
-import { camelCase, getAssets, getEntries, getFolderUid, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools'
+import { camelCase, getAllEntries, getAssets, getFolderUid, PL_SCRAPED, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools'
 import loginForAuthToken from './tools/login'
 import { EnvironmentType } from './types'
 
@@ -19,15 +19,12 @@ const contentToRemove = migrationConfiguration.filter((migration) => {
 const removeContent = async (context) => {
   const contentUids = contentToRemove.map((item) => snakeCase(item.name))
   for (const contentUid of contentUids) {
-    let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
-    let recordsRemoved = 0
-    while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
-      const response = await getEntries(context, contentUid)
-      remainingRecordCount = response.count
-      const removedEntries = await removeEntries(context, contentUid, response.entries, recordsRemoved)
-      recordsRemoved += removedEntries.length
-    }
-    console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
+    const entries = await getAllEntries(context, contentUid)
+    const onlyParkLeisureRecords = entries.filter((entry) => (
+      itemHasAllTags(entry.tags, [PL_SCRAPED])
+    ))
+    const removedEntries = await removeEntries(context, contentUid, onlyParkLeisureRecords)
+    console.log(`removedEntries -> [ ${contentUid} ]`, removedEntries.length)
     writeSync(env, 'dataCache', camelCase(contentUid), {})
   }
 }

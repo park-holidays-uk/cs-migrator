@@ -1,5 +1,4 @@
 import dotenv from 'dotenv'
-import FormData from 'form-data'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import path from 'path'
@@ -7,6 +6,8 @@ import request from 'request'
 import { EnvironmentType, FolderNameType } from '../types'
 
 dotenv.config()
+
+export const PL_SCRAPED = 'pl-scraped';
 
 // TCL: delay needs to be above 1500 to publish reliably - reduce for testing
 export const apiDelay = (delay = 1500) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
@@ -119,46 +120,92 @@ export const publishAsset = async (context, assetUid) => {
   }
 }
 
+
+const uploadFileToContentStack = (context, asset, tags, folderUid) => new Promise<{asset: { uid?: string }}>((resolve, reject) => {
+  const { log } = context;
+  try {
+    request.post({
+      headers: {
+        ...context.headers,
+        'authorization': context.management_token,
+        'Content-Type' : 'multipart/form-data'
+      },
+      url: `${context.base_url}/assets`,
+      formData: {
+        'asset[upload]': {
+          value: request.get(asset.path),
+          options: {
+            filename: asset.filename,
+            contentType: 'image/jpeg'
+          }
+        },
+        'asset[parent_uid]': folderUid,
+        'asset[description]': asset.description,
+        'asset[tags]': tags.map((tag) => tag.slice(0, 50)).join(','), // Contentstack restriction 50 chars
+      }
+    }, (err, res, body) => {
+      if (err || res.statusCode < 200 || res.statusCode > 299) {
+        const errorMsg = err || `Error status code: ${res.statusCode}`;
+        log.error(errorMsg);
+        log.error(res);
+        throw new Error(errorMsg);
+      }
+      return resolve(JSON.parse(body));
+    })
+
+  } catch (error) {
+    log.error("uploadFileToContentStack -> error", error);
+    resolve({ asset: null });
+  }
+})
+
 export const uploadAssets = async (context, assets, folderName, folderUid, tags, createCacheEntry) => {
   if (!folderUid) {
     console.error('Could not find a folder uid. Aborting asset upload!')
     return
   }
-  emptyAssetTmpDir()
+
   const responses = {}
   for (const asset of assets) {
-    const recordCount = Object.keys(responses).length + 1
-    process.stdout.write(`Uploading assets: [ ${folderName} ] ${recordCount} ${' '.repeat(25)}\r`)
-    await apiDelay()
-    const headers = {
-      ...context.headers,
-      'authorization': context.management_token,
-    }
-    await createAssetLocally(asset.path)
+    const recordCount = Object.keys(responses).length + 1;
+    process.stdout.write(`Uploading assets: [ ${folderName} ] ${recordCount} ${' '.repeat(25)}\r`);
+    await apiDelay(500);
     try {
-      const formData = new FormData();
-      formData.append('asset[upload]', fs.createReadStream(`${TMP_DIR}/${asset.path}`))
-      formData.append('asset[parent_uid]', folderUid)
-      formData.append('asset[description]', asset.description)
-      formData.append('asset[tags]', tags.join(','))
-      const res = await fetch(`${context.base_url}/assets`, {
-        method: 'POST',
-        headers,
-        body: formData
-      })
-      const response = await res.json()
-      if (response['error_code']) {
-        console.error(`\r[ ${asset.path} ]: `, response.errors)
-      } else {
-        await publishAsset(context, response.asset.uid)
-        responses[asset.id] = createCacheEntry(asset, response)
-      }
+      const response = await uploadFileToContentStack(context, asset, tags, folderUid);
+      await publishAsset(context, response.asset.uid);
+      responses[asset.id] = createCacheEntry(asset, response);
     } catch (error) {
-      console.error("uploadAssets -> error", error)
+      console.error("uploadAssets -> error", error);
       throw new Error(error);
     }
   }
-  return responses
+  return responses;
+}
+
+export const updateAssetTags = async (context, asset, tags) => {
+  try {
+    if (!asset.uid)  throw new Error('No asset.uid available');
+    await apiDelay(300)
+    const res = await fetch(`${context.base_url}/assets/${asset.uid}`, {
+      method: 'PUT',
+      headers: {
+        ...context.headers,
+        'authorization': context.management_token,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        asset: {
+          tags: tags.map((tag) => tag.slice(0, 50)).join(','), // Contentstack restriction 50 chars
+
+        },
+      })
+    })
+    const response = await res.json();
+    return response;
+  } catch (error) {
+    console.error("uploadAssets -> updateAssetTags -> error", error)
+    throw new Error(error);
+  }
 }
 
 export const publishEntry = async (context, contentUid, responseEntry, entry) => {
@@ -217,11 +264,28 @@ export const arrayToUidKeyedObject = (arr) => arr.reduce((obj, item) => {
   return obj
 }, {})
 
-const findCachedEntry = (migrationConfig, context, entry) => {
+export const findCachedEntry = (migrationConfig, context, entry) => {
+  if (entry['featureStrLc']) {
+    return findCachedEntryFromFeatureStrLc(context, migrationConfig['name'], entry)
+  }
   const entryId = entry.id || entry.uid
   if (context.cache[migrationConfig.name][entryId]) {
     return context.cache[migrationConfig.name][entryId].uid
   }
+}
+
+const findCachedEntryFromFeatureStrLc = (context, cacheRef, entry) => {
+  const cache = context.cache[cacheRef];
+  const response = Object.keys(cache).reduce<{ uid: string, id: string } | null>((foundItem, id) => {
+    if (!foundItem && cache[id].featureStrLc === entry.featureStrLc) {
+      foundItem = {
+        ...cache[id],
+        id
+      }
+    }
+    return foundItem;
+  }, null)
+  return response;
 }
 
 
@@ -236,7 +300,6 @@ export const findCachedEntryFromUid = (context, cacheRef, entry) => {
     }
     return foundItem;
   }, null)
-	console.log('TCL: findCachedEntryFromUid -> response', response)
   return response;
 }
 
@@ -317,7 +380,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
     if (existingEntryUid && migrationConfig.updateKeys === 'none') {
       responses[entry.id] = context.cache[migrationConfig.name][entry.id]
     } else {
-      await apiDelay()
+      await apiDelay(500)
       let body = await createBody(entry)
       let method = 'POST'
       let url = `${context.base_url}/content_types/${contentUid}/entries`
@@ -332,6 +395,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
         body.entry.uid = existingEntryUid
       }
       url += '?locale=en-gb'
+      body.entry.tags = [ PL_SCRAPED, ...(body.entry?.tags ?? []) ];
       const res = await fetch(url, {
         method,
         headers: {
@@ -350,17 +414,17 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
           console.error(`\r[ ${contentUid}: ${entry.id} ]: `, response.errors)
         }
       } else {
+        await apiDelay()
         await publishEntry(context, contentUid, response.entry, entry)
         responses[entry.id] = createCacheEntry(response, entry)
       }
     }
-    // break; // TCL:
   }
   return responses
 }
 
 export const getAssets = async (context, folderUid, skip = 0, limit = 100) => {
-  await apiDelay()
+  await apiDelay(200)
   const res = await fetch(`${context.base_url}/assets?include_folders=true&folder=${folderUid}&include_count=true&skip=${skip}&limit=${limit}`, {
     method: 'GET',
     headers: {
@@ -372,13 +436,13 @@ export const getAssets = async (context, folderUid, skip = 0, limit = 100) => {
   return response
 }
 
-export const getAllAssets = async (context, contentUid) => {
+export const getAllAssets = async (context, folderUid) => {
   let allAssets = []
   let remainingRecords = 1 // ensure it attempts it first time ( != 0 )
   let skip = 0;
   let limit = 100;
   while (remainingRecords > 0) { // ContentStack is paginated to max 100 records
-    const response = await getAssets(context, contentUid, skip, limit)
+    const response = await getAssets(context, folderUid, skip, limit)
     remainingRecords = response.assets.length
     skip += limit;
     allAssets = [...allAssets, ...response.assets]
@@ -432,7 +496,7 @@ export const removeAssetsWithSubFolders = async (context, folder, assets, record
   const responses = []
   for (const asset of assets) {
     process.stdout.write(`Removing assets: [ ${folder} ] ${recordsRemoved + responses.length} ${' '.repeat(35)}\r`)
-    await apiDelay()
+    await apiDelay(100)
     const res = await fetch(`${context.base_url}/assets${asset.is_dir ? '/folders' : ''}/${asset.uid}`, {
       method: 'DELETE',
       headers: {

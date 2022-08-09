@@ -1,25 +1,11 @@
 import dotenv from 'dotenv';
+import { uploadAccommodationGalleries } from '../assets/galleries';
 import {
-  additionalStockGalleries,
-  uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
-} from '../assets/galleries';
-import {
-  createAccommodation,
-  createAccommodationAmenities,
-  createAccommodationGrades,
-  createAccommodationTypes
-} from '../entries/accommodationEntries';
-import {
-  createCounties,
-  createHolidayProducts,
-  createLocationAmenities,
-  createLocationCategories,
-  createLocations,
-  createRegions
-} from '../entries/locationEntries';
-import {
-  createOwnershipParkWebpages
-} from '../entries/pages';
+  createAccommodationAmenities
+} from '../entries/accommodationAmenities';
+import { createAccommodation } from '../entries/accommodationEntries';
+import { createAccommodationGrades } from '../entries/accommodationGrades';
+import { PL_SCRAPED } from '../tools';
 import { EnvironmentType, MigrationConfigurationType } from '../types';
 dotenv.config();
 
@@ -36,52 +22,9 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   environments: process.env[`${env}_environments`]
 })
 
+const dummyAddEntries = () => Promise.resolve<any>({})
+
 export const migrationConfiguration: MigrationConfigurationType[] = [{
-    name: 'locationLogo',
-    type: 'asset',
-    handler: uploadLocationLogos,
-    folderName: 'Park_Logo',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-  }, {
-    name: 'locationGalleryTouring',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'touring', ['touring']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['touring'],
-  }, {
-    name: 'locationGalleryHolidays',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'holidays', ['holidays']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['holidays'],
-  }, {
-    name: 'locationGalleryOwnership',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'ownership', ['sales']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['sales'],
-  }, {
-    name: 'stockGallery',
-    type: 'asset',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    folderName: 'Stock_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',  // images cannot update - always 'none'
-    removalTags: ['cms_scraped'],
-  }, {
     name: 'accommodationGallery',
     type: 'asset',
     handler: uploadAccommodationGalleries,
@@ -89,79 +32,28 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['cms-scraped'],
+    removalTags: [PL_SCRAPED],
   }, {
-    name: 'additionalStockGallery',
-    type: 'asset',
-    handler: additionalStockGalleries,
-    folderName: 'Location_Media',
+
+  //   name: 'additionalStockGallery',
+  //   type: 'asset',
+  //   handler: additionalStockGalleries,
+  //   folderName: 'Location_Media',
+  //   includeInRemove: false,
+  //   includeInMigration: false,
+  //   updateKeys: 'none', // images cannot update - always 'none'
+  //   removalTags: ['additional_stock'],
+//  {
+    name: 'location',
+    type: 'entry',
+    handler: dummyAddEntries,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['additional_stock'],
+    updateKeys: 'none',
   }, {
     name: 'holidayProduct',
     type: 'entry',
-    handler: createHolidayProducts,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'locationCategory',
-    type: 'entry',
-    handler: createLocationCategories,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'locationAmenity',
-    type: 'entry',
-    handler: createLocationAmenities,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'region',
-    type: 'entry',
-    handler: createRegions,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'county',
-    type: 'entry',
-    handler: createCounties,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'webpage',
-    type: 'entry',
-    handler: createOwnershipParkWebpages,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'all',
-  }, {
-    name: 'location',
-    type: 'entry',
-    handler: createLocations,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: {
-      entry: {
-        // slug: false,
-        // holiday_product_contents: [{
-        //   contextual_images: false,
-        // }],
-        // sales_product_contents: [{
-        //   additional_stock_image: false
-        // }],
-      }
-    },
-  }, {
-    name: 'accommodationType',
-    type: 'entry',
-    handler: createAccommodationTypes,
+    handler: dummyAddEntries,
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -171,11 +63,14 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     handler: createAccommodationGrades,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: {
-      entry: {
-        media: false
-      }
-    },
+    updateKeys: 'none',
+  }, {
+    name: 'accommodationType',
+    type: 'entry',
+    handler: dummyAddEntries,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'none',
   }, {
     name: 'accommodationAmenity',
     type: 'entry',
@@ -187,8 +82,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
-    includeInRemove: true,
-    includeInMigration: false,
+    includeInRemove: false,
+    includeInMigration: true,
     updateKeys: {
       entry: { // This will only update the truthy keys. everything else left as is.
         pets_allowed: false,
@@ -197,78 +92,6 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         contextual_images: false,
       }
     },
-  }, {
-    name: 'stockAddon',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockAmenity',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockCondition',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockManufacturer',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockModel',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockStatus',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockType',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'stockUnit',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'locationStockPrice',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
   }
 ]
 

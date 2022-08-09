@@ -42,7 +42,6 @@ const migrateData = async () => {
   let locationEntries = await getAllEntries(context, 'location')
   locationEntries = locationEntries.map((entry) => {
     const park = findCachedEntryFromUid(context, 'location', entry)
-		console.log('TCL: migrateData -> park', park)
     if (park) {
       return {
         ...entry,

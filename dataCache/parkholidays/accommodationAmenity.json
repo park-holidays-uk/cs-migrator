@@ -1,1 +1,5511 @@
-{}
+{
+  "73": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "74": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "75": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "76": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "77": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "78": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "95": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "96": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "98": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "117": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "118": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "119": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "120": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "122": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "132": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "133": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "134": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "135": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "137": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "171": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "172": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "173": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "174": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "179": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "180": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "181": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "182": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "183": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "187": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "188": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "189": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "190": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "192": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "195": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "196": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "197": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "198": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "199": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "203": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "204": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "205": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "206": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "211": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "212": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "213": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "214": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "215": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "232": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "233": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "234": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "235": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "245": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "246": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "250": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "253": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "254": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "255": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "256": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "259": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "260": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "261": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "271": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "272": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "273": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "296": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "297": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "298": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "301": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "327": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "328": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "329": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "330": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "333": {
+    "uid": "blta12233b68f43d4f0",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "334": {
+    "uid": "bltcc1d0bc27a8026e9",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "335": {
+    "uid": "blt56cdb9983a5916e6",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "336": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "339": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "340": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "341": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "349": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "350": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "351": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "352": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "355": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "356": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "357": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "361": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "362": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "363": {
+    "uid": "blt73f569656f3145ba",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "364": {
+    "uid": "blt94e6cd9f15251597",
+    "title": "Balcony/decking to front of holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "balcony/decking to front of holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "365": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "366": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "446": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "447": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "448": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "449": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "491": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "492": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "505": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "506": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "507": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "513": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "514": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "515": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "534": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "535": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "537": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "538": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "541": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "542": {
+    "uid": "blta12233b68f43d4f0",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "543": {
+    "uid": "blt56cdb9983a5916e6",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "544": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "547": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "548": {
+    "uid": "blta12233b68f43d4f0",
+    "title": "TV (32 inch)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv (32 inch)",
+    "mappedToExistingAmenity": false
+  },
+  "549": {
+    "uid": "bltcc1d0bc27a8026e9",
+    "title": "DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "550": {
+    "uid": "blt56cdb9983a5916e6",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "551": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "554": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "555": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "556": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "557": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "558": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "568": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "569": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "570": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "571": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "573": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "576": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "577": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "578": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "579": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "581": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "590": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "591": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "592": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "594": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "595": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2025": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2026": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "2027": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "2028": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "2037": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2039": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2040": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "2042": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2043": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "2180": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2181": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "2182": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "2184": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "2188": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "2189": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "2190": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "2191": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "2192": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "2434": {
+    "uid": "blta5af65654fb5e4b0",
+    "title": "Free parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free parking",
+    "mappedToExistingAmenity": false
+  },
+  "2435": {
+    "uid": "blt6f7864e49af7d0c6",
+    "title": "Flat screen TV with DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "flat screen tv with dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "2436": {
+    "uid": "blt982e04989f32b838",
+    "title": "En-suite shower room with WC",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite shower room with wc",
+    "mappedToExistingAmenity": false
+  },
+  "2437": {
+    "uid": "blt91f11d5c13a8cb75",
+    "title": "Heating throughout",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "heating throughout",
+    "mappedToExistingAmenity": false
+  },
+  "2438": {
+    "uid": "blted4454e1493ac26e",
+    "title": "Equipped kitchenette including toaster, kettle, fridge & microwave",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "equipped kitchenette including toaster, kettle, fridge & microwave",
+    "mappedToExistingAmenity": false
+  },
+  "2440": {
+    "uid": "bltb89843c6c30cff1e",
+    "title": "Freshly made beds & towels",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "freshly made beds & towels",
+    "mappedToExistingAmenity": false
+  },
+  "2441": {
+    "uid": "blt6f7864e49af7d0c6",
+    "title": "Flat screen TV with DVD player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "flat screen tv with dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "2442": {
+    "uid": "blt982e04989f32b838",
+    "title": "En-suite shower room with WC",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite shower room with wc",
+    "mappedToExistingAmenity": false
+  },
+  "2443": {
+    "uid": "blt91f11d5c13a8cb75",
+    "title": "Heating throughout",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "heating throughout",
+    "mappedToExistingAmenity": false
+  },
+  "2444": {
+    "uid": "blt725c73bb03c6645e",
+    "title": "Equipped Kitchenette including kettle, toaster, fridge & microwave",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "equipped kitchenette including kettle, toaster, fridge & microwave",
+    "mappedToExistingAmenity": false
+  },
+  "2460": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "2461": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "2462": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "2463": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "3554": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "3555": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "3556": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "3583": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "3584": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "3585": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "3586": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "3587": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "3588": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "4316": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "4317": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4318": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4319": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "4432": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "4433": {
+    "uid": "blte45e8354e93844a3",
+    "title": "Roof top terrace",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "roof top terrace",
+    "mappedToExistingAmenity": false
+  },
+  "4434": {
+    "uid": "blta5f655d2d9a8e964",
+    "title": "Large living and kitchen area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large living and kitchen area",
+    "mappedToExistingAmenity": false
+  },
+  "4435": {
+    "uid": "blt25d81e4315611684",
+    "title": "Two bedrooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bedrooms",
+    "mappedToExistingAmenity": false
+  },
+  "4436": {
+    "uid": "blt4e6af8dca76fbd04",
+    "title": "Double glazing",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing",
+    "mappedToExistingAmenity": true
+  },
+  "4585": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4586": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4587": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "4835": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "4836": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4837": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "4838": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4840": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "4841": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "4842": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "4843": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "5534": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "5535": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "5536": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "5537": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "11660": {
+    "uid": "blt5c08e92aeef5db61",
+    "title": "Outdoor table & chairs and BBQ stand",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor table & chairs and bbq stand",
+    "mappedToExistingAmenity": false
+  },
+  "11661": {
+    "uid": "blt20109aeebc7f2b3b",
+    "title": "Dog bowl, BBQ stand & outdoor table & chairs",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dog bowl, bbq stand & outdoor table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "18659": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "31612": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "31613": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "31614": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "31662": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "31663": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "31664": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "31665": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "43832": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43833": {
+    "uid": "blt37469c3f51761a20",
+    "title": "Modern kicthen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kicthen",
+    "mappedToExistingAmenity": false
+  },
+  "43834": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43835": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43837": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "43838": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43839": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43840": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43841": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43842": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43843": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43844": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43845": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43846": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43847": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43848": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43849": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43850": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43851": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43852": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "43857": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43858": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43859": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43860": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43861": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "43862": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43863": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43864": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43865": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43866": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43867": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43868": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43869": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43870": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43871": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43872": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43873": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43874": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43875": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43876": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43877": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "43878": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43879": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43880": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43881": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43883": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "43884": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "43885": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "43886": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43887": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "43888": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "43889": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "43890": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43891": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43892": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "43893": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "43894": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44186": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44251": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44252": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44253": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44254": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44256": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44257": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44258": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44259": {
+    "uid": "blt5c406efe9b07947b",
+    "title": "Fully-equipped kicthen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kicthen",
+    "mappedToExistingAmenity": false
+  },
+  "44260": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44281": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44282": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44283": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44284": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44296": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44297": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44298": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44299": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44308": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44309": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44310": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44311": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44338": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44339": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44340": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44341": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44345": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44346": {
+    "uid": "blt56cdb9983a5916e6",
+    "title": "Microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44347": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "44348": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44350": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44351": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44352": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44353": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44361": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44362": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44363": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44364": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44366": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44367": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44368": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44369": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44371": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44372": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44373": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44374": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44375": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44378": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44379": {
+    "uid": "blt5282a0a1e7f2cb45",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "44380": {
+    "uid": "blt7344c8de2c63aeae",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "44381": {
+    "uid": "blt28f9c9ed0f496556",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "44382": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44561": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44562": {
+    "uid": "blt57d3b878cf8ece7e",
+    "title": "Spacious living areas",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living areas",
+    "mappedToExistingAmenity": false
+  },
+  "44563": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44564": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44624": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44626": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44627": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44628": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44631": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44632": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44633": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44634": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "44637": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44638": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44644": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44645": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44646": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44675": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44676": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "44677": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44678": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "44681": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "44682": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44699": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44700": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "44701": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44702": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "44776": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44777": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "44778": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44779": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "44784": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44785": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44786": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44790": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44791": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44792": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "44793": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "44794": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44797": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44798": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44799": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44800": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44804": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "44805": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44806": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "44807": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44808": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "44811": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "44812": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44813": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "44814": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44815": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "44817": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "44818": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44819": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "44820": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44823": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "44824": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44825": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "44826": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44860": {
+    "uid": "blta1f9258cd091b0cb",
+    "title": "28\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "28\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "44861": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "44862": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "44864": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44865": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "44866": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44867": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "44870": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44871": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "44872": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "44873": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "44876": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "44877": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "44878": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "44879": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "45014": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "45015": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "45016": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "45282": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "45283": {
+    "uid": "blt73f569656f3145ba",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45284": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "45285": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "45286": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45289": {
+    "uid": "blt73f569656f3145ba",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45290": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45291": {
+    "uid": "blt63f903e793408aae",
+    "title": "Free standing furniture",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing furniture",
+    "mappedToExistingAmenity": true
+  },
+  "45292": {
+    "uid": "blt41ec50d4855c74e5",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "45295": {
+    "uid": "blt73f569656f3145ba",
+    "title": "Patio doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "45296": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "45297": {
+    "uid": "blt63f903e793408aae",
+    "title": "Free standing furniture",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing furniture",
+    "mappedToExistingAmenity": true
+  },
+  "45298": {
+    "uid": "blt41ec50d4855c74e5",
+    "title": "Fridge freezer",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge freezer",
+    "mappedToExistingAmenity": false
+  },
+  "46684": {
+    "uid": "blt7bb48cf771b2b9b8",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46685": {
+    "uid": "blt53916d2cf25db42c",
+    "title": "50\" Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "50\" freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "46687": {
+    "uid": "blt7bb48cf771b2b9b8",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46688": {
+    "uid": "bltf194d1b64235bb95",
+    "title": "Washing machine",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "washing machine",
+    "mappedToExistingAmenity": true
+  },
+  "46689": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "46691": {
+    "uid": "blt7bb48cf771b2b9b8",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "46692": {
+    "uid": "blt9040f22cbb6acd69",
+    "title": "Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "46699": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "46700": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "46943": {
+    "uid": "blt69bcfa9ee0df2f10",
+    "title": "Patio, private garden & hot tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio, private garden & hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "46945": {
+    "uid": "blt498a3b083ca2b330",
+    "title": "Large living area with open fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "large living area with open fire",
+    "mappedToExistingAmenity": false
+  },
+  "46946": {
+    "uid": "blt82ec8e79a3972ee8",
+    "title": "Two bathrooms and Four Bedrooms",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two bathrooms and four bedrooms",
+    "mappedToExistingAmenity": false
+  },
+  "47740": {
+    "uid": "blt60c036efd8196a99",
+    "title": "Available for one Touring caravan or Campervan or Motorhome per pitch (tent and tent trailers are not permitted)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "available for one touring caravan or campervan or motorhome per pitch (tent and tent trailers are not permitted)",
+    "mappedToExistingAmenity": false
+  },
+  "47741": {
+    "uid": "blt28cda58827cb07e0",
+    "title": "6 person maximum, 2 dogs maximum",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "6 person maximum, 2 dogs maximum",
+    "mappedToExistingAmenity": false
+  },
+  "47742": {
+    "uid": "blt42b7234550024794",
+    "title": "Grass pitch with electric and water included",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "grass pitch with electric and water included",
+    "mappedToExistingAmenity": false
+  },
+  "47743": {
+    "uid": "blt605b33aa26e10497",
+    "title": "Use of toilet, shower block and Elsan Point",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "use of toilet, shower block and elsan point",
+    "mappedToExistingAmenity": false
+  },
+  "47744": {
+    "uid": "blt88097e805486bd35",
+    "title": "1 awning permitted, car parking space for 1 car",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 awning permitted, car parking space for 1 car",
+    "mappedToExistingAmenity": false
+  },
+  "47803": {
+    "uid": "bltb70b926d68bb3c27",
+    "title": "Our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "mappedToExistingAmenity": false
+  },
+  "47915": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47916": {
+    "uid": "blt0e990132f91e16c7",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47921": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47922": {
+    "uid": "bltf57f3dc4769e609b",
+    "title": "Spacious living area with smart TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area with smart tv",
+    "mappedToExistingAmenity": false
+  },
+  "47926": {
+    "uid": "blt0e990132f91e16c7",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47927": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "47934": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "47959": {
+    "uid": "blt3e5fdec3569be23d",
+    "title": "Double bed & bunk beds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double bed & bunk beds",
+    "mappedToExistingAmenity": false
+  },
+  "47960": {
+    "uid": "bltfbd49723dd62e859",
+    "title": "Pull-out sofa",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pull-out sofa",
+    "mappedToExistingAmenity": false
+  },
+  "47961": {
+    "uid": "blte640547cea14eb34",
+    "title": "Two ring burner & microwave",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two ring burner & microwave",
+    "mappedToExistingAmenity": false
+  },
+  "47962": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "47966": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "47967": {
+    "uid": "bltca98e9a53c5ed044",
+    "title": "Close to toilet & shower facilities",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "close to toilet & shower facilities",
+    "mappedToExistingAmenity": false
+  },
+  "47968": {
+    "uid": "blt3e5fdec3569be23d",
+    "title": "Double bed & bunk beds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double bed & bunk beds",
+    "mappedToExistingAmenity": false
+  },
+  "47969": {
+    "uid": "bltfbd49723dd62e859",
+    "title": "Pull-out sofa",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pull-out sofa",
+    "mappedToExistingAmenity": false
+  },
+  "47970": {
+    "uid": "blt2347852418811a7f",
+    "title": "Two ring burner, microwave & fridge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "two ring burner, microwave & fridge",
+    "mappedToExistingAmenity": false
+  },
+  "47971": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "47972": {
+    "uid": "bltca98e9a53c5ed044",
+    "title": "Close to toilet & shower facilities",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "close to toilet & shower facilities",
+    "mappedToExistingAmenity": false
+  },
+  "47973": {
+    "uid": "blt7228df6b9901b1a7",
+    "title": "Fridge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fridge",
+    "mappedToExistingAmenity": false
+  },
+  "48087": {
+    "uid": "blt4014d733df7a8bb7",
+    "title": "Situated by the lake",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "situated by the lake",
+    "mappedToExistingAmenity": false
+  },
+  "48088": {
+    "uid": "blt544c34507ed93557",
+    "title": "Fully equipped kitchen & dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen & dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48668": {
+    "uid": "bltb70b926d68bb3c27",
+    "title": "Our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our ‘1 bedroom’ just means that you can only bring one tourer onto park per pitch",
+    "mappedToExistingAmenity": false
+  },
+  "48669": {
+    "uid": "blt60c036efd8196a99",
+    "title": "Available for one Touring caravan or Campervan or Motorhome per pitch (tent and tent trailers are not permitted)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "available for one touring caravan or campervan or motorhome per pitch (tent and tent trailers are not permitted)",
+    "mappedToExistingAmenity": false
+  },
+  "48670": {
+    "uid": "blt28cda58827cb07e0",
+    "title": "6 person maximum, 2 dogs maximum",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "6 person maximum, 2 dogs maximum",
+    "mappedToExistingAmenity": false
+  },
+  "48671": {
+    "uid": "blt42b7234550024794",
+    "title": "Grass pitch with electric and water included",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "grass pitch with electric and water included",
+    "mappedToExistingAmenity": false
+  },
+  "48672": {
+    "uid": "blt605b33aa26e10497",
+    "title": "Use of toilet, shower block and Elsan Point",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "use of toilet, shower block and elsan point",
+    "mappedToExistingAmenity": false
+  },
+  "48673": {
+    "uid": "blt88097e805486bd35",
+    "title": "1 awning permitted, car parking space for 1 car",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 awning permitted, car parking space for 1 car",
+    "mappedToExistingAmenity": false
+  },
+  "48690": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48691": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48692": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48693": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48694": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48695": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48696": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48697": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "48698": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "48699": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48700": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48709": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "48710": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48711": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48712": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48713": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48714": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48715": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48716": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48717": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48718": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48719": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48720": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48721": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48722": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "48723": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48724": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48725": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48726": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48727": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48728": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48729": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48730": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48731": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48733": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48734": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48735": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48736": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48737": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48738": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48740": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48741": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48742": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "48743": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "48744": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48745": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48746": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48748": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48749": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "48750": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "48751": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "48752": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48753": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48754": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48755": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48756": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48757": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48758": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48765": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48771": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48772": {
+    "uid": "blt5282a0a1e7f2cb45",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "48773": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48774": {
+    "uid": "blt28f9c9ed0f496556",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "48775": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48776": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48777": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48778": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48780": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48782": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48784": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48788": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48796": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48798": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "48799": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48800": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48801": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48804": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48805": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "48806": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48807": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48808": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48809": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48810": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48811": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "48812": {
+    "uid": "blt65aa6fb9a4508b3a",
+    "title": "Separate seating & table for decking area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "separate seating & table for decking area",
+    "mappedToExistingAmenity": false
+  },
+  "48813": {
+    "uid": "bltd78058c30a435505",
+    "title": "Electirc Fire and Patio Doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electirc fire and patio doors",
+    "mappedToExistingAmenity": false
+  },
+  "48814": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48882": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "48883": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "48884": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "48885": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "48886": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "48983": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48984": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "48985": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48987": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48988": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48989": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48990": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48991": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48992": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48994": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48995": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "48996": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "48999": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49000": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49002": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49003": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49004": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49006": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49009": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49012": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49013": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49018": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49019": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49023": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49028": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49031": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49033": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49034": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49036": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49037": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49039": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49283": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49284": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49285": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49286": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49287": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49290": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49291": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "49292": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "49293": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49294": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49295": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49313": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49314": {
+    "uid": "blt6ce74427840f07a5",
+    "title": "Sleeps 8 when using a sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using a sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "49315": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49316": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49317": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49321": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49322": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "49323": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "49324": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "49325": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49326": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49329": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49330": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49331": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49332": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49333": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "49727": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49728": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "49729": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49730": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "49731": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "49732": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "49976": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "49977": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "49978": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "49979": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "49980": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "50269": {
+    "uid": "blt8a7ab6a01e3275de",
+    "title": "Sleeps a family of 4 with double bed and bunk bed (2 adults, 2 children)",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps a family of 4 with double bed and bunk bed (2 adults, 2 children)",
+    "mappedToExistingAmenity": false
+  },
+  "50664": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "50665": {
+    "uid": "bltb152cf30946b2889",
+    "title": "Sleeps 8 when using sofa bed",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 8 when using sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "50666": {
+    "uid": "blt445ac32fd3228c72",
+    "title": "Spacious open-plan living area ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living area",
+    "mappedToExistingAmenity": false
+  },
+  "51874": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51875": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51876": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "51877": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "51943": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51944": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "51945": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51946": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "51947": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51950": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "51951": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "51952": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51953": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51954": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "51957": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51958": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "51959": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "51960": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "51961": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51962": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "51965": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51966": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "51967": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51968": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "51969": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51970": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "51981": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51982": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51983": {
+    "uid": "blt7344c8de2c63aeae",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "51984": {
+    "uid": "blt28f9c9ed0f496556",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "51985": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51986": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51989": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "51990": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "51991": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "51992": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "51993": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "51996": {
+    "uid": "bltee052971b0e2d123",
+    "title": "More space",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "more space",
+    "mappedToExistingAmenity": false
+  },
+  "51997": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "51998": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "51999": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52000": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52003": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52004": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52005": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52006": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52007": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52014": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52015": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52016": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52017": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52018": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52031": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52032": {
+    "uid": "blt5282a0a1e7f2cb45",
+    "title": "Wide access doors",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wide access doors",
+    "mappedToExistingAmenity": false
+  },
+  "52033": {
+    "uid": "blt7344c8de2c63aeae",
+    "title": "Low level cooker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "low level cooker",
+    "mappedToExistingAmenity": false
+  },
+  "52034": {
+    "uid": "blt28f9c9ed0f496556",
+    "title": "Wet room",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "wet room",
+    "mappedToExistingAmenity": false
+  },
+  "52035": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52036": {
+    "uid": "blt91e9978d0b9ffef9",
+    "title": "Sleeps 6 with sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 6 with sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "52086": {
+    "uid": "blt39ac0ee4f6b21c0c",
+    "title": "Electrical hoist and bed guard can be delivered at an extra charge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electrical hoist and bed guard can be delivered at an extra charge",
+    "mappedToExistingAmenity": false
+  },
+  "52112": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "52113": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "52114": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52115": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52177": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "52178": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52179": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52180": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52517": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52518": {
+    "uid": "blt829b15a3dae44ae1",
+    "title": "TV and electric fire in living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv and electric fire in living area",
+    "mappedToExistingAmenity": false
+  },
+  "52519": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "52520": {
+    "uid": "blt2cd4d95be555e246",
+    "title": "Free standing table & chairs ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free standing table & chairs",
+    "mappedToExistingAmenity": false
+  },
+  "52663": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52664": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52665": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "52666": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52667": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "52680": {
+    "uid": "blt52b7ac2973fc48d2",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "52681": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "52682": {
+    "uid": "blt420031eb903fe030",
+    "title": "Sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "52683": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52759": {
+    "uid": "blt784004dd961f1d63",
+    "title": "Our glamping pods consist of Hares Hideaway, Foxes Den, Hares Hollow and Foxes Bunker",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "our glamping pods consist of hares hideaway, foxes den, hares hollow and foxes bunker",
+    "mappedToExistingAmenity": false
+  },
+  "52760": {
+    "uid": "blt879c744921c400b6",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "52778": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "52779": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "52780": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52781": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "52782": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52783": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  },
+  "52933": {
+    "uid": "blt3cc7bef78c80da55",
+    "title": "Open-plan living",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "open-plan living",
+    "mappedToExistingAmenity": true
+  },
+  "52934": {
+    "uid": "bltc92580304e52d818",
+    "title": "Modern kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "modern kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "52935": {
+    "uid": "blt80fde256c0920cce",
+    "title": "TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "tv",
+    "mappedToExistingAmenity": false
+  },
+  "52936": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "52937": {
+    "uid": "blt1faf5ac8e5278989",
+    "title": "Decking to the front or side of your holiday home",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking to the front or side of your holiday home",
+    "mappedToExistingAmenity": false
+  },
+  "52938": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "53125": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53126": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53127": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53128": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53131": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53132": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53133": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53134": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53138": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53139": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53140": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53141": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53142": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53143": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53146": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53147": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53148": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53149": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53150": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53153": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53154": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53155": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53156": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53157": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53161": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53162": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53163": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53164": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53167": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53168": {
+    "uid": "bltf30a8eb2fc8b41dd",
+    "title": "Spacious living area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious living area",
+    "mappedToExistingAmenity": false
+  },
+  "53169": {
+    "uid": "blt46fe9992061cc358",
+    "title": "Fully-equipped kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully-equipped kitchen",
+    "mappedToExistingAmenity": true
+  },
+  "53170": {
+    "uid": "blt48ed050baf4042a4",
+    "title": "Dining area",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dining area",
+    "mappedToExistingAmenity": false
+  },
+  "53171": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53172": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "53398": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "53399": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "53400": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "53401": {
+    "uid": "bltcc7ffa3979aa7d70",
+    "title": "Decking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "decking",
+    "mappedToExistingAmenity": true
+  },
+  "53692": {
+    "uid": "blt52b7ac2973fc48d2",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "53693": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "53694": {
+    "uid": "blt420031eb903fe030",
+    "title": "Sofa bed ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sofa bed",
+    "mappedToExistingAmenity": false
+  },
+  "53695": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "53696": {
+    "uid": "blt879c744921c400b6",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "53699": {
+    "uid": "blt52b7ac2973fc48d2",
+    "title": "Fully equipped kitchen with oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "fully equipped kitchen with oven",
+    "mappedToExistingAmenity": false
+  },
+  "53700": {
+    "uid": "blt56fd7948a88d216d",
+    "title": "En-suite ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "en-suite",
+    "mappedToExistingAmenity": true
+  },
+  "53701": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "53702": {
+    "uid": "blt879c744921c400b6",
+    "title": "Brand new to summer 2022",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "brand new to summer 2022",
+    "mappedToExistingAmenity": false
+  },
+  "53795": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53808": {
+    "uid": "blt7bb48cf771b2b9b8",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "53809": {
+    "uid": "blt5b05df9539ab5fd6",
+    "title": "Pet-friendly",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "pet-friendly",
+    "mappedToExistingAmenity": false
+  },
+  "53810": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "53811": {
+    "uid": "blt5c0db027d74149a3",
+    "title": "Dishwasher",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "dishwasher",
+    "mappedToExistingAmenity": true
+  },
+  "53812": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53814": {
+    "uid": "blt7bb48cf771b2b9b8",
+    "title": "Outdoor patio/garden",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "outdoor patio/garden",
+    "mappedToExistingAmenity": false
+  },
+  "53815": {
+    "uid": "blt54bcd76e885c934c",
+    "title": "Free Wi-Fi",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "free wi-fi",
+    "mappedToExistingAmenity": false
+  },
+  "53816": {
+    "uid": "blt0e990132f91e16c7",
+    "title": "Kitchen area with electric cooker and fridge ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "kitchen area with electric cooker and fridge",
+    "mappedToExistingAmenity": false
+  },
+  "53817": {
+    "uid": "blt53916d2cf25db42c",
+    "title": "50\" Freeview TV",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "50\" freeview tv",
+    "mappedToExistingAmenity": false
+  },
+  "53818": {
+    "uid": "blt43299910b33675ed",
+    "title": "Hot Tub",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "hot tub",
+    "mappedToExistingAmenity": false
+  },
+  "53835": {
+    "uid": "blt6503034f24867d4a",
+    "title": "1 bedroom",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 bedroom",
+    "mappedToExistingAmenity": false
+  },
+  "53837": {
+    "uid": "blt790b1725df280756",
+    "title": "Sleeps 4 with double bed and bunk beds",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "sleeps 4 with double bed and bunk beds",
+    "mappedToExistingAmenity": false
+  },
+  "54130": {
+    "uid": "blte6a8f91a0085c50e",
+    "title": "32\" TV and DVD Player",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "32\" tv and dvd player",
+    "mappedToExistingAmenity": false
+  },
+  "54131": {
+    "uid": "blt47d97a892375ebb2",
+    "title": "Comprehensive kitchen inventory including fridge and microwave oven",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "comprehensive kitchen inventory including fridge and microwave oven",
+    "mappedToExistingAmenity": false
+  },
+  "54132": {
+    "uid": "blt7cd2dccfbb093cba",
+    "title": "Allocated parking",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "allocated parking",
+    "mappedToExistingAmenity": false
+  },
+  "54133": {
+    "uid": "bltc58c50eff3b4abb8",
+    "title": "1 Double bedroom and 1 single bedroom",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "1 double bedroom and 1 single bedroom",
+    "mappedToExistingAmenity": false
+  },
+  "54134": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "54601": {
+    "uid": "bltabdf57284c45afca",
+    "title": "Double glazing & central heating",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "double glazing & central heating",
+    "mappedToExistingAmenity": true
+  },
+  "54602": {
+    "uid": "bltcd5da5d9e1ab3bc2",
+    "title": "Spacious open-plan living with large kitchen",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "spacious open-plan living with large kitchen",
+    "mappedToExistingAmenity": false
+  },
+  "54603": {
+    "uid": "bltaa56fdc0e164d53c",
+    "title": "Patio area with outdoor furniture ",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "patio area with outdoor furniture",
+    "mappedToExistingAmenity": false
+  },
+  "54604": {
+    "uid": "blt925fce8a85c1feed",
+    "title": "Electric Fire",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "electric fire",
+    "mappedToExistingAmenity": false
+  },
+  "54605": {
+    "uid": "bltee37c87119bae62a",
+    "title": "A great family lodge",
+    "from": "pl.craft_entryversions.fields[39]",
+    "featureStrLc": "a great family lodge",
+    "mappedToExistingAmenity": false
+  }
+}

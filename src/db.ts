@@ -6,7 +6,7 @@ export const getDbConnection = async () => {
       host: 'localhost',
       user: 'root',
       password: 'root_password',
-      database: 'ph_db'
+      database: 'parkleisure'
     })
     return db
   } catch (error) {

@@ -1,22 +1,22 @@
 {
   "Holiday Home": {
-    "uid": "blt642cdfbc420720a8",
+    "uid": "blt7058da06f67c4a09",
     "title": "Caravan"
   },
   "Cottage": {
-    "uid": "blte89e490f18cfc8a3",
+    "uid": "bltb8054a4886aee00b",
     "title": "Cottage"
   },
   "Glamping": {
-    "uid": "blt59eb8bc1415ababf",
+    "uid": "bltcca0093afe68bd3e",
     "title": "Glamping"
   },
   "Holiday Lodge": {
-    "uid": "blte6e433e93446fdd3",
+    "uid": "blt7166b673fc7fb918",
     "title": "Lodge"
   },
   "Touring Pitch": {
-    "uid": "bltcbf931ee067364c8",
+    "uid": "bltc5ce22224754c766",
     "title": "Pitch"
   }
 }
