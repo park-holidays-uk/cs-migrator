@@ -27,6 +27,7 @@ module.exports = (_, argv, configDirs) => {
       migrateSlugs: path.resolve(__dirname, './src/migration/migrateSlug'),
       migrateCmsTags: path.resolve(__dirname, './src/migration/migrateCmsTags'),
       migrateCompanyBrand: path.resolve(__dirname, './src/migration/migrateCompanyBrand'),
+      migrateMediaTextContent: path.resolve(__dirname, './src/migration/migrateMediaTextContent'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
     mode: argv.mode,

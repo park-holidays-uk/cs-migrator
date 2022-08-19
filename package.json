@@ -8,6 +8,7 @@
     "migrateSlugs": "npm run build && node ./dist/migrateSlugs.js parkholidays",
     "migrateCmsTags": "npm run build && node ./dist/migrateCmsTags.js parkholidays",
     "migrateCompanyBrand": "npm run build && node ./dist/migrateCompanyBrand.js parkholidays",
+    "migrateMediaTextContent": "npm run build && node ./dist/migrateMediaTextContent.js parkholidays",
     "publish": "npm run build && node ./dist/publish.js",
     "dynamo": "npm run build && node ./dist/dynamo.js",
     "types": "npm run build && node ./dist/contentTypes.js",

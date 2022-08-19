@@ -208,5 +208,30 @@
     "uid": "blt5f3b7066ebfc25bf",
     "title": "Seaview Village",
     "from": "db.parks"
+  },
+  "52": {
+    "uid": "blt90530dba95e082ed",
+    "title": "Par Sands",
+    "from": "db.parks"
+  },
+  "53": {
+    "uid": "blt09b6a4114f9b671f",
+    "title": "Pentire",
+    "from": "db.parks"
+  },
+  "54": {
+    "uid": "bltaca1d27d96ce9a76",
+    "title": "Malvern View",
+    "from": "db.parks"
+  },
+  "56": {
+    "uid": "blt5437c437a59f219d",
+    "title": "Brynteg",
+    "from": "db.parks"
+  },
+  "60": {
+    "uid": "blt902632b3e335a0f2",
+    "title": "Littondale",
+    "from": "db.parks"
   }
 }
