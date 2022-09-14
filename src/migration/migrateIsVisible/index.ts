@@ -40,21 +40,32 @@ const migrateData = async () => {
     if (park) {
       return {
         ...entry,
+        // brand: [
+        //   {
+        //     "uid": "blt512eebdbfb8c0494",
+        //     "_content_type_uid": "company_brand"
+        //   },
+        // ],
       }
     }
     return null;
   }).filter(Boolean);
 
   context.cache.location = arrayToUidKeyedObject(locationEntries)
-  writeSync(env, 'migrationCache', 'location_preIsVisible', locationEntries);
+  writeSync(env, 'migrationCache', 'location_preCompanyBrand', locationEntries);
 
-   // let locationEntries = readSync(env, 'migrationCache', 'location_preIsVisible') // used for development
+   // let accommodationImages = readSync(env, 'migrationCache', 'accommodationImages_preTags') // used for development
 
   const mockMigrationConfig = {
     name: 'location',
     updateKeys: {
       entry: {
-        brand: true,
+        holiday_product_contents: [{
+          is_visible: true
+        }],
+        sales_product_contents: [{
+          is_visible: true
+        }],
       }
     }
   } as any
@@ -66,17 +77,20 @@ const migrateData = async () => {
     'location',
     locationEntries,
     async (entry) => {
-      return {
+      const update =  {
         entry: {
           ...entry,
-          brand: [
-            {
-              "uid": "blt512eebdbfb8c0494",
-              "_content_type_uid": "company_brand"
-            },
-          ]
         }
       }
+      update.entry.holiday_product_contents = update.entry.holiday_product_contents.map((hp) => ({
+        ...hp,
+        is_visible: true
+      }));
+      update.entry.sales_product_contents = update.entry.sales_product_contents.map((sp) => ({
+        ...sp,
+        is_visible: true
+      }))
+      return update;
     },
     ({ entry }) => ({
       uid: entry.uid,
