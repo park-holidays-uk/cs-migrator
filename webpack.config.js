@@ -28,6 +28,7 @@ module.exports = (_, argv, configDirs) => {
       migrateCmsTags: path.resolve(__dirname, './src/migration/migrateCmsTags'),
       migrateCompanyBrand: path.resolve(__dirname, './src/migration/migrateCompanyBrand'),
       migrateIsVisible: path.resolve(__dirname, './src/migration/migrateIsVisible'),
+      migrateTouringType: path.resolve(__dirname, './src/migration/migrateTouringType'),
       migrateMediaTextContent: path.resolve(__dirname, './src/migration/migrateMediaTextContent'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
