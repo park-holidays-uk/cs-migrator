@@ -39,6 +39,7 @@ export const getAccommodationEntries = async (context, flattened = true) => {
   const entryIdsByType = await Promise.all(
     Object.values(entriesTypeId).map((typeId) => getEntryIds(typeId))
   );
+
   const entryDataByType = {};
   const entryTypeKeys = Object.keys(entriesTypeId);
   for (let i = 0; i < entryTypeKeys.length; i += 1) {
@@ -53,7 +54,7 @@ export const getAccommodationEntries = async (context, flattened = true) => {
       entryType,
     }));
     return [...acc, ...entries];
-  }, []);
+  }, [] as any);
 };
 
 export const createAccommodation = async (context, migrationConfig) => {
