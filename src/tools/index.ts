@@ -396,6 +396,7 @@ export const createEntries = async (migrationConfig, context, contentUid, entrie
       }
       url += '?locale=en-gb'
       body.entry.tags = [ PL_SCRAPED, ...(body.entry?.tags ?? []) ];
+
       const res = await fetch(url, {
         method,
         headers: {

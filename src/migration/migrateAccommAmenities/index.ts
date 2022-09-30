@@ -59,10 +59,11 @@ const migrateData = async () => {
     name: 'accommodation',
     updateKeys: {
       entry: {
-        accommodation_amenities: true,
-        contextual_images: true,
+        // accommodation_amenities: true,
+        // contextual_images: true,
         // holiday_product: false,
         tags: true,
+        name: true,
       }
     }
   } as any
@@ -112,10 +113,10 @@ const migrateData = async () => {
         return acc;
       }, []);
 
+      const atIndex = entryDb.title.indexOf(' at ');
+      const name = atIndex > 0 ? entryDb.title.slice(0, atIndex) : entryDb.title;
       const update = {...entryCS};
-      // update.holiday_product = findReferenceInCache(context, 'holidayProduct', 1),
-      update.accommodation_amenities = amenitiesForThisAccomodation;
-      update.contextual_images = imagesForThisAccomodation;
+      update.name = name;
       return ({
         entry: update
       })
