@@ -165,6 +165,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
+    removalTags: ['cms_scraped'],
   }, {
     name: 'accommodationGrade',
     type: 'entry',
@@ -176,11 +177,12 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         media: false
       }
     },
+    removalTags: ['cms_scraped'],
   }, {
     name: 'accommodationAmenity',
     type: 'entry',
     handler: createAccommodationAmenities,
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
     removalTags: ['cms_scraped'],
@@ -188,7 +190,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: {
       entry: { // This will only update the truthy keys. everything else left as is.
@@ -198,6 +200,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         contextual_images: false,
       }
     },
+    removalTags: ['cms_scraped'],
   }, {
     name: 'stockAddon',
     type: 'entry',
