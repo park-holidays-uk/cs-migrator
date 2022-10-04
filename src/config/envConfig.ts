@@ -74,8 +74,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
   }, {
     name: 'stockGallery',
     type: 'asset',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => Promise.resolve({/* not used to migrate only delete... */}),
     folderName: 'Stock_Media',
     includeInRemove: false,
     includeInMigration: false,
@@ -120,6 +119,22 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
+  }, {
+    name: 'locationActivity',
+    type: 'entry',
+    handler: () => Promise.resolve({/* not used to migrate only delete... */}),
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'none',
+    removalTags: ['cms_scraped'],
+  }, {
+    name: 'localAttraction',
+    type: 'entry',
+    handler: () => Promise.resolve({/* not used to migrate only delete... */}),
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'none',
+    removalTags: ['cms_scraped'],
   }, {
     name: 'region',
     type: 'entry',
@@ -200,7 +215,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
         contextual_images: false,
       }
     },
-    removalTags: ['cms_scraped'],
+    removalTags: ['cms-scraped'],
   }, {
     name: 'stockAddon',
     type: 'entry',
