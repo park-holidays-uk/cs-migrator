@@ -180,14 +180,15 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'accommodationAmenity',
     type: 'entry',
     handler: createAccommodationAmenities,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
+    removalTags: ['cms_scraped'],
   }, {
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: {
       entry: { // This will only update the truthy keys. everything else left as is.

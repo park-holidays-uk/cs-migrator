@@ -1,12 +1,15 @@
-import 'cross-fetch/polyfill'
+import 'cross-fetch/polyfill';
+import dotenv from 'dotenv';
 import {
   getEnvironmentVariables,
   migrationConfiguration
-} from './config/envConfig'
-import { getDataCache, writeSync } from './dataHandler/fileCache'
-import { camelCase, getAssets, getEntries, getFolderUid, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools'
-import loginForAuthToken from './tools/login'
-import { EnvironmentType } from './types'
+} from './config/envConfig';
+import { getDataCache, writeSync } from './dataHandler/fileCache';
+import { camelCase, getAllEntries, getAssets, getFolderUid, itemHasAllTags, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools';
+import loginForAuthToken from './tools/login';
+import { EnvironmentType } from './types';
+dotenv.config();
+
 
 const env = process.argv[2] as EnvironmentType
 
@@ -17,17 +20,13 @@ const contentToRemove = migrationConfiguration.filter((migration) => {
 })
 
 const removeContent = async (context) => {
-  const contentUids = contentToRemove.map((item) => snakeCase(item.name))
-  for (const contentUid of contentUids) {
-    let remainingRecordCount = 1 // ensure it attempts it first time ( != 0 )
-    let recordsRemoved = 0
-    while (remainingRecordCount > 0) { // ContentStack is paginated to max 100 records
-      const response = await getEntries(context, contentUid)
-      remainingRecordCount = response.count
-      const removedEntries = await removeEntries(context, contentUid, response.entries, recordsRemoved)
-      recordsRemoved += removedEntries.length
-    }
-    console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
+  for (const migrationConfig of contentToRemove) {
+		console.log('TCL: removeContent -> migrationConfig', migrationConfig)
+    const contentUid = snakeCase(migrationConfig.name)
+    const entries = await getAllEntries(context, contentUid)
+		console.log('TCL: removeContent -> entries', JSON.stringify(entries))
+    const removedEntries = await removeEntries(context, contentUid, entries, migrationConfig.removalTags)
+    console.log(`removedEntries -> [ ${contentUid} ]`, removedEntries.length)
     writeSync(env, 'dataCache', camelCase(contentUid), {})
   }
 }
@@ -40,6 +39,7 @@ const removeAssets = async (context) => {
   for (const migrationConfig of assetsToRemove) {
     const folder = migrationConfig.folderName
     const folderUid = getFolderUid(context.env, folder);
+		console.log('TCL: removeAssets -> folderUid', folderUid)
     if (!folderUid) {
       console.error(`Could not find a folder uid for ${folder}. Aborting asset fetch!!`)
       continue;
@@ -58,14 +58,6 @@ const removeItemFromCache = (context, migrationConfig, item) => {
       break;
     }
   }
-};
-
-const itemHasAllTags = (itemTags, tags = []) => {
-  const hasAllTags =  tags.reduce((hasAllTags, currTag) => {
-    if (!hasAllTags) return hasAllTags;
-    return itemTags.includes(currTag);
-  }, true);
-  return hasAllTags
 };
 
 const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid, removalTags) => {
@@ -87,6 +79,7 @@ const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid,
       for (const asset of assets) {
         scannedAssets += 1;
         process.stdout.write(`Scanning asset tags: [ ${folder} ] : ${asset.id || asset.uid} (${scannedAssets})  ${' '.repeat(35)} \r`)
+				console.log('TCL: removeAssetsByFolder -> asset.uid', asset.uid, itemHasAllTags(asset.tags, removalTags), asset.tags)
         if (itemHasAllTags(asset.tags, removalTags)) {
           const removeAssetResponse = await removeAssetsWithSubFolders(context, folder, [asset], recordsRemoved);
           if (removeAssetResponse?.[0].notice === 'Asset deleted successfully.') {

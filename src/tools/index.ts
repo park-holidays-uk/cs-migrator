@@ -1,12 +1,9 @@
-import dotenv from 'dotenv'
 import FormData from 'form-data'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import path from 'path'
 import request from 'request'
 import { EnvironmentType, FolderNameType } from '../types'
-
-dotenv.config()
 
 // TCL: delay needs to be above 1500 to publish reliably - reduce for testing
 export const apiDelay = (delay = 1500) => new Promise((resolve) => setTimeout(resolve, delay)) // limit on contentstack api ('x' req/sec)
@@ -236,7 +233,6 @@ export const findCachedEntryFromUid = (context, cacheRef, entry) => {
     }
     return foundItem;
   }, null)
-	console.log('TCL: findCachedEntryFromUid -> response', response)
   return response;
 }
 
@@ -446,20 +442,31 @@ export const removeAssetsWithSubFolders = async (context, folder, assets, record
   return responses
 }
 
-export const removeEntries = async (context, contentUid, entries, recordsRemoved = 0) => {
-  const responses = []
+export const itemHasAllTags = (itemTags, tags: string[] = []) => {
+  const hasAllTags = tags.reduce((hasAllTags, currTag) => {
+    if (!hasAllTags) return hasAllTags;
+    return itemTags.includes(currTag);
+  }, true);
+  return hasAllTags
+};
+
+export const removeEntries = async (context, contentUid, entries, removalTags: string[] = []) => {
+  const responses: any[] = []
   for (const entry of entries) {
-    process.stdout.write(`Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} ${' '.repeat(35)} \r`)
+    process.stdout.write(`Removing entries: [ ${contentUid} ] ${responses.length} ${' '.repeat(35)} \r`)
     await apiDelay(50)
-    const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entry.uid}`, {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        ...context.headers
-      },
-    })
-    const response = await res.json()
-    responses.push(response)
+    console.log('TCL: removeEntries -> entry.tags', entry.tags)
+    if (itemHasAllTags(entry.tags, removalTags)) {
+      const res = await fetch(`${context.base_url}/content_types/${contentUid}/entries/${entry.uid}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          ...context.headers
+        },
+      })
+      const response = await res.json()
+      responses.push(response)
+    }
   }
   return responses
 }
