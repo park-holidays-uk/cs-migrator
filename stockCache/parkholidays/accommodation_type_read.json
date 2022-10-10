@@ -1,0 +1,65 @@
+{
+  "1": {
+    "updated_at": "2017-08-01T15:34:00.000Z",
+    "id": "1",
+    "uid": "blt8ac14c008b41f588",
+    "from": "db.accommodation_types",
+    "title": "Caravan"
+  },
+  "2": {
+    "updated_at": "2017-08-01T15:34:00.000Z",
+    "id": "2",
+    "uid": "blt1fbf547261d2fed5",
+    "from": "db.accommodation_types",
+    "title": "Lodge"
+  },
+  "5": {
+    "updated_at": "2017-08-01T15:34:00.000Z",
+    "id": "5",
+    "uid": "blt66e02afc0cef5428",
+    "from": "db.accommodation_types",
+    "title": "Apartment"
+  },
+  "8": {
+    "updated_at": "2017-08-01T15:34:00.000Z",
+    "id": "8",
+    "uid": "blt30db76fc22af9e4a",
+    "from": "db.accommodation_types",
+    "title": "Pitch"
+  },
+  "9": {
+    "updated_at": "2017-12-07T12:30:00.000Z",
+    "id": "9",
+    "uid": "bltddfe15f7b98089cb",
+    "from": "db.accommodation_types",
+    "title": "Other"
+  },
+  "10": {
+    "updated_at": "2018-12-11T14:30:00.000Z",
+    "id": "10",
+    "uid": "blte70dd9e98858b45f",
+    "from": "db.accommodation_types",
+    "title": "Camping Pod"
+  },
+  "11": {
+    "updated_at": "2019-04-06T15:00:00.000Z",
+    "id": "11",
+    "uid": "bltf6d41cadd7b6bdca",
+    "from": "db.accommodation_types",
+    "title": "Luxury Apartments"
+  },
+  "12": {
+    "updated_at": "2022-07-07T08:34:44.000Z",
+    "id": "12",
+    "uid": "blt4d5fc6788414d3d7",
+    "from": "db.accommodation_types",
+    "title": "Cottage"
+  },
+  "13": {
+    "updated_at": "2022-07-07T08:33:30.000Z",
+    "id": "13",
+    "uid": "bltbb2b4ddcc3033698",
+    "from": "db.accommodation_types",
+    "title": "Glamping"
+  }
+}

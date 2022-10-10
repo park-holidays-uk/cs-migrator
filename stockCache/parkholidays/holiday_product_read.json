@@ -1,0 +1,16 @@
+{
+  "1": {
+    "updated_at": "2017-08-01T15:33:53.000Z",
+    "id": "1",
+    "uid": "blt128e823207f59808",
+    "from": "db.sectors",
+    "title": "Holidays and short breaks"
+  },
+  "2": {
+    "updated_at": "2017-08-01T15:33:53.000Z",
+    "id": "2",
+    "uid": "bltf7c3da70d95ec980",
+    "from": "db.sectors",
+    "title": "Touring and camping"
+  }
+}
