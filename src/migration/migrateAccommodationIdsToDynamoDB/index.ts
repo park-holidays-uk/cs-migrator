@@ -33,21 +33,32 @@ const migrateData = async () => {
   context.env = env
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
 
+  const hireTypeRows = await context.db.query(`
+    SELECT code, id
+    FROM hire_types
+    WHERE deleted_at IS NULL;
+  `);
+
   // save a copy of current v1 entries
   let accommEntriesCS = await getAllEntries(context, 'accommodation')
   accommEntriesCS = accommEntriesCS.map((entry) => {
-		console.log('TCL: migrateData -> entry', entry)
-
-    if (entry) {
+    const dbID = hireTypeRows.find((row) => row.code === entry.title)?.id;
+		console.log('TCL: migrateData -> dbID', dbID)
+    console.log('TCL: migrateData -> entry.tags.includes(pl-scraped)', entry.tags.includes('pl-scraped'), entry.tags)
+    if (dbID && entry.tags.includes('pl-scraped')) {
       return {
-        ...entry,
-        id: park.id,
+        id: dbID.toString(),
+        from: 'pl.craft',
+        title: entry.title,
+        uid: entry.uid,
+        updated_at: '2050-01-01T00:00:00.000Z'
       }
     }
     return null;
   }).filter(Boolean);
   writeSync(env, 'stockCache', 'accommodation_PL', accommEntriesCS)
 
+	console.log('TCL: migrateData -> accommEntriesCS', JSON.stringify(accommEntriesCS))
   process.exit()
 }
 

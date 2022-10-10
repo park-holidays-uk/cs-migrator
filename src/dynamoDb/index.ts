@@ -25,6 +25,7 @@ const getUserInput = (text, defaultInput = '') => new Promise<string>((resolve, 
 const putItem = (params) => new Promise<number>((resolve) => {
   docClient.put(params, (err, data) => {
     if (err) {
+			console.log('TCL: putItem -> err', err)
       colorLog(RED, 'Can`t add item!', params);
       resolve(0);
     } else {
@@ -37,6 +38,7 @@ const writeToDynamoDb = async (tableName, env, type, fileName) => {
   const data = await readSync(env, type, fileName)
   let itemsAdded = 0
   for (const id in data) {
+		console.log('TCL: writeToDynamoDb -> id', id, JSON.stringify(data[id]))
     itemsAdded += await putItem({
       TableName: tableName,
       Item: {

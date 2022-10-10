@@ -410,7 +410,7 @@ export const getEntry = async (context, contentUid, uid) => {
 }
 
 export const getAllEntries = async (context, contentUid) => {
-  let allEntries = []
+  let allEntries: any[] = []
   let remainingRecords = 1 // ensure it attempts it first time ( != 0 )
   let skip = 0;
   let limit = 100;
