@@ -25,7 +25,7 @@ module.exports = (_, argv, configDirs) => {
       contentTypes: path.resolve(__dirname, './src/contentTypes/index.ts'),
       dynamo: path.resolve(__dirname, './src/dynamoDb/index.ts'),
       migrateSlugs: path.resolve(__dirname, './src/migration/migrateSlug'),
-      migrateCmsTags: path.resolve(__dirname, './src/migration/migrateCmsTags'),
+      migrateTradeSales: path.resolve(__dirname, './src/migration/migrateTradeSales'),
       migrateCompanyBrand: path.resolve(__dirname, './src/migration/migrateCompanyBrand'),
       migrateIsVisible: path.resolve(__dirname, './src/migration/migrateIsVisible'),
       migrateTouringType: path.resolve(__dirname, './src/migration/migrateTouringType'),

@@ -256,11 +256,12 @@ const blacklistKeys = {
   locale: true,
 };
 
-const scrubExistingData = (existingData) => {
+export const scrubExistingData = (existingData, extendedBlacklistKeys = {}) => {
   // This existing data is needed for arrays in particular.
   // Whilst updating things like contextual_images an empty array
   // removes all the data, whereas we should just be leaving it alone.
   // This comes from having a nested keyMap obj for updates.
+  const allBlacklistKeys = { ...blacklistKeys, ...extendedBlacklistKeys };
   const data = { ...existingData };
   return Object.keys(data).reduce((acc, key) => {
     const formatted = { ...acc };
@@ -268,7 +269,7 @@ const scrubExistingData = (existingData) => {
       formatted['image'] = data[key].uid;
     } else */ if (data[key]?.filename && data[key]?.uid) { // This is an asset - just return uid
       formatted[key] = data[key].uid;
-    } else if (!blacklistKeys[key]) {
+    } else if (!allBlacklistKeys[key]) {
       if (typeof data[key] === 'object') {
         if (Array.isArray(data[key])) {
           formatted[key] = data[key].map((item) => scrubExistingData(item));

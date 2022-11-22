@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npx webpack --mode=development",
     "migrateSlugs": "npm run build && node ./dist/migrateSlugs.js parkholidays",
-    "migrateCmsTags": "npm run build && node ./dist/migrateCmsTags.js parkholidays",
+    "migrateTradeSales": "npm run build && node ./dist/migrateTradeSales.js tradesales",
     "migrateCompanyBrand": "npm run build && node ./dist/migrateCompanyBrand.js parkholidays",
     "migrateIsVisible": "npm run build && node ./dist/migrateIsVisible.js parkholidays",
     "migrateTouringType": "npm run build && node ./dist/migrateTouringType.js playground",
