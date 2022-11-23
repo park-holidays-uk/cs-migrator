@@ -1,17 +1,10 @@
 import 'cross-fetch/polyfill'
 import {
-  getEnvironmentVariables,
   migrationConfiguration
 } from './config/envConfig'
 import { getDataCache, writeSync } from './dataHandler/fileCache'
-import { getDbConnection } from './db'
 import { snakeCase } from './tools'
-import loginForAuthToken from './tools/login'
-import { EnvironmentType } from './types'
-
-const env = process.argv[2] as EnvironmentType
-
-const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
+import { createApiCredentials } from './tools/login'
 
 const reportCreatedEntries = (key, context) => {
   console.log(`createdEntries -> [ ${snakeCase(key)} ]`, Object.keys(context.cache[key]).length, ' '.repeat(25))
@@ -19,19 +12,10 @@ const reportCreatedEntries = (key, context) => {
 
 const importData = async () => {
   console.log('\n\n Build Complete!! Starting migration... \n\n\n')
-  const context = await loginForAuthToken({
-    base_url,
-    email,
-    password: null,
-    management_token,
-    headers: {
-      api_key,
-      authtoken: null,
-    }
+  const context = await createApiCredentials({
+    CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
   })
-  context.db = await getDbConnection()
-  context.env = env
-  context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name))
+  context.cache = getDataCache(migrationConfiguration.map((m) => m.name))
 
   const migrations = migrationConfiguration.filter((migration) => {
     return migration.includeInMigration
@@ -41,12 +25,12 @@ const importData = async () => {
     try {
       context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
       reportCreatedEntries(migrationConfig.name, context)
-      writeSync(env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
+      writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     } catch (error) {
       console.error('Error during migrations ',  error)
       console.error('Cache saved at this point: ', migrationConfig)
       console.error('Cache: ', context.cache[migrationConfig.name])
-      writeSync(env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
+      writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     } finally {
 
     }

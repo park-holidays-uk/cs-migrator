@@ -1,26 +1,8 @@
 import dotenv from 'dotenv';
 import {
-  additionalStockGalleries,
-  uploadAccommodationGalleries, uploadLocationGalleries, uploadLocationLogos
-} from '../assets/galleries';
-import {
-  createAccommodation,
-  createAccommodationAmenities,
-  createAccommodationGrades,
-  createAccommodationTypes
-} from '../entries/accommodationEntries';
-import {
-  createCounties,
   createHolidayProducts,
-  createLocationAmenities,
-  createLocationCategories,
-  createLocations,
-  createRegions
-} from '../entries/locationEntries';
-import {
-  createOwnershipParkWebpages
-} from '../entries/pages';
-import { EnvironmentType, MigrationConfigurationType } from '../types';
+} from '../entries';
+import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
 dotenv.config();
 
 export const getEnvironmentVariables = (env: EnvironmentType) => ({
@@ -36,7 +18,26 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   environments: process.env[`${env}_environments`]
 })
 
-export const migrationConfiguration: MigrationConfigurationType[] = [{
+const globalAllEnvironments: PublishEnvironments[] = ['production', 'production_parkholidays', 'production_parkleisure', 'staging', 'staging_parkholidays', 'staging_parkleisure'];
+const globalParkHolidaysEnvironments: PublishEnvironments[] = ['production', 'production_parkholidays', 'staging', 'staging_parkholidays'];
+const globalParkLeisureEnvironments: PublishEnvironments[] = ['production', 'production_parkleisure', 'staging', 'production_parkleisure'];
+const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
+
+export const migrationConfiguration: MigrationConfigurationType[] = [
+  {
+    name: 'holidayProduct',
+    contentUid: 'holiday_product',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    scrubbedFields: { tags: true },
+    handler: createHolidayProducts,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }
+  /*
+  {
     name: 'locationLogo',
     type: 'asset',
     handler: uploadLocationLogos,
@@ -44,7 +45,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
-  }, {
+  }
+  , {
     name: 'locationGalleryTouring',
     type: 'asset',
     handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'touring', ['touring']),
@@ -75,7 +77,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockGallery',
     type: 'asset',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     folderName: 'Stock_Media',
     includeInRemove: false,
     includeInMigration: false,
@@ -201,7 +203,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockAddon',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -209,7 +211,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockAmenity',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -217,7 +219,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockCondition',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -225,7 +227,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockManufacturer',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -233,7 +235,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockModel',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -241,7 +243,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockStatus',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -249,7 +251,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockType',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -257,7 +259,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'stockUnit',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
@@ -265,11 +267,12 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'locationStockPrice',
     type: 'entry',
     //@ts-ignore
-    handler: () => {/* not used to migrate only delete... */},
+    handler: () => {/* not used to migrate only delete... *//*},
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'none',
   }
+  */
 ]
 
 export default {

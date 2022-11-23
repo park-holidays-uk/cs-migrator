@@ -1,10 +1,10 @@
 import 'cross-fetch/polyfill'
 import pluralize from 'pluralize'
-import loginForAuthToken from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
 import { EnvironmentType, ContentTypeType, MigrationType } from '../types'
 import { readSync } from '../dataHandler/fileCache'
 import { apiDelay, arrayToUidKeyedObject } from '../tools'
+import { createApiCredentials } from '../tools/login'
 
 const env = process.argv[2] as EnvironmentType
 const filename = process.argv[4]
@@ -48,15 +48,8 @@ export const updateContentType = async (context, data, type: ContentTypeType, co
 }
 
 const importContentTypes = async () => {
-  const context = await loginForAuthToken({
-    base_url,
-    email,
-    password: null,
-    management_token,
-    headers: {
-      api_key,
-      authtoken: null,
-    }
+  const context = await createApiCredentials({
+    CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
   })
   const { contentTypes, globalFields } = readSync(env, 'contentCache', filename)
   await updateContentType(context, globalFields, 'global_fields')

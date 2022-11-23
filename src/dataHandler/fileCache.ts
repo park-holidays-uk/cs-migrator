@@ -30,9 +30,9 @@ export const writeSync = (env: EnvironmentType, type: CacheType, filename: strin
   }
 }
 
-export const getDataCache = (env: EnvironmentType, migrationTypes: MigrationType[]) => {
+export const getDataCache = (migrationTypes: MigrationType[]) => {
   return migrationTypes.reduce((cache, type) => {
-    cache[type] = readSync(env, 'dataCache', type)
+    cache[type] = readSync('legacy', 'dataCache', type)
     return cache
   }, {})
 }

@@ -5,7 +5,7 @@ import {
 } from './config/envConfig'
 import { getDataCache, writeSync } from './dataHandler/fileCache'
 import { camelCase, getAssets, getEntries, getFolderUid, removeAssetsWithSubFolders, removeEntries, snakeCase } from './tools'
-import loginForAuthToken from './tools/login'
+import { createApiCredentials } from './tools/login'
 import { EnvironmentType } from './types'
 
 const env = process.argv[2] as EnvironmentType
@@ -104,15 +104,8 @@ const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid,
 
 const removeData = async () => {
   console.log('\n\n Build Complete!! Starting removal... \n\n\n')
-  const context = await loginForAuthToken({
-    base_url,
-    email,
-    password: null,
-    management_token,
-    headers: {
-      api_key,
-      authtoken: null,
-    }
+  const context = await createApiCredentials({
+    CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
   })
   context.env = env
   context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name));

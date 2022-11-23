@@ -1,0 +1,1 @@
+export { createHolidayProducts } from './holidayProduct';

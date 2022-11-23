@@ -6,12 +6,9 @@ const reportUsage = (reason) => {
   console.log(reason)
   console.log('\n')
   console.log('Usage: ')
-  console.log('       npm start <environment> <command>')
-  console.log('\n')
-  console.log('  -environment:  playground or parkholidays')
+  console.log('       npm start <command>')
   console.log('\n')
   console.log('  -command:      migrate - creates new assets/entries')
-  // console.log('               migrate - creates new assets/entries')
   console.log('                 remove - deletes all assets/entries')
   console.log('\n')
   console.log('  e.g.    npm start playground migrate\n')
@@ -35,10 +32,5 @@ const run = async (command) => {
   }
 }
 
-if (!(process.argv[2] === 'playground' || process.argv[2] === 'parkholidays')) {
-  reportUsage('Invalid environment provided! (requires: parkholidays / playground)')
-  process.exit(1)
-}
-
-run(process.argv[3])
+run(process.argv[2])
 

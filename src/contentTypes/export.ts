@@ -1,5 +1,5 @@
 import 'cross-fetch/polyfill'
-import loginForAuthToken from '../tools/login'
+import { createApiCredentials } from '../tools/login'
 import { getEnvironmentVariables } from '../config/envConfig'
 import { EnvironmentType, MigrationType, ContentTypeType } from '../types'
 import { writeSync } from '../dataHandler/fileCache'
@@ -26,15 +26,8 @@ export const fetchContentType = async (context, type: ContentTypeType, contentUi
 }
 
 const exportContentTypes = async () => {
-  const context = await loginForAuthToken({
-    base_url,
-    email,
-    password: null,
-    management_token,
-    headers: {
-      api_key,
-      authtoken: null,
-    }
+  const context = await createApiCredentials({
+    CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
   })
   const globalFields = await fetchContentType(context, 'global_fields')
   const contentTypes = await fetchContentType(context, 'content_types')
