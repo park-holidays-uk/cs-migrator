@@ -236,13 +236,18 @@ const findCachedEntry = (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
   legacyEntryUid: string = 'not_a_uid',
-  targetStack?: StackName
-): CacheEntry | undefined => {
-  const entry = context.cache[migrationConfig.name]?.[legacyEntryUid]
+  targetStack?: StackName,
+): [CacheEntry, string] | [] => {
+  const entry = context.cache[migrationConfig.name]?.[legacyEntryUid];
   if (entry) {
-    const targetUid = targetStack ? `${targetStack}Uid` : `${migrationConfig.stackName}Uid`;
-    return entry[targetUid];
+		console.log('TCL: entry', entry)
+    const targetUidKey = targetStack ? `${targetStack}Uid` : `${migrationConfig.stackName}Uid`;
+		console.log('TCL: targetUidKey', targetUidKey)
+    const targetUid = entry[targetUidKey];
+		console.log('TCL: targetUid', targetUid)
+    return targetUid ? [entry, targetUid] : [];
   }
+  return [];
 };
 
 export const findCachedEntryFromUid = (context, cacheRef, entry) => {
@@ -340,6 +345,18 @@ const removeUnwantedDataUsingKeyMap = (keyMap: {}, dataObj, existingData): Entry
   }, {} as EntryPayload);
 };
 
+const skipUpdate = (
+  migrationConfig: MigrationConfigurationType,
+  entry: EntryObj,
+  existingEntry?: CacheEntry,
+) => {
+  if ((existingEntry && migrationConfig.updateKeys === 'none') ||
+   (existingEntry?.updated_at === entry.updated_at)) {
+    return true;
+  }
+  return false;
+};
+
 export const createEntries = async (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
@@ -350,13 +367,14 @@ export const createEntries = async (
 ): Promise<CachedEntries> => {
   const responses = {};
   for (const entry of entries) {
-    console.log('TCL: removeUnwantedDataUsingKeyMap -> entry', JSON.stringify(entry));
     if (!entry.uid) return {};
+    console.log('TCL: entry.uid', entry.uid);
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
-    const existingEntryUid = findCachedEntry(context, migrationConfig, entry.uid);
+    const [ existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
     console.log('TCL: createEntries -> existingEntryUid', existingEntryUid);
-    if (existingEntryUid && migrationConfig.updateKeys === 'none') {
+    if (skipUpdate(migrationConfig, entry, existingEntry)) {
+			console.log('TCL: !!!!! FAILED FAILED skipUpdate FAILED FAILED !!!!', JSON.stringify(existingEntry), JSON.stringify(entry))
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
     } else {
       await apiDelay();
@@ -370,13 +388,19 @@ export const createEntries = async (
         if (migrationConfig.updateKeys !== 'all') {
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, body);
         }
-        body.entry.uid = existingEntryUid[`${migrationConfig.stackName}Uid`];
-				console.log('TCL: existingEntryUid', existingEntryUid)
-				console.log('TCL: `${migrationConfig.stackName}Uid`', `${migrationConfig.stackName}Uid`)
-				console.log('TCL: existingEntryUid[`${migrationConfig.stackName}Uid`]', existingEntryUid[`${migrationConfig.stackName}Uid`])
-				console.log('TCL: body.entry.uid', body.entry.uid)
+        body.entry.uid = existingEntryUid;
+        console.log('TCL: (PUT) existingEntryUid', existingEntryUid);
+        console.log(
+          'TCL: (PUT) `${migrationConfig.stackName}Uid`',
+          `${migrationConfig.stackName}Uid`,
+        );
+        console.log(
+          'TCL: (PUT) existingEntryUid[`${migrationConfig.stackName}Uid`]',
+          existingEntryUid[`${migrationConfig.stackName}Uid`],
+        );
+        console.log('TCL: (PUT) body.entry.uid', body.entry.uid);
       }
-			console.log('TCL: body', JSON.stringify(body))
+      console.log('TCL: body', JSON.stringify(body));
       url += '?locale=en-gb';
       const res = await fetch(url, {
         method,
@@ -406,18 +430,15 @@ export const createEntries = async (
         let childUids = {};
         if (migrationConfig.stackName === 'global') {
           childUids = await findChildStackUids(context, contentUid, response.entry);
-					console.log('TCL: childUids <> <> <> <> <> <> <>', JSON.stringify(childUids))
         }
         responses[entry.uid] = createCacheEntry({
           legacyUid: entry.uid,
           globalUid: response.entry.uid,
-          ...childUids
+          ...childUids,
         } as CacheEntry);
       }
     }
-    break;
   }
-	console.log('TCL: responses', JSON.stringify(responses))
   return responses;
 };
 

@@ -2,11 +2,15 @@
   "bltf7c3da70d95ec980": {
     "legacyUid": "bltf7c3da70d95ec980",
     "updated_at": "2022-06-22T16:22:19.040Z",
-    "globalUid": "blta8c94b2b9852f681",
-    "parkleisureUid": "blt99e21a02d0436e60"
+    "globalUid": "blta1ce6e7a473f9034",
+    "parkholidaysUid": "blt55e20a02d63d7c96",
+    "parkleisureUid": "bltae6a18e68098919e"
   },
   "blt128e823207f59808": {
     "legacyUid": "blt128e823207f59808",
-    "updated_at": "2022-06-22T16:22:17.447Z"
+    "updated_at": "2022-06-22T16:22:17.447Z",
+    "globalUid": "bltaeaf8a84de2e5fa8",
+    "parkholidaysUid": "blt5827ba34ef0b6aa1",
+    "parkleisureUid": "bltedec1123b7a74072"
   }
 }

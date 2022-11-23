@@ -54,7 +54,6 @@ const createApiDetails = (
 
 const createApiCredentials = async (ctx) => {
   const apiDetails = createApiDetails(STACKS, ENVIRONMENTS);
-  console.log("TCL: createApiCredentials -> apiDetails", apiDetails);
   const context = {
     ...ctx,
     apiDetails,

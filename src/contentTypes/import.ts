@@ -3,15 +3,13 @@ import pluralize from 'pluralize'
 import { getEnvironmentVariables } from '../config/envConfig'
 import { EnvironmentType, ContentTypeType, MigrationType } from '../types'
 import { readSync } from '../dataHandler/fileCache'
-import { apiDelay, arrayToUidKeyedObject } from '../tools'
+import { apiDelay, arrayToKeyedObject } from '../tools'
 import { createApiCredentials } from '../tools/login'
 
 const env = process.argv[2] as EnvironmentType
 const filename = process.argv[4]
 
 const { api_key, base_url, management_token, email } = getEnvironmentVariables(env)
-
-
 
 export const updateContentType = async (context, data, type: ContentTypeType, contentUid?: MigrationType) => {
   const contentUidUrl = contentUid ? `/${contentUid}` : ''
@@ -24,7 +22,7 @@ export const updateContentType = async (context, data, type: ContentTypeType, co
     headers
   })
   const response = await res.json()
-  const existingFields = arrayToUidKeyedObject(contentUid ? [ response[pluralize.singular(type)] ] : response[type])
+  const existingFields = arrayToKeyedObject(contentUid ? [ response[pluralize.singular(type)] ] : response[type], 'uid')
   const dataToIterate = Array.isArray(data) ? data : [ data ]
   for (const item of dataToIterate) {
     let url = `${context.base_url}/${type}`

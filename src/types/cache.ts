@@ -1,8 +1,9 @@
 type CacheEntry = {
   legacyUid: string;
-  globalUid: string;
-  parkholidaysUid: string;
-  parkleisureUid: string;
+  updated_at: string;
+  globalUid?: string;
+  parkholidaysUid?: string;
+  parkleisureUid?: string;
 };
 
 type CachedEntries = {
@@ -12,4 +13,4 @@ type CachedEntries = {
 type CacheObject = {
   [contentUid: string]: CachedEntries
 }
-export type { CacheEntry, CacheObject };
+export type { CacheEntry, CachedEntries, CacheObject };
