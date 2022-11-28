@@ -1,13 +1,16 @@
 type CacheEntry = {
-  legacyUid: string;
-  updated_at: string;
-  globalUid?: string;
-  parkholidaysUid?: string;
-  parkleisureUid?: string;
+  legacy_uid: string;
+  legacy_updated_at: string;
+  global_id?: string;
+  global_updated_at?: string;
+  parkholidays_id?: string;
+  parkholidays_updated_at?: string;
+  parkleisure_id?: string;
+  parkleisure_updated_at?: string;
 };
 
 type CachedEntries = {
-  [legacyUid: string]: CacheEntry
+  [legacy_uid: string]: CacheEntry
 }
 
 type CacheObject = {

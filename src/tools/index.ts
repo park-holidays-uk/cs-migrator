@@ -189,7 +189,6 @@ export const publishEntry = async (
 ) => {
   try {
     const environments = getPublishEnvironments(context, migrationConfig);
-    console.log('TCL: environments', environments);
     if (!environments.length) {
       console.error('No Publishing Environments configured. Did not publish anything!');
       return;
@@ -213,10 +212,6 @@ export const publishEntry = async (
       }),
     });
     const publishEntryResponse = await res.json();
-    console.log(
-      'TCL: publishEntryResponse > > > > PUBLISH >>> >>>> >>>>',
-      JSON.stringify(publishEntryResponse),
-    );
     if (publishEntryResponse.errors) {
       console.error('\npublishEntry -> error: ', publishEntryResponse, 'contentUid', contentUid);
       console.error('responseEntry -> ', responseEntry, 'entry', entry);
@@ -240,11 +235,8 @@ const findCachedEntry = (
 ): [CacheEntry, string] | [] => {
   const entry = context.cache[migrationConfig.name]?.[legacyEntryUid];
   if (entry) {
-		console.log('TCL: entry', entry)
-    const targetUidKey = targetStack ? `${targetStack}Uid` : `${migrationConfig.stackName}Uid`;
-		console.log('TCL: targetUidKey', targetUidKey)
+    const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
     const targetUid = entry[targetUidKey];
-		console.log('TCL: targetUid', targetUid)
     return targetUid ? [entry, targetUid] : [];
   }
   return [];
@@ -264,7 +256,6 @@ export const findCachedEntryFromUid = (context, cacheRef, entry) => {
     },
     null,
   );
-  console.log('TCL: findCachedEntryFromUid -> response', response);
   return response;
 };
 
@@ -301,7 +292,9 @@ export const scrubExistingData = <T>(
     } else if (!allBlacklistedKeys[key]) {
       if (typeof data[key] === 'object') {
         if (Array.isArray(data[key])) {
-          formatted[key] = data[key].map((item) => scrubExistingData(item, extendedBlacklistKeys));
+          formatted[key] = data[key].map((item) =>
+            typeof item === 'object' ? scrubExistingData(item, extendedBlacklistKeys) : item,
+          );
         } else {
           formatted[key] = scrubExistingData(data[key], extendedBlacklistKeys);
         }
@@ -350,8 +343,8 @@ const skipUpdate = (
   entry: EntryObj,
   existingEntry?: CacheEntry,
 ) => {
-  if ((existingEntry && migrationConfig.updateKeys === 'none') ||
-   (existingEntry?.updated_at === entry.updated_at)) {
+  if (existingEntry && migrationConfig.updateKeys === 'none') return true;
+  if (migrationConfig.shouldCheckUpdatedAt && existingEntry?.updated_at === entry.updated_at) {
     return true;
   }
   return false;
@@ -368,16 +361,14 @@ export const createEntries = async (
   const responses = {};
   for (const entry of entries) {
     if (!entry.uid) return {};
-    console.log('TCL: entry.uid', entry.uid);
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
     const [ existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
-    console.log('TCL: createEntries -> existingEntryUid', existingEntryUid);
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
-			console.log('TCL: !!!!! FAILED FAILED skipUpdate FAILED FAILED !!!!', JSON.stringify(existingEntry), JSON.stringify(entry))
+			console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry))
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
     } else {
-      await apiDelay();
+      await apiDelay(5000); // Needs a long delay to allow child stacks to catch up
       let body = await createBody(entry);
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
@@ -389,18 +380,8 @@ export const createEntries = async (
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, body);
         }
         body.entry.uid = existingEntryUid;
-        console.log('TCL: (PUT) existingEntryUid', existingEntryUid);
-        console.log(
-          'TCL: (PUT) `${migrationConfig.stackName}Uid`',
-          `${migrationConfig.stackName}Uid`,
-        );
-        console.log(
-          'TCL: (PUT) existingEntryUid[`${migrationConfig.stackName}Uid`]',
-          existingEntryUid[`${migrationConfig.stackName}Uid`],
-        );
-        console.log('TCL: (PUT) body.entry.uid', body.entry.uid);
       }
-      console.log('TCL: body', JSON.stringify(body));
+      console.log('TCL: body', JSON.stringify(body))
       url += '?locale=en-gb';
       const res = await fetch(url, {
         method,
@@ -426,16 +407,19 @@ export const createEntries = async (
           console.error(`\r[ ${contentUid}: ${entry.uid} ]: `, response.errors);
         }
       } else {
+        await apiDelay(500);
         await publishEntry(context, migrationConfig, contentUid, response.entry, entry);
         let childUids = {};
         if (migrationConfig.stackName === 'global') {
           childUids = await findChildStackUids(context, contentUid, response.entry);
         }
         responses[entry.uid] = createCacheEntry({
-          legacyUid: entry.uid,
-          globalUid: response.entry.uid,
+          legacy_uid: entry.uid,
+          legacy_updated_at: entry.updated_at ?? '',
+          [`${migrationConfig.stackName}_uid`]: response.entry.uid,
+          [`${migrationConfig.stackName}_updated_at`]: response.entry.updated_at,
           ...childUids,
-        } as CacheEntry);
+        });
       }
     }
   }
@@ -549,29 +533,35 @@ export const removeAssetsWithSubFolders = async (context, folder, assets, record
   return responses;
 };
 
-export const removeEntries = async (context, contentUid, entries, recordsRemoved = 0) => {
-  const responses = [];
+export const removeEntries = async (
+  context: ScraperCtx,
+  migrationConfig: MigrationConfigurationType,
+  contentUid: string,
+  entries: EntryObj[],
+): Promise<string[]> => {
+  const deletedUids: string[] = [];
   for (const entry of entries) {
+    if (!entry.uid) continue;
     process.stdout.write(
-      `Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} ${' '.repeat(
+      `Removing entries: [ ${contentUid} ] ${deletedUids.length} ${' '.repeat(
         35,
       )} \r`,
     );
     await apiDelay(50);
+
     const res = await fetch(
-      `${context.base_url}/content_types/${contentUid}/entries/${entry.uid}`,
+      `${context.CS_BASE_URL}/content_types/${contentUid}/entries/${entry.uid}`,
       {
         method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          ...context.headers,
-        },
+        headers: createHeaders(context, migrationConfig.stackName),
       },
     );
     const response = await res.json();
-    responses.push(response);
+    if (response.notice === 'Entry deleted successfully.') {
+      deletedUids.push(entry.uid);
+    }
   }
-  return responses;
+  return deletedUids;
 };
 
 export const snakeCase = (str) => {

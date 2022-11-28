@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import {
   createHolidayProducts,
+  migrateAllEntriesForContentType,
 } from '../entries';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
 dotenv.config();
@@ -25,15 +26,37 @@ const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 export const migrationConfiguration: MigrationConfigurationType[] = [
   {
+    name: 'county',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'enquiryForm',
+    contentUid: 'enquiry_form',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
     name: 'holidayProduct',
     contentUid: 'holiday_product',
     type: 'entry',
     stackName: 'global',
     publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
     scrubbedFields: { tags: true },
-    handler: createHolidayProducts,
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }
   /*

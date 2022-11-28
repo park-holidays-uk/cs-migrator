@@ -11,6 +11,7 @@ const PURPLE = '\x1b[35m'
 const YELLOW = '\x1b[33m'
 
 const colorLog = (color, ...restArgs) => {
+  console.log('here 111222333')
   console.info(color, ...restArgs, NO_COLOUR)
 }
 

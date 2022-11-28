@@ -20,37 +20,39 @@ export type MigrationConfigurationType = {
   includeInRemove: boolean;
   includeInMigration: boolean;
   stackName: TargetStackName;
-  publishEnvironments: PublishEnvironments[]
+  publishEnvironments: PublishEnvironments[];
+  shouldCheckUpdatedAt: boolean;
   scrubbedFields?: { [key: string]: boolean };
   updateKeys: 'none' | 'all' | { entry: UpdateKeyMapType };
   removalTags?: string[];
 };
 
 export type MigrationType =
-  | 'locationLogo'
-  | 'locationGalleryHolidays'
-  | 'locationGalleryTouring'
-  | 'locationGalleryOwnership'
-  | 'stockGallery'
-  | 'accommodationGallery'
-  | 'additionalStockGallery'
-  | 'holidayProduct'
-  | 'locationCategory'
-  | 'locationAmenity'
-  | 'region'
-  | 'county'
-  | 'webpage'
-  | 'location'
-  | 'accommodationType'
-  | 'accommodationGrade'
-  | 'accommodationAmenity'
   | 'accommodation'
+  | 'accommodationAmenity'
+  | 'accommodationGallery'
+  | 'accommodationGrade'
+  | 'accommodationType'
+  | 'additionalStockGallery'
+  | 'county'
+  | 'enquiryForm'
+  | 'holidayProduct'
+  | 'location'
+  | 'locationAmenity'
+  | 'locationCategory'
+  | 'locationGalleryHolidays'
+  | 'locationGalleryOwnership'
+  | 'locationGalleryTouring'
+  | 'locationLogo'
+  | 'locationStockPrice'
+  | 'region'
   | 'stockAddon'
   | 'stockAmenity'
   | 'stockCondition'
+  | 'stockGallery'
   | 'stockManufacturer'
   | 'stockModel'
   | 'stockStatus'
   | 'stockType'
   | 'stockUnit'
-  | 'locationStockPrice';
+  | 'webpage';

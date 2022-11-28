@@ -8,7 +8,6 @@
     "migrateSlugs": "npm run build && node ./dist/migrateSlugs.js parkholidays",
     "publish": "npm run build && node ./dist/publish.js",
     "dynamo": "npm run build && node ./dist/dynamo.js",
-    "types": "npm run build && node ./dist/contentTypes.js",
     "start": "npm run build && node ./dist/index.js"
   },
   "author": "",

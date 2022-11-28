@@ -8,9 +8,6 @@ const findEntryWithParentInAnyEnvironment = async (
   apiConfig: ApiConfig,
 ): Promise<EntryObj | undefined> => {
   if (!parentEntryUid) return;
-	console.log('TCL: parentEntryUid', parentEntryUid)
-
-
   for (const deliveryToken of apiConfig.deliveryTokens) {
     const csStack = Contentstack.Stack({
       api_key: apiConfig.apiKey,
@@ -39,17 +36,15 @@ const findChildStackUids = async (
   });
   const childUids = {};
   for (const childApiConfig of childApiConfigs) {
-		console.log('TCL: childApiConfig >> >>> >>> >>> >> >>>> >> >>>', JSON.stringify(childApiConfig))
     const childEntry = await findEntryWithParentInAnyEnvironment(
       contentUid,
       entry.uid,
       childApiConfig,
     );
-		console.log('TCL: childEntry', childEntry)
     if (childEntry) {
-      childUids[`${childApiConfig.stackName}Uid`] = childEntry.uid;
+      childUids[`${childApiConfig.stackName}_uid`] = childEntry.uid;
+      childUids[`${childApiConfig.stackName}_updated_at`] = childEntry.updated_at;
     }
-    console.log('TCL: \n\n')
   }
   return childUids;
 };

@@ -1,1 +1,0 @@
-export { migrateContentType } from './contentType';
