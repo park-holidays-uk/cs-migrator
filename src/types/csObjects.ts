@@ -46,4 +46,7 @@ type ContentTypeSchemaEntry = {
   }
 };
 
-export type { ContentTypeSchemaEntry, EntryObj, EntryPayload };
+
+type CreateBody = (entry: EntryObj) => Promise<EntryPayload>
+
+export type { ContentTypeSchemaEntry, CreateBody, EntryObj, EntryPayload };

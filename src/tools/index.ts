@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 import path from 'path';
 import request from 'request';
 import { createHeaders, getPublishEnvironments } from '../config';
-import { CachedEntries, CacheEntry, EntryObj, EntryPayload, MigrationType } from '../types';
+import { CachedEntries, CacheEntry, CreateBody, EntryObj, EntryPayload, MigrationType } from '../types';
 import {
   EnvironmentType,
   FolderNameType,
@@ -355,7 +355,7 @@ export const createEntries = async (
   migrationConfig: MigrationConfigurationType,
   contentUid: string,
   entries: EntryObj[],
-  createBody: (entry: EntryObj) => Promise<EntryPayload>,
+  createBody: CreateBody,
   createCacheEntry: (uids: CacheEntry) => CacheEntry,
 ): Promise<CachedEntries> => {
   const responses = {};
@@ -422,6 +422,7 @@ export const createEntries = async (
         });
       }
     }
+    break;
   }
   return responses;
 };

@@ -1,7 +1,7 @@
 import 'cross-fetch/polyfill';
 import { getDataCache, readSync, writeSync } from '../dataHandler/fileCache';
 import { arrayToKeyedObject, createEntries, getAllEntries, snakeCase } from '../tools';
-import { CachedEntries, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx } from '../types';
+import { CachedEntries, CreateBody, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx } from '../types';
 
 const reportUpdatedEntries = (key, cachedEntries) => {
   console.log(
@@ -27,10 +27,19 @@ const mergeCache = (
   {},
 );
 
+const defaultCreateBodyFn = async (entry: EntryObj) => {
+  const update = {
+    entry: {
+      ...entry,
+    },
+  };
+  return update;
+};
 
 const migrateAllEntriesForContentType = async (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
+  createBody: CreateBody = defaultCreateBodyFn,
 ): Promise<CachedEntries> => {
   const contentUid = migrationConfig.contentUid ?? snakeCase(migrationConfig.name);
 
@@ -50,14 +59,7 @@ const migrateAllEntriesForContentType = async (
     migrationConfig,
     contentUid,
     legacyEntries,
-    async (entry: EntryObj) => {
-      const update = {
-        entry: {
-          ...entry,
-        },
-      };
-      return update;
-    },
+    createBody,
     (uids) => uids,
   );
   context.cache[migrationConfig.name] = mergeCache(context.cache[migrationConfig.name], childCacheEntries)

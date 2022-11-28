@@ -1,2 +1,2 @@
-export { createHolidayProducts } from './holidayProduct';
+export { updateLocations } from './locations';
 export { migrateAllEntriesForContentType } from './genericContentType';
