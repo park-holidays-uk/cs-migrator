@@ -14,7 +14,7 @@ type EntryObj = {
 };
 
 type EntryPayload = {
-  entry: EntryObj
+  entry: EntryObj | null
 }
 
 type ContentTypeSchemaEntry = {
@@ -46,7 +46,8 @@ type ContentTypeSchemaEntry = {
   }
 };
 
+type CSReference = { uid: string, _content_type_uid: string };
 
 type CreateBody = (entry: EntryObj) => Promise<EntryPayload>
 
-export type { ContentTypeSchemaEntry, CreateBody, EntryObj, EntryPayload };
+export type { CSReference, ContentTypeSchemaEntry, CreateBody, EntryObj, EntryPayload };

@@ -1,2 +1,2 @@
-export { updateLocations } from './locations';
+export { updateCreateLocationsInGlobal } from './locationsGlobal';
 export { migrateAllEntriesForContentType } from './genericContentType';

@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 import path from 'path';
 import request from 'request';
 import { createHeaders, getPublishEnvironments } from '../config';
-import { CachedEntries, CacheEntry, CreateBody, EntryObj, EntryPayload, MigrationType } from '../types';
+import { CachedEntries, CacheEntry, CreateBody, CSReference, EntryObj, EntryPayload, TargetStackName } from '../types';
 import {
   EnvironmentType,
   FolderNameType,
@@ -38,17 +38,7 @@ const emptyAssetTmpDir = () => {
   });
 };
 
-export const findReferenceInCache = (context, cacheRef, id, contentUid = snakeCase(cacheRef)) => {
-  const data = context.cache[cacheRef][id];
-  if (data) {
-    return [
-      {
-        uid: data.uid,
-        _content_type_uid: contentUid,
-      },
-    ];
-  }
-};
+
 
 export const createImageFolders = async (context, folder, subFolder, migrationConfig) => {
   const subFolderName = subFolder.replace('&', 'and');
@@ -227,13 +217,15 @@ export const arrayToKeyedObject = (arr, key = 'uid') =>
     return obj;
   }, {});
 
-const findCachedEntry = (
+export const findCachedEntry = (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
   legacyEntryUid: string = 'not_a_uid',
   targetStack?: StackName,
+  cacheName?: string,
 ): [CacheEntry, string] | [] => {
-  const entry = context.cache[migrationConfig.name]?.[legacyEntryUid];
+  const cacheKey = cacheName ?? migrationConfig.name;
+  const entry = context.cache[cacheKey]?.[legacyEntryUid];
   if (entry) {
     const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
     const targetUid = entry[targetUidKey];
@@ -242,22 +234,109 @@ const findCachedEntry = (
   return [];
 };
 
-export const findCachedEntryFromUid = (context, cacheRef, entry) => {
-  const cache = context.cache[cacheRef];
-  const response = Object.keys(cache).reduce<{ uid: string; id: string } | null>(
-    (foundItem, id) => {
-      if (!foundItem && cache[id].uid === entry.uid) {
-        foundItem = {
-          ...cache[id],
-          id,
+
+export const switchStackReferences = (
+  context: ScraperCtx,
+  entry: EntryObj,
+  stackName: TargetStackName,
+): EntryObj => {
+
+  const switchReferencesInEntry = (data: object): object => {
+    const update = {};
+    if (data === null) {
+			console.log('TCL: data', data)
+      return data;
+    }
+    if (typeof data === 'object' && data.hasOwnProperty('_content_type_uid')) {
+      // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
+      const [_cachedEntry, uid] = findCachedEntry(context, {}, data.uid, stackName, camelCase(data['_content_type_uid']))
+      if (uid) {
+        return {
+          uid,
+          _content_type_uid: data['_content_type_uid'],
         };
       }
-      return foundItem;
-    },
-    null,
-  );
-  return response;
+      return data;
+    }
+    const keys = Object.keys(data);
+    for (const key of keys) {
+      if (typeof data[key] === 'object') {
+        if (Array.isArray(data[key])) {
+          update[key] = [];
+          for (const item of data[key]) {
+            if (typeof item === 'object') {
+              update[key].push(switchReferencesInEntry(item))
+            } else {
+              update[key].push(item)
+            }
+          }
+        } else {
+          update[key] = switchReferencesInEntry(data[key]);
+        }
+      } else {
+        update[key] = data[key];
+      }
+    }
+    return update;
+  };
+  //@ts-expect-error - object/EntryObj
+  return switchReferencesInEntry(entry);
 };
+
+// export const switchStackReferences = (
+//   context: ScraperCtx,
+//   references: CSReference[],
+//   cacheName: string,
+//   stackName: TargetStackName,
+// ): CSReference[] => {
+//   //@ts-expect-error - TS does not understand filter(Boolean)
+//   return references.map<CSReference>((legeacyRef) => {
+//     const entry = context.cache[cacheName]?.[legeacyRef.uid];
+//     if (entry && entry[`${stackName}_uid`]) {
+//       return {
+//         uid: entry[`${stackName}_uid`],
+//         _content_type_uid: legeacyRef._content_type_uid,
+//       }
+//     }
+//   }).filter(Boolean);
+// }
+
+// const findReferenceInCache = (
+//   context: ScraperCtx,
+//   migrationConfig: MigrationConfigurationType,
+//   legacyEntryUid: string = 'not_a_uid',
+//   targetStack?: StackName,
+//   cacheName?: string,
+//   ) => {
+// 	console.log('TCL: legacyEntryUid', legacyEntryUid)
+//   const cachedEntry = findCachedEntry(context, migrationConfig, legacyEntryUid, targetStack, cacheName)
+// 	console.log('TCL: cachedEntry', JSON.stringify(cachedEntry))
+//   if (data) {
+//     return [
+//       {
+//         uid: data.uid,
+//         _content_type_uid: contentUid,
+//       },
+//     ];
+//   }
+// };
+
+// export const findCachedEntryFromUid = (context, cacheRef, entry) => {
+//   const cache = context.cache[cacheRef];
+//   const response = Object.keys(cache).reduce<{ uid: string; id: string } | null>(
+//     (foundItem, id) => {
+//       if (!foundItem && cache[id].uid === entry.uid) {
+//         foundItem = {
+//           ...cache[id],
+//           id,
+//         };
+//       }
+//       return foundItem;
+//     },
+//     null,
+//   );
+//   return response;
+// };
 
 const blacklistKeys = {
   created_at: true,
@@ -370,6 +449,8 @@ export const createEntries = async (
     } else {
       await apiDelay(5000); // Needs a long delay to allow child stacks to catch up
       let body = await createBody(entry);
+			console.log('TCL: body', JSON.stringify(body))
+      if (body.entry === null) continue;
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
       let url = `${context.CS_BASE_URL}/content_types/${contentUid}/entries`;
@@ -379,6 +460,7 @@ export const createEntries = async (
         if (migrationConfig.updateKeys !== 'all') {
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, body);
         }
+        //@ts-expect-error body.entry is possibly null
         body.entry.uid = existingEntryUid;
       }
       console.log('TCL: body', JSON.stringify(body))

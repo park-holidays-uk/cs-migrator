@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import {
-  createHolidayProducts,
+  updateCreateLocationsInGlobal,
   migrateAllEntriesForContentType,
 } from '../entries';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
@@ -65,6 +65,28 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     publishEnvironments: globalAllEnvironments,
     shouldCheckUpdatedAt: true,
     handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'location_ph',
+    contentUid: 'location',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalParkHolidaysEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: updateCreateLocationsInGlobal,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
+    name: 'location_pl',
+    contentUid: 'location',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalParkLeisureEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
