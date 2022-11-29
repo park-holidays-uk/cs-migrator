@@ -244,7 +244,6 @@ export const switchStackReferences = (
   const switchReferencesInEntry = (data: object): object => {
     const update = {};
     if (data === null) {
-			console.log('TCL: data', data)
       return data;
     }
     if (typeof data === 'object' && data.hasOwnProperty('_content_type_uid')) {
@@ -423,7 +422,7 @@ const skipUpdate = (
   existingEntry?: CacheEntry,
 ) => {
   if (existingEntry && migrationConfig.updateKeys === 'none') return true;
-  if (migrationConfig.shouldCheckUpdatedAt && existingEntry?.updated_at === entry.updated_at) {
+  if (migrationConfig.shouldCheckUpdatedAt && existingEntry?.legacy_updated_at === entry.updated_at) {
     return true;
   }
   return false;
@@ -443,14 +442,14 @@ export const createEntries = async (
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
     const [ existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
+		console.log('TCL: existingEntry', existingEntryUid, existingEntry )
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
 			console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry))
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
     } else {
-      await apiDelay(5000); // Needs a long delay to allow child stacks to catch up
       let body = await createBody(entry);
-			console.log('TCL: body', JSON.stringify(body))
       if (body.entry === null) continue;
+      await apiDelay(5000); // Needs a long delay to allow child stacks to catch up
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
       let url = `${context.CS_BASE_URL}/content_types/${contentUid}/entries`;
@@ -463,7 +462,6 @@ export const createEntries = async (
         //@ts-expect-error body.entry is possibly null
         body.entry.uid = existingEntryUid;
       }
-      console.log('TCL: body', JSON.stringify(body))
       url += '?locale=en-gb';
       const res = await fetch(url, {
         method,
@@ -504,7 +502,6 @@ export const createEntries = async (
         });
       }
     }
-    break;
   }
   return responses;
 };

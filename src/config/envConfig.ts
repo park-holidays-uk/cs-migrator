@@ -88,7 +88,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationAmenity',
