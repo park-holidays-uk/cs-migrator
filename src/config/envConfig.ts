@@ -3,6 +3,9 @@ import {
   updateCreateLocationsInGlobal,
   migrateAllEntriesForContentType,
 } from '../entries';
+import {
+  uploadLocationImagesFromLegacy
+} from '../assets';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
 dotenv.config();
 
@@ -69,6 +72,26 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'locationImages_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: uploadLocationImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'locationImages_pl',
+    type: 'asset',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: uploadLocationImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
     name: 'location_ph',
     contentUid: 'location',
     type: 'entry',
@@ -77,7 +100,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'location_pl',
@@ -88,7 +111,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationAmenity',

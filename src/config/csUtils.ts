@@ -15,9 +15,9 @@ const getPublishEnvironments = (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
 ): string[] => {
-  const apiConfig = context.apiDetails.find((config) => {
-    return config.stackName === migrationConfig.stackName;
-  });
+  const apiConfig = context.apiDetails.find((config) =>
+    config.stackName === migrationConfig.stackName
+  );
   if (!apiConfig) return [];
   const includedEnvs = apiConfig.environmentUids.filter((env) =>
     (migrationConfig.publishEnvironments ?? []).includes(env.environment as PublishEnvironments),

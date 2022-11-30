@@ -1,7 +1,6 @@
 import 'cross-fetch/polyfill';
-import { getDataCache, readSync, writeSync } from '../dataHandler/fileCache';
 import { arrayToKeyedObject, createEntries, getAllEntries, snakeCase } from '../tools';
-import { CachedEntries, CreateBody, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx } from '../types';
+import { CachedEntries, CreateBody, EntryObj, MigrationConfigurationType, ScraperCtx } from '../types';
 
 const reportUpdatedEntries = (key, cachedEntries) => {
   console.log(

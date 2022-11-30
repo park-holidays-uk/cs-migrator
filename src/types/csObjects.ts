@@ -14,8 +14,8 @@ type EntryObj = {
 };
 
 type EntryPayload = {
-  entry: EntryObj | null
-}
+  entry: EntryObj | null;
+};
 
 type ContentTypeSchemaEntry = {
   content_type: {
@@ -35,7 +35,7 @@ type ContentTypeSchemaEntry = {
         version?: number;
         ref_multiple?: boolean;
         ref_multiple_content_types?: boolean;
-      },
+      };
       mandatory: boolean;
       uid: string;
       unique: boolean;
@@ -43,11 +43,19 @@ type ContentTypeSchemaEntry = {
       non_localizable: boolean;
     }[];
     description: string;
-  }
+  };
 };
 
-type CSReference = { uid: string, _content_type_uid: string };
+type CSReference = { uid: string; _content_type_uid: string };
 
-type CreateBody = (entry: EntryObj) => Promise<EntryPayload>
+type CsImage = {
+  uid: string;
+  url: string;
+  filename: string;
+  description: string;
+  tags: string[];
+};
 
-export type { CSReference, ContentTypeSchemaEntry, CreateBody, EntryObj, EntryPayload };
+type CreateBody = (entry: EntryObj) => Promise<EntryPayload>;
+
+export type { CsImage, CSReference, ContentTypeSchemaEntry, CreateBody, EntryObj, EntryPayload };

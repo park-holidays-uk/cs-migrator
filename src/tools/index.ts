@@ -5,10 +5,8 @@ import fetch from 'node-fetch';
 import path from 'path';
 import request from 'request';
 import { createHeaders, getPublishEnvironments } from '../config';
-import { CachedEntries, CacheEntry, CreateBody, CSReference, EntryObj, EntryPayload, TargetStackName } from '../types';
+import { CachedEntries, CacheEntry, CreateBody, CsImage, EntryObj, EntryPayload, TargetStackName } from '../types';
 import {
-  EnvironmentType,
-  FolderNameType,
   MigrationConfigurationType,
   ScraperCtx,
   StackName,
@@ -19,83 +17,6 @@ dotenv.config();
 
 // TCL: delay needs to be above 1500 to publish reliably - reduce for testing
 export const apiDelay = (delay = 1500) => new Promise((resolve) => setTimeout(resolve, delay)); // limit on contentstack api ('x' req/sec)
-
-export const getFolderUid = (env: EnvironmentType, folder: FolderNameType) => {
-  return process.env[`${env}_${folder}`];
-};
-const TMP_DIR = path.resolve(__dirname, '../tmp');
-
-const createAssetLocally = (assetName) =>
-  new Promise(async (resolve) => {
-    const writeStream = fs.createWriteStream(`${TMP_DIR}/${assetName}`);
-    await request(`https://assets.parkholidays.com/assets/${assetName}`).pipe(writeStream);
-    writeStream.on('finish', resolve);
-  });
-
-const emptyAssetTmpDir = () => {
-  fs.readdirSync(TMP_DIR).forEach(function (file, index) {
-    fs.unlinkSync(`${TMP_DIR}/${file}`);
-  });
-};
-
-
-
-export const createImageFolders = async (context, folder, subFolder, migrationConfig) => {
-  const subFolderName = subFolder.replace('&', 'and');
-  const foldersExist = Object.keys(context.cache[migrationConfig.name]).find((key) => {
-    return context.cache[migrationConfig.name][key].folder === `${folder}/${subFolderName}/images`;
-  });
-  if (foldersExist) {
-    return context.cache[migrationConfig.name][foldersExist].folderUids;
-  }
-  const folderUid = getFolderUid(context.env, folder);
-  if (!folderUid) {
-    console.error('Could not find a folder lookup. Aborting folder creation!');
-    return;
-  }
-  const headers = {
-    'Content-Type': 'application/json',
-    ...context.headers,
-    authorization: context.management_token,
-  };
-  const subRes = await fetch(`${context.base_url}/assets/folders`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      asset: {
-        name: subFolderName,
-        parent_uid: folderUid,
-      },
-    }),
-  });
-  const subFolderResponse = await subRes.json();
-  const imgRes = await fetch(`${context.base_url}/assets/folders`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      asset: {
-        name: 'Images',
-        parent_uid: subFolderResponse.asset.uid,
-      },
-    }),
-  });
-  const vidRes = await fetch(`${context.base_url}/assets/folders`, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({
-      asset: {
-        name: 'Videos',
-        parent_uid: subFolderResponse.asset.uid,
-      },
-    }),
-  });
-  const imageResponse = await imgRes.json();
-  const videoResponse = await vidRes.json();
-  return {
-    imageFolderUid: imageResponse.asset.uid,
-    videoFolderUid: videoResponse.asset.uid,
-  };
-};
 
 export const publishAsset = async (context, assetUid) => {
   try {
@@ -121,54 +42,52 @@ export const publishAsset = async (context, assetUid) => {
   }
 };
 
-export const uploadAssets = async (
-  context,
-  assets,
-  folderName,
-  folderUid,
-  tags,
-  createCacheEntry,
-) => {
-  if (!folderUid) {
-    console.error('Could not find a folder uid. Aborting asset upload!');
-    return;
-  }
-  emptyAssetTmpDir();
-  const responses = {};
-  for (const asset of assets) {
-    const recordCount = Object.keys(responses).length + 1;
-    process.stdout.write(`Uploading assets: [ ${folderName} ] ${recordCount} ${' '.repeat(25)}\r`);
-    await apiDelay();
-    const headers = {
-      ...context.headers,
-      authorization: context.management_token,
-    };
-    await createAssetLocally(asset.path);
-    try {
-      const formData = new FormData();
-      formData.append('asset[upload]', fs.createReadStream(`${TMP_DIR}/${asset.path}`));
-      formData.append('asset[parent_uid]', folderUid);
-      formData.append('asset[description]', asset.description);
-      formData.append('asset[tags]', tags.join(','));
-      const res = await fetch(`${context.base_url}/assets`, {
-        method: 'POST',
-        headers,
-        body: formData,
-      });
-      const response = await res.json();
-      if (response['error_code']) {
-        console.error(`\r[ ${asset.path} ]: `, response.errors);
-      } else {
-        await publishAsset(context, response.asset.uid);
-        responses[asset.id] = createCacheEntry(asset, response);
-      }
-    } catch (error) {
-      console.error('uploadAssets -> error', error);
-      throw new Error(error);
+export const uploadFileToContentStack = (
+  context: ScraperCtx,
+  migrationHandler: MigrationConfigurationType,
+  image: CsImage,
+  folderUid: string,
+) =>
+  new Promise<{ uid?: string }>((resolve, reject) => {
+		if (context.cache[migrationHandler.name][image.uid]) {
+      // @ts-expect-error image cache is string map only
+      resolve({ uid: context.cache[migrationHandler.name][image.uid]});
     }
-  }
-  return responses;
-};
+    try {
+			console.log('TCL: image.description', image.description)
+      request.post(
+        {
+          headers: createHeaders(context, migrationHandler.stackName),
+          url: `${context.CS_BASE_URL}/assets`,
+          formData: {
+            'asset[upload]': {
+              value: request.get(image.url),
+              options: {
+                filename: image.filename,
+                contentType: 'image/jpeg',
+              },
+            },
+            'asset[parent_uid]': folderUid,
+            'asset[description]': image.description ?? '',
+            'asset[tags]': image.tags,
+          },
+        },
+        (err, res, body) => {
+          if (err || res.statusCode < 200 || res.statusCode > 299) {
+            const errorMsg = err || `Error status code: ${res.statusCode}`;
+            console.error(errorMsg);
+            console.error(res);
+            throw new Error(errorMsg);
+          }
+          return resolve(JSON.parse(body).asset);
+        },
+      );
+    } catch (error) {
+      console.error('uploadFileToContentStack -> error', error);
+      resolve({});
+    }
+  });
+
 
 export const publishEntry = async (
   context: ScraperCtx,
