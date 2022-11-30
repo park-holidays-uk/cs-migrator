@@ -13,6 +13,8 @@ type UpdateKeyMapType = {
 
 export type MigrationConfigurationType = {
   name: MigrationType;
+  cacheLookupKey?: string; // defaults to name
+  // used by migrations like locationChild_ph - allows you to override findCachedEntry.cacheKey
   contentUid?: string;
   type: 'asset' | 'entry';
   folderName?: FolderNameType;
@@ -36,10 +38,13 @@ export type MigrationType =
   | 'enquiryForm'
   | 'holidayProduct'
   | 'icon'
+  | 'location'
   | 'location_ph'
   | 'location_pl'
   | 'locationAmenity'
   | 'locationCategory'
+  | 'locationChild_ph'
+  | 'locationChild_pl'
   | 'locationImages_ph'
   | 'locationImages_pl'
   | 'locationStockPrice'

@@ -1,6 +1,6 @@
 import { migrateAllEntriesForContentType } from '.';
 import { CachedEntries, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx } from '../types';
-import { findCachedEntry, scrubExistingData, switchStackReferences } from '../tools';
+import { scrubExistingData, switchStackReferences } from '../tools';
 
 const brandUids = {
   location_ph: 'blt512eebdbfb8c0494',

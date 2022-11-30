@@ -1,0 +1,31 @@
+** Moving Entries between child stacks **
+
+I have now migrated locations across as well as location images. This functionality is re-usable in the sense of moving a location from one brand to another..
+
+We would simply run the equivalent of envConfig: locationImages_ph -> with a stackname of child stack (e.g. parkleisure ) This would lift and shift the assets from parkholidays to parkleisure.
+
+Then you could simply publish the location to the child stack from global and then re-run the equivalent of locationChild_ph to re-attach all the images.
+
+This needs streamlining and documenting for future dev operations. I can see this happening rather frequently for things like stcok units and or accommodation??
+
+Data Cleanup functionality will have to handle the de-duping of images and cleanup of assets in old stack as the assets will no longer have a reference after deleting the location within the original stack.
+
+
+** DynamoDB  for Scraper ** 
+
+Once I have managed to migrate all stock and accommodation entries from legacy into the new stack system.. Will need to setup dynamodb records to allow huj/cms scraper to continue on its merry little way..
+
+This will have to have some custom code to take the old cms_??? version and merge it with the results stored in cs-migrator/legacy to append the extra stack uid's in order to create a ns_??? version.
+
+e.g. the ns_??? version needs combined legacy_uid with the original db id and table info merged with the legacyCache uids for parkholidays/parkleisure.
+
+
+
+** Create Cleanup function ** 
+
+This needs to use references queries and a config object / updated_at and remove assets/entries that are no longer referenced by valid parents.
+
+This needs to de-dupe images - re-assigning there uid refernces to the single image.
+
+
+ 

@@ -143,7 +143,7 @@ export const findCachedEntry = (
   targetStack?: StackName,
   cacheName?: string,
 ): [CacheEntry, string] | [] => {
-  const cacheKey = cacheName ?? migrationConfig.name;
+  const cacheKey = cacheName ?? migrationConfig.cacheLookupKey ?? migrationConfig.name;
   const entry = context.cache[cacheKey]?.[legacyEntryUid];
   if (entry) {
     const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
@@ -152,6 +152,31 @@ export const findCachedEntry = (
   }
   return [];
 };
+
+export const findImageRef = (
+  context: ScraperCtx,
+  targetStack: StackName,
+  imageType: 'locationImage',
+  legacyAssetUid: string = 'not_a_uid',
+): { image: string } | null => {
+  const cacheName = {
+    parkholidays: {
+      locationImage: 'locationImages_ph'
+    },
+    parkleisure: {
+      locationImage: 'locationImages_pl'
+    }
+  }
+  const cacheKey = cacheName[targetStack]?.[imageType] ?? ''
+  const assetUid = context.cache[cacheKey]?.[legacyAssetUid] ?? '';
+  if (assetUid) {
+    return {
+      // @ts-expect-error - imageRefs are only string maps, not a CacheEntry
+      image: assetUid
+    }
+  }
+  return null;
+}
 
 
 export const switchStackReferences = (
@@ -394,7 +419,7 @@ export const createEntries = async (
           response.errors?.title &&
           response.errors.title[0] === 'is not unique.'
         ) {
-          const dupedId = findDuplicateInResponses(responses, body.entry.title);
+          const dupedId = findDuplicateInResponses(responses, body.entry?.title);
           console.error(
             `\r[ ${contentUid}: ${entry.uid} ]: `,
             response.errors,

@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 import {
   updateCreateLocationsInGlobal,
   migrateAllEntriesForContentType,
+  updateLocationsInChild,
 } from '../entries';
 import {
   uploadLocationImagesFromLegacy
@@ -72,6 +73,46 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'location',
+    contentUid: 'location',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: () => {
+      // not used to migrate -
+      // location cache is made up from combining location_ph && location_pl data
+      // only used for reference switching and or deleting locations
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'none',
+  }, {
+    name: 'locationChild_ph',
+    cacheLookupKey: 'location',
+    contentUid: 'location',
+    type: 'entry',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: updateLocationsInChild,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'locationChild_pl',
+    cacheLookupKey: 'location',
+    contentUid: 'location',
+    type: 'entry',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: updateLocationsInChild,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'locationImages_ph',
     type: 'asset',
     stackName: 'parkholidays',
@@ -89,7 +130,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: uploadLocationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'location_ph',
