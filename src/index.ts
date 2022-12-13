@@ -11,7 +11,7 @@ const reportUsage = (reason) => {
   console.log('  -command:      migrate - creates new assets/entries')
   console.log('                 remove - deletes all assets/entries')
   console.log('\n')
-  console.log('  e.g.    npm start playground migrate\n')
+  console.log('  e.g.    npm start migrate\n')
   console.log('       ')
 }
 

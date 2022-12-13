@@ -41,6 +41,7 @@ export type MigrationType =
   | 'location'
   | 'location_ph'
   | 'location_pl'
+  | 'locationActivity'
   | 'locationAmenity'
   | 'locationCategory'
   | 'locationChild_ph'

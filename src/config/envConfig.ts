@@ -155,6 +155,18 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'locationActivity',
+    contentUid: 'location_activity',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    scrubbedFields: { tags: true },
+    shouldCheckUpdatedAt: false,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
     name: 'locationAmenity',
     type: 'entry',
     stackName: 'global',
