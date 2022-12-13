@@ -98,7 +98,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationChild_pl',
@@ -138,10 +138,10 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     type: 'entry',
     stackName: 'global',
     publishEnvironments: globalParkHolidaysEnvironments,
-    shouldCheckUpdatedAt: true,
+    shouldCheckUpdatedAt: false,
     handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: false, // This should never need running again - use child version
     updateKeys: 'all',
   }, {
     name: 'location_pl',
@@ -149,8 +149,20 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     type: 'entry',
     stackName: 'global',
     publishEnvironments: globalParkLeisureEnvironments,
-    shouldCheckUpdatedAt: true,
+    shouldCheckUpdatedAt: false,
     handler: updateCreateLocationsInGlobal,
+    includeInRemove: false,
+    includeInMigration: false, // This should never need running again - use child version
+    updateKeys: 'all',
+  }, {
+    name: 'localAttraction',
+    contentUid: 'local_attraction',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    scrubbedFields: { tags: true },
+    shouldCheckUpdatedAt: false,
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
@@ -164,7 +176,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationAmenity',
