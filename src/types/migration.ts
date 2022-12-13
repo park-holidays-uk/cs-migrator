@@ -1,6 +1,6 @@
 import type { PublishEnvironments, TargetStackName } from './apiConfig';
 
-export type EnvironmentType = 'legacy';
+export type EnvironmentType = 'legacy' | 'parkholidays';
 
 export type ContentTypeType = 'global_fields' | 'content_types';
 

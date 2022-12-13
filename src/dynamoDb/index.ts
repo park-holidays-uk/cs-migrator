@@ -11,7 +11,6 @@ const PURPLE = '\x1b[35m'
 const YELLOW = '\x1b[33m'
 
 const colorLog = (color, ...restArgs) => {
-  console.log('here 111222333')
   console.info(color, ...restArgs, NO_COLOUR)
 }
 
@@ -86,7 +85,7 @@ const runImport = async () => {
   const tableName = await getUserInput('Provide the table name: (e.g. cms_location)? ');
   const fileName = await getUserInput('Provide the file name: (e.g. location)? ');
   const env = await getUserInput('Provide the environment: (default: parkholidays)? ', 'parkholidays');
-  const type = await getUserInput('Provide the cacheFolder: (default: stockCache)? ', 'stockCache');
+  const type = await getUserInput('Provide the cacheFolder: (default: dynamoMigration)? ', 'dynamoMigration');
   const readWrite = await getUserInput('Read or write (r/W)? ', 'w');
   let forceUpdate = false;
   if (readWrite === 'r') {

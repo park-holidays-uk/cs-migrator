@@ -2,10 +2,13 @@ import { readFileSync, writeFileSync } from 'fs'
 import path from 'path'
 import { EnvironmentType, MigrationType } from '../types'
 
-export type CacheType = 'dataCache' | 'contentCache' | 'migrationCache'
+export type CacheType = 'dataCache' | 'contentCache' | 'migrationCache' | 'dynamoMigration'
 
-export const readSync = (env: EnvironmentType, type: CacheType, filename: string ) => {
-  let result = null
+
+type FileContents = { [key: string]: object };
+
+export const readSync = (env: EnvironmentType, type: CacheType, filename: string ): FileContents  => {
+  let result;
   const filePath = path.resolve(__dirname, `../${type}/${env}/`, `${filename}.json`)
   try {
     result = JSON.parse(readFileSync(filePath, 'utf-8'))
