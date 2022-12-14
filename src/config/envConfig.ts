@@ -1,7 +1,8 @@
 import dotenv from 'dotenv';
 import {
-  updateCreateLocationsInGlobal,
   migrateAllEntriesForContentType,
+  updateCreateLocationsInGlobal,
+  updateFooterInChild,
   updateLocationsInChild,
 } from '../entries';
 import {
@@ -51,6 +52,17 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'featuredLocation',
+    contentUid: 'featured_location',
+    type: 'entry',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'holidayProduct',
     contentUid: 'holiday_product',
     type: 'entry',
@@ -63,11 +75,35 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'footer',
+    contentUid: 'footer',
+    type: 'entry',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    scrubbedFields: { logo: true },
+    handler: updateFooterInChild,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
     name: 'icon',
     type: 'entry',
     stackName: 'global',
     publishEnvironments: globalAllEnvironments,
     shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'localAttraction',
+    contentUid: 'local_attraction',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    scrubbedFields: { tags: true },
+    shouldCheckUpdatedAt: false,
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
@@ -98,7 +134,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationChild_pl',
@@ -110,7 +146,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationImages_ph',
@@ -153,18 +189,6 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     handler: updateCreateLocationsInGlobal,
     includeInRemove: false,
     includeInMigration: false, // This should never need running again - use child version
-    updateKeys: 'all',
-  }, {
-    name: 'localAttraction',
-    contentUid: 'local_attraction',
-    type: 'entry',
-    stackName: 'global',
-    publishEnvironments: globalAllEnvironments,
-    scrubbedFields: { tags: true },
-    shouldCheckUpdatedAt: false,
-    handler: migrateAllEntriesForContentType,
-    includeInRemove: false,
-    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationActivity',
