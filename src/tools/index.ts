@@ -5,12 +5,16 @@ import fetch from 'node-fetch';
 import path from 'path';
 import request from 'request';
 import { createHeaders, getPublishEnvironments } from '../config';
-import { CachedEntries, CacheEntry, CreateBody, CsImage, EntryObj, EntryPayload, TargetStackName } from '../types';
 import {
-  MigrationConfigurationType,
-  ScraperCtx,
-  StackName,
+  CachedEntries,
+  CacheEntry,
+  CreateBody,
+  CsImage,
+  EntryObj,
+  EntryPayload,
+  TargetStackName,
 } from '../types';
+import { MigrationConfigurationType, ScraperCtx, StackName } from '../types';
 import { findChildStackUids } from './childstack';
 
 dotenv.config();
@@ -49,12 +53,12 @@ export const uploadFileToContentStack = (
   folderUid: string,
 ) =>
   new Promise<{ uid?: string }>((resolve, reject) => {
-		if (context.cache[migrationHandler.name][image.uid]) {
+    if (context.cache[migrationHandler.name][image.uid]) {
       // @ts-expect-error image cache is string map only
-      resolve({ uid: context.cache[migrationHandler.name][image.uid]});
+      resolve({ uid: context.cache[migrationHandler.name][image.uid] });
     }
     try {
-			console.log('TCL: image.description', image.description)
+      console.log('TCL: image.description', image.description);
       request.post(
         {
           headers: createHeaders(context, migrationHandler.stackName),
@@ -87,7 +91,6 @@ export const uploadFileToContentStack = (
       resolve({});
     }
   });
-
 
 export const publishEntry = async (
   context: ScraperCtx,
@@ -156,35 +159,37 @@ export const findCachedEntry = (
 export const findImageRef = (
   context: ScraperCtx,
   targetStack: StackName,
-  imageType: 'locationImage',
+  imageType: 'locationImage' | 'socialLogo' | 'awardLogo',
   legacyAssetUid: string = 'not_a_uid',
 ): { image: string } | null => {
   const cacheName = {
     parkholidays: {
-      locationImage: 'locationImages_ph'
+      awardLogo: 'associationLogos_ph',
+      locationImage: 'locationImages_ph',
+      socialLogo: 'socialLogos_ph',
     },
     parkleisure: {
-      locationImage: 'locationImages_pl'
-    }
-  }
-  const cacheKey = cacheName[targetStack]?.[imageType] ?? ''
+      awardLogo: 'associationLogos_pl',
+      locationImage: 'locationImages_pl',
+      socialLogo: 'socialLogos_pl',
+    },
+  };
+  const cacheKey = cacheName[targetStack]?.[imageType] ?? '';
   const assetUid = context.cache[cacheKey]?.[legacyAssetUid] ?? '';
   if (assetUid) {
     return {
       // @ts-expect-error - imageRefs are only string maps, not a CacheEntry
-      image: assetUid
-    }
+      image: assetUid,
+    };
   }
   return null;
-}
-
+};
 
 export const switchStackReferences = (
   context: ScraperCtx,
   entry: EntryObj,
   stackName: TargetStackName,
 ): EntryObj => {
-
   const switchReferencesInEntry = (data: object): object => {
     const update = {};
     if (data === null) {
@@ -192,7 +197,13 @@ export const switchStackReferences = (
     }
     if (typeof data === 'object' && data.hasOwnProperty('_content_type_uid')) {
       // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
-      const [_cachedEntry, uid] = findCachedEntry(context, {}, data.uid, stackName, camelCase(data['_content_type_uid']))
+      const [_cachedEntry, uid] = findCachedEntry(
+        context,
+        {},
+        data.uid,
+        stackName,
+        camelCase(data['_content_type_uid']),
+      );
       if (uid) {
         return {
           uid,
@@ -208,9 +219,9 @@ export const switchStackReferences = (
           update[key] = [];
           for (const item of data[key]) {
             if (typeof item === 'object') {
-              update[key].push(switchReferencesInEntry(item))
+              update[key].push(switchReferencesInEntry(item));
             } else {
-              update[key].push(item)
+              update[key].push(item);
             }
           }
         } else {
@@ -366,7 +377,10 @@ const skipUpdate = (
   existingEntry?: CacheEntry,
 ) => {
   if (existingEntry && migrationConfig.updateKeys === 'none') return true;
-  if (migrationConfig.shouldCheckUpdatedAt && existingEntry?.legacy_updated_at === entry.updated_at) {
+  if (
+    migrationConfig.shouldCheckUpdatedAt &&
+    existingEntry?.legacy_updated_at === entry.updated_at
+  ) {
     return true;
   }
   return false;
@@ -385,10 +399,10 @@ export const createEntries = async (
     if (!entry.uid) return {};
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
-    const [ existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
-		console.log('TCL: existingEntry', existingEntryUid, existingEntry )
+    const [existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
+    console.log('TCL: existingEntry', existingEntryUid, existingEntry);
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
-			console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry))
+      console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry));
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
     } else {
       let body = await createBody(entry);
@@ -567,9 +581,7 @@ export const removeEntries = async (
   for (const entry of entries) {
     if (!entry.uid) continue;
     process.stdout.write(
-      `Removing entries: [ ${contentUid} ] ${deletedUids.length} ${' '.repeat(
-        35,
-      )} \r`,
+      `Removing entries: [ ${contentUid} ] ${deletedUids.length} ${' '.repeat(35)} \r`,
     );
     await apiDelay(50);
 

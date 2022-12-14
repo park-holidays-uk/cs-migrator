@@ -31,6 +31,36 @@ const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 export const migrationConfiguration: MigrationConfigurationType[] = [
   {
+    name: 'associationLogos_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: () => {
+      // not used to migrate -
+      // associationLogos cache is hard coded
+      // only used for reference switching
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'associationLogos_pl',
+    type: 'asset',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: () => {
+      // not used to migrate -
+      // associationLogos cache is hard coded
+      // only used for reference switching
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'county',
     type: 'entry',
     stackName: 'global',
@@ -78,10 +108,9 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     name: 'footer',
     contentUid: 'footer',
     type: 'entry',
-    stackName: 'parkholidays',
+    stackName: 'parkleisure',
     publishEnvironments: localEnvironments,
     shouldCheckUpdatedAt: false,
-    scrubbedFields: { logo: true },
     handler: updateFooterInChild,
     includeInRemove: false,
     includeInMigration: true,
@@ -252,45 +281,39 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
-  }
+  }, {
+    name: 'socialLogos_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: () => {
+      // not used to migrate -
+      // associationLogos cache is hard coded
+      // only used for reference switching
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'socialLogos_pl',
+    type: 'asset',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: () => {
+      // not used to migrate -
+      // associationLogos cache is hard coded
+      // only used for reference switching
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  },
   /*
-  {
-    name: 'locationLogo',
-    type: 'asset',
-    handler: uploadLocationLogos,
-    folderName: 'Park_Logo',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-  }
-  , {
-    name: 'locationGalleryTouring',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'touring', ['touring']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['touring'],
-  }, {
-    name: 'locationGalleryHolidays',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'holidays', ['holidays']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['holidays'],
-  }, {
-    name: 'locationGalleryOwnership',
-    type: 'asset',
-    handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'ownership', ['sales']),
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['sales'],
-  }, {
+     {
     name: 'stockGallery',
     type: 'asset',
     //@ts-ignore
@@ -318,48 +341,6 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['additional_stock'],
-  }, {
-    name: 'holidayProduct',
-    type: 'entry',
-    handler: createHolidayProducts,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'locationCategory',
-    type: 'entry',
-    handler: createLocationCategories,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'locationAmenity',
-    type: 'entry',
-    handler: createLocationAmenities,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'region',
-    type: 'entry',
-    handler: createRegions,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'county',
-    type: 'entry',
-    handler: createCounties,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'webpage',
-    type: 'entry',
-    handler: createOwnershipParkWebpages,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'all',
   }, {
     name: 'location',
     type: 'entry',
