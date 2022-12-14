@@ -110,7 +110,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationImages_ph',
@@ -382,7 +382,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     name: 'accommodation',
     type: 'entry',
     handler: createAccommodation,
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: false,
     updateKeys: {
       entry: { // This will only update the truthy keys. everything else left as is.
