@@ -10,7 +10,7 @@ const tagReference = {
 const imageFolder = {
   accomodationGradeImages_ph: {
     grade_media: 'blte4c4bf5a459c7cff',
-    grade_type_media: 'blt6b595ff3bba5676a',
+    grade_type_media: 'bltfcbaf2cc6356215b',
   },
   accomodationGradeImages_pl: {
     grade_media: 'blt149e26dd72d31aeb',
@@ -26,21 +26,21 @@ const uploadAccommodationGradeImagesFromLegacy = async (
   const imageCache = {};
 
   for (const grade of legacyAccommodationGrades) {
+		console.log('TCL: grade', grade)
     if (!(grade['tags'] || []).includes(tagReference[migrationConfig.name])) {
       continue;
     }
     // Grade Images
     const gradeImages = grade['grade_contextual_images'] ?? [];
     for (const gImg of gradeImages) {
-			console.log('TCL: gImg', gImg)
       const response = await uploadFileToContentStack(
         context,
         migrationConfig,
         gImg.image,
         imageFolder[migrationConfig.name].grade_media,
+        [],
       )
       imageCache[gImg.image.uid] = response.uid;
-      continue;
     }
     context.cache[migrationConfig.name] = imageCache;
 
@@ -54,16 +54,14 @@ const uploadAccommodationGradeImagesFromLegacy = async (
           migrationConfig,
           contextualImage.image,
           imageFolder[migrationConfig.name].grade_type_media,
+          [],
         )
         imageCache[contextualImage.image.uid] = response.uid;
-        break;
       }
       context.cache[migrationConfig.name] = imageCache;
-      break;
     }
     context.cache[migrationConfig.name] = imageCache;
     writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
-    break;
   }
   return imageCache;
 };

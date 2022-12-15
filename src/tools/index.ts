@@ -51,6 +51,7 @@ export const uploadFileToContentStack = (
   migrationHandler: MigrationConfigurationType,
   image: CsImage,
   folderUid: string,
+  customTags?: string[],
 ) =>
   new Promise<{ uid?: string }>((resolve, reject) => {
     if (context.cache[migrationHandler.name][image.uid]) {
@@ -73,7 +74,7 @@ export const uploadFileToContentStack = (
             },
             'asset[parent_uid]': folderUid,
             'asset[description]': image.description ?? '',
-            'asset[tags]': image.tags,
+            'asset[tags]': customTags ?? image.tags,
           },
         },
         (err, res, body) => {
