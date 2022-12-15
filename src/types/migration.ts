@@ -31,9 +31,10 @@ export type MigrationConfigurationType = {
 
 export type MigrationType =
   // | 'accommodation'
-  // | 'accommodationAmenity'
-  // | 'accommodationGrade'
-  // | 'accommodationType'
+  | 'accommodationAmenity'
+  | 'accomodationGradeImages_ph'
+  | 'accomodationGradeImages_pl'
+  | 'accommodationType'
   | 'associationLogos_ph'
   | 'associationLogos_pl'
   | 'county'

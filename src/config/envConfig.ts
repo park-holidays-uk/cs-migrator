@@ -6,7 +6,8 @@ import {
   updateLocationsInChild,
 } from '../entries';
 import {
-  uploadLocationImagesFromLegacy
+  uploadAccommodationGradeImagesFromLegacy,
+  uploadLocationImagesFromLegacy,
 } from '../assets';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
 dotenv.config();
@@ -31,6 +32,38 @@ const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 export const migrationConfiguration: MigrationConfigurationType[] = [
   {
+    name: 'accommodationAmenity',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: false,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
+    name: 'accomodationGradeImages_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: uploadAccommodationGradeImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'accommodationType',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'associationLogos_ph',
     type: 'asset',
     stackName: 'parkholidays',
@@ -352,7 +385,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }
 

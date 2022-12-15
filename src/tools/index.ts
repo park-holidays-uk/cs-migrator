@@ -371,12 +371,32 @@ const removeUnwantedDataUsingKeyMap = (keyMap: {}, dataObj, existingData): Entry
   }, {} as EntryPayload);
 };
 
+const hasMissingKeys = (
+  migrationConfig: MigrationConfigurationType,
+  existingEntry?: CacheEntry,
+) => {
+  if (!existingEntry) return false;
+  let numberKeysRequired = 4; // e.g. legacy_uid, legacy_updated_at, parkholidays_uid && parkholidays_updated_at
+  if (migrationConfig.stackName === 'global') {
+    // Needs all the keys
+    // legacy_uid, legacy_updated_at,
+    // global_uid, global_updated_at,
+    // parkholidays_uid, parkholidays_updated_at,
+    // parkleisure_uid, parkleisure_updated_at
+    numberKeysRequired = 8;
+  }
+  return Object.keys(existingEntry).length !== numberKeysRequired;
+};
+
 const skipUpdate = (
   migrationConfig: MigrationConfigurationType,
   entry: EntryObj,
   existingEntry?: CacheEntry,
 ) => {
   if (existingEntry && migrationConfig.updateKeys === 'none') return true;
+  if (hasMissingKeys(migrationConfig, existingEntry)) {
+    return false;
+  }
   if (
     migrationConfig.shouldCheckUpdatedAt &&
     existingEntry?.legacy_updated_at === entry.updated_at
