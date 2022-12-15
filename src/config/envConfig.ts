@@ -113,7 +113,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: updateFooterInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false, // This has been run for parkholidays and then parkleisure ->
+    // Do not run again ideally. If so footer.json gets overwritten each time. Manually deleting incorrect records.
     updateKeys: 'all',
   }, {
     name: 'icon',
@@ -252,10 +253,42 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'navigation',
+    name: 'navigationMenu',
+    contentUid: 'navigation_menu',
+    type: 'entry',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'navigationMenuPh',
+    contentUid: 'navigation_menu_ph',
     type: 'entry',
     stackName: 'parkholidays',
     publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'notificationType',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'priority',
+    type: 'entry',
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
     shouldCheckUpdatedAt: true,
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
@@ -311,7 +344,18 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
-  },
+  }, {
+    name: 'webpage',
+    type: 'entry',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }
+
   /*
      {
     name: 'stockGallery',
