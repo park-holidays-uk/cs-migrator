@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
 import {
   migrateAllEntriesForContentType,
+  updateAccommodationGradeInChild,
+  updateAccommodationInChild,
   updateCreateLocationsInGlobal,
   updateFooterInChild,
   updateLocationsInChild,
@@ -32,6 +34,30 @@ const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 export const migrationConfiguration: MigrationConfigurationType[] = [
   {
+    name: 'accommodation_ph',
+    contentUid: 'accommodation',
+    type: 'entry',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateAccommodationInChild,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'accommodation_pl',
+    contentUid: 'accommodation',
+    type: 'entry',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateAccommodationInChild,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'accommodationAmenity',
     type: 'entry',
     stackName: 'global',
@@ -39,6 +65,48 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'accomodationGrade',
+    type: 'entry',
+    contentUid: 'accommodation_grade',
+    stackName: 'global', // Not actually used - only used for manually merged cache object
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: () => {
+      // not used to migrate -
+      // location cache is made up from combining location_ph && location_pl data
+      // only used for reference switching and or deleting locations
+      return Promise.resolve({})
+    },
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'accomodationGrade_ph',
+    type: 'entry',
+    contentUid: 'accommodation_grade',
+    cacheLookupKey: 'accommodationGrade',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    scrubbedFields: { tags: true },
+    handler: updateAccommodationGradeInChild,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'accomodationGrade_pl',
+    type: 'entry',
+    contentUid: 'accommodation_grade',
+    cacheLookupKey: 'accommodationGrade',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    scrubbedFields: { tags: true },
+    handler: updateAccommodationGradeInChild,
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
@@ -60,7 +128,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadAccommodationGradeImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'accommodationType',

@@ -59,7 +59,6 @@ export const uploadFileToContentStack = (
       resolve({ uid: context.cache[migrationHandler.name][image.uid] });
     }
     try {
-      console.log('TCL: image.description', image.description);
       request.post(
         {
           headers: createHeaders(context, migrationHandler.stackName),
@@ -157,19 +156,25 @@ export const findCachedEntry = (
   return [];
 };
 
+type ImageType ='locationImage' | 'socialLogo' | 'awardLogo' | 'accommodationGradeImages' | 'accommodationImages'
+
 export const findImageRef = (
   context: ScraperCtx,
   targetStack: StackName,
-  imageType: 'locationImage' | 'socialLogo' | 'awardLogo',
+  imageType: ImageType,
   legacyAssetUid: string = 'not_a_uid',
 ): { image: string } | null => {
   const cacheName = {
     parkholidays: {
+      accommodationGradeImages: 'accomodationGradeImages_ph',
+      accommodationImages: 'accomodationImages_ph',
       awardLogo: 'associationLogos_ph',
       locationImage: 'locationImages_ph',
       socialLogo: 'socialLogos_ph',
     },
     parkleisure: {
+      accommodationGradeImages: 'accomodationGradeImages_pl',
+      accommodationImages: 'accomodationImages_pl',
       awardLogo: 'associationLogos_pl',
       locationImage: 'locationImages_pl',
       socialLogo: 'socialLogos_pl',
@@ -197,11 +202,11 @@ export const switchStackReferences = (
       return data;
     }
     if (typeof data === 'object' && data.hasOwnProperty('_content_type_uid')) {
-      // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
       const [_cachedEntry, uid] = findCachedEntry(
         context,
+        // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
         {},
-        data.uid,
+        data['uid'],
         stackName,
         camelCase(data['_content_type_uid']),
       );

@@ -30,8 +30,12 @@ export type MigrationConfigurationType = {
 };
 
 export type MigrationType =
-  // | 'accommodation'
+  | 'accommodation_ph'
+  | 'accommodation_pl'
   | 'accommodationAmenity'
+  | 'accomodationGrade'
+  | 'accomodationGrade_ph'
+  | 'accomodationGrade_pl'
   | 'accomodationGradeImages_ph'
   | 'accomodationGradeImages_pl'
   | 'accommodationType'

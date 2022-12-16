@@ -10,7 +10,7 @@ const tagReference = {
 const imageFolder = {
   accomodationGradeImages_ph: {
     grade_media: 'blte4c4bf5a459c7cff',
-    grade_type_media: 'bltfcbaf2cc6356215b',
+    grade_type_media: 'bltaf7d8783d01f53f3',
   },
   accomodationGradeImages_pl: {
     grade_media: 'blt149e26dd72d31aeb',
@@ -26,7 +26,6 @@ const uploadAccommodationGradeImagesFromLegacy = async (
   const imageCache = {};
 
   for (const grade of legacyAccommodationGrades) {
-		console.log('TCL: grade', grade)
     if (!(grade['tags'] || []).includes(tagReference[migrationConfig.name])) {
       continue;
     }
