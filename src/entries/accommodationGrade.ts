@@ -9,8 +9,8 @@ import {
 import { findImageRef, scrubExistingData, switchStackReferences } from '../tools';
 
 const tagReference = {
-  accomodationGrade_ph: 'parkholidays',
-  accomodationGrade_pl: 'parkleisure',
+  accommodationGrade_ph: 'parkholidays',
+  accommodationGrade_pl: 'parkleisure',
 };
 
 const updateAccommodationGradeInChild = async (

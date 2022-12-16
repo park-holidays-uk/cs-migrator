@@ -59,6 +59,7 @@ export const uploadFileToContentStack = (
       resolve({ uid: context.cache[migrationHandler.name][image.uid] });
     }
     try {
+			console.log('TCL: image.description', image.description)
       request.post(
         {
           headers: createHeaders(context, migrationHandler.stackName),
@@ -166,15 +167,15 @@ export const findImageRef = (
 ): { image: string } | null => {
   const cacheName = {
     parkholidays: {
-      accommodationGradeImages: 'accomodationGradeImages_ph',
-      accommodationImages: 'accomodationImages_ph',
+      accommodationGradeImages: 'accommodationGradeImages_ph',
+      accommodationImages: 'accommodationImages_ph',
       awardLogo: 'associationLogos_ph',
       locationImage: 'locationImages_ph',
       socialLogo: 'socialLogos_ph',
     },
     parkleisure: {
-      accommodationGradeImages: 'accomodationGradeImages_pl',
-      accommodationImages: 'accomodationImages_pl',
+      accommodationGradeImages: 'accommodationGradeImages_pl',
+      accommodationImages: 'accommodationImages_pl',
       awardLogo: 'associationLogos_pl',
       locationImage: 'locationImages_pl',
       socialLogo: 'socialLogos_pl',

@@ -9,6 +9,7 @@ import {
 } from '../entries';
 import {
   uploadAccommodationGradeImagesFromLegacy,
+  uploadAccommodationImagesFromLegacy,
   uploadLocationImagesFromLegacy,
 } from '../assets';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
@@ -58,6 +59,26 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'accommodationImages_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: uploadAccommodationImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: true,
+    updateKeys: 'all',
+  }, {
+    name: 'accommodationImages_pl',
+    type: 'asset',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: uploadAccommodationImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'accommodationAmenity',
     type: 'entry',
     stackName: 'global',
@@ -69,7 +90,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'accomodationGrade',
+    name: 'accommodationGrade',
     type: 'entry',
     contentUid: 'accommodation_grade',
     stackName: 'global', // Not actually used - only used for manually merged cache object
@@ -85,7 +106,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'accomodationGrade_ph',
+    name: 'accommodationGrade_ph',
     type: 'entry',
     contentUid: 'accommodation_grade',
     cacheLookupKey: 'accommodationGrade',
@@ -98,7 +119,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'accomodationGrade_pl',
+    name: 'accommodationGrade_pl',
     type: 'entry',
     contentUid: 'accommodation_grade',
     cacheLookupKey: 'accommodationGrade',
@@ -111,7 +132,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'accomodationGradeImages_ph',
+    name: 'accommodationGradeImages_ph',
     type: 'asset',
     stackName: 'parkholidays',
     publishEnvironments: localEnvironments,
@@ -121,7 +142,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'accomodationGradeImages_pl',
+    name: 'accommodationGradeImages_pl',
     type: 'asset',
     stackName: 'parkleisure',
     publishEnvironments: localEnvironments,
