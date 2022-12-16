@@ -498,7 +498,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockAmenity',
@@ -520,7 +520,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockManufacturer',
