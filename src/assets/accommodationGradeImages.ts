@@ -32,6 +32,7 @@ const uploadAccommodationGradeImagesFromLegacy = async (
     // Grade Images
     const gradeImages = grade['grade_contextual_images'] ?? [];
     for (const gImg of gradeImages) {
+      if (imageCache[gImg.image.uid]) continue;
       const response = await uploadFileToContentStack(
         context,
         migrationConfig,
@@ -48,6 +49,7 @@ const uploadAccommodationGradeImagesFromLegacy = async (
     for (const type of gradeTypes) {
       const contextualImages = type['contextual_images'] ?? [];
       for (const contextualImage of contextualImages) {
+        if (imageCache[contextualImage.image.uid]) continue;
         const response = await uploadFileToContentStack(
           context,
           migrationConfig,

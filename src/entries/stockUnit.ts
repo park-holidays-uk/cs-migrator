@@ -9,15 +9,15 @@ import {
 import { findCachedEntry, findImageRef, scrubExistingData, switchStackReferences } from '../tools';
 
 const locationCache = {
-  accommodation_ph: 'locationChild_ph',
-  accommodation_pl: 'locationChild_pl',
+  stockUnit_ph: 'locationChild_ph',
+  stockUnit_pl: 'locationChild_pl',
 };
 
-const updateAccommodationInChild = async (
+const updateStockUnitInChild = async (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
-  const createAccommodationBody = async (entry: EntryObj): Promise<EntryPayload> => {
+  const createStockUnitBody = async (entry: EntryObj): Promise<EntryPayload> => {
 
     // Check to see if the accommodations location is in the correct brand
     const [_, locationUid] = findCachedEntry(
@@ -36,30 +36,30 @@ const updateAccommodationInChild = async (
       };
     }
 
-    // create accommodation body
-    let accommodation: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
+    // create stock_unit body
+    let stockUnit: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
 
-		console.log('TCL: accommodation', accommodation, JSON.stringify(accommodation))
+		console.log('TCL: stockUnit', stockUnit, JSON.stringify(stockUnit))
 
-    accommodation['contextual_images'] = (accommodation['contextual_images'] ?? []).map(
+    return {
+      entry: null,
+    };
+
+    stockUnit['contextual_images'] = (stockUnit['contextual_images'] ?? []).map(
       (contextualImage) => findImageRef(
         context,
         migrationConfig.stackName,
-        'accommodationImages',
+        'stockImages',
         contextualImage.image.uid,
       )
     );
 
-    if (accommodation['touring'] && !accommodation['touring']?.['touring_type']) {
-      delete accommodation['touring'];
-    }
-
     return {
-      entry: scrubExistingData(accommodation),
+      entry: scrubExistingData(stockUnit),
     };
   };
 
-  return await migrateAllEntriesForContentType(context, migrationConfig, createAccommodationBody);
+  return await migrateAllEntriesForContentType(context, migrationConfig, createStockUnitBody);
 };
 
-export { updateAccommodationInChild };
+export { updateStockUnitInChild };

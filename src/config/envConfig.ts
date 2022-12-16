@@ -6,11 +6,14 @@ import {
   updateCreateLocationsInGlobal,
   updateFooterInChild,
   updateLocationsInChild,
+  updateStockModel,
+  updateStockUnitInChild,
 } from '../entries';
 import {
   uploadAccommodationGradeImagesFromLegacy,
   uploadAccommodationImagesFromLegacy,
   uploadLocationImagesFromLegacy,
+  uploadStockUnitImagesFromLegacy,
 } from '../assets';
 import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
 dotenv.config();
@@ -44,7 +47,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: updateAccommodationInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'accommodation_pl',
@@ -66,7 +69,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadAccommodationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'accommodationImages_pl',
@@ -486,167 +489,106 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
-  }
-
-  /*
-     {
-    name: 'stockGallery',
-    type: 'asset',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
-    folderName: 'Stock_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',  // images cannot update - always 'none'
-    removalTags: ['cms_scraped'],
-  }, {
-    name: 'accommodationGallery',
-    type: 'asset',
-    handler: uploadAccommodationGalleries,
-    folderName: 'Accommodation_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['cms-scraped'],
-  }, {
-    name: 'additionalStockGallery',
-    type: 'asset',
-    handler: additionalStockGalleries,
-    folderName: 'Location_Media',
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none', // images cannot update - always 'none'
-    removalTags: ['additional_stock'],
-  }, {
-    name: 'location',
-    type: 'entry',
-    handler: createLocations,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: {
-      entry: {
-        // slug: false,
-        // holiday_product_contents: [{
-        //   contextual_images: false,
-        // }],
-        // sales_product_contents: [{
-        //   additional_stock_image: false
-        // }],
-      }
-    },
-  }, {
-    name: 'accommodationType',
-    type: 'entry',
-    handler: createAccommodationTypes,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'accommodationGrade',
-    type: 'entry',
-    handler: createAccommodationGrades,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: {
-      entry: {
-        media: false
-      }
-    },
-  }, {
-    name: 'accommodationAmenity',
-    type: 'entry',
-    handler: createAccommodationAmenities,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: 'none',
-  }, {
-    name: 'accommodation',
-    type: 'entry',
-    handler: createAccommodation,
-    includeInRemove: false,
-    includeInMigration: false,
-    updateKeys: {
-      entry: { // This will only update the truthy keys. everything else left as is.
-        pets_allowed: false,
-        accessible: false,
-        accommodation_amenities: false,
-        contextual_images: false,
-      }
-    },
   }, {
     name: 'stockAddon',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockAmenity',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockCondition',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockManufacturer',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockModel',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateStockModel,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockStatus',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
     name: 'stockType',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'global',
+    publishEnvironments: globalAllEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentType,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
-    name: 'stockUnit',
-    type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    name: 'stockImages_ph',
+    type: 'asset',
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: uploadStockUnitImagesFromLegacy,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }, {
-    name: 'locationStockPrice',
+    name: 'stockUnit_ph',
+    contentUid: 'stock_unit',
     type: 'entry',
-    //@ts-ignore
-    handler: () => {/* not used to migrate only delete... *//*},
+    stackName: 'parkholidays',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateStockUnitInChild,
     includeInRemove: false,
     includeInMigration: false,
-    updateKeys: 'none',
+    updateKeys: 'all',
   }
-  */
 ]
 
 export default {

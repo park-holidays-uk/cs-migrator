@@ -157,7 +157,7 @@ export const findCachedEntry = (
   return [];
 };
 
-type ImageType ='locationImage' | 'socialLogo' | 'awardLogo' | 'accommodationGradeImages' | 'accommodationImages'
+type ImageType ='locationImage' | 'socialLogo' | 'awardLogo' | 'accommodationGradeImages' | 'accommodationImages' | 'stockImages'
 
 export const findImageRef = (
   context: ScraperCtx,
@@ -172,6 +172,7 @@ export const findImageRef = (
       awardLogo: 'associationLogos_ph',
       locationImage: 'locationImages_ph',
       socialLogo: 'socialLogos_ph',
+      stockImages: 'stockImages_ph',
     },
     parkleisure: {
       accommodationGradeImages: 'accommodationGradeImages_pl',
@@ -179,6 +180,7 @@ export const findImageRef = (
       awardLogo: 'associationLogos_pl',
       locationImage: 'locationImages_pl',
       socialLogo: 'socialLogos_pl',
+      stockImages: 'stockImages_pl',
     },
   };
   const cacheKey = cacheName[targetStack]?.[imageType] ?? '';

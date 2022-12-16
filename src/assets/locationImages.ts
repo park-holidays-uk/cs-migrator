@@ -62,6 +62,7 @@ const uploadLocationImagesFromLegacy = async (
     for (const sp of salesProducts) {
       const contextualImages = sp['contextual_images'] ?? [];
       for (const contextualImage of contextualImages) {
+        if (imageCache[contextualImage.image.uid]) continue;
         const response = await uploadFileToContentStack(
           context,
           migrationConfig,
@@ -74,6 +75,7 @@ const uploadLocationImagesFromLegacy = async (
       const bannerImages = ['wide_image', 'compact_image'];
       for (const bImg of bannerImages) {
         if (!sp['banner_images']?.[0]?.[bImg]) continue;
+        if (imageCache[sp['banner_images'][0][bImg].uid]) continue;
         const response = await uploadFileToContentStack(
           context,
           migrationConfig,
@@ -85,6 +87,7 @@ const uploadLocationImagesFromLegacy = async (
       context.cache[migrationConfig.name] = imageCache;
       const mediaPages = sp['media_text_content']?.pages ?? [];
       for (const page of mediaPages) {
+        if (imageCache[page.image.uid]) continue;
         const response = await uploadFileToContentStack(
           context,
           migrationConfig,
@@ -96,6 +99,7 @@ const uploadLocationImagesFromLegacy = async (
       context.cache[migrationConfig.name] = imageCache;
       const additionalStockImages = sp['additional_stock_image']?.contextual_images ?? [];
       for (const contextualImage of additionalStockImages) {
+        if (imageCache[contextualImage.image.uid]) continue;
         const response = await uploadFileToContentStack(
           context,
           migrationConfig,
