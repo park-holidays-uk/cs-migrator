@@ -3,9 +3,11 @@
     "legacy_uid": "bltd4df28140c45838e",
     "legacy_updated_at": "2022-07-25T14:50:00.335Z",
     "global_uid": "blt80e4ed019439919f",
-    "global_updated_at": "2022-12-16T17:46:00.448Z",
+    "global_updated_at": "2022-12-16T18:31:21.552Z",
     "parkleisure_uid": "blt2c6afec5c8a1786f",
-    "parkleisure_updated_at": "2022-12-16T17:46:02.788Z"
+    "parkleisure_updated_at": "2022-12-16T17:46:02.788Z",
+    "parkholidays_uid": "blta39a57097cfa4c08",
+    "parkholidays_updated_at": "2022-12-16T17:46:01.804Z"
   },
   "blt199182cc5b6d43c2": {
     "legacy_uid": "blt199182cc5b6d43c2",
@@ -41,15 +43,21 @@
     "legacy_uid": "blt548c4a46ebb682c1",
     "legacy_updated_at": "2022-03-23T11:35:19.397Z",
     "global_uid": "blt0010a89fbf1e9ae4",
-    "global_updated_at": "2022-12-16T17:46:41.353Z",
+    "global_updated_at": "2022-12-16T18:31:32.020Z",
     "parkleisure_uid": "blta5390b43a3176ae7",
-    "parkleisure_updated_at": "2022-12-16T17:46:43.552Z"
+    "parkleisure_updated_at": "2022-12-16T17:46:43.552Z",
+    "parkholidays_uid": "blt96d74ed4cf2d651f",
+    "parkholidays_updated_at": "2022-12-16T17:46:42.627Z"
   },
   "blt8bf25f10324bcd87": {
     "legacy_uid": "blt8bf25f10324bcd87",
     "legacy_updated_at": "2022-03-23T11:35:18.153Z",
     "global_uid": "bltf9fc649f1c6be130",
-    "global_updated_at": "2022-12-16T17:46:51.644Z"
+    "global_updated_at": "2022-12-16T18:31:42.259Z",
+    "parkholidays_uid": "blt46e842f4c4e2b645",
+    "parkholidays_updated_at": "2022-12-16T18:30:14.451Z",
+    "parkleisure_uid": "blt052e1309e0c91f88",
+    "parkleisure_updated_at": "2022-12-16T18:30:15.453Z"
   },
   "blt7868674fc3d70fdd": {
     "legacy_uid": "blt7868674fc3d70fdd",
@@ -65,17 +73,21 @@
     "legacy_uid": "blt1f00043b7acedd8a",
     "legacy_updated_at": "2022-03-23T11:35:15.668Z",
     "global_uid": "blt27639e188d0f8c6d",
-    "global_updated_at": "2022-12-16T17:47:12.404Z",
+    "global_updated_at": "2022-12-16T18:31:52.546Z",
     "parkleisure_uid": "blt9e38bb6f1a793d99",
-    "parkleisure_updated_at": "2022-12-16T17:47:14.739Z"
+    "parkleisure_updated_at": "2022-12-16T17:47:14.739Z",
+    "parkholidays_uid": "bltfa64202b43b047c0",
+    "parkholidays_updated_at": "2022-12-16T17:47:13.718Z"
   },
   "blta29002f7f93cd898": {
     "legacy_uid": "blta29002f7f93cd898",
     "legacy_updated_at": "2022-03-23T11:35:14.435Z",
     "global_uid": "blt56929917a28d353e",
-    "global_updated_at": "2022-12-16T17:47:22.657Z",
+    "global_updated_at": "2022-12-16T18:32:02.896Z",
     "parkleisure_uid": "blt9b1dadb0acae310a",
-    "parkleisure_updated_at": "2022-12-16T17:47:24.987Z"
+    "parkleisure_updated_at": "2022-12-16T17:47:24.987Z",
+    "parkholidays_uid": "blt0011940272a86ea1",
+    "parkholidays_updated_at": "2022-12-16T17:47:23.940Z"
   },
   "blt1a4c803206191782": {
     "legacy_uid": "blt1a4c803206191782",
@@ -101,9 +113,11 @@
     "legacy_uid": "bltc81c5b6acbd8618f",
     "legacy_updated_at": "2022-03-23T11:35:10.806Z",
     "global_uid": "bltbbdb273ef594750c",
-    "global_updated_at": "2022-12-16T17:47:53.506Z",
+    "global_updated_at": "2022-12-16T18:32:13.088Z",
     "parkleisure_uid": "blt4a6d89ecd33a40b7",
-    "parkleisure_updated_at": "2022-12-16T17:47:55.788Z"
+    "parkleisure_updated_at": "2022-12-16T17:47:55.788Z",
+    "parkholidays_uid": "bltfd2f4a61ca214048",
+    "parkholidays_updated_at": "2022-12-16T17:47:54.840Z"
   },
   "bltc1d1cc8825851c3d": {
     "legacy_uid": "bltc1d1cc8825851c3d",
@@ -139,9 +153,11 @@
     "legacy_uid": "bltf98a94cd55d83ed0",
     "legacy_updated_at": "2022-03-23T11:35:05.862Z",
     "global_uid": "blt324240a4537ae801",
-    "global_updated_at": "2022-12-16T17:48:34.449Z",
+    "global_updated_at": "2022-12-16T18:32:23.278Z",
     "parkleisure_uid": "blte9d0a8b4cf08c61e",
-    "parkleisure_updated_at": "2022-12-16T17:48:36.792Z"
+    "parkleisure_updated_at": "2022-12-16T17:48:36.792Z",
+    "parkholidays_uid": "blt8116e0040f188ae1",
+    "parkholidays_updated_at": "2022-12-16T17:48:35.802Z"
   },
   "bltbd4d7bed70ddac88": {
     "legacy_uid": "bltbd4d7bed70ddac88",
@@ -167,17 +183,21 @@
     "legacy_uid": "blt49427ae5b43dcc4e",
     "legacy_updated_at": "2022-03-23T11:35:02.172Z",
     "global_uid": "blt8cd21e2fee2a9a31",
-    "global_updated_at": "2022-12-16T17:49:05.283Z",
+    "global_updated_at": "2022-12-16T18:32:33.758Z",
     "parkleisure_uid": "blt78ab375621ee4088",
-    "parkleisure_updated_at": "2022-12-16T17:49:07.601Z"
+    "parkleisure_updated_at": "2022-12-16T17:49:07.601Z",
+    "parkholidays_uid": "bltd7f3e7048bc4130f",
+    "parkholidays_updated_at": "2022-12-16T17:49:06.576Z"
   },
   "bltb068aa2fdfcfcdc9": {
     "legacy_uid": "bltb068aa2fdfcfcdc9",
     "legacy_updated_at": "2022-03-23T11:35:00.943Z",
     "global_uid": "bltba595cf6915602ac",
-    "global_updated_at": "2022-12-16T17:49:15.584Z",
+    "global_updated_at": "2022-12-16T18:32:44.033Z",
     "parkleisure_uid": "blt32e06aa884b6e4b8",
-    "parkleisure_updated_at": "2022-12-16T17:49:17.816Z"
+    "parkleisure_updated_at": "2022-12-16T17:49:17.816Z",
+    "parkholidays_uid": "blt31e930da0910a3ab",
+    "parkholidays_updated_at": "2022-12-16T17:49:16.841Z"
   },
   "blt58b9fd6394ea5133": {
     "legacy_uid": "blt58b9fd6394ea5133",
