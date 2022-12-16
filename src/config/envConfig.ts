@@ -47,7 +47,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: updateAccommodationInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'accommodation_pl',
@@ -498,7 +498,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockAmenity',
