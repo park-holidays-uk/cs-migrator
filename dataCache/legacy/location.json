@@ -227,7 +227,9 @@
     "legacy_uid": "bltf26a8f23833a6241",
     "legacy_updated_at": "2022-10-13T11:00:14.443Z",
     "global_uid": "blt72b2db382d649967",
-    "global_updated_at": "2022-12-14T10:51:50.270Z"
+    "global_updated_at": "2022-12-14T10:51:50.270Z",
+    "parkholidays_uid": "blt5fbf70ee46837999",
+    "parkholidays_updated_at": "2022-12-14T10:51:50.270Z"
   },
   "blt43283a33213b8e21": {
     "legacy_uid": "blt43283a33213b8e21",
@@ -425,7 +427,9 @@
     "legacy_uid": "blt3194a358ed60f8f2",
     "legacy_updated_at": "2022-10-04T15:39:29.481Z",
     "global_uid": "blt11fa5cdd0327604b",
-    "global_updated_at": "2022-12-14T10:54:17.363Z"
+    "global_updated_at": "2022-12-14T10:54:17.363Z",
+    "parkholidays_uid": "blt8f8025e8d7140730",
+    "parkholidays_updated_at": "2022-12-14T10:54:17.363Z"
   },
   "blt7975131300366485": {
     "legacy_uid": "blt7975131300366485",
