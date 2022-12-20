@@ -542,7 +542,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockModel,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockStatus',
@@ -553,7 +553,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockType',
@@ -564,7 +564,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockImages_ph',
