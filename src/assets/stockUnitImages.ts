@@ -9,10 +9,10 @@ const locationCache = {
 
 const imageFolder = {
   stockImages_ph: {
-    stock_media: '',
+    stock_media: 'bltb0e6bb02eb4abf65',
   },
   stockImages_pl: {
-    stock_media: '',
+    stock_media: 'blt88a1aa5912db81ec',
   }
 }
 
@@ -53,7 +53,6 @@ const uploadStockUnitImagesFromLegacy = async (
     }
     context.cache[migrationConfig.name] = imageCache;
     writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
-    break;
   }
   return imageCache;
 };
