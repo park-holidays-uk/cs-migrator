@@ -41,10 +41,6 @@ const updateStockUnitInChild = async (
 
 		console.log('TCL: stockUnit', stockUnit, JSON.stringify(stockUnit))
 
-    return {
-      entry: null,
-    };
-
     stockUnit['contextual_images'] = (stockUnit['contextual_images'] ?? []).map(
       (contextualImage) => findImageRef(
         context,
