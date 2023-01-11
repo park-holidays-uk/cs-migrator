@@ -574,7 +574,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadStockUnitImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockUnit_ph',
@@ -585,7 +585,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'all',
   }

@@ -436,7 +436,7 @@ export const createEntries = async (
     } else {
       let body = await createBody(entry);
       if (body.entry === null) continue;
-      await apiDelay(5000); // Needs a long delay to allow child stacks to catch up
+      await apiDelay(500);
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
       let url = `${context.CS_BASE_URL}/content_types/${contentUid}/entries`;
@@ -457,6 +457,7 @@ export const createEntries = async (
       });
       const response = await res.json();
       if (response['error_code']) {
+				console.log('TCL: response[error_code]', response['error_code'])
         if (
           response['error_code'] === 119 &&
           response.errors?.title &&

@@ -38,9 +38,7 @@ const updateStockUnitInChild = async (
 
     // create stock_unit body
     let stockUnit: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
-
-		console.log('TCL: stockUnit', stockUnit, JSON.stringify(stockUnit))
-
+		console.log('TCL: stockUnit.title', stockUnit.title)
     stockUnit['contextual_images'] = (stockUnit['contextual_images'] ?? []).map(
       (contextualImage) => findImageRef(
         context,
