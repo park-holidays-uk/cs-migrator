@@ -23,7 +23,7 @@ const uploadAccommodationGradeImagesFromLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const legacyAccommodationGrades = await getAllEntries(context, 'legacy', 'accommodation_grade');
-  const imageCache = {};
+  const imageCache = context.cache[migrationConfig.name] ?? {};
 
   for (const grade of legacyAccommodationGrades) {
     if (!(grade['tags'] || []).includes(tagReference[migrationConfig.name])) {

@@ -21,7 +21,8 @@ const uploadStockUnitImagesFromLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const legacyStockUnits = await getAllEntries(context, 'legacy', 'stock_unit');
-  const imageCache = {};
+  const imageCache = context.cache[migrationConfig.name] ?? {};
+	console.log('TCL: imageCache', typeof imageCache, JSON.stringify(imageCache))
 
   for (const stockUnit of legacyStockUnits) {
     // Check to see if the accommodations location is in the correct brand
@@ -41,7 +42,10 @@ const uploadStockUnitImagesFromLegacy = async (
     // Contextual images
     const contextualImages = stockUnit['contextual_images'] ?? [];
     for (const contextualImage of contextualImages) {
-      if (imageCache[contextualImage.image.uid]) continue;
+      if (imageCache[contextualImage.image.uid]) {
+        console.log('TCL: Image already exists...')
+        continue;
+      }
       const response = await uploadFileToContentStack(
         context,
         migrationConfig,

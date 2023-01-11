@@ -21,7 +21,7 @@ const uploadAccommodationImagesFromLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const legacyAccommodation = await getAllEntries(context, 'legacy', 'accommodation');
-  const imageCache = {};
+  const imageCache = context.cache[migrationConfig.name] ?? {};
 
   for (const accommodation of legacyAccommodation) {
     // Check to see if the accommodations location is in the correct brand

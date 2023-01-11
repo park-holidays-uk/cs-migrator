@@ -25,7 +25,7 @@ const uploadLocationImagesFromLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const legacyLocations = await getAllEntries(context, 'legacy', 'location');
-  const imageCache = {};
+  const imageCache = context.cache[migrationConfig.name] ?? {};
 
   for (const location of legacyLocations) {
     if (location['brand']?.[0]?.uid !== brandUids[migrationConfig.name]) {
