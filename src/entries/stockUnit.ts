@@ -35,12 +35,8 @@ const updateStockUnitInChild = async (
         entry: null,
       };
     }
-
-		console.log('TCL: locationUid', locationUid)
     // create stock_unit body
     let stockUnit: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
-		console.log('TCL: stockUnit.title', stockUnit.title);
-
     stockUnit['contextual_images'] = (stockUnit['contextual_images'] ?? []).map(
       (contextualImage) => findImageRef(
         context,
@@ -49,7 +45,6 @@ const updateStockUnitInChild = async (
         contextualImage.image?.uid,
       )
     );
-		console.log('TCL: stockUnit[contextual_images]', stockUnit['contextual_images'].length)
 
     return {
       entry: scrubExistingData(stockUnit),
