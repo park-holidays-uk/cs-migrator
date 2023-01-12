@@ -582,10 +582,10 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     type: 'entry',
     stackName: 'parkholidays',
     publishEnvironments: localEnvironments,
-    shouldCheckUpdatedAt: true,
+    shouldCheckUpdatedAt: false,
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
-    includeInRemove: true,
+    includeInRemove: false,
     includeInMigration: true,
     updateKeys: 'all',
   }
