@@ -130,7 +130,8 @@ const removeAssetsByFolder = async (context, migrationConfig, folder, folderUid,
 const removeData = async () => {
   console.log('\n\n Build Complete!! Starting removal... \n\n\n');
   const context = await createApiCredentials({
-    CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
+    // CS_BASE_URL: 'https://eu-api.contentstack.com/v3',
+    CS_BASE_URL: 'https://4y0ax61fd7.execute-api.eu-west-2.amazonaws.com/default',
   });
   context.env = env;
   context.cache = getDataCache(migrationConfiguration.map((m) => m.name));

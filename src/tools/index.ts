@@ -209,7 +209,7 @@ export const switchStackReferences = (
         context,
         // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
         {},
-        data['uid'],
+        data?.['uid'],
         stackName,
         camelCase(data['_content_type_uid']),
       );
@@ -425,7 +425,8 @@ export const createEntries = async (
 ): Promise<CachedEntries> => {
   const responses = {};
   for (const entry of entries) {
-    if (!entry.uid) return {};
+		console.log('TCL: entry FETCHED', !!entry, entry?.title)
+    if (!entry?.uid) return {};
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
     const [existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
@@ -436,6 +437,7 @@ export const createEntries = async (
     } else {
       let body = await createBody(entry);
       if (body.entry === null) continue;
+			console.log('TCL: body.entry', body.entry)
       await apiDelay(500);
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
@@ -481,6 +483,8 @@ export const createEntries = async (
         if (migrationConfig.stackName === 'global') {
           childUids = await findChildStackUids(context, contentUid, response.entry);
         }
+
+				console.log('TCL: response.entry: uid : exists', response.entry?.uid, !!response.entry)
         responses[entry.uid] = createCacheEntry({
           legacy_uid: entry.uid,
           legacy_updated_at: entry.updated_at ?? '',

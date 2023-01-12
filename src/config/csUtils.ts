@@ -6,8 +6,8 @@ const createHeaders = (context: ScraperCtx, stackName: StackName): HeadersInit =
   if (!apiConfig) return { ...headers };
   return {
     ...headers,
-    api_key: apiConfig?.apiKey,
-    authorization: apiConfig.mgmtToken,
+    'x-api-key': apiConfig?.apiKey,
+    'x-authorization': apiConfig.mgmtToken,
   };
 };
 

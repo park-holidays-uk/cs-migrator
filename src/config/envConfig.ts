@@ -586,7 +586,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
     includeInRemove: true,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }
 ]
