@@ -574,7 +574,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadStockUnitImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockUnit_ph',
@@ -582,11 +582,11 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     type: 'entry',
     stackName: 'parkholidays',
     publishEnvironments: localEnvironments,
-    shouldCheckUpdatedAt: false,
+    shouldCheckUpdatedAt: true,
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
-    includeInRemove: false,
-    includeInMigration: false,
+    includeInRemove: true,
+    includeInMigration: true,
     updateKeys: 'all',
   }
 ]
