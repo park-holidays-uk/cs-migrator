@@ -15,7 +15,7 @@ import {
   uploadLocationImagesFromLegacy,
   uploadStockUnitImagesFromLegacy,
 } from '../assets';
-import { EnvironmentType, MigrationConfigurationType, PublishEnvironments } from '../types';
+import { EnvironmentType, MigrationConfigType, PublishEnvironments } from '../types';
 dotenv.config();
 
 export const getEnvironmentVariables = (env: EnvironmentType) => ({
@@ -36,7 +36,10 @@ const globalParkHolidaysEnvironments: PublishEnvironments[] = ['production', 'pr
 const globalParkLeisureEnvironments: PublishEnvironments[] = ['production', 'production_parkleisure', 'staging', 'production_parkleisure'];
 const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
-export const migrationConfiguration: MigrationConfigurationType[] = [
+
+export const switchStackParkCodes = ['AL'];
+
+export const migrationConfiguration: MigrationConfigType[] = [
   {
     name: 'accommodation_ph',
     contentUid: 'accommodation',
@@ -321,7 +324,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     handler: uploadLocationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationImages_pl',
@@ -585,8 +588,8 @@ export const migrationConfiguration: MigrationConfigurationType[] = [
     shouldCheckUpdatedAt: true,
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
-    includeInRemove: true,
-    includeInMigration: true,
+    includeInRemove: false,
+    includeInMigration: false,
     updateKeys: 'all',
   }
 ]

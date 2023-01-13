@@ -41,8 +41,7 @@ const migrateAllEntriesForContentType = async (
   createBody: CreateBody = defaultCreateBodyFn,
 ): Promise<CachedEntries> => {
   const contentUid = migrationConfig.contentUid ?? snakeCase(migrationConfig.name);
-
-  const legacyEntries = await getAllEntries(context, 'legacy', contentUid);
+  const legacyEntries = await getAllEntries(context, migrationConfig.sourceStackName, contentUid);
   const legacyCache = arrayToKeyedObject(
     legacyEntries.map((entry) => ({
       legacy_uid: entry.uid,

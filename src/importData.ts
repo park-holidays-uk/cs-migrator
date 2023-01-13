@@ -24,6 +24,7 @@ const importData = async () => {
 
   for (const migrationConfig of migrations) {
     try {
+      migrationConfig.sourceStackName =  migrationConfig.sourceStackName ?? 'legacy';
       context.cache[migrationConfig.name] = await migrationConfig.handler(context, migrationConfig)
       reportCreatedEntries(migrationConfig.name, context)
       writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])

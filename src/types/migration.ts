@@ -1,4 +1,4 @@
-import type { PublishEnvironments, TargetStackName } from './apiConfig';
+import type { PublishEnvironments, StackName, TargetStackName } from './apiConfig';
 
 export type EnvironmentType = 'legacy' | 'parkholidays';
 
@@ -22,12 +22,15 @@ export type MigrationConfigurationType = {
   includeInRemove: boolean;
   includeInMigration: boolean;
   stackName: TargetStackName;
+  sourceStackName: StackName; // defaults to 'legacy'
   publishEnvironments: PublishEnvironments[];
   shouldCheckUpdatedAt: boolean;
   scrubbedFields?: { [key: string]: boolean };
   updateKeys: 'none' | 'all' | { entry: UpdateKeyMapType };
   removalTags?: string[];
 };
+
+export type MigrationConfigType = Omit<MigrationConfigurationType, 'sourceStackName'> & { sourceStackName?: StackName }
 
 export type MigrationType =
   | 'accommodation_ph'

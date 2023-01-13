@@ -56,9 +56,21 @@ export const uploadFileToContentStack = (
   new Promise<{ uid?: string }>((resolve, reject) => {
     if (context.cache[migrationHandler.name][image.uid]) {
       // @ts-expect-error image cache is string map only
-      resolve({ uid: context.cache[migrationHandler.name][image.uid] });
+      return resolve({ uid: context.cache[migrationHandler.name][image.uid] });
     }
     try {
+      let imageContentType = image.content_type;
+      if (!image.content_type) { // Try and guess it from image.url
+        imageContentType = 'image/jpeg'
+        if (image.url.endsWith('.gif')) {
+          imageContentType = 'image/gif';
+        } else if (image.url.endsWith('.png')) {
+          imageContentType = 'image/png';
+        }
+      }
+      // if (image.uid === 'blt4b571d5f4212610a') {
+      //   return resolve({ uid: 'blte79904ac481c203d'});
+      // }
 			console.log('TCL: image.description', image.description)
       request.post(
         {
@@ -69,7 +81,7 @@ export const uploadFileToContentStack = (
               value: request.get(image.url),
               options: {
                 filename: image.filename,
-                contentType: 'image/jpeg',
+                contentType: imageContentType,
               },
             },
             'asset[parent_uid]': folderUid,

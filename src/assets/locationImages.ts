@@ -1,6 +1,7 @@
-import { CachedEntries, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx } from '../types';
+import { CachedEntries, EntryObj, EntryPayload, MigrationConfigurationType, ScraperCtx, StackName } from '../types';
 import { getAllEntries, uploadFileToContentStack } from '../tools';
 import { writeSync } from '../dataHandler/fileCache';
+import { switchStackParkCodes } from '../config/envConfig';
 
 const brandUids = {
   locationImages_ph: 'blt512eebdbfb8c0494',
@@ -24,14 +25,18 @@ const uploadLocationImagesFromLegacy = async (
   context: ScraperCtx,
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
-  const legacyLocations = await getAllEntries(context, 'legacy', 'location');
+  const sourceLocations = await getAllEntries(context, migrationConfig.sourceStackName, 'location');
   const imageCache = context.cache[migrationConfig.name] ?? {};
 
-  for (const location of legacyLocations) {
-    if (location['brand']?.[0]?.uid !== brandUids[migrationConfig.name]) {
-      continue;
+  for (const location of sourceLocations) {
+    if (migrationConfig.sourceStackName === 'legacy' && location['brand']?.[0]?.uid !== brandUids[migrationConfig.name]) {
+      if (!switchStackParkCodes.includes(location['park_code'])) {
+        continue;
+      }
     }
+    console.log('TCL: migratePark', location.title)
     // Park Logo
+		console.log('TCL: Park Logo')
     const response = await uploadFileToContentStack(
       context,
       migrationConfig,
@@ -43,6 +48,7 @@ const uploadLocationImagesFromLegacy = async (
 
     // Holiday Products
     const holidayProducts = location['holiday_product_contents'] ?? [];
+		console.log('TCL: holidayProducts')
     for (const hp of holidayProducts) {
       const contextualImages = hp['contextual_images'] ?? [];
       for (const contextualImage of contextualImages) {
@@ -59,6 +65,7 @@ const uploadLocationImagesFromLegacy = async (
 
     // Sales Products
     const salesProducts = location['sales_product_contents'] ?? [];
+		console.log('TCL: salesProducts')
     for (const sp of salesProducts) {
       const contextualImages = sp['contextual_images'] ?? [];
       for (const contextualImage of contextualImages) {

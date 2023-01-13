@@ -52,6 +52,7 @@ type CsImage = {
   uid: string;
   url: string;
   filename: string;
+  content_type: string;
   description: string;
   tags: string[];
 };
