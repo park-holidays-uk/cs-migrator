@@ -299,10 +299,10 @@ export const migrationConfiguration: MigrationConfigType[] = [
     type: 'entry',
     stackName: 'parkholidays',
     publishEnvironments: localEnvironments,
-    shouldCheckUpdatedAt: false,
+    shouldCheckUpdatedAt: true,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationChild_pl',
@@ -324,7 +324,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     handler: uploadLocationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationImages_pl',

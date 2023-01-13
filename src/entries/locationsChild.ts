@@ -7,6 +7,7 @@ import {
   ScraperCtx,
 } from '../types';
 import { findImageRef, scrubExistingData, switchStackReferences } from '../tools';
+import { switchStackParkCodes } from '../config/envConfig';
 
 const brandUids = {
   parkholidays: 'blt512eebdbfb8c0494',
@@ -18,11 +19,19 @@ const updateLocationsInChild = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const createLocationBody = async (entry: EntryObj): Promise<EntryPayload> => {
-    if (entry['brand']?.[0]?.uid !== brandUids[migrationConfig.stackName]) {
+    // if (entry['brand']?.[0]?.uid !== brandUids[migrationConfig.stackName]) {
+    //   return {
+    //     entry: null,
+    //   };
+    // }
+    if (!switchStackParkCodes.includes(entry['park_code'])) {
       return {
         entry: null,
       };
     }
+
+    console.log('TCL: location', entry['park_code']);
+
     let location: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
     delete location['brand'];
 
