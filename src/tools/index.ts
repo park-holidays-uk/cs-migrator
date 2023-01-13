@@ -160,11 +160,9 @@ export const findCachedEntry = (
   cacheName?: string,
 ): [CacheEntry, string] | [] => {
   const cacheKey = cacheName ?? migrationConfig.cacheLookupKey ?? migrationConfig.name;
-	console.log('TCL: cacheKey', cacheKey)
   const entry = context.cache[cacheKey]?.[legacyEntryUid];
   if (entry) {
     const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
-		console.log('TCL: targetUidKey', targetUidKey)
     const targetUid = entry[targetUidKey];
     return targetUid ? [entry, targetUid] : [];
   }
@@ -442,10 +440,7 @@ export const createEntries = async (
     if (!entry?.uid) return {};
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
-		console.log('TCL: entry.uid >>>> ', entry.uid)
     const [existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
-		console.log('TCL: existingEntryUid', existingEntryUid)
-		console.log('TCL: existingEntry', existingEntry)
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
       console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry));
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];

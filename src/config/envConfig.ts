@@ -37,7 +37,9 @@ const globalParkLeisureEnvironments: PublishEnvironments[] = ['production', 'pro
 const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 
-export const switchStackParkCodes = ['AL'];
+// export const switchStackParkCodes = ['AL'];
+export const switchStackParkCodes = ['WM', 'RH', 'SH', 'WF'];
+
 
 export const migrationConfiguration: MigrationConfigType[] = [
   {
@@ -302,7 +304,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationChild_pl',
@@ -311,10 +313,10 @@ export const migrationConfiguration: MigrationConfigType[] = [
     type: 'entry',
     stackName: 'parkleisure',
     publishEnvironments: localEnvironments,
-    shouldCheckUpdatedAt: false,
+    shouldCheckUpdatedAt: true,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'locationImages_ph',
