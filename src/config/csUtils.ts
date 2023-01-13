@@ -4,6 +4,13 @@ const createHeaders = (context: ScraperCtx, stackName: StackName): HeadersInit =
   const apiConfig = context.apiDetails.find((config) => config.stackName === stackName);
   const headers = { 'Content-Type': 'application/json' };
   if (!apiConfig) return { ...headers };
+  if (context.CS_BASE_URL.includes('eu-api.contentstack.com')) {
+    return {
+      ...headers,
+      'api_key': apiConfig?.apiKey,
+      'authorization': apiConfig.mgmtToken,
+    };
+  }
   return {
     ...headers,
     'x-api-key': apiConfig?.apiKey,

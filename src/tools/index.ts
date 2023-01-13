@@ -98,7 +98,7 @@ export const publishEntry = async (
   migrationConfig: MigrationConfigurationType,
   contentUid: string,
   responseEntry: EntryObj,
-  entry: EntryObj,
+  entry?: EntryObj,
 ) => {
   try {
     const environments = getPublishEnvironments(context, migrationConfig);

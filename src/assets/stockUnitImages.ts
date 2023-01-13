@@ -42,8 +42,8 @@ const uploadStockUnitImagesFromLegacy = async (
     // Contextual images
     const contextualImages = stockUnit['contextual_images'] ?? [];
     for (const contextualImage of contextualImages) {
-      if (imageCache[contextualImage.image.uid]) {
-        console.log('TCL: Image already exists...')
+      if (!contextualImage.image?.uid || imageCache[contextualImage.image.uid]) {
+        console.log('TCL: Image already exists...', contextualImage.image?.uid)
         continue;
       }
       const response = await uploadFileToContentStack(
@@ -53,7 +53,7 @@ const uploadStockUnitImagesFromLegacy = async (
         imageFolder[migrationConfig.name].stock_media,
         [],
       )
-      imageCache[contextualImage.image.uid] = response.uid;
+      imageCache[contextualImage.image?.uid] = response.uid;
     }
     context.cache[migrationConfig.name] = imageCache;
     writeSync('legacy', 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])

@@ -61,6 +61,6 @@ const createApiCredentials = async (ctx) => {
   return context;
 };
 
-export { createApiCredentials };
+export { createApiCredentials, ENVIRONMENTS };
 
 export type { ApiConfig };
