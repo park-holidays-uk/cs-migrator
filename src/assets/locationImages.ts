@@ -34,6 +34,9 @@ const uploadLocationImagesFromLegacy = async (
         continue;
       }
     }
+    if (!switchStackParkCodes.includes(location['park_code'])) {
+      continue;
+    }
     console.log('TCL: migratePark', location.title)
     // Park Logo
 		console.log('TCL: Park Logo')

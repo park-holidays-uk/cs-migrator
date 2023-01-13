@@ -32,10 +32,6 @@ const updateLocationsInChild = async (
 
     console.log('TCL: location', entry['park_code'], entry['uid']);
 
-    return {
-      entry: null,
-    };
-
     let location: EntryObj = switchStackReferences(context, entry, migrationConfig.stackName);
     delete location['brand'];
 

@@ -447,6 +447,7 @@ export const createEntries = async (
     } else {
       let body = await createBody(entry);
       if (body.entry === null) continue;
+			console.log('TCL: body.entry.park_code', body.entry['park_code'])
       await apiDelay(500);
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';

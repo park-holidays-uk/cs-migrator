@@ -316,7 +316,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     handler: updateLocationsInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'locationImages_ph',
