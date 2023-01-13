@@ -25,7 +25,9 @@
   },
   "blt84ce8c75313d88ec": {
     "legacy_uid": "blt84ce8c75313d88ec",
-    "legacy_updated_at": "2022-10-04T15:39:37.039Z"
+    "legacy_updated_at": "2022-10-04T15:39:37.039Z",
+    "parkleisure_uid": "blta721fd4ac7e9856d",
+    "parkleisure_updated_at": "2022-12-12T10:53:57.980Z"
   },
   "blt52e68df7654a01cf": {
     "legacy_uid": "blt52e68df7654a01cf",
@@ -69,7 +71,9 @@
   },
   "bltf26a8f23833a6241": {
     "legacy_uid": "bltf26a8f23833a6241",
-    "legacy_updated_at": "2022-10-13T11:00:14.443Z"
+    "legacy_updated_at": "2022-10-13T11:00:14.443Z",
+    "parkleisure_uid": "blt2a4b9117c1976e50",
+    "parkleisure_updated_at": "2022-12-12T10:51:50.270Z"
   },
   "blt4a0cb3c8dc112110": {
     "legacy_uid": "blt4a0cb3c8dc112110",
@@ -113,11 +117,15 @@
   },
   "blt464eabc53119e9eb": {
     "legacy_uid": "blt464eabc53119e9eb",
-    "legacy_updated_at": "2022-11-28T12:59:11.112Z"
+    "legacy_updated_at": "2022-11-28T12:59:11.112Z",
+    "parkleisure_uid": "blt1fa0de404e460878",
+    "parkleisure_updated_at": "2022-12-12T10:49:24.680Z"
   },
   "bltf2b6d65b521eb72f": {
     "legacy_uid": "bltf2b6d65b521eb72f",
-    "legacy_updated_at": "2022-11-28T12:59:13.112Z"
+    "legacy_updated_at": "2022-11-28T12:59:13.112Z",
+    "parkleisure_uid": "bltac4d15f22c187395",
+    "parkleisure_updated_at": "2022-12-12T10:49:14.343Z"
   },
   "blt6e9cdb37e6fb1011": {
     "legacy_uid": "blt6e9cdb37e6fb1011",
