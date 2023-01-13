@@ -84,7 +84,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadAccommodationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'accommodationAmenity',
