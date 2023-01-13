@@ -64,7 +64,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateAccommodationInChild,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'accommodationImages_ph',
@@ -613,7 +613,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }
 ]
