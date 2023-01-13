@@ -80,5 +80,7 @@ export type MigrationType =
   | 'stockStatus'
   | 'stockType'
   | 'stockImages_ph'
+  | 'stockImages_pl'
   | 'stockUnit_ph'
+  | 'stockUnit_pl'
   | 'webpage'

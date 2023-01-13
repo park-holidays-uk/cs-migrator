@@ -84,7 +84,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: false,
     handler: uploadAccommodationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'accommodationAmenity',
@@ -582,6 +582,16 @@ export const migrationConfiguration: MigrationConfigType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'stockImages_pl',
+    type: 'asset',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: uploadStockUnitImagesFromLegacy,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'stockUnit_ph',
     contentUid: 'stock_unit',
     type: 'entry',
@@ -592,6 +602,18 @@ export const migrationConfiguration: MigrationConfigType[] = [
     handler: updateStockUnitInChild,
     includeInRemove: false,
     includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'stockUnit_pl',
+    contentUid: 'stock_unit',
+    type: 'entry',
+    stackName: 'parkleisure',
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateStockUnitInChild,
+    includeInRemove: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }
 ]
