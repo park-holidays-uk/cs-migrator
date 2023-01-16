@@ -5,6 +5,8 @@ e.g. if you `npm run dynamo` and read out cms_location to dynamoMirgration/parkh
 
 you would then be able to merge it with dataCache/legacy/location.json using this script.
 
+`npm run dynamoMerge`
+
 therefore creating a dynamoMirgration/parkholidays/location_merged.json
 
 which you can then upload using `npm run dynamo` with ns_location as the destination
@@ -50,7 +52,7 @@ const runImport = async () => {
     const update = {
       ...sourceObj[id],
     };
-    const legacyUid = update['uid'];
+    const legacyUid = update['legacy_uid'] ?? update['uid'];
     delete update['uid'];
     delete update['updated_at'];
     return  {
