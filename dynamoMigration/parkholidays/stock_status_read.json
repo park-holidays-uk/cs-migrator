@@ -1,0 +1,23 @@
+{
+  "1": {
+    "updated_at": "2017-11-01T11:52:33.000Z",
+    "id": "1",
+    "uid": "blt1e031b55bc9776b4",
+    "from": "db.holiday_home_statuses",
+    "title": "For Sale"
+  },
+  "2": {
+    "updated_at": "2017-11-01T11:52:33.000Z",
+    "id": "2",
+    "uid": "blt59ec47f3b1df7ad1",
+    "from": "db.holiday_home_statuses",
+    "title": "Sold"
+  },
+  "3": {
+    "updated_at": "2017-11-01T11:52:33.000Z",
+    "id": "3",
+    "uid": "blt163b678171cdf03f",
+    "from": "db.holiday_home_statuses",
+    "title": "Under Offer"
+  }
+}

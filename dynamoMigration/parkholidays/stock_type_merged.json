@@ -1,0 +1,41 @@
+{
+  "1": {
+    "id": "1",
+    "from": "db.holiday_home_types",
+    "title": "Static Caravan",
+    "legacy_uid": "blt8954ed9f0df824f9",
+    "legacy_updated_at": "2022-03-23T11:34:55.773Z",
+    "global_uid": "blt50863603d18521b6",
+    "global_updated_at": "2022-12-16T18:38:08.076Z",
+    "parkleisure_uid": "blt9b0751b45e7433e8",
+    "parkleisure_updated_at": "2022-12-16T17:50:36.600Z",
+    "parkholidays_uid": "blt39967c28ad221dcd",
+    "parkholidays_updated_at": "2022-12-16T17:50:35.581Z"
+  },
+  "2": {
+    "id": "2",
+    "from": "db.holiday_home_types",
+    "title": "Luxury Lodge",
+    "legacy_uid": "blt0a91e8f1691a71ea",
+    "legacy_updated_at": "2022-03-23T11:34:57.022Z",
+    "global_uid": "blt8e56448324035c4c",
+    "global_updated_at": "2022-12-16T17:50:24.151Z",
+    "parkholidays_uid": "blt10a18bfc3c8152fa",
+    "parkholidays_updated_at": "2022-12-16T17:50:25.433Z",
+    "parkleisure_uid": "blt79c2f756b3a20d94",
+    "parkleisure_updated_at": "2022-12-16T17:50:26.476Z"
+  },
+  "3": {
+    "id": "3",
+    "from": "db.holiday_home_types",
+    "title": "Villa",
+    "legacy_uid": "blt910bc5081bd26ee9",
+    "legacy_updated_at": "2022-03-23T11:34:58.241Z",
+    "global_uid": "blt7e88a2cc3dd46b52",
+    "global_updated_at": "2022-12-16T17:50:13.875Z",
+    "parkholidays_uid": "blt049383f5f724f567",
+    "parkholidays_updated_at": "2022-12-16T17:50:15.252Z",
+    "parkleisure_uid": "blt3dccdbee4458ac74",
+    "parkleisure_updated_at": "2022-12-16T17:50:16.190Z"
+  }
+}
