@@ -336,7 +336,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     handler: uploadLocationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'location_ph',

@@ -16,11 +16,19 @@ import {
 } from '../types';
 import { MigrationConfigurationType, ScraperCtx, StackName } from '../types';
 import { findChildStackUids } from './childstack';
+import { htmlToJson, IAnyObject } from '@contentstack/json-rte-serializer';
+import { JSDOM } from 'jsdom';
 
 dotenv.config();
 
 // TCL: delay needs to be above 1500 to publish reliably - reduce for testing
 export const apiDelay = (delay = 1500) => new Promise((resolve) => setTimeout(resolve, delay)); // limit on contentstack api ('x' req/sec)
+
+export const parseToJsonRTE = (htmlStr: string | undefined): IAnyObject | null => {
+  const dom = new JSDOM(htmlStr ?? '')
+  const htmlDoc = dom.window.document.querySelector('body')
+  return htmlToJson(htmlDoc);
+}
 
 export const publishAsset = async (context, assetUid) => {
   try {

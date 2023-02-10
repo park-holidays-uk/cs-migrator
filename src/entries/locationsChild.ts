@@ -6,7 +6,7 @@ import {
   MigrationConfigurationType,
   ScraperCtx,
 } from '../types';
-import { findImageRef, scrubExistingData, switchStackReferences } from '../tools';
+import { findImageRef, parseToJsonRTE, scrubExistingData, switchStackReferences } from '../tools';
 import { switchStackParkCodes } from '../config/envConfig';
 
 const brandUids = {
@@ -57,6 +57,7 @@ const updateLocationsInChild = async (
             contextualImage.image.uid,
           ),
         );
+        hp.overview.json_long_overview = parseToJsonRTE(hp.overview.long_overview);
         return hp;
       },
     );
@@ -99,6 +100,9 @@ const updateLocationsInChild = async (
           ...(compactImage && { compact_image: compactImage.image }),
         };
       });
+      sp.overview.json_short_overview = parseToJsonRTE(sp.overview.short_overview);
+      sp.overview.json_long_overview = parseToJsonRTE(sp.overview.long_overview);
+      sp.arrange_visit.text_content = parseToJsonRTE(sp.arrange_visit.text_content);
       return sp;
     });
 
