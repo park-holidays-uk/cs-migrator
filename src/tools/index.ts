@@ -80,6 +80,9 @@ export const uploadFileToContentStack = (
       //   return resolve({ uid: 'blte79904ac481c203d'});
       // }
 			console.log('TCL: image.description', image.description)
+			console.log('TCL: imageContentType', imageContentType)
+			console.log('TCL: image.url', image.url)
+			console.log('TCL: context.CS_BASE_URL', context.CS_BASE_URL)
       request.post(
         {
           headers: createHeaders(context, migrationHandler.stackName),
@@ -101,7 +104,6 @@ export const uploadFileToContentStack = (
           if (err || res.statusCode < 200 || res.statusCode > 299) {
             const errorMsg = err || `Error status code: ${res.statusCode}`;
             console.error(errorMsg);
-            console.error(res);
             throw new Error(errorMsg);
           }
           return resolve(JSON.parse(body).asset);
