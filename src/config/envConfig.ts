@@ -38,7 +38,7 @@ const localEnvironments: PublishEnvironments[] = ['production', 'staging'];
 
 
 // export const switchStackParkCodes = ['AL'];
-export const switchStackParkCodes = ['WM', 'RH', 'SH', 'WF'];
+export const switchStackParkCodes = ['RB'];
 
 
 export const migrationConfiguration: MigrationConfigType[] = [
@@ -64,7 +64,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateAccommodationInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'accommodationImages_ph',
@@ -336,7 +336,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     handler: uploadLocationImagesFromLegacy,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'location_ph',
