@@ -170,8 +170,12 @@ export const findCachedEntry = (
   cacheName?: string,
 ): [CacheEntry, string] | [] => {
   const cacheKey = cacheName ?? migrationConfig.cacheLookupKey ?? migrationConfig.name;
+	console.log('TCL: cacheKey', cacheKey)
   const entry = context.cache[cacheKey]?.[legacyEntryUid];
+	console.log('TCL: legacyEntryUid', legacyEntryUid)
+	console.log('TCL: entry', entry)
   if (entry) {
+		console.log('TCL: targetStack', targetStack)
     const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
     const targetUid = entry[targetUidKey];
     return targetUid ? [entry, targetUid] : [];
@@ -457,7 +461,6 @@ export const createEntries = async (
     } else {
       let body = await createBody(entry);
       if (body.entry === null) continue;
-			console.log('TCL: body.entry.park_code', body.entry['park_code'])
       await apiDelay(500);
       body = scrubExistingData(body, migrationConfig.scrubbedFields);
       let method = 'POST';
@@ -465,13 +468,16 @@ export const createEntries = async (
       if (existingEntryUid) {
         url += `/${existingEntryUid}`;
         method = 'PUT';
+				console.log('TCL: migrationConfig.updateKeys', migrationConfig.updateKeys)
         if (migrationConfig.updateKeys !== 'all') {
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, body);
         }
         //@ts-expect-error body.entry is possibly null
         body.entry.uid = existingEntryUid;
       }
+
       url += '?locale=en-gb';
+      // break;
       const res = await fetch(url, {
         method,
         headers: createHeaders(context, migrationConfig.stackName),

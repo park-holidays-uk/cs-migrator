@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --mode=development",
-    "migrateSlugs": "npm run build && node ./dist/migrateSlugs.js parkholidays",
+    "migrateLongDescription": "npm run build && node ./dist/migrateLongDescription.js parkholidays",
     "publish": "npm run build && node ./dist/publish.js",
     "dynamo": "npm run build && node ./dist/dynamo.js",
     "dynamoMerge": "npm run build && node ./dist/dynamoMerge.js",

@@ -24,7 +24,7 @@ module.exports = (_, argv, configDirs) => {
       index: path.resolve(__dirname, './src/index.ts'),
       dynamo: path.resolve(__dirname, './src/dynamoDb/index.ts'),
       dynamoMerge: path.resolve(__dirname, './src/dynamoDb/merge.ts'),
-      // migrateSlugs: path.resolve(__dirname, './src/migration/migrateSlug'),
+      migrateLongDescription: path.resolve(__dirname, './src/migration/migrateLongDescription'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
     mode: argv.mode,
