@@ -171,6 +171,7 @@ export const findCachedEntry = (
 ): [CacheEntry, string] | [] => {
   const cacheKey = cacheName ?? migrationConfig.cacheLookupKey ?? migrationConfig.name;
 	console.log('TCL: cacheKey', cacheKey)
+	console.log('TCL: cacheKey', JSON.stringify(cacheKey))
   const entry = context.cache[cacheKey]?.[legacyEntryUid];
 	console.log('TCL: legacyEntryUid', legacyEntryUid)
 	console.log('TCL: entry', entry)
@@ -475,7 +476,6 @@ export const createEntries = async (
         //@ts-expect-error body.entry is possibly null
         body.entry.uid = existingEntryUid;
       }
-
       url += '?locale=en-gb';
       // break;
       const res = await fetch(url, {
