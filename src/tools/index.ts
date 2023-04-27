@@ -68,6 +68,7 @@ export const uploadFileToContentStack = (
     }
     try {
       let imageContentType = image.content_type;
+			console.log('TCL: image', JSON.stringify(image))
       if (!image.content_type) { // Try and guess it from image.url
         imageContentType = 'image/jpeg'
         if (image.url.endsWith('.gif')) {
@@ -76,13 +77,6 @@ export const uploadFileToContentStack = (
           imageContentType = 'image/png';
         }
       }
-      // if (image.uid === 'blt4b571d5f4212610a') {
-      //   return resolve({ uid: 'blte79904ac481c203d'});
-      // }
-			console.log('TCL: image.description', image.description)
-			console.log('TCL: imageContentType', imageContentType)
-			console.log('TCL: image.url', image.url)
-			console.log('TCL: context.CS_BASE_URL', context.CS_BASE_URL)
       request.post(
         {
           headers: createHeaders(context, migrationHandler.stackName),
@@ -168,15 +162,23 @@ export const findCachedEntry = (
   legacyEntryUid: string = 'not_a_uid',
   targetStack?: StackName,
   cacheName?: string,
+  sourceStack?: StackName,
 ): [CacheEntry, string] | [] => {
   const cacheKey = cacheName ?? migrationConfig.cacheLookupKey ?? migrationConfig.name;
-	console.log('TCL: cacheKey', cacheKey)
-	console.log('TCL: cacheKey', JSON.stringify(cacheKey))
-  const entry = context.cache[cacheKey]?.[legacyEntryUid];
-	console.log('TCL: legacyEntryUid', legacyEntryUid)
-	console.log('TCL: entry', entry)
+  const cacheObj = context.cache[cacheKey] ?? {};
+  let entry;
+  if (!sourceStack || sourceStack === 'legacy') {
+    entry = cacheObj[legacyEntryUid];
+  } else {
+    const sourceUidKey = `${sourceStack}_uid`;
+    const foundKey = Object.keys(cacheObj).find((legacyKey) => {
+      return cacheObj[legacyKey][sourceUidKey] === legacyEntryUid
+    })
+    if (foundKey) {
+      entry = cacheObj[foundKey];
+    }
+  }
   if (entry) {
-		console.log('TCL: targetStack', targetStack)
     const targetUidKey = targetStack ? `${targetStack}_uid` : `${migrationConfig.stackName}_uid`;
     const targetUid = entry[targetUidKey];
     return targetUid ? [entry, targetUid] : [];
@@ -209,6 +211,9 @@ export const findImageRef = (
       socialLogo: 'socialLogos_pl',
       stockImages: 'stockImages_pl',
     },
+    legacy: {
+      stockImages: 'stockImages_legacy',
+    }
   };
   const cacheKey = cacheName[targetStack]?.[imageType] ?? '';
   const assetUid = context.cache[cacheKey]?.[legacyAssetUid] ?? '';
@@ -224,7 +229,8 @@ export const findImageRef = (
 export const switchStackReferences = (
   context: ScraperCtx,
   entry: EntryObj,
-  stackName: TargetStackName,
+  targetStackName: TargetStackName,
+  sourceStackName: StackName = 'legacy',
 ): EntryObj => {
   const switchReferencesInEntry = (data: object): object => {
     const update = {};
@@ -237,8 +243,9 @@ export const switchStackReferences = (
         // @ts-expect-error - findCachedEntry is expecting a migrationConfig object but being forced here with stackName and contentType.
         {},
         data?.['uid'],
-        stackName,
+        targetStackName,
         camelCase(data['_content_type_uid']),
+        sourceStackName,
       );
       if (uid) {
         return {

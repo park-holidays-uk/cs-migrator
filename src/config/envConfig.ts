@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import {
   migrateAllEntriesForContentType,
+  migrateAllEntriesForContentTypeToLegacy,
   updateAccommodationGradeInChild,
   updateAccommodationInChild,
   updateCreateLocationsInGlobal,
@@ -8,14 +9,16 @@ import {
   updateLocationsInChild,
   updateStockModel,
   updateStockUnitInChild,
+  updateStockUnitInLegacy,
 } from '../entries';
 import {
   uploadAccommodationGradeImagesFromLegacy,
   uploadAccommodationImagesFromLegacy,
   uploadLocationImagesFromLegacy,
   uploadStockUnitImagesFromLegacy,
+  uploadStockUnitImagesFromParkLeisure,
 } from '../assets';
-import { EnvironmentType, MigrationConfigType, PublishEnvironments } from '../types';
+import { EnvironmentType, MigrationConfigType, PublishEnvironments, TargetStackName } from '../types';
 dotenv.config();
 
 export const getEnvironmentVariables = (env: EnvironmentType) => ({
@@ -506,6 +509,18 @@ export const migrationConfiguration: MigrationConfigType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'stockAddon_legacy',
+    contentUid: 'stock_addon',
+    type: 'entry',
+    stackName: 'legacy' as TargetStackName,
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentTypeToLegacy,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'stockAmenity',
     type: 'entry',
     stackName: 'global',
@@ -513,6 +528,18 @@ export const migrationConfiguration: MigrationConfigType[] = [
     shouldCheckUpdatedAt: true,
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentType,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'stockAmenity_legacy',
+    contentUid: 'stock_amenity',
+    type: 'entry',
+    stackName: 'legacy' as TargetStackName,
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: migrateAllEntriesForContentTypeToLegacy,
     includeInRemove: false,
     includeInMigration: false,
     updateKeys: 'all',
@@ -572,6 +599,16 @@ export const migrationConfiguration: MigrationConfigType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
+    name: 'stockImages_legacy', // This is migration back to legacy (e.g. Amble Links, parkleisure -> legacy)
+    type: 'asset',
+    stackName: 'legacy' as TargetStackName,
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: false,
+    handler: uploadStockUnitImagesFromParkLeisure,
+    includeInRemove: false,
+    includeInMigration: false,
+    updateKeys: 'all',
+  }, {
     name: 'stockImages_ph',
     type: 'asset',
     stackName: 'parkholidays',
@@ -590,6 +627,18 @@ export const migrationConfiguration: MigrationConfigType[] = [
     handler: uploadStockUnitImagesFromLegacy,
     includeInRemove: false,
     includeInMigration: false,
+    updateKeys: 'all',
+  }, {
+    name: 'stockUnit_legacy', // This is migration back to legacy (e.g. Amble Links, parkleisure -> legacy)
+    contentUid: 'stock_unit',
+    type: 'entry',
+    stackName: 'legacy' as TargetStackName,
+    publishEnvironments: localEnvironments,
+    shouldCheckUpdatedAt: true,
+    scrubbedFields: { tags: true },
+    handler: updateStockUnitInLegacy,
+    includeInRemove: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockUnit_ph',
@@ -613,7 +662,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockUnitInChild,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }
 ]
