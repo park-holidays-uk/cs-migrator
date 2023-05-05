@@ -23,7 +23,7 @@ const uploadStockUnitImagesFromParkLeisure = async (
   const parkLeisureStockUnits = await getAllEntries(context, 'parkleisure', 'stock_unit');
   const imageCache = context.cache[migrationConfig.name] ?? {};
   for (const stockUnit of parkLeisureStockUnits) {
-    if (stockUnit.location?.[0]?.uid !== 'blte646f73c887257d7') { // Oyster Bay
+    if (stockUnit.location?.[0]?.uid !== 'blte96cb7fb0909268e') { // Pentire
       continue;
     }
     // Contextual images
