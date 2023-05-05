@@ -463,8 +463,6 @@ export const createEntries = async (
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
     const [existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
-		console.log('TCL: existingEntryUid', existingEntryUid)
-		console.log('TCL: existingEntry', existingEntry)
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
       console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry));
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
