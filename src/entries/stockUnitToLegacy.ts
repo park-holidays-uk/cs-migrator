@@ -31,8 +31,8 @@ const updateStockUnitInLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const createStockUnitBody = async (entry: EntryObj): Promise<EntryPayload> => {
-    // Check to see if the Stock Units location is Par Sands
-    if (entry.location?.[0]?.uid !== 'blt31255ad0edb859f7') {
+    // Check to see if the Stock Units location is Oyster Bay
+    if (entry.location?.[0]?.uid !== 'blte646f73c887257d7') {
       return {
         entry: null,
       };
@@ -66,7 +66,7 @@ const updateStockUnitInLegacy = async (
     context,
     migrationConfig,
     createStockUnitBody,
-    (entry) => entry.location?.[0]?.uid === 'blt31255ad0edb859f7', // Par Sands
+    (entry) => entry.location?.[0]?.uid === 'blte646f73c887257d7', // Oyster Bay
   );
 };
 
