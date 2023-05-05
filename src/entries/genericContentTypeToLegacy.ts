@@ -59,6 +59,9 @@ const migrateAllEntriesForContentTypeToLegacy = async (
   const slicedEntries = parkLeisureEntries
     .filter(filterEntriesFn);
 
+
+	console.log('TCL: slicedEntries', slicedEntries.length, parkLeisureEntries.length)
+
   // // re-populate entries using new structure
   const childCacheEntries = await createEntries(
     context,

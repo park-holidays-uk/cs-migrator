@@ -509,7 +509,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'stockAddon_legacy',
+    name: 'stockAddon_legacy', // This is migration back to legacy (e.g. Amble Links, parkleisure -> legacy)
     contentUid: 'stock_addon',
     type: 'entry',
     stackName: 'legacy' as TargetStackName,
@@ -518,7 +518,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentTypeToLegacy,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockAmenity',
@@ -532,7 +532,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     includeInMigration: false,
     updateKeys: 'all',
   }, {
-    name: 'stockAmenity_legacy',
+    name: 'stockAmenity_legacy', // This is migration back to legacy (e.g. Amble Links, parkleisure -> legacy)
     contentUid: 'stock_amenity',
     type: 'entry',
     stackName: 'legacy' as TargetStackName,
@@ -638,7 +638,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockUnitInLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockUnit_ph',

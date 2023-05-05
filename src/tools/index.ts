@@ -463,6 +463,8 @@ export const createEntries = async (
     const recordCount = Object.keys(responses).length + 1;
     process.stdout.write(`Creating entries: [ ${contentUid} ] ${recordCount} \r`);
     const [existingEntry, existingEntryUid] = findCachedEntry(context, migrationConfig, entry.uid);
+		console.log('TCL: existingEntryUid', existingEntryUid)
+		console.log('TCL: existingEntry', existingEntry)
     if (skipUpdate(migrationConfig, entry, existingEntry)) {
       console.log('TCL: skipUpdate SKIP SKIP', JSON.stringify(existingEntry));
       responses[entry.uid] = context.cache[migrationConfig.name][entry.uid];
@@ -476,7 +478,6 @@ export const createEntries = async (
       if (existingEntryUid) {
         url += `/${existingEntryUid}`;
         method = 'PUT';
-				console.log('TCL: migrationConfig.updateKeys', migrationConfig.updateKeys)
         if (migrationConfig.updateKeys !== 'all') {
           body = removeUnwantedDataUsingKeyMap(migrationConfig.updateKeys, body, body);
         }
@@ -498,7 +499,8 @@ export const createEntries = async (
           response.errors?.title &&
           response.errors.title[0] === 'is not unique.'
         ) {
-          const dupedId = findDuplicateInResponses(responses, body.entry?.title);
+          // const dupedId = findDuplicateInResponses(responses, body.entry?.title);
+          const dupedId = findDuplicateInResponses(responses, body.entry?.title); // This is migration back to legacy (e.g. Amble Links, parkleisure -> legacy)
           console.error(
             `\r[ ${contentUid}: ${entry.uid} ]: `,
             response.errors,
