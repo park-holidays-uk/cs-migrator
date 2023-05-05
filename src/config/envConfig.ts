@@ -518,7 +518,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: migrateAllEntriesForContentTypeToLegacy,
     includeInRemove: false,
-    includeInMigration: true,
+    includeInMigration: false,
     updateKeys: 'all',
   }, {
     name: 'stockAmenity',
@@ -638,7 +638,7 @@ export const migrationConfiguration: MigrationConfigType[] = [
     scrubbedFields: { tags: true },
     handler: updateStockUnitInLegacy,
     includeInRemove: false,
-    includeInMigration: false,
+    includeInMigration: true,
     updateKeys: 'all',
   }, {
     name: 'stockUnit_ph',

@@ -31,8 +31,8 @@ const updateStockUnitInLegacy = async (
   migrationConfig: MigrationConfigurationType,
 ): Promise<CachedEntries> => {
   const createStockUnitBody = async (entry: EntryObj): Promise<EntryPayload> => {
-    // Check to see if the Stock Units location is Amble Links
-    if (entry.location?.[0]?.uid !== 'blt6bc9f61323d804d2') {
+    // Check to see if the Stock Units location is Plas Coch
+    if (entry.location?.[0]?.uid !== 'blt2a34342141f27d74') {
       return {
         entry: null,
       };
@@ -66,7 +66,7 @@ const updateStockUnitInLegacy = async (
     context,
     migrationConfig,
     createStockUnitBody,
-    (entry) => entry.location?.[0]?.uid === 'blt6bc9f61323d804d2', // Amble Links
+    (entry) => entry.location?.[0]?.uid === 'blt2a34342141f27d74', // Plas Coch
   );
 };
 

@@ -23,7 +23,7 @@ const uploadStockUnitImagesFromParkLeisure = async (
   const parkLeisureStockUnits = await getAllEntries(context, 'parkleisure', 'stock_unit');
   const imageCache = context.cache[migrationConfig.name] ?? {};
   for (const stockUnit of parkLeisureStockUnits) {
-    if (stockUnit.location?.[0]?.uid !== 'blt6bc9f61323d804d2') { // Amble Links
+    if (stockUnit.location?.[0]?.uid !== 'blt2a34342141f27d74') { // Plas Coch
       continue;
     }
     // Contextual images
