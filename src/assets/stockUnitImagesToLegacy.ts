@@ -23,7 +23,7 @@ const uploadStockUnitImagesFromParkLeisure = async (
   const parkLeisureStockUnits = await getAllEntries(context, 'parkleisure', 'stock_unit');
   const imageCache = context.cache[migrationConfig.name] ?? {};
   for (const stockUnit of parkLeisureStockUnits) {
-    if (stockUnit.location?.[0]?.uid !== 'blt185531672cf01cc7') { // Chantry
+    if (stockUnit.location?.[0]?.uid !== 'blt698c100e5382c9c8') { // Littondale
       continue;
     }
     // Contextual images
