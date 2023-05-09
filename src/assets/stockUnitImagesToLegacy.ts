@@ -23,7 +23,7 @@ const uploadStockUnitImagesFromParkLeisure = async (
   const parkLeisureStockUnits = await getAllEntries(context, 'parkleisure', 'stock_unit');
   const imageCache = context.cache[migrationConfig.name] ?? {};
   for (const stockUnit of parkLeisureStockUnits) {
-    if (stockUnit.location?.[0]?.uid !== 'blte96cb7fb0909268e') { // Pentire
+    if (stockUnit.location?.[0]?.uid !== 'bltba2eb6dac439ec6f') { // Ribble Valley
       continue;
     }
     // Contextual images

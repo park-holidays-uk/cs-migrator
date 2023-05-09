@@ -65,7 +65,9 @@
   },
   "bltb82d6797db24f1b1": {
     "parkleisure_uid": "bltb82d6797db24f1b1",
-    "parkleisure_updated_at": "2023-04-26T10:42:13.402Z"
+    "parkleisure_updated_at": "2023-04-26T10:42:13.402Z",
+    "legacy_uid": "blte9833dcff54656b5",
+    "legacy_updated_at": "2023-05-05T13:43:07.613Z"
   },
   "bltb3c4d7884f60b990": {
     "parkleisure_uid": "bltb3c4d7884f60b990",
@@ -189,7 +191,9 @@
   },
   "blt767b6b90ccac548f": {
     "parkleisure_uid": "blt767b6b90ccac548f",
-    "parkleisure_updated_at": "2023-04-26T12:51:20.396Z"
+    "parkleisure_updated_at": "2023-04-26T12:51:20.396Z",
+    "legacy_uid": "blt1d7096c710bf877a",
+    "legacy_updated_at": "2023-05-05T13:43:09.643Z"
   },
   "blt18265bd4ab2dc40f": {
     "parkleisure_uid": "blt18265bd4ab2dc40f",
@@ -229,15 +233,21 @@
   },
   "blt1f8d777c06de7e0b": {
     "parkleisure_uid": "blt1f8d777c06de7e0b",
-    "parkleisure_updated_at": "2023-04-26T12:04:51.278Z"
+    "parkleisure_updated_at": "2023-04-26T12:04:51.278Z",
+    "legacy_uid": "blt293e1f6c0a0300e3",
+    "legacy_updated_at": "2023-05-05T13:43:11.458Z"
   },
   "blt5f3f39eb83ee5d27": {
     "parkleisure_uid": "blt5f3f39eb83ee5d27",
-    "parkleisure_updated_at": "2023-04-26T12:10:41.172Z"
+    "parkleisure_updated_at": "2023-04-26T12:10:41.172Z",
+    "legacy_uid": "blte6ad12513befa171",
+    "legacy_updated_at": "2023-05-05T13:43:13.089Z"
   },
   "bltddef68fab2e1b0c7": {
     "parkleisure_uid": "bltddef68fab2e1b0c7",
-    "parkleisure_updated_at": "2023-04-26T12:48:48.090Z"
+    "parkleisure_updated_at": "2023-04-26T12:48:48.090Z",
+    "legacy_uid": "bltb63b144181df5ece",
+    "legacy_updated_at": "2023-05-05T13:43:14.850Z"
   },
   "blt67c65476d92a17fa": {
     "parkleisure_uid": "blt67c65476d92a17fa",
@@ -407,7 +417,9 @@
   },
   "blt56df2cbd8df42c7a": {
     "parkleisure_uid": "blt56df2cbd8df42c7a",
-    "parkleisure_updated_at": "2023-04-29T09:12:05.078Z"
+    "parkleisure_updated_at": "2023-04-29T09:12:05.078Z",
+    "legacy_uid": "blt64c96dcabde90ae1",
+    "legacy_updated_at": "2023-05-05T13:43:16.567Z"
   },
   "bltf2df303ca3908852": {
     "parkleisure_uid": "bltf2df303ca3908852",
@@ -527,59 +539,87 @@
   },
   "bltba87b4fc1cc2e117": {
     "parkleisure_uid": "bltba87b4fc1cc2e117",
-    "parkleisure_updated_at": "2023-04-26T12:26:55.516Z"
+    "parkleisure_updated_at": "2023-04-26T12:26:55.516Z",
+    "legacy_uid": "blt28a05c51f9cfc562",
+    "legacy_updated_at": "2023-05-05T13:43:18.347Z"
   },
   "blt790f6aa5dae5fb88": {
     "parkleisure_uid": "blt790f6aa5dae5fb88",
-    "parkleisure_updated_at": "2023-04-26T14:02:16.986Z"
+    "parkleisure_updated_at": "2023-04-26T14:02:16.986Z",
+    "legacy_uid": "bltb82dbd540186fc6d",
+    "legacy_updated_at": "2023-05-05T13:43:19.886Z"
   },
   "blt82a9c0759933d488": {
     "parkleisure_uid": "blt82a9c0759933d488",
-    "parkleisure_updated_at": "2023-04-26T13:19:06.431Z"
+    "parkleisure_updated_at": "2023-04-26T13:19:06.431Z",
+    "legacy_uid": "bltba3dd06d765ca4cb",
+    "legacy_updated_at": "2023-05-05T13:43:21.415Z"
   },
   "blt2f2e66e0cedb0661": {
     "parkleisure_uid": "blt2f2e66e0cedb0661",
-    "parkleisure_updated_at": "2023-04-26T13:07:56.485Z"
+    "parkleisure_updated_at": "2023-04-26T13:07:56.485Z",
+    "legacy_uid": "blt90cc9e65989b7d54",
+    "legacy_updated_at": "2023-05-05T13:43:23.162Z"
   },
   "blt0a7f067f48dd8974": {
     "parkleisure_uid": "blt0a7f067f48dd8974",
-    "parkleisure_updated_at": "2023-04-26T12:50:48.482Z"
+    "parkleisure_updated_at": "2023-04-26T12:50:48.482Z",
+    "legacy_uid": "blta8f9e1a5d602504e",
+    "legacy_updated_at": "2023-05-05T13:43:24.923Z"
   },
   "blt9936ac014d3a69e7": {
     "parkleisure_uid": "blt9936ac014d3a69e7",
-    "parkleisure_updated_at": "2023-04-26T12:50:34.566Z"
+    "parkleisure_updated_at": "2023-04-26T12:50:34.566Z",
+    "legacy_uid": "bltc167bd3232bbcb83",
+    "legacy_updated_at": "2023-05-05T13:43:26.481Z"
   },
   "bltb6cde87f79671d4a": {
     "parkleisure_uid": "bltb6cde87f79671d4a",
-    "parkleisure_updated_at": "2023-04-26T12:50:11.594Z"
+    "parkleisure_updated_at": "2023-04-26T12:50:11.594Z",
+    "legacy_uid": "blt83042b7d743e3854",
+    "legacy_updated_at": "2023-05-05T13:43:28.077Z"
   },
   "blt0ddb4abcea60f331": {
     "parkleisure_uid": "blt0ddb4abcea60f331",
-    "parkleisure_updated_at": "2023-04-26T12:49:17.016Z"
+    "parkleisure_updated_at": "2023-04-26T12:49:17.016Z",
+    "legacy_uid": "bltd5316a4fa3fd9cdd",
+    "legacy_updated_at": "2023-05-05T13:43:29.843Z"
   },
   "blt46fdbd22ecf61906": {
     "parkleisure_uid": "blt46fdbd22ecf61906",
-    "parkleisure_updated_at": "2023-04-26T12:48:23.300Z"
+    "parkleisure_updated_at": "2023-04-26T12:48:23.300Z",
+    "legacy_uid": "blt95100ac082e914aa",
+    "legacy_updated_at": "2023-05-05T13:43:31.496Z"
   },
   "bltf26cd34a43832bfc": {
     "parkleisure_uid": "bltf26cd34a43832bfc",
-    "parkleisure_updated_at": "2023-04-26T12:36:13.064Z"
+    "parkleisure_updated_at": "2023-04-26T12:36:13.064Z",
+    "legacy_uid": "bltc804b9414590617c",
+    "legacy_updated_at": "2023-05-05T13:43:33.038Z"
   },
   "blt6a3bc13db0e9944a": {
     "parkleisure_uid": "blt6a3bc13db0e9944a",
-    "parkleisure_updated_at": "2023-04-26T12:18:57.331Z"
+    "parkleisure_updated_at": "2023-04-26T12:18:57.331Z",
+    "legacy_uid": "blt528db01d403a93dc",
+    "legacy_updated_at": "2023-05-05T13:43:34.829Z"
   },
   "bltdeb74bb991d06a4d": {
     "parkleisure_uid": "bltdeb74bb991d06a4d",
-    "parkleisure_updated_at": "2023-04-26T12:12:33.733Z"
+    "parkleisure_updated_at": "2023-04-26T12:12:33.733Z",
+    "legacy_uid": "bltf49750818efd329f",
+    "legacy_updated_at": "2023-05-05T13:43:36.410Z"
   },
   "bltfb0e2204754fbf82": {
     "parkleisure_uid": "bltfb0e2204754fbf82",
-    "parkleisure_updated_at": "2023-04-26T10:19:06.480Z"
+    "parkleisure_updated_at": "2023-04-26T10:19:06.480Z",
+    "legacy_uid": "blta9493714d308eadf",
+    "legacy_updated_at": "2023-05-05T13:43:38.013Z"
   },
   "bltc472386225fecffd": {
     "parkleisure_uid": "bltc472386225fecffd",
-    "parkleisure_updated_at": "2023-04-26T10:07:00.222Z"
+    "parkleisure_updated_at": "2023-04-26T10:07:00.222Z",
+    "legacy_uid": "bltab74fdf825232307",
+    "legacy_updated_at": "2023-05-05T13:43:39.513Z"
   },
   "blt941b5fd0e9184b1d": {
     "parkleisure_uid": "blt941b5fd0e9184b1d",
@@ -1019,7 +1059,9 @@
   },
   "bltc83c0a891e3742fa": {
     "parkleisure_uid": "bltc83c0a891e3742fa",
-    "parkleisure_updated_at": "2023-03-30T10:36:35.379Z"
+    "parkleisure_updated_at": "2023-03-30T10:36:35.379Z",
+    "legacy_uid": "blt1fe21fd1d56edfe8",
+    "legacy_updated_at": "2023-05-05T13:43:41.577Z"
   },
   "bltb85fdb519ba243e2": {
     "parkleisure_uid": "bltb85fdb519ba243e2",
