@@ -23,7 +23,7 @@ const uploadStockUnitImagesFromParkLeisure = async (
   const parkLeisureStockUnits = await getAllEntries(context, 'parkleisure', 'stock_unit');
   const imageCache = context.cache[migrationConfig.name] ?? {};
   for (const stockUnit of parkLeisureStockUnits) {
-    if (stockUnit.location?.[0]?.uid !== 'blt3f233106adeb001c') { // Yorkshire Dales
+    if (stockUnit.location?.[0]?.uid !== 'blt185531672cf01cc7') { // Chantry
       continue;
     }
     // Contextual images
