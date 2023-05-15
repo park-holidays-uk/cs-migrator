@@ -7,6 +7,7 @@
     "build": "npx webpack --mode=development",
     "migrateLocalAttraction": "npm run build && node ./dist/migrateLocalAttraction.js parkleisure",
     "migrateLongDescription": "npm run build && node ./dist/migrateLongDescription.js parkholidays",
+    "removePlScraperTags": "npm run build && node ./dist/removePlScraperTags.js parkholidays",
     "publish": "npm run build && node ./dist/publish.js",
     "dynamo": "npm run build && node ./dist/dynamo.js",
     "dynamoMerge": "npm run build && node ./dist/dynamoMerge.js",

@@ -26,6 +26,7 @@ module.exports = (_, argv, configDirs) => {
       dynamoMerge: path.resolve(__dirname, './src/dynamoDb/merge.ts'),
       migrateLocalAttraction: path.resolve(__dirname, './src/migration/migrateLocalAttraction'),
       migrateLongDescription: path.resolve(__dirname, './src/migration/migrateLongDescription'),
+      removePlScraperTags: path.resolve(__dirname, './src/migration/removePlScraperTags'),
       publish: path.resolve(__dirname, './src/publish/index.ts'),
     },
     mode: argv.mode,
