@@ -32,7 +32,7 @@ export const getEnvironmentVariables = (env: EnvironmentType) => ({
   Location_Media: process.env[`${env}_Location_Media`],
   Accommodation_Media: process.env[`${env}_Accommodation_Media`],
   Stock_Media: process.env[`${env}_Stock_Media`],
-  Icon_Star: process.env[`${env}_Icon_Star`],
+  Special_Offers: process.env[`${env}_Special_Offers`],
   environments: process.env[`${env}_environments`]
 })
 
@@ -49,7 +49,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'asset',
     handler: async (context, migrationConfig) => uploadLocationGalleries(context, migrationConfig, 'touring', ['touring']),
     folderName: 'Location_Media',
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['touring'],
@@ -77,7 +77,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
     folderName: 'Stock_Media',
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',  // images cannot update - always 'none'
     removalTags: ['cms_scraped'],
@@ -86,7 +86,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'asset',
     handler: uploadAccommodationGalleries,
     folderName: 'Accommodation_Media',
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none', // images cannot update - always 'none'
     removalTags: ['cms-scraped'],
@@ -117,7 +117,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'locationAmenity',
     type: 'entry',
     handler: createLocationAmenities,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -145,7 +145,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'location',
     type: 'entry',
     handler: createLocations,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: {
       entry: {
@@ -180,7 +180,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     name: 'accommodationAmenity',
     type: 'entry',
     handler: createAccommodationAmenities,
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -202,7 +202,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -210,7 +210,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -226,7 +226,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -234,7 +234,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {
@@ -258,7 +258,7 @@ export const migrationConfiguration: MigrationConfigurationType[] = [{
     type: 'entry',
     //@ts-ignore
     handler: () => {/* not used to migrate only delete... */},
-    includeInRemove: false,
+    includeInRemove: true,
     includeInMigration: false,
     updateKeys: 'none',
   }, {

@@ -448,6 +448,7 @@ export const removeAssetsWithSubFolders = async (context, folder, assets, record
 
 export const removeEntries = async (context, contentUid, entries, recordsRemoved = 0) => {
   const responses = []
+  if (!entries) return responses;
   for (const entry of entries) {
     process.stdout.write(`Removing entries: [ ${contentUid} ] ${recordsRemoved + responses.length} ${' '.repeat(35)} \r`)
     await apiDelay(50)

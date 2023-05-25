@@ -28,7 +28,7 @@ const removeContent = async (context) => {
       recordsRemoved += removedEntries.length
     }
     console.log(`removedEntries -> [ ${contentUid} ]`, recordsRemoved)
-    writeSync(env, 'dataCache', camelCase(contentUid), {})
+    // writeSync(env, 'dataCache', camelCase(contentUid), {})
   }
 }
 
@@ -45,7 +45,7 @@ const removeAssets = async (context) => {
       continue;
     }
     let recordsRemoved = await removeAssetsByFolder(context, migrationConfig, folder, folderUid, migrationConfig.removalTags);
-    writeSync(context.env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
+    // writeSync(context.env, 'dataCache', migrationConfig.name, context.cache[migrationConfig.name])
     console.log(`removedAssets -> [ ${folder} ]`, recordsRemoved)
   }
 }
@@ -115,7 +115,7 @@ const removeData = async () => {
     }
   })
   context.env = env
-  context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name));
+  // context.cache = getDataCache(env, migrationConfiguration.map((m) => m.name));
   await removeAssets(context)
   await removeContent(context)
   process.exit()
